@@ -1,0 +1,11 @@
+{
+  "pid": 29272,
+  "start_ticks": "286099809",
+  "code": "import subprocess; subprocess.run(['python3', '-B', '/root/private_data/qwen21-turbo-stage009-transfer/download_qwen21_turbo009.py', 'download', '--component', 'all', '--max-bytes', '34000000000', '--max-seconds', '1800'],check=True); subprocess.run(['python3', '-B', '/root/private_data/qwen21-turbo-stage009-transfer/download_qwen21_turbo009.py', 'verify', '--component', 'all', '--max-bytes', '34000000000', '--max-seconds', '180'],check=True)",
+  "epoch": 1792833614.3959076,
+  "gates": [
+    "/root/private_data/qwen21-full-shapes012-results/full-shapes012.json",
+    "/root/private_data/qwen21-tiny-pipeline011-results/tiny-pipeline011.json"
+  ],
+  "platform_notebook_id": "2112237945233408001"
+}

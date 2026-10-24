@@ -1,0 +1,795 @@
+{
+  "schema": "qwen21-complete-pretrained014-v1",
+  "passed": true,
+  "model_id": "Qwen/Qwen-Image-2.1-Turbo",
+  "model_revision": "fc13ba1986fcb905854dc8de2f52eee395f49b5b",
+  "checkpoint": "/root/private_data/guoxin-candidates/models/Qwen-Image-2.1-Turbo-fc13ba1986f",
+  "bundle_manifest_sha256": "73f10aef47106011a31826ce257867cf61ddd3ebd62f94cb23068ab9e275ed0d",
+  "shape_receipt_sha256": "f288c5e53b8c336a61e48ecdd43d2d29e787c7ff1343f4ecbc75ede0119dd189",
+  "pid": 29422,
+  "started_utc": "2026-10-24T09:41:41.819082+00:00",
+  "verified_files": [
+    {
+      "path": "LICENSE",
+      "size": 7831,
+      "sha256": "8dc973f024ff95966bea25866efa443fd16776dcb1001e681e3d467ea572b28d"
+    },
+    {
+      "path": "README.md",
+      "size": 15116,
+      "sha256": "9a262724d564444f1fd41a1a3fc1aae75bfb7873cd623abb3acd3d59f02ee4c5"
+    },
+    {
+      "path": "model_index.json",
+      "size": 578,
+      "sha256": "97e2febeb19d93cb41fa44807cde8bd42757950b5dffeacdb0331fb2d390cf20"
+    },
+    {
+      "path": "processor/chat_template.jinja",
+      "size": 5292,
+      "sha256": "3636d0f0bd6bef02654cdffdc447b79cb2cef8ab02cc75267345946291a489e4"
+    },
+    {
+      "path": "processor/processor_config.json",
+      "size": 1300,
+      "sha256": "14932921ca485d458a04dafd8069fbb0a4505622a48208d19ed247115801385b"
+    },
+    {
+      "path": "processor/tokenizer.json",
+      "size": 11422650,
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506"
+    },
+    {
+      "path": "processor/tokenizer_config.json",
+      "size": 705,
+      "sha256": "fd42a0b35a8d13cd473e88e310b50cbf1bccaa9eb60ed0fd873af5f8f0c59307"
+    },
+    {
+      "path": "scheduler/scheduler_config.json",
+      "size": 486,
+      "sha256": "16c948c71f9152a34cce6e3a2f309e97ad2dca32beecbe5e2fd3a7925b7eb4bb"
+    },
+    {
+      "path": "text_encoder/config.json",
+      "size": 1542,
+      "sha256": "89050cba6b66c4f68f52305b54fc37efe28d95232246b94aa8dc0cfa36f3b734"
+    },
+    {
+      "path": "text_encoder/generation_config.json",
+      "size": 241,
+      "sha256": "d04d0c6fdd1dc056cf68178425a3ecf17a0b9e848cf1a8378ad31c623263472c"
+    },
+    {
+      "path": "text_encoder/model.safetensors",
+      "size": 17534340584,
+      "sha256": "a1eee8233f3063466dd3b06e857b0a2cf13a77c543908374771d51a546beb2e0"
+    },
+    {
+      "path": "transformer/config.json",
+      "size": 370,
+      "sha256": "2c567038ca190824728844b8d06d94ae02360e668707afd9734e789a7eb58ce3"
+    },
+    {
+      "path": "transformer/diffusion_pytorch_model-00001-of-00002.safetensors",
+      "size": 9968332504,
+      "sha256": "6cccd922767f01694461bdcf1f34ea7b771f3442e4d5e338ea9aa55277431cc0"
+    },
+    {
+      "path": "transformer/diffusion_pytorch_model-00002-of-00002.safetensors",
+      "size": 4261951904,
+      "sha256": "69f53ebb063d2f606bdaff7e22e0e2144f28d978d73dc75e6e4293fc5982eab5"
+    },
+    {
+      "path": "transformer/diffusion_pytorch_model.safetensors.index.json",
+      "size": 30283,
+      "sha256": "17987f6623b1c814d0ef55a137d99142b7b3b040eb1bf241b5575dd35af803a2"
+    },
+    {
+      "path": "vae/config.json",
+      "size": 2172,
+      "sha256": "42bfdec412459bbb7bc38a0617ab70edcfc873f84ec47e0c7d01c53ba09885a5"
+    },
+    {
+      "path": "vae/diffusion_pytorch_model.safetensors",
+      "size": 675508656,
+      "sha256": "71879ffd5321e6d10c3c87513e2b474b1252efa7f3dec2969214a9bf06a6dd5c"
+    }
+  ],
+  "samples": [
+    {
+      "height": 256,
+      "width": 256,
+      "seed": 42,
+      "prompt": "A red cube on a clean white background.",
+      "png": "qwen21-pretrained014-256.png",
+      "bytes": 39803,
+      "sha256": "7518e55e20942d0e8d0179bbc3740acb9e10150425cca0a08cea386785708b3a",
+      "chain": {
+        "prompt_ids": [
+          [
+            151644,
+            8948,
+            198,
+            1092,
+            30782,
+            408,
+            323,
+            23643,
+            279,
+            3897,
+            9934,
+            13,
+            151645,
+            198,
+            151644,
+            872,
+            198,
+            32,
+            2518,
+            23739,
+            389,
+            264,
+            4240,
+            4158,
+            4004,
+            13,
+            151645,
+            198,
+            151644,
+            77091,
+            198
+          ]
+        ],
+        "drop_system_tokens": 14,
+        "conditioning": {
+          "shape": [
+            1,
+            17,
+            4096
+          ],
+          "dtype": "torch.bfloat16",
+          "device": "cuda:0",
+          "sha256_float32": "544aa95da5b695bab0b0dbb26cac689c7da2d701dd6f131de7a9a105d1769523",
+          "finite": true
+        },
+        "pre_final_norm_verified": true,
+        "sigmas": [
+          1.0,
+          0.9784529805183411,
+          0.9541800022125244,
+          0.9266260266304016,
+          0.8950799703598022,
+          0.8451480269432068,
+          0.7045339941978455,
+          0.4145680069923401,
+          0.0
+        ],
+        "steps": [
+          {
+            "index": 0,
+            "timestep": 1000.0,
+            "elapsed_seconds": 0.9905526810325682,
+            "latents": {
+              "shape": [
+                1,
+                256,
+                64
+              ],
+              "dtype": "torch.bfloat16",
+              "device": "cuda:0",
+              "sha256_float32": "a0d2fe7f16586b937f0bc1698b832564d83bc8d290b3c17fad702d5320e94660",
+              "finite": true
+            }
+          },
+          {
+            "index": 1,
+            "timestep": 978.4530029296875,
+            "elapsed_seconds": 0.058876155875623226,
+            "latents": {
+              "shape": [
+                1,
+                256,
+                64
+              ],
+              "dtype": "torch.bfloat16",
+              "device": "cuda:0",
+              "sha256_float32": "8fd119f6ac3d41d3c9f14e0b7a0bcbf4b3f97cb37a34e4855a2cb24516a9cd25",
+              "finite": true
+            }
+          },
+          {
+            "index": 2,
+            "timestep": 954.1799926757812,
+            "elapsed_seconds": 0.057626781053841114,
+            "latents": {
+              "shape": [
+                1,
+                256,
+                64
+              ],
+              "dtype": "torch.bfloat16",
+              "device": "cuda:0",
+              "sha256_float32": "ae9f724ccb042cb32b6ea27549dfc99ccc93b9fe3a09785e3169b7e313af050b",
+              "finite": true
+            }
+          },
+          {
+            "index": 3,
+            "timestep": 926.6260375976562,
+            "elapsed_seconds": 0.05966529482975602,
+            "latents": {
+              "shape": [
+                1,
+                256,
+                64
+              ],
+              "dtype": "torch.bfloat16",
+              "device": "cuda:0",
+              "sha256_float32": "d940a0125a24d73282ccaf2b1be341f3a29e2b9b5dce22543a9fd9c38c5de122",
+              "finite": true
+            }
+          },
+          {
+            "index": 4,
+            "timestep": 895.0799560546875,
+            "elapsed_seconds": 0.0621174331754446,
+            "latents": {
+              "shape": [
+                1,
+                256,
+                64
+              ],
+              "dtype": "torch.bfloat16",
+              "device": "cuda:0",
+              "sha256_float32": "099df96975b1d94a0005a04d358e98191a5a85b6625e81066d26e7f3a7352e89",
+              "finite": true
+            }
+          },
+          {
+            "index": 5,
+            "timestep": 845.1480102539062,
+            "elapsed_seconds": 0.05520240310579538,
+            "latents": {
+              "shape": [
+                1,
+                256,
+                64
+              ],
+              "dtype": "torch.bfloat16",
+              "device": "cuda:0",
+              "sha256_float32": "7d24a1962d1bcbec86a0aed2e716f6ff85749bed75ae8b2f5438a25a1ea2b303",
+              "finite": true
+            }
+          },
+          {
+            "index": 6,
+            "timestep": 704.5339965820312,
+            "elapsed_seconds": 0.05885846493765712,
+            "latents": {
+              "shape": [
+                1,
+                256,
+                64
+              ],
+              "dtype": "torch.bfloat16",
+              "device": "cuda:0",
+              "sha256_float32": "fce08f28028c805b4d6f2dfc7ae8139b52f991e61ec8aecceda2da7e3270ce23",
+              "finite": true
+            }
+          },
+          {
+            "index": 7,
+            "timestep": 414.5679931640625,
+            "elapsed_seconds": 0.05499365087598562,
+            "latents": {
+              "shape": [
+                1,
+                256,
+                64
+              ],
+              "dtype": "torch.bfloat16",
+              "device": "cuda:0",
+              "sha256_float32": "8f1a6a8c1c9346aa69f905a2cd3be97770b462c8df9cdc7cd3d6cd621c5b0a51",
+              "finite": true
+            }
+          }
+        ],
+        "decoded": {
+          "shape": [
+            1,
+            4,
+            1,
+            256,
+            256
+          ],
+          "dtype": "torch.bfloat16",
+          "device": "cuda:0",
+          "sha256_float32": "2b524da8decc75de1f9f60ea1cd5c8335a3bf7e0636e5b075e8b526cd99adbc2",
+          "finite": true
+        },
+        "prefix_cache_layers_populated": 32,
+        "condition_reference_images": 0
+      },
+      "elapsed_seconds_including_validation": 12.086361807771027,
+      "GPU_memory_peak_allocated": 32783264768,
+      "GPU_memory_peak_reserved": 35334914048
+    },
+    {
+      "height": 512,
+      "width": 512,
+      "seed": 42,
+      "prompt": "A red cube on a clean white background.",
+      "png": "qwen21-pretrained014-512.png",
+      "bytes": 195115,
+      "sha256": "f5cdbeff7e9078f01ae8268cea297462b398ccc06f404ba4b349f199c01d5f26",
+      "chain": {
+        "prompt_ids": [
+          [
+            151644,
+            8948,
+            198,
+            1092,
+            30782,
+            408,
+            323,
+            23643,
+            279,
+            3897,
+            9934,
+            13,
+            151645,
+            198,
+            151644,
+            872,
+            198,
+            32,
+            2518,
+            23739,
+            389,
+            264,
+            4240,
+            4158,
+            4004,
+            13,
+            151645,
+            198,
+            151644,
+            77091,
+            198
+          ]
+        ],
+        "drop_system_tokens": 14,
+        "conditioning": {
+          "shape": [
+            1,
+            17,
+            4096
+          ],
+          "dtype": "torch.bfloat16",
+          "device": "cuda:0",
+          "sha256_float32": "544aa95da5b695bab0b0dbb26cac689c7da2d701dd6f131de7a9a105d1769523",
+          "finite": true
+        },
+        "pre_final_norm_verified": true,
+        "sigmas": [
+          1.0,
+          0.9784529805183411,
+          0.9541800022125244,
+          0.9266260266304016,
+          0.8950799703598022,
+          0.8451480269432068,
+          0.7045339941978455,
+          0.4145680069923401,
+          0.0
+        ],
+        "steps": [
+          {
+            "index": 0,
+            "timestep": 1000.0,
+            "elapsed_seconds": 0.13612710079178214,
+            "latents": {
+              "shape": [
+                1,
+                1024,
+                64
+              ],
+              "dtype": "torch.bfloat16",
+              "device": "cuda:0",
+              "sha256_float32": "245a7b319a4599fab34b8d8836dc91a42891ac769b4253f3ec44e2f03f152b78",
+              "finite": true
+            }
+          },
+          {
+            "index": 1,
+            "timestep": 978.4530029296875,
+            "elapsed_seconds": 0.08726677112281322,
+            "latents": {
+              "shape": [
+                1,
+                1024,
+                64
+              ],
+              "dtype": "torch.bfloat16",
+              "device": "cuda:0",
+              "sha256_float32": "ee116e3b85fed605dde034aae09f2b6bda8baf8a650b34b1988ced6bc541b915",
+              "finite": true
+            }
+          },
+          {
+            "index": 2,
+            "timestep": 954.1799926757812,
+            "elapsed_seconds": 0.08714115899056196,
+            "latents": {
+              "shape": [
+                1,
+                1024,
+                64
+              ],
+              "dtype": "torch.bfloat16",
+              "device": "cuda:0",
+              "sha256_float32": "6df76fbaac04b06ead9b03feb1cffe7d0819aebdeb3ac66ea00a96e992fd6fb9",
+              "finite": true
+            }
+          },
+          {
+            "index": 3,
+            "timestep": 926.6260375976562,
+            "elapsed_seconds": 0.08752299379557371,
+            "latents": {
+              "shape": [
+                1,
+                1024,
+                64
+              ],
+              "dtype": "torch.bfloat16",
+              "device": "cuda:0",
+              "sha256_float32": "df8a2199826aed4100f246e50366502ed7493afee38fd4e5471100844fd35d90",
+              "finite": true
+            }
+          },
+          {
+            "index": 4,
+            "timestep": 895.0799560546875,
+            "elapsed_seconds": 0.08906676201149821,
+            "latents": {
+              "shape": [
+                1,
+                1024,
+                64
+              ],
+              "dtype": "torch.bfloat16",
+              "device": "cuda:0",
+              "sha256_float32": "065a65fce4e90c5adb4db597c1f9928e9197a8d73428c8493dce091ce45ecc68",
+              "finite": true
+            }
+          },
+          {
+            "index": 5,
+            "timestep": 845.1480102539062,
+            "elapsed_seconds": 0.08691948791965842,
+            "latents": {
+              "shape": [
+                1,
+                1024,
+                64
+              ],
+              "dtype": "torch.bfloat16",
+              "device": "cuda:0",
+              "sha256_float32": "896bb880d41a799a0ab1763d97bc27f197e3cd8b945ef4c925088e01d309792a",
+              "finite": true
+            }
+          },
+          {
+            "index": 6,
+            "timestep": 704.5339965820312,
+            "elapsed_seconds": 0.08724225964397192,
+            "latents": {
+              "shape": [
+                1,
+                1024,
+                64
+              ],
+              "dtype": "torch.bfloat16",
+              "device": "cuda:0",
+              "sha256_float32": "6cb80a8ec525361397912d641a0308902c9a3cd76b0f88ee069144a15aa47b07",
+              "finite": true
+            }
+          },
+          {
+            "index": 7,
+            "timestep": 414.5679931640625,
+            "elapsed_seconds": 0.08682211581617594,
+            "latents": {
+              "shape": [
+                1,
+                1024,
+                64
+              ],
+              "dtype": "torch.bfloat16",
+              "device": "cuda:0",
+              "sha256_float32": "048909114b9734b6a78cf56bf0267f3a28a36d6ad505c030cda7eb835ae3fdd0",
+              "finite": true
+            }
+          }
+        ],
+        "decoded": {
+          "shape": [
+            1,
+            4,
+            1,
+            512,
+            512
+          ],
+          "dtype": "torch.bfloat16",
+          "device": "cuda:0",
+          "sha256_float32": "adb5bcd5a0baeb4336dfce296dec149d2493da3ed4bede8cad7ccb1104a91657",
+          "finite": true
+        },
+        "prefix_cache_layers_populated": 32,
+        "condition_reference_images": 0
+      },
+      "elapsed_seconds_including_validation": 1.1135749416425824,
+      "GPU_memory_peak_allocated": 33407691776,
+      "GPU_memory_peak_reserved": 35498491904
+    }
+  ],
+  "GPU_tensor_compute": true,
+  "all_weights_loaded": true,
+  "official_accuracy_verified": false,
+  "official_performance_verified": false,
+  "submitted": false,
+  "profile": {
+    "TP": 1,
+    "SP": 1,
+    "batch": 1,
+    "sigmas": 8,
+    "attention": "torch_sdpa",
+    "compile": false,
+    "graphs": false,
+    "quantization": false,
+    "offload": false,
+    "conditioning_cache": false,
+    "new_BitExactFusionGate_paths": false
+  },
+  "scope": "Real complete pretrained development images; no official quality/performance claim",
+  "driver_sources": {
+    "run_qwen21_pretrained014.py": "da1920b0fc344d12c8de682da64011985499089386c914f1e99833ff04d58fe1",
+    "qwen21_pretrained014.py": "bd9f1a8f855cc9ab0d21ed25a78958e1e70934725296aff62b892790503580a4",
+    "qwen21_t2i_stage014.py": "faba96cda115018fc9e4fe7422f9db91e8402bf68898d9fea017590959b6969f"
+  },
+  "bundle": {
+    "files": 531,
+    "sha256": "73f10aef47106011a31826ce257867cf61ddd3ebd62f94cb23068ab9e275ed0d"
+  },
+  "native_before": {
+    "version": "0.5.12+das185.dtk2604.torch2100.2608191739.ga14e79",
+    "root": "/root/private_data/guoxin-wan-env-006-001/venv/lib/python3.10/site-packages",
+    "python_files_verified": 1989,
+    "wheel_sha256": "7c13be91a56b160af81847fffbf4f177b0f07fe0717b4042960ee23846ae7d61"
+  },
+  "activation": {
+    "finder": "BoundSourceFinder",
+    "overlay": "/root/private_data/qwen21-turbo-core-probe010/overlay"
+  },
+  "platform": {
+    "class": "sglang.multimodal_gen.runtime.platforms.rocm.RocmPlatform",
+    "torch": "2.10.0",
+    "hip": "6.3.26093",
+    "device_name": "BW"
+  },
+  "admission_GPU_memory": {
+    "free": 68365058048,
+    "total": 68702699520
+  },
+  "shape_plan": {
+    "text_encoder": {
+      "source_keys": 750,
+      "target_keys": 750,
+      "bijection_and_shapes_verified": true,
+      "mapped_names_sha256": "93e81c9fa8fc763ec73944a003fca706a48f3260d78f5abfc61ffbe824b325f2",
+      "parameters": 8767123696,
+      "all_parameters_meta": true,
+      "meta_buffers": [
+        {
+          "name": "model.visual.rotary_pos_emb.inv_freq",
+          "shape": [
+            18
+          ],
+          "dtype": "torch.float32"
+        },
+        {
+          "name": "model.language_model.layers.0.self_attn.rotary_emb.cos_sin_cache",
+          "shape": [
+            262144,
+            128
+          ],
+          "dtype": "torch.bfloat16"
+        }
+      ],
+      "custom_weight_loader_parameters": 232,
+      "missing_key_synthesis_permitted": false,
+      "merge_or_duplicate_keys_permitted": false
+    },
+    "transformer": {
+      "source_keys": 297,
+      "target_keys": 297,
+      "bijection_and_shapes_verified": true,
+      "mapped_names_sha256": "269466c9348a53b49ee0302588b6afd130304f30e1d6416b796101243d1e7cc0",
+      "parameters": 7115124736,
+      "all_parameters_meta": true,
+      "meta_buffers": [],
+      "custom_weight_loader_parameters": 224,
+      "missing_key_synthesis_permitted": false,
+      "merge_or_duplicate_keys_permitted": false
+    },
+    "vae": {
+      "source_keys": 238,
+      "target_keys": 238,
+      "bijection_and_shapes_verified": true,
+      "mapped_names_sha256": "8c4e99da649d809422ab4e0196bae6abe815cba99b1f025482d77bde4c6cedc1",
+      "parameters": 337740404,
+      "all_parameters_meta": true,
+      "meta_buffers": [],
+      "custom_weight_loader_parameters": 0,
+      "missing_key_synthesis_permitted": false,
+      "merge_or_duplicate_keys_permitted": false
+    }
+  },
+  "disabled_optional_gates": [
+    "sglang.multimodal_gen.runtime.models.dits.qwen_image21._ROPE_FUSION",
+    "sglang.multimodal_gen.runtime.models.dits.qwen_image21._SILU_MUL_FUSION",
+    "sglang.multimodal_gen.runtime.models.dits.qwen_image21._QK_ROPE_FUSION",
+    "sglang.multimodal_gen.runtime.models.dits.qwen_image21._KV_ROPE_FUSION",
+    "sglang.multimodal_gen.runtime.models.dits.qwen_image21._QK_ROPE_CUDA_FUSION",
+    "sglang.multimodal_gen.runtime.models.dits.qwen_image21._KV_PACK_CUDA_FUSION",
+    "sglang.multimodal_gen.runtime.models.dits.qwen_image21._KV_PROJECT_INTO_FUSION",
+    "sglang.multimodal_gen.runtime.models.dits.qwen_image21._QKV_PACK_FUSION",
+    "sglang.multimodal_gen.runtime.models.dits.qwen_image21._QK_NORM_FUSION",
+    "sglang.multimodal_gen.runtime.models.dits.qwen_image21._MODULATION_FUSION",
+    "sglang.multimodal_gen.runtime.models.vaes.autoencoder_kl_qwenimage21._CHANNEL_RMSNORM_FUSION"
+  ],
+  "loads": {
+    "text_encoder": {
+      "missing": [],
+      "unexpected": [],
+      "native_streaming_custom_loaders_preserved": true,
+      "positional_buffers_rebuilt_by_original_code": [
+        "model.visual.rotary_pos_emb.inv_freq",
+        "model.language_model.layers.0.self_attn.rotary_emb.cos_sin_cache"
+      ],
+      "actual_parameter_value_checks": [
+        {
+          "parameter": "model.language_model.layers.0.input_layernorm.weight",
+          "source_name": "model.language_model.layers.0.input_layernorm.weight",
+          "bytes": 8192,
+          "dtype": "torch.bfloat16",
+          "actual_sha256": "da14da9264fcb45df7b76ff86c2cc6947639c162a96edb0e5459c9d2d87eec19",
+          "source_sha256": "da14da9264fcb45df7b76ff86c2cc6947639c162a96edb0e5459c9d2d87eec19",
+          "native_custom_weight_loader": false,
+          "exact_equal": true
+        },
+        {
+          "parameter": "model.visual.pos_embed.weight",
+          "source_name": "model.visual.pos_embed.weight",
+          "bytes": 5308416,
+          "dtype": "torch.bfloat16",
+          "actual_sha256": "656847de8f5e4b03cb40c7fa0076a6cd455022cd9e5db526143e1f630495154b",
+          "source_sha256": "656847de8f5e4b03cb40c7fa0076a6cd455022cd9e5db526143e1f630495154b",
+          "native_custom_weight_loader": false,
+          "exact_equal": true
+        },
+        {
+          "parameter": "model.visual.blocks.0.attn.proj.bias",
+          "source_name": "model.visual.blocks.0.attn.proj.bias",
+          "bytes": 2304,
+          "dtype": "torch.bfloat16",
+          "actual_sha256": "ee5424820ca2cc641011cd8ec655553c42cb3d565844e52bfa6253045f140e3c",
+          "source_sha256": "ee5424820ca2cc641011cd8ec655553c42cb3d565844e52bfa6253045f140e3c",
+          "native_custom_weight_loader": true,
+          "exact_equal": true
+        },
+        {
+          "parameter": "model.visual.merger.linear_fc2.bias",
+          "source_name": "model.visual.merger.linear_fc2.bias",
+          "bytes": 8192,
+          "dtype": "torch.bfloat16",
+          "actual_sha256": "b9873d3158b2543e8b4bcc3c08b79005229dc5bcf4eb9854725c7ec28323dc17",
+          "source_sha256": "b9873d3158b2543e8b4bcc3c08b79005229dc5bcf4eb9854725c7ec28323dc17",
+          "native_custom_weight_loader": true,
+          "exact_equal": true
+        }
+      ]
+    },
+    "transformer": {
+      "missing": [],
+      "unexpected": [],
+      "native_streaming_custom_loaders_preserved": true,
+      "positional_buffers_rebuilt_by_original_code": [],
+      "actual_parameter_value_checks": [
+        {
+          "parameter": "img_in.weight",
+          "source_name": "img_in.weight",
+          "bytes": 524288,
+          "dtype": "torch.bfloat16",
+          "actual_sha256": "a1630fa61276dcc25f22903abcd9c0a14bb64675546ec553658cd6f518c7cff1",
+          "source_sha256": "a1630fa61276dcc25f22903abcd9c0a14bb64675546ec553658cd6f518c7cff1",
+          "native_custom_weight_loader": false,
+          "exact_equal": true
+        },
+        {
+          "parameter": "txt_in.text_norm.weight",
+          "source_name": "txt_in.text_norm.weight",
+          "bytes": 8192,
+          "dtype": "torch.bfloat16",
+          "actual_sha256": "bfd1f6efe5e2f6ccbd2a9c041a08ad8613a69563d1a7927e57c0170d07570613",
+          "source_sha256": "bfd1f6efe5e2f6ccbd2a9c041a08ad8613a69563d1a7927e57c0170d07570613",
+          "native_custom_weight_loader": false,
+          "exact_equal": true
+        },
+        {
+          "parameter": "transformer_blocks.0.attn.to_k.weight",
+          "source_name": "transformer_blocks.0.attn.to_k.weight",
+          "bytes": 33554432,
+          "dtype": "torch.bfloat16",
+          "actual_sha256": "a9d2be18a8693efb3785101f236baae078dff4a264c0ecf2055b5ab5c9e9cf26",
+          "source_sha256": "a9d2be18a8693efb3785101f236baae078dff4a264c0ecf2055b5ab5c9e9cf26",
+          "native_custom_weight_loader": true,
+          "exact_equal": true
+        },
+        {
+          "parameter": "transformer_blocks.9.attn.to_v.weight",
+          "source_name": "transformer_blocks.9.attn.to_v.weight",
+          "bytes": 33554432,
+          "dtype": "torch.bfloat16",
+          "actual_sha256": "840d0d3bfc4ecf0c345b87eb801f43c2919977811c8ddb2f5b43272bde54ef1e",
+          "source_sha256": "840d0d3bfc4ecf0c345b87eb801f43c2919977811c8ddb2f5b43272bde54ef1e",
+          "native_custom_weight_loader": true,
+          "exact_equal": true
+        }
+      ]
+    },
+    "vae": {
+      "missing": [],
+      "unexpected": [],
+      "native_streaming_custom_loaders_preserved": true,
+      "positional_buffers_rebuilt_by_original_code": [],
+      "actual_parameter_value_checks": [
+        {
+          "parameter": "decoder.conv_in.bias",
+          "source_name": "decoder.conv_in.bias",
+          "bytes": 2304,
+          "dtype": "torch.bfloat16",
+          "actual_sha256": "a38c5284a1ff20897ec4fe11c8f95ad21bf57b4043221bbaa182c67c5e15610e",
+          "source_sha256": "a38c5284a1ff20897ec4fe11c8f95ad21bf57b4043221bbaa182c67c5e15610e",
+          "native_custom_weight_loader": false,
+          "exact_equal": true
+        },
+        {
+          "parameter": "quant_conv.weight",
+          "source_name": "quant_conv.weight",
+          "bytes": 32768,
+          "dtype": "torch.bfloat16",
+          "actual_sha256": "f3410e66978b093e1a3e9b6779d9f88e2d6b764e11616cf87415cd5528f1b9d4",
+          "source_sha256": "f3410e66978b093e1a3e9b6779d9f88e2d6b764e11616cf87415cd5528f1b9d4",
+          "native_custom_weight_loader": false,
+          "exact_equal": true
+        }
+      ]
+    }
+  },
+  "GPU_tensors_loaded": true,
+  "load_and_SHA_seconds": 111.28790879901499,
+  "GPU_compute_attempted": true,
+  "post_cleanup_GPU_allocated": 105528832,
+  "post_cleanup_GPU_reserved": 192937984,
+  "cuda_context_initialized": true,
+  "native_after": {
+    "version": "0.5.12+das185.dtk2604.torch2100.2608191739.ga14e79",
+    "root": "/root/private_data/guoxin-wan-env-006-001/venv/lib/python3.10/site-packages",
+    "python_files_verified": 1989,
+    "wheel_sha256": "7c13be91a56b160af81847fffbf4f177b0f07fe0717b4042960ee23846ae7d61"
+  },
+  "native_unchanged": true,
+  "finished_utc": "2026-10-24T09:43:53.373471+00:00",
+  "elapsed_seconds": 131.5344329327345
+}

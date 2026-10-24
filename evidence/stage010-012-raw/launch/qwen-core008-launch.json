@@ -1,0 +1,18 @@
+{
+  "pid": 21630,
+  "start_ticks": "285822168",
+  "argv": [
+    "timeout",
+    "--signal=INT",
+    "--kill-after=30",
+    "900",
+    "/root/private_data/guoxin-wan-env-006-001/venv/bin/python",
+    "-B",
+    "/root/private_data/qwen21-turbo-core-probe008/probe_qwen21_core007.py",
+    "--bundle",
+    "/root/private_data/qwen21-turbo-core-probe008",
+    "--output",
+    "/root/private_data/qwen21-core-probe008-results"
+  ],
+  "launch_epoch": 1792830837.9839647
+}

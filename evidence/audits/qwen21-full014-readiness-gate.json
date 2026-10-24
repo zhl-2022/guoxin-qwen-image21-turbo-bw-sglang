@@ -1,0 +1,38 @@
+{
+  "schema": "qwen21-full014-readiness-gate-v1",
+  "created_utc": "2026-10-24T09:34:25.412423+00:00",
+  "actual_source_archive_sha256": "b6faeea32b4a20eb2cc175df2e477c3d6a47ad5204e974bb4f85bf2344d54dbc",
+  "all_CPU_and_full_architecture_prerequisites_passed": true,
+  "core010_selected_DiT_encoder_native_forwards_passed": true,
+  "fullmeta012_published_key_shape_bijections_passed": true,
+  "fullmeta012_parameters": {
+    "text_encoder": 8767123696,
+    "transformer": 7115124736,
+    "vae": 337740404
+  },
+  "genuine_native_custom_loaders": {
+    "text_encoder": 232,
+    "transformer": 224,
+    "vae": 0
+  },
+  "actual_published_VAE_checkpoint_CPU_passed": true,
+  "actual_VAE_parameters": 337740404,
+  "actual_metadata_plus_VAE14_files_full_SHA_bound": true,
+  "tiny011_eight_sigma_five_component_chain_passed": true,
+  "tiny011_pre_final_norm_verified": true,
+  "tiny011_random_PNG_fully_decoded": true,
+  "tiny011_PNG_sha256": "23c30cb776162ead4e7490faa3964db291c962f6ed0a5fb7dab96bbcd5cfdff5",
+  "014_exact_decode_order_original_function_regression_passed": true,
+  "014_zip_sha256": "8b52a18dd5a86d187fbacd26fcfc75d94b8073b4385557d0d500d6109e5d523a",
+  "014_helper_sha256": "2ca152c6a8a230c354d5b2f4302d4be0dce39d3d9af8bce4e87355e820890ea9",
+  "native_files_per_process_verified_unchanged": 1989,
+  "actual_all17_download_launch_UTC": "2026-10-24T09:20:14.395908+00:00",
+  "actual_all17_download_pid": 29272,
+  "actual_all17_download_start_ticks": "286099809",
+  "all17_checkpoint_full_SHA_verified": false,
+  "full014_GPU_launch_condition": "Launch after actual all17 full-SHA verification receipt succeeds and the owned transfer process has exited; retain native HCU admission checks",
+  "full014_GPU_has_executed": false,
+  "official_accuracy_verified": false,
+  "official_performance_verified": false,
+  "scope": "Actual native CPU prerequisites passed; full pretrained GPU generation remains conditional on actual complete checkpoint receipt"
+}

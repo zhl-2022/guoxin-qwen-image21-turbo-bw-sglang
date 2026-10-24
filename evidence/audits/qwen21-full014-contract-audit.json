@@ -1,0 +1,102 @@
+{
+  "schema": "qwen21-full014-independent-contract-audit-v1",
+  "archive_sha256": "d52e54209eafa1328ac7a8b16253da94f6bab368c2b70f14d42d2f2915aa6a8c",
+  "archive_bytes": 256699,
+  "CRC_manifest_and_payload_SHA_verified": true,
+  "payloads": 11,
+  "checkpoint_source_lock_sha256": "dbab7a7daf5ac2e000eda646fbb74f0bdc8ee9fd4822199043e7b03cf4fec5fd",
+  "transfer_receipts": [
+    {
+      "path": "guoxin-candidates/models/qwen21-turbo009-transfer-82d9eef5d82c4b30a5adad9467951358.json",
+      "run_id": "82d9eef5d82c4b30a5adad9467951358",
+      "mode": "verify",
+      "files": 17,
+      "total_bytes": 32451622214,
+      "finished_utc": "2026-10-24T09:32:10.858552+00:00",
+      "all_workers_joined": true,
+      "GPU_imported": false
+    },
+    {
+      "path": "guoxin-candidates/models/qwen21-turbo009-transfer-f56d16dd0b8d4480aed77d8cc632b6d9.json",
+      "run_id": "f56d16dd0b8d4480aed77d8cc632b6d9",
+      "mode": "download",
+      "files": 17,
+      "total_bytes": 32451622214,
+      "finished_utc": "2026-10-24T09:30:58.034166+00:00",
+      "all_workers_joined": true,
+      "GPU_imported": false
+    }
+  ],
+  "full014": [
+    {
+      "path": "qwen21-complete-pretrained014-results/complete-pretrained014.json",
+      "passed": true,
+      "driver_sources_bound": true,
+      "native_1989_files_unchanged": true,
+      "GPU_tensor_compute": true,
+      "GPU_tensors_loaded": true,
+      "cuda_context_initialized": true,
+      "elapsed_seconds": 131.5344329327345,
+      "samples": [
+        {
+          "width": 256,
+          "height": 256,
+          "sha256": "7518e55e20942d0e8d0179bbc3740acb9e10150425cca0a08cea386785708b3a",
+          "bytes": 39803,
+          "channel_extrema": [
+            [
+              159,
+              253
+            ],
+            [
+              0,
+              253
+            ],
+            [
+              13,
+              255
+            ],
+            [
+              253,
+              255
+            ]
+          ],
+          "GPU_eight_steps_finite": true,
+          "pre_norm_and_32_prefix_caches": true,
+          "elapsed_seconds_including_validation": 12.086361807771027
+        },
+        {
+          "width": 512,
+          "height": 512,
+          "sha256": "f5cdbeff7e9078f01ae8268cea297462b398ccc06f404ba4b349f199c01d5f26",
+          "bytes": 195115,
+          "channel_extrema": [
+            [
+              57,
+              255
+            ],
+            [
+              0,
+              253
+            ],
+            [
+              0,
+              255
+            ],
+            [
+              254,
+              255
+            ]
+          ],
+          "GPU_eight_steps_finite": true,
+          "pre_norm_and_32_prefix_caches": true,
+          "elapsed_seconds_including_validation": 1.1135749416425824
+        }
+      ],
+      "checkpoint_full_SHA_bytes": 32451622214
+    }
+  ],
+  "official_accuracy_verified": false,
+  "official_performance_verified": false,
+  "submitted": false
+}

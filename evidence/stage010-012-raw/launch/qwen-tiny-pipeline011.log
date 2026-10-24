@@ -1,0 +1,275 @@
+INFO 10-24 17:12:38 [__init__.py:44] Available plugins for group vllm.platform_plugins:
+INFO 10-24 17:12:38 [__init__.py:46] - hcu -> vllm_hcu:hcu_platform_plugin
+INFO 10-24 17:12:38 [__init__.py:49] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 10-24 17:12:38 [__init__.py:239] Platform plugin hcu is activated
+[aiter] WARNING: NUMA balancing is enabled, which may cause errors. It is recommended to disable NUMA balancing by running "sudo sh -c 'echo 0 > /proc/sys/kernel/numa_balancing'" 
+aiter MXFP4 kernels not available: No module named 'aiter.ops.gemm_op_a4w4'
+flash_attn is installed but failed to import: cannot import name '_wrapped_flash_attn_backward' from 'flash_attn.flash_attn_interface' (/usr/local/lib/python3.10/dist-packages/flash_attn/flash_attn_interface.py). Falling back to native PyTorch attention.
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+INFO: Please install lmslim if you want to infer the quantitative model of moe.
+
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[10-24 17:12:57] Disabling some offloading (except dit, text_encoder) for image generation model
+[10-24 17:12:57] server_args: {"model_path": "Qwen/Qwen-Image-2.1-Turbo", "model_id": null, "backend": "auto", "attention_backend": "torch_sdpa", "attention_backend_config": {}, "component_attention_backends": {}, "cache_dit_config": null, "nccl_port": null, "trust_remote_code": false, "revision": null, "num_gpus": 1, "performance_mode": "auto", "tp_size": 1, "sp_degree": 1, "ulysses_degree": 1, "ring_degree": 1, "dp_size": 1, "dp_degree": 1, "enable_cfg_parallel": false, "cfg_parallel_degree": 1, "hsdp_replicate_dim": 1, "hsdp_shard_dim": 1, "dist_timeout": 3600, "pipeline_class_name": null, "lora_path": null, "lora_nickname": "default", "lora_scale": 1.0, "lora_merge_mode": "auto", "lora_weight_name": null, "component_paths": {}, "transformer_weights_path": null, "quantization": null, "quantization_ignored_layers": null, "lora_target_modules": null, "dit_cpu_offload": true, "dit_layerwise_offload": false, "dit_offload_prefetch_size": 0.0, "text_encoder_cpu_offload": true, "image_encoder_cpu_offload": false, "vae_cpu_offload": false, "use_fsdp_inference": false, "pin_cpu_memory": true, "ltx2_two_stage_device_mode": null, "comfyui_mode": false, "enable_torch_compile": false, "warmup": false, "warmup_resolutions": null, "warmup_steps": 1, "disable_autocast": false, "master_port": 30005, "host": "127.0.0.1", "port": 30000, "webui": false, "webui_port": 12312, "scheduler_port": 5555, "batching_mode": "dynamic", "batching_max_size": 1, "batching_delay_ms": 0.0, "batching_config": null, "enable_batching_metrics": false, "strict_ports": false, "output_path": "outputs/", "input_save_path": "inputs/uploads", "prompt_file_path": null, "model_paths": {}, "model_loaded": {"transformer": true, "vae": true, "video_vae": true, "audio_vae": true, "video_dit": true, "audio_dit": true, "dual_tower_bridge": true}, "boundary_ratio": null, "base_gpu_id": 0, "disagg_role": "monolithic", "disagg_timeout": 600, "disagg_dispatch_policy": "round_robin", "disagg_mode": false, "disagg_server_addr": null, "encoder_urls": null, "denoiser_urls": null, "decoder_urls": null, "encoder_tp": null, "denoiser_tp": null, "denoiser_sp": null, "denoiser_ulysses": null, "denoiser_ring": null, "decoder_tp": null, "disagg_transfer_pool_size": 268435456, "disagg_p2p_hostname": "127.0.0.1", "disagg_ib_device": null, "pool_work_endpoint": null, "pool_result_endpoint": null, "log_level": "info", "uvicorn_access_log_exclude_prefixes": [], "enable_trace": false, "otlp_traces_endpoint": "localhost:4317"}
+`BaseImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `BaseImageProcessor` instead.
+[10-24 17:13:03] Using Torch SDPA backend
+[10-24 17:13:04] Using Torch SDPA backend
+{
+  "passed": true,
+  "scope": "Five real component types; tiny random architectures, not pretrained image generation",
+  "full_checkpoint_loaded": false,
+  "GPU_tensor_compute": false,
+  "official_accuracy_verified": false,
+  "bundle": {
+    "files": 531,
+    "sha256": "73f10aef47106011a31826ce257867cf61ddd3ebd62f94cb23068ab9e275ed0d"
+  },
+  "native_before": {
+    "version": "0.5.12+das185.dtk2604.torch2100.2608191739.ga14e79",
+    "root": "/root/private_data/guoxin-wan-env-006-001/venv/lib/python3.10/site-packages",
+    "python_files_verified": 1989,
+    "wheel_sha256": "7c13be91a56b160af81847fffbf4f177b0f07fe0717b4042960ee23846ae7d61"
+  },
+  "activation": {
+    "finder": "BoundSourceFinder",
+    "overlay": "/root/private_data/qwen21-turbo-core-probe010/overlay"
+  },
+  "srt_auxiliary_config": {
+    "class": "sglang.srt.server_args.ServerArgs",
+    "purpose": "Auxiliary native RoPE configuration; no SRT model server",
+    "model_path": "None",
+    "device": "cpu",
+    "rl_on_policy_target": null
+  },
+  "parameters": {
+    "text_encoder": 19530592,
+    "dit": 484544,
+    "vae": 82120
+  },
+  "chain": {
+    "prompt_ids": [
+      [
+        151644,
+        8948,
+        198,
+        1092,
+        30782,
+        408,
+        323,
+        23643,
+        279,
+        3897,
+        9934,
+        13,
+        151645,
+        198,
+        151644,
+        872,
+        198,
+        32,
+        2518,
+        23739,
+        389,
+        264,
+        4240,
+        4158,
+        4004,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198
+      ]
+    ],
+    "drop_system_tokens": 14,
+    "conditioning": {
+      "shape": [
+        1,
+        17,
+        64
+      ],
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "sha256_float32": "1d1676367f0139f358cb3dcbb4965c75e57c91520f07ffa64ee1960687575603",
+      "finite": true
+    },
+    "pre_final_norm_verified": true,
+    "sigmas": [
+      1.0,
+      0.9784529805183411,
+      0.9541800022125244,
+      0.9266260266304016,
+      0.8950799703598022,
+      0.8451480269432068,
+      0.7045339941978455,
+      0.4145680069923401,
+      0.0
+    ],
+    "steps": [
+      {
+        "index": 0,
+        "timestep": 1000.0,
+        "elapsed_seconds": 0.007201133295893669,
+        "latents": {
+          "shape": [
+            1,
+            4,
+            4
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "sha256_float32": "b148e23222b2ed4020cdf1d6f4bb1c083b1447489a2c531876f5faa6f2d3aad1",
+          "finite": true
+        }
+      },
+      {
+        "index": 1,
+        "timestep": 978.4530029296875,
+        "elapsed_seconds": 0.0030330047011375427,
+        "latents": {
+          "shape": [
+            1,
+            4,
+            4
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "sha256_float32": "8b52d5892b146fd25c09b1c71d46a1cce8d8a23437004bf30d77a48f7c6f6024",
+          "finite": true
+        }
+      },
+      {
+        "index": 2,
+        "timestep": 954.1799926757812,
+        "elapsed_seconds": 0.0029386538080871105,
+        "latents": {
+          "shape": [
+            1,
+            4,
+            4
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "sha256_float32": "09d01cfd35820c15c25a3e66533fcc6de7b3ae1807b66de0d06e7bb9524bb374",
+          "finite": true
+        }
+      },
+      {
+        "index": 3,
+        "timestep": 926.6260375976562,
+        "elapsed_seconds": 0.0030228239484131336,
+        "latents": {
+          "shape": [
+            1,
+            4,
+            4
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "sha256_float32": "6b87059a28c2c6d9a54afe40a83122f4a13df0d2595b63b34c4e7f31a73cbe0a",
+          "finite": true
+        }
+      },
+      {
+        "index": 4,
+        "timestep": 895.0799560546875,
+        "elapsed_seconds": 0.002905133180320263,
+        "latents": {
+          "shape": [
+            1,
+            4,
+            4
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "sha256_float32": "354bbe5d807de013d107a28f1978d9337d7dc2f57afac7f6010cc92200ef1250",
+          "finite": true
+        }
+      },
+      {
+        "index": 5,
+        "timestep": 845.1480102539062,
+        "elapsed_seconds": 0.0029021739028394222,
+        "latents": {
+          "shape": [
+            1,
+            4,
+            4
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "sha256_float32": "8034315a46265dd3f27b5eb10c6d5a764b344aca083908c2bcf0748eb1b11d56",
+          "finite": true
+        }
+      },
+      {
+        "index": 6,
+        "timestep": 704.5339965820312,
+        "elapsed_seconds": 0.00290099298581481,
+        "latents": {
+          "shape": [
+            1,
+            4,
+            4
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "sha256_float32": "dc31db4604c735edf9888d0cb64f0943f31f2bb6afb3fd21c651710792754a22",
+          "finite": true
+        }
+      },
+      {
+        "index": 7,
+        "timestep": 414.5679931640625,
+        "elapsed_seconds": 0.0029128328897058964,
+        "latents": {
+          "shape": [
+            1,
+            4,
+            4
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "sha256_float32": "60669f48260d92ff6a4800f3cf874b7eb6229cbb947cf6999e75681a0ee9132a",
+          "finite": true
+        }
+      }
+    ],
+    "decoded": {
+      "shape": [
+        1,
+        4,
+        1,
+        32,
+        32
+      ],
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "sha256_float32": "efc03fd995418a64250a166653b5b267cf5483bbd3e85be150598ece2559c608",
+      "finite": true
+    },
+    "prefix_cache_layers_populated": 2,
+    "condition_reference_images": 0
+  },
+  "PNG_sha256": "23c30cb776162ead4e7490faa3964db291c962f6ed0a5fb7dab96bbcd5cfdff5",
+  "cuda_context_initialized": true,
+  "native_after": {
+    "version": "0.5.12+das185.dtk2604.torch2100.2608191739.ga14e79",
+    "root": "/root/private_data/guoxin-wan-env-006-001/venv/lib/python3.10/site-packages",
+    "python_files_verified": 1989,
+    "wheel_sha256": "7c13be91a56b160af81847fffbf4f177b0f07fe0717b4042960ee23846ae7d61"
+  },
+  "native_unchanged": true,
+  "elapsed_seconds": 58.705038046929985
+}

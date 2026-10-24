@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "dtype": "torch.float32",
+      "exact_original_scale_shift_equal": true,
+      "exact_original_pixel_normalization_equal": true,
+      "old_multiply_diff_elements": 97,
+      "old_multiply_max_abs": 1.9073486328125e-06
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "exact_original_scale_shift_equal": true,
+      "exact_original_pixel_normalization_equal": true,
+      "old_multiply_diff_elements": 84,
+      "old_multiply_max_abs": 0.0625
+    }
+  ],
+  "upstream_decode_source_sha256": "81a9f3f6ee57f8955f4ce2dff248ac2d52bf616c19321b5fe60a27638ac6cdb7",
+  "stage_sha256": "faba96cda115018fc9e4fe7422f9db91e8402bf68898d9fea017590959b6969f",
+  "Torch": "2.10.0+cpu",
+  "GPU_tensor_compute": false,
+  "native_DAS": false,
+  "full_checkpoint_loaded": false,
+  "scope": "Unmodified original arithmetic functions executed on real Torch CPU; no native component runtime claim"
+}

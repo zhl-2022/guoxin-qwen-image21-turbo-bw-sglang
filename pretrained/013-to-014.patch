@@ -1,0 +1,997 @@
+--- 013/run_qwen21_pretrained013.py
++++ 014/run_qwen21_pretrained014.py
+@@ -1,190 +1,210 @@
+-"""Strict complete Qwen21 Turbo TP1 HCU generation, one load and multiple sizes."""
+-from __future__ import annotations
+-import argparse
+-import datetime as dt
+-import hashlib
+-import importlib.util
+-import json
+-import os
+-from pathlib import Path
+-import signal
+-import sys
+-import time
+-import traceback
+-
+-CHECKPOINT = Path("/root/private_data/guoxin-candidates/models/Qwen-Image-2.1-Turbo-fc13ba1986f")
+-LOCK_SHA256 = "dbab7a7daf5ac2e000eda646fbb74f0bdc8ee9fd4822199043e7b03cf4fec5fd"
+-
+-
+-def digest(path):
+-    value = hashlib.sha256()
+-    with path.open("rb") as stream:
+-        while block := stream.read(8 * 1024 * 1024):
+-            value.update(block)
+-    return value.hexdigest()
+-
+-
+-def event(name, **values):
+-    print(json.dumps({"event": name, **values}), flush=True)
+-
+-
+-def main():
+-    parser = argparse.ArgumentParser(description=__doc__)
+-    parser.add_argument("--bundle", type=Path, required=True)
+-    parser.add_argument("--expected-bundle-sha256", required=True)
+-    parser.add_argument("--shape-receipt", type=Path, required=True)
+-    parser.add_argument("--lock", type=Path, default=Path(__file__).resolve().with_name("download-sources009.json"))
+-    parser.add_argument("--headers", type=Path, default=Path(__file__).resolve().with_name("headers"))
+-    parser.add_argument("--resolutions", choices=("256", "256,512", "256,1024"), default="256,512")
+-    parser.add_argument("--output", type=Path, required=True)
+-    parser.add_argument("--max-seconds", type=int, default=1200)
+-    args = parser.parse_args()
+-    assert sys.platform == "linux" and sys.version_info[:2] == (3, 10)
+-    assert 120 <= args.max_seconds <= 3600
+-    bundle = args.bundle.resolve(strict=True)
+-    output = args.output.absolute()
+-    assert not output.exists() and bundle not in output.parents and CHECKPOINT not in output.parents
+-    assert not any(path.is_symlink() for path in (output, *output.parents, CHECKPOINT, *CHECKPOINT.parents))
+-    assert digest(bundle / "MANIFEST.json") == args.expected_bundle_sha256
+-    assert digest(args.lock) == LOCK_SHA256
+-    prior = json.loads(args.shape_receipt.read_text())
+-    assert prior["passed"] and prior["native_unchanged"]
+-    assert prior["bundle"]["sha256"] == args.expected_bundle_sha256
+-    assert all(row["bijection_and_shapes_verified"] and row["all_parameters_meta"] for row in prior["components"].values())
+-    lock = json.loads(args.lock.read_text())
+-    assert lock["hf_revision"] == "fc13ba1986fcb905854dc8de2f52eee395f49b5b" and len(lock["files"]) == 17
+-    output.mkdir(parents=True)
+-    record = {"schema": "qwen21-complete-pretrained013-v1", "passed": False,
+-        "model_id": "Qwen/Qwen-Image-2.1-Turbo", "model_revision": lock["hf_revision"],
+-        "checkpoint": str(CHECKPOINT), "bundle_manifest_sha256": args.expected_bundle_sha256,
+-        "shape_receipt_sha256": digest(args.shape_receipt), "pid": os.getpid(),
+-        "started_utc": dt.datetime.now(dt.timezone.utc).isoformat(), "verified_files": [], "samples": [],
+-        "GPU_tensor_compute": False, "all_weights_loaded": False, "official_accuracy_verified": False,
+-        "official_performance_verified": False, "submitted": False,
+-        "profile": {"TP": 1, "SP": 1, "batch": 1, "sigmas": 8, "attention": "torch_sdpa",
+-            "compile": False, "graphs": False, "quantization": False, "offload": False,
+-            "conditioning_cache": False, "new_BitExactFusionGate_paths": False},
+-        "scope": "Real complete pretrained development images; no official quality/performance claim"}
+-    record["driver_sources"] = {name: digest(Path(__file__).resolve().with_name(name)) for name in
+-        ("run_qwen21_pretrained013.py", "qwen21_pretrained012.py", "qwen21_t2i_stage011.py")}
+-    start = time.monotonic()
+-    core = None
+-    models = {}
+-    decoded = None
+-    def stop(signum, frame):
+-        raise TimeoutError("Owned complete Qwen generation deadline or signal: " + str(signum))
+-    for number in (signal.SIGALRM, signal.SIGINT, signal.SIGTERM): signal.signal(number, stop)
+-    signal.alarm(args.max_seconds)
+-    try:
+-        # Whole-file integrity is checked once per process before loading.
+-        for row in lock["files"]:
+-            path = CHECKPOINT / row["path"]
+-            assert path.is_file() and not any(item.is_symlink() for item in (path, *path.parents))
+-            assert path.stat().st_size == row["size"] and digest(path) == row["sha256"], row["path"]
+-            record["verified_files"].append({"path": row["path"], "size": row["size"], "sha256": row["sha256"]})
+-            event("actual_file_SHA_verified", path=row["path"], size=row["size"])
+-        spec = importlib.util.spec_from_file_location("qwen_core013", bundle / "probe_qwen21_core007.py")
+-        core = importlib.util.module_from_spec(spec); spec.loader.exec_module(core)
+-        record["bundle"] = core.check_bundle(bundle)
+-        record["native_before"] = core.native_snapshot(bundle)
+-        record["activation"] = core.activate(bundle)
+-        import torch
+-        torch.set_num_threads(2); torch.set_default_device("cpu"); torch.manual_seed(42)
+-        assert torch.version.hip is not None and torch.cuda.is_available(), "Genuine HCU/HIP required"
+-        torch.cuda.set_device(0)
+-        from sglang.multimodal_gen.runtime.platforms import current_platform
+-        assert current_platform.is_rocm() and not current_platform.is_cuda(), "Require actual native ROCm platform"
+-        record["platform"] = {"class": type(current_platform).__module__ + "." + type(current_platform).__name__,
+-            "torch": torch.__version__, "hip": torch.version.hip, "device_name": torch.cuda.get_device_name(0)}
+-        free, total = torch.cuda.mem_get_info(0)
+-        record["admission_GPU_memory"] = {"free": free, "total": total}
+-        weights_bytes = sum(row["size"] for row in lock["files"] if row["path"].endswith(".safetensors"))
+-        assert free >= weights_bytes + 8 * 1024**3, "Insufficient currently free device memory and reserve"
+-        from sglang.multimodal_gen.runtime.distributed.parallel_state import init_distributed_environment, initialize_model_parallel
+-        init_distributed_environment(world_size=1, rank=0, local_rank=0, backend="nccl",
+-            distributed_init_method=(output / "hcu-tp1-rendezvous").as_uri(), timeout=60)
+-        initialize_model_parallel(sequence_parallel_degree=1, tensor_parallel_degree=1, backend="nccl")
+-        from sglang.multimodal_gen.runtime.server_args import ServerArgs, set_global_server_args
+-        set_global_server_args(ServerArgs(model_path=str(CHECKPOINT), num_gpus=1,
+-            attention_backend="torch_sdpa", enable_torch_compile=False))
+-        from sglang.srt.server_args import ServerArgs as SRTServerArgs, set_global_server_args_for_scheduler
+-        set_global_server_args_for_scheduler(SRTServerArgs(model_path="None", device="cuda", rl_on_policy_target=None))
+-        from qwen21_pretrained012 import build_full_models, header_plan, load_component_native
+-        models = build_full_models(bundle / "model-assets")
+-        record["shape_plan"] = header_plan(args.headers, models)
+-        event("actual_full_meta_key_shape_plan_passed", components=record["shape_plan"])
+-        # Disable genuine optional optimization gates; the unmodified original
+-        # eager reduction/SDPA/residual paths remain selected on actual HIP.
+-        from sglang.kernels.ops.diffusion.sites.bitexact_gate import BitExactFusionGate
+-        disabled = []
+-        for module_name in ("sglang.multimodal_gen.runtime.models.dits.qwen_image21",
+-                "sglang.multimodal_gen.runtime.models.vaes.autoencoder_kl_qwenimage21"):
+-            for name, value in vars(sys.modules[module_name]).items():
+-                if isinstance(value, BitExactFusionGate):
+-                    value.disable(); disabled.append(module_name + "." + name)
+-        record["disabled_optional_gates"] = disabled
+-        record["loads"] = {}
+-        for component in ("text_encoder", "transformer", "vae"):
+-            rows = [row for row in lock["files"] if row["component"] == component]
+-            event("native_streaming_load_started", component=component)
+-            record["loads"][component] = load_component_native(models[component], component, CHECKPOINT, rows)
+-            event("native_streaming_load_complete", component=component)
+-        record["all_weights_loaded"] = True
+-        record["load_and_SHA_seconds"] = time.monotonic() - start
+-        from transformers import Qwen3VLProcessor
+-        from diffusers import FlowMatchEulerDiscreteScheduler
+-        from qwen21_t2i_stage011 import run_t2i
+-        from PIL import Image
+-        processor = Qwen3VLProcessor.from_pretrained(CHECKPOINT / "processor", local_files_only=True)
+-        scheduler = FlowMatchEulerDiscreteScheduler.from_pretrained(CHECKPOINT / "scheduler", local_files_only=True)
+-        sigmas = json.loads((CHECKPOINT / "model_index.json").read_text())["sample_sigmas"]
+-        for size in map(int, args.resolutions.split(",")):
+-            sample_start = time.monotonic()
+-            event("complete_pretrained_sample_started", height=size, width=size)
+-            decoded, chain = run_t2i(text_encoder=models["text_encoder"], dit=models["transformer"], vae=models["vae"],
+-                processor=processor, scheduler=scheduler, sigmas=sigmas,
+-                prompt="A red cube on a clean white background.", height=size, width=size, seed=42)
+-            assert decoded.device.type == "cuda"
+-            rgba = ((decoded[0, :, 0].float().clamp(-1, 1) + 1) / 2).permute(1, 2, 0).cpu().numpy()
+-            path = output / ("qwen21-pretrained013-" + str(size) + ".png")
+-            Image.fromarray((rgba * 255).round().astype("uint8"), mode="RGBA").save(path)
+-            torch.cuda.synchronize()
+-            sample = {"height": size, "width": size, "seed": 42, "prompt": "A red cube on a clean white background.",
+-                "png": path.name, "bytes": path.stat().st_size, "sha256": digest(path), "chain": chain,
+-                "elapsed_seconds_including_validation": time.monotonic() - sample_start,
+-                "GPU_memory_peak_allocated": torch.cuda.max_memory_allocated(0),
+-                "GPU_memory_peak_reserved": torch.cuda.max_memory_reserved(0)}
+-            record["samples"].append(sample); record["GPU_tensor_compute"] = True
+-            decoded = None
+-            event("complete_pretrained_sample_saved", height=size, width=size, sha256=sample["sha256"])
+-        record["passed"] = True
+-    except BaseException:
+-        record["traceback"] = traceback.format_exc()
+-        event("complete_pretrained_run_failed", last_line=record["traceback"].strip().splitlines()[-1])
+-    finally:
+-        signal.alarm(0)
+-        models.clear(); decoded = None
+-        try:
+-            if "torch" in sys.modules:
+-                torch = sys.modules["torch"]
+-                if torch.distributed.is_initialized(): torch.distributed.destroy_process_group()
+-                if torch.cuda.is_initialized():
+-                    torch.cuda.empty_cache()
+-                    record["post_cleanup_GPU_allocated"] = torch.cuda.memory_allocated(0)
+-                    record["post_cleanup_GPU_reserved"] = torch.cuda.memory_reserved(0)
+-                record["cuda_context_initialized"] = torch.cuda.is_initialized()
+-            if core and "native_before" in record:
+-                record["native_after"] = core.native_snapshot(bundle)
+-                record["native_unchanged"] = record["native_before"] == record["native_after"]
+-        except BaseException:
+-            record["cleanup_traceback"] = traceback.format_exc()
+-        record["finished_utc"] = dt.datetime.now(dt.timezone.utc).isoformat()
+-        record["elapsed_seconds"] = time.monotonic() - start
+-        with (output / "complete-pretrained013.json").open("x", encoding="utf-8") as stream:
+-            json.dump(record, stream, indent=2); stream.write("\n")
+-    event("complete_pretrained_run_finished", passed=record["passed"], output=str(output))
+-    return 0 if record["passed"] and record.get("native_unchanged") else 2
+-
+-
+-if __name__ == "__main__":
+-    raise SystemExit(main())
++"""Strict complete Qwen21 Turbo TP1 HCU generation, one load and multiple sizes."""
++from __future__ import annotations
++import argparse
++import datetime as dt
++import hashlib
++import importlib.util
++import json
++import os
++from pathlib import Path
++import signal
++import sys
++import time
++import traceback
++
++CHECKPOINT = Path("/root/private_data/guoxin-candidates/models/Qwen-Image-2.1-Turbo-fc13ba1986f")
++LOCK_SHA256 = "dbab7a7daf5ac2e000eda646fbb74f0bdc8ee9fd4822199043e7b03cf4fec5fd"
++
++
++def digest(path):
++    value = hashlib.sha256()
++    with path.open("rb") as stream:
++        while block := stream.read(8 * 1024 * 1024):
++            value.update(block)
++    return value.hexdigest()
++
++
++def event(name, **values):
++    print(json.dumps({"event": name, **values}), flush=True)
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument("--bundle", type=Path, required=True)
++    parser.add_argument("--expected-bundle-sha256", required=True)
++    parser.add_argument("--shape-receipt", type=Path, required=True)
++    parser.add_argument("--lock", type=Path, default=Path(__file__).resolve().with_name("download-sources009.json"))
++    parser.add_argument("--headers", type=Path, default=Path(__file__).resolve().with_name("headers"))
++    parser.add_argument("--resolutions", choices=("256", "256,512", "256,1024"), default="256,512")
++    parser.add_argument("--output", type=Path, required=True)
++    parser.add_argument("--max-seconds", type=int, default=1200)
++    args = parser.parse_args()
++    assert sys.platform == "linux" and sys.version_info[:2] == (3, 10)
++    assert 120 <= args.max_seconds <= 3600
++    bundle = args.bundle.resolve(strict=True)
++    output = args.output.absolute()
++    assert not output.exists() and bundle not in output.parents and CHECKPOINT not in output.parents
++    assert not any(path.is_symlink() for path in (output, *output.parents, CHECKPOINT, *CHECKPOINT.parents))
++    assert digest(bundle / "MANIFEST.json") == args.expected_bundle_sha256
++    assert digest(args.lock) == LOCK_SHA256
++    prior = json.loads(args.shape_receipt.read_text())
++    assert prior["passed"] and prior["native_unchanged"]
++    assert prior["bundle"]["sha256"] == args.expected_bundle_sha256
++    assert all(row["bijection_and_shapes_verified"] and row["all_parameters_meta"] for row in prior["components"].values())
++    lock = json.loads(args.lock.read_text())
++    assert lock["hf_revision"] == "fc13ba1986fcb905854dc8de2f52eee395f49b5b" and len(lock["files"]) == 17
++    output.mkdir(parents=True)
++    record = {"schema": "qwen21-complete-pretrained014-v1", "passed": False,
++        "model_id": "Qwen/Qwen-Image-2.1-Turbo", "model_revision": lock["hf_revision"],
++        "checkpoint": str(CHECKPOINT), "bundle_manifest_sha256": args.expected_bundle_sha256,
++        "shape_receipt_sha256": digest(args.shape_receipt), "pid": os.getpid(),
++        "started_utc": dt.datetime.now(dt.timezone.utc).isoformat(), "verified_files": [], "samples": [],
++        "GPU_tensor_compute": False, "all_weights_loaded": False, "official_accuracy_verified": False,
++        "official_performance_verified": False, "submitted": False,
++        "profile": {"TP": 1, "SP": 1, "batch": 1, "sigmas": 8, "attention": "torch_sdpa",
++            "compile": False, "graphs": False, "quantization": False, "offload": False,
++            "conditioning_cache": False, "new_BitExactFusionGate_paths": False},
++        "scope": "Real complete pretrained development images; no official quality/performance claim"}
++    record["driver_sources"] = {name: digest(Path(__file__).resolve().with_name(name)) for name in
++        ("run_qwen21_pretrained014.py", "qwen21_pretrained014.py", "qwen21_t2i_stage014.py")}
++    start = time.monotonic()
++    core = None
++    models = {}
++    decoded = None
++    def stop(signum, frame):
++        raise TimeoutError("Owned complete Qwen generation deadline or signal: " + str(signum))
++    for number in (signal.SIGALRM, signal.SIGINT, signal.SIGTERM): signal.signal(number, stop)
++    signal.alarm(args.max_seconds)
++    try:
++        # Whole-file integrity is checked once per process before loading.
++        for row in lock["files"]:
++            path = CHECKPOINT / row["path"]
++            assert path.is_file() and not any(item.is_symlink() for item in (path, *path.parents))
++            assert path.stat().st_size == row["size"] and digest(path) == row["sha256"], row["path"]
++            record["verified_files"].append({"path": row["path"], "size": row["size"], "sha256": row["sha256"]})
++            event("actual_file_SHA_verified", path=row["path"], size=row["size"])
++        spec = importlib.util.spec_from_file_location("qwen_core013", bundle / "probe_qwen21_core007.py")
++        core = importlib.util.module_from_spec(spec); spec.loader.exec_module(core)
++        record["bundle"] = core.check_bundle(bundle)
++        record["native_before"] = core.native_snapshot(bundle)
++        record["activation"] = core.activate(bundle)
++        import torch
++        torch.set_num_threads(2); torch.set_default_device("cpu"); torch.manual_seed(42)
++        assert torch.version.hip is not None and torch.cuda.is_available(), "Genuine HCU/HIP required"
++        torch.cuda.set_device(0)
++        # Actual HIP is already checked; select the genuine installed ROCm
++        # platform explicitly so optional vendor-management detection cannot
++        # misclassify HCU as NVIDIA. No implementation is replaced.
++        import sglang.multimodal_gen.runtime.platforms as platforms
++        from sglang.multimodal_gen.runtime.platforms.rocm import RocmPlatform
++        platforms._current_platform = RocmPlatform()
++        current_platform = platforms.current_platform
++        assert current_platform.is_rocm() and not current_platform.is_cuda(), "Require actual native ROCm platform"
++        record["platform"] = {"class": type(current_platform).__module__ + "." + type(current_platform).__name__,
++            "torch": torch.__version__, "hip": torch.version.hip, "device_name": torch.cuda.get_device_name(0)}
++        free, total = torch.cuda.mem_get_info(0)
++        record["admission_GPU_memory"] = {"free": free, "total": total}
++        weights_bytes = sum(row["size"] for row in lock["files"] if row["path"].endswith(".safetensors"))
++        assert free >= weights_bytes + 8 * 1024**3, "Insufficient currently free device memory and reserve"
++        from sglang.multimodal_gen.runtime.distributed.parallel_state import init_distributed_environment, initialize_model_parallel
++        init_distributed_environment(world_size=1, rank=0, local_rank=0, backend="nccl",
++            distributed_init_method=(output / "hcu-tp1-rendezvous").as_uri(), timeout=60)
++        initialize_model_parallel(sequence_parallel_degree=1, tensor_parallel_degree=1, backend="nccl")
++        from sglang.multimodal_gen.runtime.server_args import ServerArgs, set_global_server_args
++        from sglang.multimodal_gen.configs.pipeline_configs.qwen_image21 import QwenImage21PipelineConfig
++        pipeline_config = QwenImage21PipelineConfig()
++        pipeline_config.sample_sigmas = json.loads((CHECKPOINT / "model_index.json").read_text())["sample_sigmas"]
++        set_global_server_args(ServerArgs(model_path=str(CHECKPOINT), num_gpus=1,
++            pipeline_config=pipeline_config, disable_autocast=True,
++            attention_backend="torch_sdpa", enable_torch_compile=False))
++        from sglang.srt.server_args import ServerArgs as SRTServerArgs, set_global_server_args_for_scheduler
++        set_global_server_args_for_scheduler(SRTServerArgs(model_path="None", device="cuda", rl_on_policy_target=None))
++        from qwen21_pretrained014 import build_full_models, header_plan, load_component_native
++        models = build_full_models(bundle / "model-assets")
++        record["shape_plan"] = header_plan(args.headers, models)
++        event("actual_full_meta_key_shape_plan_passed", components=record["shape_plan"])
++        # Disable genuine optional optimization gates; the unmodified original
++        # eager reduction/SDPA/residual paths remain selected on actual HIP.
++        from sglang.kernels.ops.diffusion.sites.bitexact_gate import BitExactFusionGate
++        disabled = []
++        for module_name in ("sglang.multimodal_gen.runtime.models.dits.qwen_image21",
++                "sglang.multimodal_gen.runtime.models.vaes.autoencoder_kl_qwenimage21"):
++            for name, value in vars(sys.modules[module_name]).items():
++                if isinstance(value, BitExactFusionGate):
++                    value.disable(); disabled.append(module_name + "." + name)
++        record["disabled_optional_gates"] = disabled
++        record["loads"] = {}
++        for component in ("text_encoder", "transformer", "vae"):
++            rows = [row for row in lock["files"] if row["component"] == component]
++            event("native_streaming_load_started", component=component)
++            record["loads"][component] = load_component_native(models[component], component, CHECKPOINT, rows)
++            event("native_streaming_load_complete", component=component)
++        record["all_weights_loaded"] = True
++        record["GPU_tensors_loaded"] = True
++        record["load_and_SHA_seconds"] = time.monotonic() - start
++        from transformers import Qwen3VLProcessor
++        from diffusers import FlowMatchEulerDiscreteScheduler
++        from qwen21_t2i_stage014 import run_t2i
++        from PIL import Image
++        processor = Qwen3VLProcessor.from_pretrained(CHECKPOINT / "processor", local_files_only=True)
++        scheduler = FlowMatchEulerDiscreteScheduler.from_pretrained(CHECKPOINT / "scheduler", local_files_only=True)
++        sigmas = json.loads((CHECKPOINT / "model_index.json").read_text())["sample_sigmas"]
++        def on_stage(name, **values):
++            if str(values.get("device", "")).startswith("cuda"):
++                record["GPU_tensor_compute"] = True
++            event(name, **values)
++        for size in map(int, args.resolutions.split(",")):
++            sample_start = time.monotonic()
++            event("complete_pretrained_sample_started", height=size, width=size)
++            record["GPU_compute_attempted"] = True
++            # Until a genuine component forward completes, a partial exception
++            # does not prove absence of GPU work.
++            if record["GPU_tensor_compute"] is False:
++                record["GPU_tensor_compute"] = None
++            decoded, chain = run_t2i(text_encoder=models["text_encoder"], dit=models["transformer"], vae=models["vae"],
++                processor=processor, scheduler=scheduler, sigmas=sigmas,
++                prompt="A red cube on a clean white background.", height=size, width=size, seed=42, progress=on_stage)
++            assert decoded.device.type == "cuda"
++            rgba = ((decoded[0, :, 0] / 2 + 0.5).clamp(0, 1)).float().permute(1, 2, 0).cpu().numpy()
++            path = output / ("qwen21-pretrained014-" + str(size) + ".png")
++            Image.fromarray((rgba * 255).round().astype("uint8"), mode="RGBA").save(path)
++            torch.cuda.synchronize()
++            sample = {"height": size, "width": size, "seed": 42, "prompt": "A red cube on a clean white background.",
++                "png": path.name, "bytes": path.stat().st_size, "sha256": digest(path), "chain": chain,
++                "elapsed_seconds_including_validation": time.monotonic() - sample_start,
++                "GPU_memory_peak_allocated": torch.cuda.max_memory_allocated(0),
++                "GPU_memory_peak_reserved": torch.cuda.max_memory_reserved(0)}
++            record["samples"].append(sample); record["GPU_tensor_compute"] = True
++            decoded = None
++            event("complete_pretrained_sample_saved", height=size, width=size, sha256=sample["sha256"])
++        record["passed"] = True
++    except BaseException:
++        record["traceback"] = traceback.format_exc()
++        event("complete_pretrained_run_failed", last_line=record["traceback"].strip().splitlines()[-1])
++    finally:
++        signal.alarm(0)
++        models.clear(); decoded = None
++        try:
++            if "torch" in sys.modules:
++                torch = sys.modules["torch"]
++                if torch.distributed.is_initialized(): torch.distributed.destroy_process_group()
++                if torch.cuda.is_initialized():
++                    torch.cuda.empty_cache()
++                    record["post_cleanup_GPU_allocated"] = torch.cuda.memory_allocated(0)
++                    record["post_cleanup_GPU_reserved"] = torch.cuda.memory_reserved(0)
++                record["cuda_context_initialized"] = torch.cuda.is_initialized()
++            if core and "native_before" in record:
++                record["native_after"] = core.native_snapshot(bundle)
++                record["native_unchanged"] = record["native_before"] == record["native_after"]
++        except BaseException:
++            record["cleanup_traceback"] = traceback.format_exc()
++        record["finished_utc"] = dt.datetime.now(dt.timezone.utc).isoformat()
++        record["elapsed_seconds"] = time.monotonic() - start
++        with (output / "complete-pretrained014.json").open("x", encoding="utf-8") as stream:
++            json.dump(record, stream, indent=2); stream.write("\n")
++    event("complete_pretrained_run_finished", passed=record["passed"], output=str(output))
++    return 0 if record["passed"] and record.get("native_unchanged") else 2
++
++
++if __name__ == "__main__":
++    raise SystemExit(main())
+--- 013/qwen21_pretrained012.py
++++ 014/qwen21_pretrained014.py
+@@ -1,152 +1,189 @@
+-"""Exact full architectures, bijective checkpoint plan and native streaming load."""
+-from __future__ import annotations
+-import dataclasses
+-import hashlib
+-import json
+-from pathlib import Path
+-
+-
+-def build_full_models(assets):
+-    import torch
+-    from types import SimpleNamespace
+-    from transformers import Qwen3VLConfig as HFConfig
+-    from sglang.multimodal_gen.runtime.loader.utils import set_default_torch_dtype
+-    from sglang.multimodal_gen.configs.models.dits.qwenimage21 import QwenImage21ArchConfig, QwenImage21DitConfig
+-    from sglang.multimodal_gen.configs.models.vaes.qwenimage21 import QwenImage21VAEArchConfig, QwenImage21VAEConfig
+-    from sglang.multimodal_gen.runtime.models.encoders.qwen3vl import Qwen3VLForConditionalGeneration
+-    from sglang.multimodal_gen.runtime.models.dits.qwen_image21 import QwenImage21Transformer2DModel
+-    from sglang.multimodal_gen.runtime.models.vaes.autoencoder_kl_qwenimage21 import AutoencoderKLQwenImage21
+-
+-    def config_values(path, arch_type):
+-        raw = json.loads(path.read_text())
+-        accepted = {field.name for field in dataclasses.fields(arch_type)}
+-        unknown = [name for name in raw if name not in accepted and not name.startswith("_")]
+-        if unknown:
+-            raise ValueError("Unconsumed exact architecture fields: " + repr(unknown))
+-        return {name: value for name, value in raw.items() if name in accepted}
+-
+-    hf_config = HFConfig.from_pretrained(assets / "text_encoder", local_files_only=True)
+-    hf_config._fsdp_shard_conditions = []; hf_config.stacked_params_mapping = []
+-    dit_config = QwenImage21DitConfig(arch_config=QwenImage21ArchConfig(**config_values(
+-        assets / "transformer/config.json", QwenImage21ArchConfig)))
+-    vae_config = QwenImage21VAEConfig(arch_config=QwenImage21VAEArchConfig(**config_values(
+-        assets / "vae/config.json", QwenImage21VAEArchConfig)))
+-    vae_config.use_tiling = vae_config.use_temporal_tiling = False
+-    vae_config.use_parallel_decode = vae_config.use_parallel_tiling = False
+-    with set_default_torch_dtype(torch.bfloat16), torch.device("meta"):
+-        models = {
+-            "text_encoder": Qwen3VLForConditionalGeneration(SimpleNamespace(arch_config=hf_config, quant_config=None)),
+-            "transformer": QwenImage21Transformer2DModel(dit_config, json.loads((assets / "transformer/config.json").read_text())),
+-            "vae": AutoencoderKLQwenImage21(vae_config),
+-        }
+-    return models
+-
+-
+-def map_name(component, name):
+-    # Exact concrete Qwen3VL.load_weights conversion. These published headers
+-    # contain no rotary_emb.inv_freq entry and no stacked/merge mapping.
+-    if component == "text_encoder" and "visual." in name:
+-        return name.replace(".attn.qkv.", ".attn.qkv_proj.")
+-    return name
+-
+-
+-def header_plan(directory, models):
+-    receipt = json.loads((directory / "header-receipt012.json").read_text())
+-    expected_lock = "dbab7a7daf5ac2e000eda646fbb74f0bdc8ee9fd4822199043e7b03cf4fec5fd"
+-    assert receipt["source_lock_sha256"] == expected_lock and len(receipt["files"]) == 4
+-    mapped = {component: {} for component in models}
+-    source_count = {component: 0 for component in models}
+-    for row in receipt["files"]:
+-        raw = (directory / row["saved_header"]).read_bytes()
+-        assert len(raw) == row["actual_header_bytes"] and hashlib.sha256(raw).hexdigest() == row["actual_header_sha256"]
+-        component = row["component"]
+-        for name, value in json.loads(raw).items():
+-            if name == "__metadata__":
+-                continue
+-            target = map_name(component, name)
+-            assert "rotary_emb.inv_freq" not in name
+-            assert target not in mapped[component], "Duplicate mapped parameter: " + target
+-            mapped[component][target] = {"source_name": name, "shape": value["shape"],
+-                "dtype": value["dtype"], "checkpoint_file": row["path"]}
+-            source_count[component] += 1
+-    results = {}
+-    for component, model in models.items():
+-        expected = model.state_dict()
+-        names = set(expected)
+-        actual = set(mapped[component])
+-        missing, unexpected = sorted(names - actual), sorted(actual - names)
+-        shape_mismatch = [{"name": name, "model": list(expected[name].shape), "checkpoint": mapped[component][name]["shape"]}
+-            for name in sorted(names & actual) if list(expected[name].shape) != mapped[component][name]["shape"]]
+-        assert not missing and not unexpected and not shape_mismatch, {
+-            "component": component, "missing": missing, "unexpected": unexpected, "shape_mismatch": shape_mismatch}
+-        assert all(value["dtype"] == "BF16" for value in mapped[component].values())
+-        results[component] = {"source_keys": source_count[component], "target_keys": len(expected),
+-            "bijection_and_shapes_verified": True, "mapped_names_sha256": hashlib.sha256(json.dumps(mapped[component], sort_keys=True).encode()).hexdigest(),
+-            "parameters": sum(parameter.numel() for parameter in model.parameters()),
+-            "all_parameters_meta": all(parameter.is_meta for parameter in model.parameters()),
+-            "meta_buffers": [{"name": name, "shape": list(value.shape), "dtype": str(value.dtype)}
+-                for name, value in model.named_buffers() if value.is_meta],
+-            "custom_weight_loader_parameters": sum(hasattr(parameter, "weight_loader") for parameter in model.parameters()),
+-            "missing_key_synthesis_permitted": False, "merge_or_duplicate_keys_permitted": False}
+-    return results
+-
+-
+-def readonly_weight_iterator(root, rows):
+-    from safetensors import safe_open
+-    seen = set()
+-    for row in rows:
+-        path = root / row["path"]
+-        assert path.is_file() and not path.is_symlink()
+-        with safe_open(path, framework="pt", device="cpu") as handle:
+-            for name in handle.keys():
+-                assert name not in seen, "Duplicate checkpoint key: " + name
+-                seen.add(name)
+-                yield name, handle.get_tensor(name)
+-
+-
+-def load_component_native(model, component, checkpoint_root, rows):
+-    """Preserve native custom parameter loaders after strict header-plan approval.
+-
+-    Caller must first validate whole-file disk SHAs and header_plan for this exact
+-    model. Native streaming loader receives a one-to-one mapping, so legacy merge
+-    buffering and missing-parameter synthesis cannot be reached for this plan.
+-    """
+-    import torch
+-    from sglang.multimodal_gen.runtime.loader.fsdp_load import load_model_from_streaming_state_dict
+-    device = torch.device("cuda", 0)
+-    mapping = lambda name: (map_name(component, name), None, None)
+-    result = load_model_from_streaming_state_dict(model,
+-        readonly_weight_iterator(checkpoint_root, rows), device, torch.bfloat16,
+-        strict=True, cpu_offload=False, param_names_mapping=mapping)
+-    assert not result.missing_keys and not result.unexpected_keys
+-    assert not any(parameter.is_meta for parameter in model.parameters())
+-    # Recompute only the exact two known nonpersistent positional caches using
+-    # their genuine original methods/classes. No parameter or unknown buffer is
+-    # synthesized. Dtypes follow the already-constructed native meta buffer.
+-    rebuilt = []
+-    for module_name, module in model.named_modules():
+-        for name, value in list(module._buffers.items()):
+-            if value is None:
+-                continue
+-            if value.is_meta:
+-                if name == "cos_sin_cache" and type(module).__module__.startswith("sglang.srt.layers.rotary_embedding."):
+-                    actual = module._compute_cos_sin_cache()
+-                elif name == "inv_freq" and type(module).__name__ == "Qwen3VLVisionRotaryEmbedding":
+-                    actual = type(module)(module.dim).inv_freq
+-                else:
+-                    raise ValueError("Unsupported unmaterialized buffer: " + module_name + "." + name)
+-                module._buffers[name] = actual.to(device=device, dtype=value.dtype)
+-                rebuilt.append(module_name + "." + name)
+-            elif value.device != device:
+-                module._buffers[name] = value.to(device=device)
+-    for module in model.modules():
+-        method = getattr(getattr(module, "quant_method", None), "process_weights_after_loading", None)
+-        if method is not None:
+-            method(module)
+-    post = getattr(model, "post_load_weights", None)
+-    if post is not None:
+-        post()
+-    assert not any(value.is_meta for value in (*model.parameters(), *model.buffers()))
+-    model.eval().requires_grad_(False)
+-    return {"missing": [], "unexpected": [], "native_streaming_custom_loaders_preserved": True,
+-        "positional_buffers_rebuilt_by_original_code": rebuilt}
++"""Exact full architectures, bijective checkpoint plan and native streaming load."""
++from __future__ import annotations
++import dataclasses
++import hashlib
++import json
++from pathlib import Path
++
++
++def build_full_models(assets):
++    import torch
++    from types import SimpleNamespace
++    from transformers import Qwen3VLConfig as HFConfig
++    from sglang.multimodal_gen.runtime.loader.utils import set_default_torch_dtype
++    from sglang.multimodal_gen.configs.models.dits.qwenimage21 import QwenImage21ArchConfig, QwenImage21DitConfig
++    from sglang.multimodal_gen.configs.models.vaes.qwenimage21 import QwenImage21VAEArchConfig, QwenImage21VAEConfig
++    from sglang.multimodal_gen.runtime.models.encoders.qwen3vl import Qwen3VLForConditionalGeneration
++    from sglang.multimodal_gen.runtime.models.dits.qwen_image21 import QwenImage21Transformer2DModel
++    from sglang.multimodal_gen.runtime.models.vaes.autoencoder_kl_qwenimage21 import AutoencoderKLQwenImage21
++
++    def config_values(path, arch_type):
++        raw = json.loads(path.read_text())
++        accepted = {field.name for field in dataclasses.fields(arch_type)}
++        unknown = [name for name in raw if name not in accepted and not name.startswith("_")]
++        if unknown:
++            raise ValueError("Unconsumed exact architecture fields: " + repr(unknown))
++        return {name: value for name, value in raw.items() if name in accepted}
++
++    hf_config = HFConfig.from_pretrained(assets / "text_encoder", local_files_only=True)
++    hf_config._fsdp_shard_conditions = []; hf_config.stacked_params_mapping = []
++    dit_config = QwenImage21DitConfig(arch_config=QwenImage21ArchConfig(**config_values(
++        assets / "transformer/config.json", QwenImage21ArchConfig)))
++    vae_config = QwenImage21VAEConfig(arch_config=QwenImage21VAEArchConfig(**config_values(
++        assets / "vae/config.json", QwenImage21VAEArchConfig)))
++    vae_config.use_tiling = vae_config.use_temporal_tiling = False
++    vae_config.use_parallel_decode = vae_config.use_parallel_tiling = False
++    with set_default_torch_dtype(torch.bfloat16), torch.device("meta"):
++        models = {
++            "text_encoder": Qwen3VLForConditionalGeneration(SimpleNamespace(arch_config=hf_config, quant_config=None)),
++            "transformer": QwenImage21Transformer2DModel(dit_config, json.loads((assets / "transformer/config.json").read_text())),
++            "vae": AutoencoderKLQwenImage21(vae_config),
++        }
++    return models
++
++
++def map_name(component, name):
++    # Exact concrete Qwen3VL.load_weights conversion. These published headers
++    # contain no rotary_emb.inv_freq entry and no stacked/merge mapping.
++    if component == "text_encoder" and "visual." in name:
++        return name.replace(".attn.qkv.", ".attn.qkv_proj.")
++    return name
++
++
++def header_plan(directory, models):
++    receipt = json.loads((directory / "header-receipt012.json").read_text())
++    expected_lock = "dbab7a7daf5ac2e000eda646fbb74f0bdc8ee9fd4822199043e7b03cf4fec5fd"
++    assert receipt["source_lock_sha256"] == expected_lock and len(receipt["files"]) == 4
++    mapped = {component: {} for component in models}
++    source_count = {component: 0 for component in models}
++    for row in receipt["files"]:
++        raw = (directory / row["saved_header"]).read_bytes()
++        assert len(raw) == row["actual_header_bytes"] and hashlib.sha256(raw).hexdigest() == row["actual_header_sha256"]
++        component = row["component"]
++        for name, value in json.loads(raw).items():
++            if name == "__metadata__":
++                continue
++            target = map_name(component, name)
++            assert "rotary_emb.inv_freq" not in name
++            assert target not in mapped[component], "Duplicate mapped parameter: " + target
++            mapped[component][target] = {"source_name": name, "shape": value["shape"],
++                "dtype": value["dtype"], "checkpoint_file": row["path"]}
++            source_count[component] += 1
++    results = {}
++    for component, model in models.items():
++        expected = model.state_dict()
++        names = set(expected)
++        actual = set(mapped[component])
++        missing, unexpected = sorted(names - actual), sorted(actual - names)
++        shape_mismatch = [{"name": name, "model": list(expected[name].shape), "checkpoint": mapped[component][name]["shape"]}
++            for name in sorted(names & actual) if list(expected[name].shape) != mapped[component][name]["shape"]]
++        assert not missing and not unexpected and not shape_mismatch, {
++            "component": component, "missing": missing, "unexpected": unexpected, "shape_mismatch": shape_mismatch}
++        assert all(value["dtype"] == "BF16" for value in mapped[component].values())
++        results[component] = {"source_keys": source_count[component], "target_keys": len(expected),
++            "bijection_and_shapes_verified": True, "mapped_names_sha256": hashlib.sha256(json.dumps(mapped[component], sort_keys=True).encode()).hexdigest(),
++            "parameters": sum(parameter.numel() for parameter in model.parameters()),
++            "all_parameters_meta": all(parameter.is_meta for parameter in model.parameters()),
++            "meta_buffers": [{"name": name, "shape": list(value.shape), "dtype": str(value.dtype)}
++                for name, value in model.named_buffers() if value.is_meta],
++            "custom_weight_loader_parameters": sum(hasattr(parameter, "weight_loader") for parameter in model.parameters()),
++            "missing_key_synthesis_permitted": False, "merge_or_duplicate_keys_permitted": False}
++    return results
++
++
++def readonly_weight_iterator(root, rows):
++    from safetensors import safe_open
++    seen = set()
++    for row in rows:
++        path = root / row["path"]
++        assert path.is_file() and not path.is_symlink()
++        with safe_open(path, framework="pt", device="cpu") as handle:
++            for name in handle.keys():
++                assert name not in seen, "Duplicate checkpoint key: " + name
++                seen.add(name)
++                yield name, handle.get_tensor(name)
++
++
++def load_component_native(model, component, checkpoint_root, rows):
++    """Preserve native custom parameter loaders after strict header-plan approval.
++
++    Caller must first validate whole-file disk SHAs and header_plan for this exact
++    model. Native streaming loader receives a one-to-one mapping, so legacy merge
++    buffering and missing-parameter synthesis cannot be reached for this plan.
++    """
++    import torch
++    from sglang.multimodal_gen.runtime.loader.fsdp_load import load_model_from_streaming_state_dict
++    device = torch.device("cuda", 0)
++    original_custom = {name for name, parameter in model.named_parameters() if hasattr(parameter, "weight_loader")}
++    mapping = lambda name: (map_name(component, name), None, None)
++    result = load_model_from_streaming_state_dict(model,
++        readonly_weight_iterator(checkpoint_root, rows), device, torch.bfloat16,
++        strict=True, cpu_offload=False, param_names_mapping=mapping)
++    assert not result.missing_keys and not result.unexpected_keys
++    assert not any(parameter.is_meta for parameter in model.parameters())
++    # Check actual payload values after native custom loaders and before native
++    # post-load packing. Select bounded source first/last and custom first/last
++    # candidates, at most32MiB each; large embedding tensors are excluded.
++    from safetensors import safe_open
++    candidates = {}
++    for row in rows:
++        with safe_open(checkpoint_root / row["path"], framework="pt", device="cpu") as handle:
++            for name in handle.keys():
++                shape = handle.get_slice(name).get_shape()
++                count = 1
++                for dim in shape: count *= dim
++                if count * 2 <= 32 * 1024**2:
++                    target = map_name(component, name)
++                    assert target not in candidates
++                    candidates[target] = (row["path"], name)
++    names = sorted(candidates)
++    custom_names = sorted(set(names) & original_custom)
++    selected = list(dict.fromkeys([names[0], names[-1]] +
++        ([custom_names[0], custom_names[-1]] if custom_names else [])))
++    parameters = dict(model.named_parameters())
++    value_checks = []
++    for name in selected:
++        filename, source_name = candidates[name]
++        with safe_open(checkpoint_root / filename, framework="pt", device="cpu") as handle:
++            reference = handle.get_tensor(source_name)
++            actual = parameters[name].detach().cpu().contiguous()
++            assert actual.shape == reference.shape and actual.dtype == reference.dtype
++            assert torch.equal(actual, reference), "Loaded native parameter value differs: " + name
++            def bits(value):
++                return hashlib.sha256(value.contiguous().reshape(-1).view(torch.uint8).numpy().tobytes()).hexdigest()
++            actual_sha, reference_sha = bits(actual), bits(reference)
++            assert actual_sha == reference_sha
++            value_checks.append({"parameter": name, "source_name": source_name,
++                "bytes": actual.numel() * actual.element_size(), "dtype": str(actual.dtype),
++                "actual_sha256": actual_sha, "source_sha256": reference_sha,
++                "native_custom_weight_loader": name in original_custom, "exact_equal": True})
++    # Recompute only the exact two known nonpersistent positional caches using
++    # their genuine original methods/classes. No parameter or unknown buffer is
++    # synthesized. Dtypes follow the already-constructed native meta buffer.
++    rebuilt = []
++    for module_name, module in model.named_modules():
++        for name, value in list(module._buffers.items()):
++            if value is None:
++                continue
++            if value.is_meta:
++                if name == "cos_sin_cache" and type(module).__module__.startswith("sglang.srt.layers.rotary_embedding."):
++                    actual = module._compute_cos_sin_cache()
++                elif name == "inv_freq" and type(module).__name__ == "Qwen3VLVisionRotaryEmbedding":
++                    actual = type(module)(module.dim).inv_freq
++                else:
++                    raise ValueError("Unsupported unmaterialized buffer: " + module_name + "." + name)
++                module._buffers[name] = actual.to(device=device, dtype=value.dtype)
++                rebuilt.append(module_name + "." + name)
++            elif value.device != device:
++                module._buffers[name] = value.to(device=device)
++    for module in model.modules():
++        method = getattr(getattr(module, "quant_method", None), "process_weights_after_loading", None)
++        if method is not None:
++            method(module)
++    post = getattr(model, "post_load_weights", None)
++    if post is not None:
++        post()
++    assert not any(value.is_meta for value in (*model.parameters(), *model.buffers()))
++    model.eval().requires_grad_(False)
++    return {"missing": [], "unexpected": [], "native_streaming_custom_loaders_preserved": True,
++        "positional_buffers_rebuilt_by_original_code": rebuilt, "actual_parameter_value_checks": value_checks}
+--- 013/qwen21_t2i_stage011.py
++++ 014/qwen21_t2i_stage014.py
+@@ -1,114 +1,133 @@
+-# SPDX-License-Identifier: Apache-2.0
+-# Prompt/layout math adapted from the fixed Qwen Team SGLang Qwen-Image2.1 stage:
+-# efc9849520216b31b8a4a4322399e47e8dbde067.
+-"""Minimal single-request real-model T2I orchestration for a strict TP1 profile."""
+-from __future__ import annotations
+-import hashlib
+-import time
+-
+-SYSTEM_PROMPT = "Comprehend and analyze the provided prompt."
+-SYSTEM_TEMPLATE = f"<|im_start|>system\n{SYSTEM_PROMPT}<|im_end|>\n"
+-SIGMAS = [1.0, .978453, .95418, .926626, .89508, .845148, .704534, .414568]
+-
+-
+-def collapse_image_slots(hidden, input_ids, image_token_id):
+-    image_mask = input_ids == image_token_id
+-    keep = ~image_mask
+-    keep[0] = True
+-    keep[1:] |= image_mask[1:] & ~image_mask[:-1]
+-    return hidden[keep], image_mask[keep]
+-
+-
+-def prompt_inputs(processor, prompt):
+-    """The original no-reference-image branch of upstream _encode_prompt."""
+-    if not isinstance(prompt, str) or len(prompt) > 1024:
+-        raise ValueError("One text prompt of at most1024 characters required")
+-    text = SYSTEM_TEMPLATE + f"<|im_start|>user\n{prompt or ' '}<|im_end|>\n<|im_start|>assistant\n"
+-    inputs = processor(text=[text], padding=True, padding_side="left", return_tensors="pt")
+-    system_message = [{"role": "system", "content": [{"type": "text", "text": SYSTEM_PROMPT}]}]
+-    drop_idx = len(processor.apply_chat_template(system_message, tokenize=True, return_dict=False)[0])
+-    image_token_id = processor.tokenizer.convert_tokens_to_ids("<|image_pad|>")
+-    return inputs, drop_idx, image_token_id
+-
+-
+-def tensor_fingerprint(tensor):
+-    import torch
+-    assert torch.isfinite(tensor).all()
+-    return {"shape": list(tensor.shape), "dtype": str(tensor.dtype), "device": str(tensor.device),
+-        "sha256_float32": hashlib.sha256(tensor.detach().float().cpu().contiguous().numpy().tobytes()).hexdigest(),
+-        "finite": True}
+-
+-
+-def run_t2i(*, text_encoder, dit, vae, processor, scheduler, sigmas, prompt, height, width, seed):
+-    """Connect genuine components. No component implementation is replaced here.
+-
+-    T2I only, batch1, TP1, SP1, true CFG1, eager. Conditioning-cache/offload/graph
+-    orchestration is absent; genuine model prefix K/V caching follows upstream.
+-    The caller supplies loaded models and config; this function loads no weights.
+-    """
+-    import torch
+-    from diffusers.utils.torch_utils import randn_tensor
+-    from sglang.multimodal_gen.runtime.managers.forward_context import set_forward_context
+-    from sglang.multimodal_gen.runtime.models.dits.qwen_image21 import build_layout
+-    assert list(sigmas) == SIGMAS
+-    assert height >= 32 and width >= 32 and height % 32 == width % 32 == 0
+-    device = next(dit.parameters()).device
+-    dit_dtype = next(dit.parameters()).dtype
+-    assert next(text_encoder.parameters()).device == next(vae.parameters()).device == device
+-    text_encoder.model.visual.fp32_position_interpolation = False
+-    text_encoder.model.visual.rotary_pos_emb.recompute_on_device_change = True
+-    inputs, drop_idx, image_token_id = prompt_inputs(processor, prompt)
+-    inputs = inputs.to(device)
+-    captured = []
+-    norm = text_encoder.model.language_model.norm
+-    handle = norm.register_forward_pre_hook(lambda module, values: captured.append(values[0].detach()))
+-    try:
+-        with torch.inference_mode(), set_forward_context(current_timestep=None, attn_metadata=None):
+-            output = text_encoder(**inputs, output_hidden_states=True, use_cache=False, logits_to_keep=1)
+-        final_hidden = output.hidden_states[-1]
+-        assert len(captured) == 1 and torch.equal(final_hidden, captured[0]), "Conditioner must return pre-final-norm"
+-    finally:
+-        handle.remove()
+-    valid = inputs.attention_mask[0].bool()
+-    hidden = final_hidden[0, valid][drop_idx:]
+-    ids = inputs.input_ids[0, valid][drop_idx:]
+-    hidden, slots = collapse_image_slots(hidden, ids, image_token_id)
+-    assert hidden.shape[0] > 0 and not slots.any(), "T2I entry forbids reference-image slots"
+-    layout = build_layout(slots.tolist(), [(1, height // 16, width // 16)], dit.config.axes_dims_rope, device)
+-    conditioning = hidden[None].to(dtype=dit_dtype)
+-    generator = torch.Generator(device="cpu").manual_seed(seed)
+-    latents = randn_tensor((1, 1, dit.config.in_channels, height // 16, width // 16),
+-        generator=generator, device=device, dtype=dit_dtype)
+-    latents = latents.reshape(1, dit.config.in_channels, -1).transpose(1, 2)
+-    sched = scheduler.config
+-    length = (height // 16) * (width // 16)
+-    base_length, max_length = sched.get("base_image_seq_len", 256), sched.get("max_image_seq_len", 4096)
+-    slope = (sched.get("max_shift", 1.15) - sched.get("base_shift", .5)) / (max_length - base_length)
+-    mu = length * slope + sched.get("base_shift", .5) - base_length * slope
+-    scheduler.set_timesteps(sigmas=list(sigmas), device=device, mu=mu)
+-    assert len(scheduler.timesteps) == 8 and len(scheduler.sigmas) == 9
+-    caches = [[{} for _ in range(dit.config.num_layers)]]
+-    steps = []
+-    with torch.inference_mode():
+-        for index, timestep in enumerate(scheduler.timesteps):
+-            started = time.monotonic()
+-            with set_forward_context(current_timestep=index, attn_metadata=None):
+-                noise = dit(hidden_states=latents, encoder_hidden_states=conditioning,
+-                    timestep=timestep.expand(1).to(dtype=dit_dtype), layouts=[layout], prefix_caches=caches)
+-            assert noise.shape == latents.shape
+-            latents = scheduler.step(noise, timestep, latents, return_dict=False)[0]
+-            assert all(cache.get("key") is not None and cache.get("value") is not None for cache in caches[0])
+-            steps.append({"index": index, "timestep": float(timestep), "elapsed_seconds": time.monotonic() - started,
+-                "latents": tensor_fingerprint(latents)})
+-        unpacked = latents.transpose(1, 2).reshape(1, -1, 1, height // 16, width // 16)
+-        ac = vae.config.arch_config
+-        vae_dtype = next(vae.parameters()).dtype
+-        mean = torch.tensor(ac.latents_mean, dtype=vae_dtype, device=device).view(1, ac.z_dim, 1, 1, 1)
+-        std = torch.tensor(ac.latents_std, dtype=vae_dtype, device=device).view(1, ac.z_dim, 1, 1, 1)
+-        decoded = vae.decode(unpacked.to(dtype=vae_dtype) * std + mean)
+-    assert decoded.shape == (1, 4, 1, height, width)
+-    receipt = {"prompt_ids": inputs.input_ids.tolist(), "drop_system_tokens": drop_idx,
+-        "conditioning": tensor_fingerprint(conditioning), "pre_final_norm_verified": True,
+-        "sigmas": scheduler.sigmas.tolist(), "steps": steps, "decoded": tensor_fingerprint(decoded),
+-        "prefix_cache_layers_populated": len(caches[0]), "condition_reference_images": 0}
+-    return decoded, receipt
++# SPDX-License-Identifier: Apache-2.0
++# Prompt/layout math adapted from the fixed Qwen Team SGLang Qwen-Image2.1 stage:
++# efc9849520216b31b8a4a4322399e47e8dbde067.
++"""Minimal single-request real-model T2I orchestration for a strict TP1 profile."""
++from __future__ import annotations
++import hashlib
++import time
++
++SYSTEM_PROMPT = "Comprehend and analyze the provided prompt."
++SYSTEM_TEMPLATE = f"<|im_start|>system\n{SYSTEM_PROMPT}<|im_end|>\n"
++SIGMAS = [1.0, .978453, .95418, .926626, .89508, .845148, .704534, .414568]
++
++
++def collapse_image_slots(hidden, input_ids, image_token_id):
++    image_mask = input_ids == image_token_id
++    keep = ~image_mask
++    keep[0] = True
++    keep[1:] |= image_mask[1:] & ~image_mask[:-1]
++    return hidden[keep], image_mask[keep]
++
++
++def prompt_inputs(processor, prompt):
++    """The original no-reference-image branch of upstream _encode_prompt."""
++    if not isinstance(prompt, str) or len(prompt) > 1024:
++        raise ValueError("One text prompt of at most1024 characters required")
++    text = SYSTEM_TEMPLATE + f"<|im_start|>user\n{prompt or ' '}<|im_end|>\n<|im_start|>assistant\n"
++    inputs = processor(text=[text], padding=True, padding_side="left", return_tensors="pt")
++    system_message = [{"role": "system", "content": [{"type": "text", "text": SYSTEM_PROMPT}]}]
++    drop_idx = len(processor.apply_chat_template(system_message, tokenize=True, return_dict=False)[0])
++    image_token_id = processor.tokenizer.convert_tokens_to_ids("<|image_pad|>")
++    return inputs, drop_idx, image_token_id
++
++
++def tensor_fingerprint(tensor):
++    import torch
++    assert torch.isfinite(tensor).all()
++    return {"shape": list(tensor.shape), "dtype": str(tensor.dtype), "device": str(tensor.device),
++        "sha256_float32": hashlib.sha256(tensor.detach().float().cpu().contiguous().numpy().tobytes()).hexdigest(),
++        "finite": True}
++
++
++def denormalize_latents(latents, arch):
++    import torch
++    mean = torch.tensor(arch.latents_mean, dtype=latents.dtype, device=latents.device).view(1, arch.z_dim, 1, 1, 1)
++    std = torch.tensor(arch.latents_std, dtype=latents.dtype, device=latents.device).view(1, arch.z_dim, 1, 1, 1)
++    # Preserve upstream get_decode_scale_and_shift + DecodingStage operation
++    # order: BF16 reciprocal first, divide, then add. Multiplication by std
++    # changes BF16 rounding and is deliberately not substituted.
++    scale = std.reciprocal()
++    latents = latents / scale
++    return latents + mean
++
++
++def run_t2i(*, text_encoder, dit, vae, processor, scheduler, sigmas, prompt, height, width, seed, progress=None):
++    """Connect genuine components. No component implementation is replaced here.
++
++    T2I only, batch1, TP1, SP1, true CFG1, eager. Conditioning-cache/offload/graph
++    orchestration is absent; genuine model prefix K/V caching follows upstream.
++    The caller supplies loaded models and config; this function loads no weights.
++    """
++    import torch
++    from diffusers.utils.torch_utils import randn_tensor
++    from sglang.multimodal_gen.runtime.managers.forward_context import set_forward_context
++    from sglang.multimodal_gen.runtime.models.dits.qwen_image21 import build_layout
++    assert list(sigmas) == SIGMAS
++    assert height >= 32 and width >= 32 and height % 32 == width % 32 == 0
++    device = next(dit.parameters()).device
++    dit_dtype = next(dit.parameters()).dtype
++    assert next(text_encoder.parameters()).device == next(vae.parameters()).device == device
++    text_encoder.model.visual.fp32_position_interpolation = False
++    text_encoder.model.visual.rotary_pos_emb.recompute_on_device_change = True
++    inputs, drop_idx, image_token_id = prompt_inputs(processor, prompt)
++    inputs = inputs.to(device)
++    captured = []
++    norm = text_encoder.model.language_model.norm
++    handle = norm.register_forward_pre_hook(lambda module, values: captured.append(values[0].detach()))
++    try:
++        with torch.inference_mode(), set_forward_context(current_timestep=None, attn_metadata=None):
++            output = text_encoder(**inputs, output_hidden_states=True, use_cache=False, logits_to_keep=1)
++        final_hidden = output.hidden_states[-1]
++        assert len(captured) == 1 and torch.equal(final_hidden, captured[0]), "Conditioner must return pre-final-norm"
++        if progress:
++            progress("text_encoder_forward_completed", device=str(final_hidden.device))
++    finally:
++        handle.remove()
++    valid = inputs.attention_mask[0].bool()
++    hidden = final_hidden[0, valid][drop_idx:]
++    ids = inputs.input_ids[0, valid][drop_idx:]
++    hidden, slots = collapse_image_slots(hidden, ids, image_token_id)
++    assert hidden.shape[0] > 0 and not slots.any(), "T2I entry forbids reference-image slots"
++    layout = build_layout(slots.tolist(), [(1, height // 16, width // 16)], dit.config.axes_dims_rope, device)
++    conditioning = hidden[None].to(dtype=dit_dtype)
++    generator = torch.Generator(device="cpu").manual_seed(seed)
++    latents = randn_tensor((1, 1, dit.config.in_channels, height // 16, width // 16),
++        generator=generator, device=device, dtype=dit_dtype)
++    latents = latents.reshape(1, dit.config.in_channels, -1).transpose(1, 2)
++    if hasattr(scheduler, "init_noise_sigma"):
++        latents = latents * scheduler.init_noise_sigma
++    sched = scheduler.config
++    length = (height // 16) * (width // 16)
++    base_length, max_length = sched.get("base_image_seq_len", 256), sched.get("max_image_seq_len", 4096)
++    slope = (sched.get("max_shift", 1.15) - sched.get("base_shift", .5)) / (max_length - base_length)
++    mu = length * slope + (sched.get("base_shift", .5) - base_length * slope)
++    scheduler.set_timesteps(sigmas=list(sigmas), device=device, mu=mu)
++    assert len(scheduler.timesteps) == 8 and len(scheduler.sigmas) == 9
++    caches = [[{} for _ in range(dit.config.num_layers)]]
++    steps = []
++    with torch.inference_mode():
++        for index, timestep in enumerate(scheduler.timesteps):
++            started = time.monotonic()
++            with set_forward_context(current_timestep=index, attn_metadata=None):
++                noise = dit(hidden_states=latents, encoder_hidden_states=conditioning,
++                    timestep=timestep.expand(1).to(dtype=dit_dtype), layouts=[layout], prefix_caches=caches)
++            assert noise.shape == latents.shape
++            latents = scheduler.step(noise, timestep, latents, return_dict=False)[0]
++            assert all(cache.get("key") is not None and cache.get("value") is not None for cache in caches[0])
++            steps.append({"index": index, "timestep": float(timestep), "elapsed_seconds": time.monotonic() - started,
++                "latents": tensor_fingerprint(latents)})
++            if progress:
++                progress("DiT_scheduler_step_completed", device=str(latents.device), index=index)
++        unpacked = latents.transpose(1, 2).reshape(1, -1, 1, height // 16, width // 16)
++        ac = vae.config.arch_config
++        vae_dtype = next(vae.parameters()).dtype
++        denormalized = denormalize_latents(unpacked, ac)
++        decoded = vae.decode(denormalized.to(dtype=vae_dtype))
++        if progress:
++            progress("VAE_decode_completed", device=str(decoded.device))
++    assert decoded.shape == (1, 4, 1, height, width)
++    receipt = {"prompt_ids": inputs.input_ids.tolist(), "drop_system_tokens": drop_idx,
++        "conditioning": tensor_fingerprint(conditioning), "pre_final_norm_verified": True,
++        "sigmas": scheduler.sigmas.tolist(), "steps": steps, "decoded": tensor_fingerprint(decoded),
++        "prefix_cache_layers_populated": len(caches[0]), "condition_reference_images": 0}
++    return decoded, receipt

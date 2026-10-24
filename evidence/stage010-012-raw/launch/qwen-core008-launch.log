@@ -1,0 +1,38 @@
+{
+  "bundle": {
+    "files": 230,
+    "sha256": "6ebcbcb34d8e28f5095ab81adc795cc860e903d910d05d94d32f4e0de82dd397"
+  },
+  "native": {
+    "version": "0.5.12+das185.dtk2604.torch2100.2608191739.ga14e79",
+    "root": "/root/private_data/guoxin-wan-env-006-001/venv/lib/python3.10/site-packages",
+    "python_files_verified": 1989,
+    "wheel_sha256": "7c13be91a56b160af81847fffbf4f177b0f07fe0717b4042960ee23846ae7d61"
+  },
+  "workers": [
+    {
+      "name": "scheduler_processor",
+      "returncode": 0
+    },
+    {
+      "name": "config",
+      "returncode": 0
+    },
+    {
+      "name": "vae",
+      "returncode": 0
+    },
+    {
+      "name": "dit",
+      "returncode": 2
+    },
+    {
+      "name": "encoder",
+      "returncode": 2
+    }
+  ],
+  "passed": false,
+  "model_weights_loaded": false,
+  "GPU_tensor_compute": false,
+  "full_service_ready": false
+}

@@ -1,0 +1,61 @@
+{
+  "files": [
+    {
+      "path": "e/qwen21-full014-B001-cleanup.json",
+      "size": 1065,
+      "sha256": "7175d8911f5bafaa058192eea18f78d67f70f786b12354f93adc9369df21d646"
+    },
+    {
+      "path": "e/qwen21-full014-B001-hy-smi.txt",
+      "size": 588,
+      "sha256": "5609614b366ac5527d181f40e4ec19060c615fcba287a8a9eca07f9b05878891"
+    },
+    {
+      "path": "e/qwen21-full014-B001-launch.json",
+      "size": 862,
+      "sha256": "8d45d3b06970be289e0192c389c1d5846ff0415f0ddacb529a378e999b24cb7a"
+    },
+    {
+      "path": "e/qwen21-full014-B001.log",
+      "size": 35474,
+      "sha256": "f373a2346d7b698c76b067679cbca583d60baf361bcacaecb2e2a6aabbbf4635"
+    },
+    {
+      "path": "guoxin-candidates/models/qwen21-turbo009-transfer-3b40f76692194521b8ce56c212bacdca.json",
+      "size": 3331,
+      "sha256": "4faf7de59ce66caf1c3c5ccbd17a58c8d362cb0b4968bfc2acabd7922018e17e"
+    },
+    {
+      "path": "guoxin-candidates/models/qwen21-turbo009-transfer-82d9eef5d82c4b30a5adad9467951358.json",
+      "size": 3989,
+      "sha256": "80dc7b4346f79a1750fd58d1a9b57191134d72e550410eb41bc013c615f40dc4"
+    },
+    {
+      "path": "guoxin-candidates/models/qwen21-turbo009-transfer-f56d16dd0b8d4480aed77d8cc632b6d9.json",
+      "size": 6891,
+      "sha256": "e7c183b7a6bc701845d91db617609a903865cb79eaba2c14c9430c4e145f8076"
+    },
+    {
+      "path": "guoxin-candidates/models/qwen21-turbo009-transfer-fe613d9cd6344a758bf69cef8602800f.json",
+      "size": 6069,
+      "sha256": "b8ec4ad11d7f3f719d5ef27305d724ef2472d8eceb97a66b1a87cc2b02b66588"
+    },
+    {
+      "path": "qwen21-complete-pretrained014-results/complete-pretrained014.json",
+      "size": 26110,
+      "sha256": "1e70fa7394cc48ba9d69d028d2e7dac60a491290db644a315f06b73f273e3806"
+    },
+    {
+      "path": "qwen21-complete-pretrained014-results/qwen21-pretrained014-256.png",
+      "size": 39803,
+      "sha256": "7518e55e20942d0e8d0179bbc3740acb9e10150425cca0a08cea386785708b3a"
+    },
+    {
+      "path": "qwen21-complete-pretrained014-results/qwen21-pretrained014-512.png",
+      "size": 195115,
+      "sha256": "f5cdbeff7e9078f01ae8268cea297462b398ccc06f404ba4b349f199c01d5f26"
+    }
+  ],
+  "UTC": "2026-10-24T09:45:10.624559+00:00",
+  "includes_weights": false
+}

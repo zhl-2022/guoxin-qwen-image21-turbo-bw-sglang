@@ -1,0 +1,18 @@
+{
+  "pid": 28843,
+  "start_ticks": "286051083",
+  "argv": [
+    "/root/private_data/guoxin-wan-env-006-001/venv/bin/python",
+    "-B",
+    "/root/private_data/qwen21-turbo-core-probe010/probe_qwen21_pipeline011.py",
+    "--bundle",
+    "/root/private_data/qwen21-turbo-core-probe010",
+    "--expected-bundle-sha256",
+    "73f10aef47106011a31826ce257867cf61ddd3ebd62f94cb23068ab9e275ed0d",
+    "--output",
+    "/root/private_data/qwen21-tiny-pipeline011-results",
+    "--timeout-seconds",
+    "300"
+  ],
+  "epoch": 1792833127.133326
+}

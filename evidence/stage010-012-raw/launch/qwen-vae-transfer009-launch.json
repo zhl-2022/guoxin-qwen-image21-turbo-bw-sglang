@@ -1,0 +1,6 @@
+{
+  "pid": 27070,
+  "start_ticks": "285928126",
+  "code": "import subprocess; subprocess.run(['python3', '-B', '/root/private_data/qwen21-turbo-stage009-transfer/download_qwen21_turbo009.py', 'download', '--component', 'vae', '--max-seconds', '900'],check=True); subprocess.run(['python3', '-B', '/root/private_data/qwen21-turbo-stage009-transfer/download_qwen21_turbo009.py', 'verify', '--component', 'vae', '--max-seconds', '180'],check=True)",
+  "epoch": 1792831897.5616226
+}

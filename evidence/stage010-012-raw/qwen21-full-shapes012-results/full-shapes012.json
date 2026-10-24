@@ -1,0 +1,91 @@
+{
+  "passed": true,
+  "GPU_tensor_compute": false,
+  "checkpoint_tensors_loaded": false,
+  "full_model_architectures": true,
+  "source": "Actual immutable published HTTP206 tensor headers; not whole-file SHA proof",
+  "bundle": {
+    "files": 531,
+    "sha256": "73f10aef47106011a31826ce257867cf61ddd3ebd62f94cb23068ab9e275ed0d"
+  },
+  "native_before": {
+    "version": "0.5.12+das185.dtk2604.torch2100.2608191739.ga14e79",
+    "root": "/root/private_data/guoxin-wan-env-006-001/venv/lib/python3.10/site-packages",
+    "python_files_verified": 1989,
+    "wheel_sha256": "7c13be91a56b160af81847fffbf4f177b0f07fe0717b4042960ee23846ae7d61"
+  },
+  "activation": {
+    "finder": "BoundSourceFinder",
+    "overlay": "/root/private_data/qwen21-turbo-core-probe010/overlay"
+  },
+  "srt_auxiliary_config": {
+    "class": "sglang.srt.server_args.ServerArgs",
+    "purpose": "Auxiliary native RoPE configuration; no SRT model server",
+    "model_path": "None",
+    "device": "cpu",
+    "rl_on_policy_target": null
+  },
+  "components": {
+    "text_encoder": {
+      "source_keys": 750,
+      "target_keys": 750,
+      "bijection_and_shapes_verified": true,
+      "mapped_names_sha256": "93e81c9fa8fc763ec73944a003fca706a48f3260d78f5abfc61ffbe824b325f2",
+      "parameters": 8767123696,
+      "all_parameters_meta": true,
+      "meta_buffers": [
+        {
+          "name": "model.visual.rotary_pos_emb.inv_freq",
+          "shape": [
+            18
+          ],
+          "dtype": "torch.float32"
+        },
+        {
+          "name": "model.language_model.layers.0.self_attn.rotary_emb.cos_sin_cache",
+          "shape": [
+            262144,
+            128
+          ],
+          "dtype": "torch.bfloat16"
+        }
+      ],
+      "custom_weight_loader_parameters": 232,
+      "missing_key_synthesis_permitted": false,
+      "merge_or_duplicate_keys_permitted": false
+    },
+    "transformer": {
+      "source_keys": 297,
+      "target_keys": 297,
+      "bijection_and_shapes_verified": true,
+      "mapped_names_sha256": "269466c9348a53b49ee0302588b6afd130304f30e1d6416b796101243d1e7cc0",
+      "parameters": 7115124736,
+      "all_parameters_meta": true,
+      "meta_buffers": [],
+      "custom_weight_loader_parameters": 224,
+      "missing_key_synthesis_permitted": false,
+      "merge_or_duplicate_keys_permitted": false
+    },
+    "vae": {
+      "source_keys": 238,
+      "target_keys": 238,
+      "bijection_and_shapes_verified": true,
+      "mapped_names_sha256": "8c4e99da649d809422ab4e0196bae6abe815cba99b1f025482d77bde4c6cedc1",
+      "parameters": 337740404,
+      "all_parameters_meta": true,
+      "meta_buffers": [],
+      "custom_weight_loader_parameters": 0,
+      "missing_key_synthesis_permitted": false,
+      "merge_or_duplicate_keys_permitted": false
+    }
+  },
+  "cuda_context_initialized": true,
+  "native_after": {
+    "version": "0.5.12+das185.dtk2604.torch2100.2608191739.ga14e79",
+    "root": "/root/private_data/guoxin-wan-env-006-001/venv/lib/python3.10/site-packages",
+    "python_files_verified": 1989,
+    "wheel_sha256": "7c13be91a56b160af81847fffbf4f177b0f07fe0717b4042960ee23846ae7d61"
+  },
+  "native_unchanged": true,
+  "elapsed_seconds": 62.19736366532743
+}

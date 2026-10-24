@@ -1,0 +1,197 @@
+{
+  "archive": "E:\\hg20261019\\dist\\000-session007-qwen21-core008-raw.zip",
+  "archive_bytes": 164565,
+  "archive_sha256": "4f03d8071176d09cd002d5676d308ca5d2c9081a0f8f92e548799c2bd719ddfb",
+  "CRC_verified": true,
+  "manifest_payloads_verified": 11,
+  "bundle_manifest_bound": true,
+  "worker_path_prefix": "qwen008/",
+  "native_wheel_sha256": "7c13be91a56b160af81847fffbf4f177b0f07fe0717b4042960ee23846ae7d61",
+  "workers": [
+    {
+      "name": "scheduler_processor",
+      "returncode": 0,
+      "passed": true,
+      "native_sources_verified": 1989,
+      "native_unchanged": true,
+      "cuda_context_initialized": true,
+      "elapsed_seconds": 97.04330853605643,
+      "result": {
+        "components": {
+          "processor": [
+            "transformers",
+            "Qwen3VLProcessor"
+          ],
+          "text_encoder": [
+            "transformers",
+            "Qwen3VLForConditionalGeneration"
+          ],
+          "transformer": [
+            "diffusers",
+            "QwenImage21Transformer2DModel"
+          ],
+          "vae": [
+            "diffusers",
+            "AutoencoderKLQwenImage21"
+          ],
+          "scheduler": [
+            "diffusers",
+            "FlowMatchEulerDiscreteScheduler"
+          ]
+        },
+        "sigmas_input": [
+          1.0,
+          0.978453,
+          0.95418,
+          0.926626,
+          0.89508,
+          0.845148,
+          0.704534,
+          0.414568
+        ],
+        "sigmas_actual": [
+          1.0,
+          0.9784529805183411,
+          0.9541800022125244,
+          0.9266260266304016,
+          0.8950799703598022,
+          0.8451480269432068,
+          0.7045339941978455,
+          0.4145680069923401,
+          0.0
+        ],
+        "timesteps": [
+          1000.0,
+          978.4530029296875,
+          954.1799926757812,
+          926.6260375976562,
+          895.0799560546875,
+          845.1480102539062,
+          704.5339965820312,
+          414.5679931640625
+        ],
+        "processor_class": "Qwen3VLProcessor",
+        "batch_shapes": {
+          "input_ids": [
+            1,
+            71
+          ],
+          "attention_mask": [
+            1,
+            71
+          ],
+          "mm_token_type_ids": [
+            1,
+            71
+          ],
+          "pixel_values": [
+            256,
+            1536
+          ],
+          "image_grid_thw": [
+            1,
+            3
+          ]
+        }
+      },
+      "error_last_line": null,
+      "traceback_sha256": null
+    },
+    {
+      "name": "config",
+      "returncode": 0,
+      "passed": true,
+      "native_sources_verified": 1989,
+      "native_unchanged": true,
+      "cuda_context_initialized": true,
+      "elapsed_seconds": 45.22885000705719,
+      "result": {
+        "pipeline_config": "QwenImage21PipelineConfig",
+        "sigmas": [
+          1.0,
+          0.978453,
+          0.95418,
+          0.926626,
+          0.89508,
+          0.845148,
+          0.704534,
+          0.414568
+        ]
+      },
+      "error_last_line": null,
+      "traceback_sha256": null
+    },
+    {
+      "name": "vae",
+      "returncode": 0,
+      "passed": true,
+      "native_sources_verified": 1989,
+      "native_unchanged": true,
+      "cuda_context_initialized": true,
+      "elapsed_seconds": 35.457989980001,
+      "result": {
+        "parameters": 82120,
+        "latent": {
+          "shape": [
+            1,
+            4,
+            1,
+            2,
+            4
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "abs_max": 0.36177363991737366,
+          "finite": true,
+          "sha256": "8e8d430132d5f1ca9c5dd85e5163b1d2934ca9cd11d45cf43f6a5ab582775890"
+        },
+        "decoded": {
+          "shape": [
+            1,
+            4,
+            1,
+            32,
+            64
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "abs_max": 1.0,
+          "finite": true,
+          "sha256": "6873a52a9a24203713bd91cad3891a0897eff6ff2d31851f5cb5feb98e136877"
+        }
+      },
+      "error_last_line": null,
+      "traceback_sha256": null
+    },
+    {
+      "name": "dit",
+      "returncode": 2,
+      "passed": false,
+      "native_sources_verified": 1989,
+      "native_unchanged": true,
+      "cuda_context_initialized": true,
+      "elapsed_seconds": 34.18546162266284,
+      "result": null,
+      "error_last_line": "RuntimeError: Cannot find sglang.kernels.jit path",
+      "traceback_sha256": "db7649ca5595e107f2c46885eb96c5792aebb6272c1b21fcccd3a39faf7e9971"
+    },
+    {
+      "name": "encoder",
+      "returncode": 2,
+      "passed": false,
+      "native_sources_verified": 1989,
+      "native_unchanged": true,
+      "cuda_context_initialized": true,
+      "elapsed_seconds": 79.8448603763245,
+      "result": null,
+      "error_last_line": "AttributeError: type object 'TextEncoder' has no attribute 'layer_names'",
+      "traceback_sha256": "347ea98e307dfaa6ea6a22873fcc9db51a14ce926824b2aea432995a9ca41dbb"
+    }
+  ],
+  "all_workers_passed": false,
+  "all_native_sources_unchanged": true,
+  "failure_layer": "see individual raw workers",
+  "model_weights_loaded": false,
+  "GPU_tensor_compute": false,
+  "full_service_ready": false
+}

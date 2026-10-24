@@ -1,0 +1,48 @@
+{
+  "schema": "qwen21-locked-contest-scope-review007-v1",
+  "scope": "Read-only review of locked local organizer text, not a fresh website check",
+  "inputs": [
+    {
+      "path": "evidence/rules/pdf-text.txt",
+      "bytes": 66682,
+      "sha256": "66f626b406deb827ad72747960222c114a64047d0cdfd3c6d2908999bdcde6d3"
+    },
+    {
+      "path": "evidence/session004/rules-current-20261023/tracks-current.ax.txt",
+      "bytes": 10810,
+      "sha256": "a01c7744e5bb8487164bf6139c27a8ce4fea70244b8ce8bee38b6f91227ec70b"
+    },
+    {
+      "path": "evidence/official-materials/20261019/report-template.md",
+      "bytes": 14427,
+      "sha256": "b151143f6fa38c87e301cfc9335a94d17fcd49c7113a53fe05f89c04b45f349f"
+    }
+  ],
+  "Qwen_appendix_lines": [
+    851,
+    875
+  ],
+  "appendix_capabilities": [
+    "T2I",
+    "image editing"
+  ],
+  "explicit_editing_sample_requirement_found_in_reviewed_text": false,
+  "explicit_Qwen_HTTP_API_contract_found_in_reviewed_text": false,
+  "T03_full_pipeline_required": true,
+  "T03_published_prompt_condition_GPU_baseline_metric_contract_required": true,
+  "actual_development_coverage": [
+    "same-prompt T2I 256x256",
+    "same-prompt T2I 512x512"
+  ],
+  "untested": [
+    "image editing",
+    "HTTP service",
+    "1024",
+    "appendix 2048-class presets"
+  ],
+  "submission_ready": false,
+  "official_accuracy_verified": false,
+  "official_performance_verified": false,
+  "submitted": false,
+  "interpretation": "Absence of an explicit extra rule in reviewed locked text is not an organizer exemption; formal contracts and acceptance remain missing"
+}

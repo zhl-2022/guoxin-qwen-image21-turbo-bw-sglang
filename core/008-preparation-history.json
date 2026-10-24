@@ -1,0 +1,9 @@
+{
+  "draft": "E:\\hg20261019\\revisions\\qwen21-core008-draft",
+  "sealed": false,
+  "parent007_unchanged": true,
+  "native_wheel_unchanged": true,
+  "patch": "Native PatchEmbed wrapper lacks disable_linear keyword; explicitly select native Conv3dLayer.enable_linear=False after construction",
+  "dynamic_verified": false,
+  "GPU_executed": false
+}

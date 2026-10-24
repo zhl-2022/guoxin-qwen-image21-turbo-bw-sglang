@@ -1,0 +1,25 @@
+{
+  "schema": "qwen21-checkpoint-probe-v1",
+  "files": [
+    {
+      "path": "build010-source.py",
+      "bytes": 4018,
+      "sha256": "1a01455921b3512a4f96344b301209ff38e50958d0f5b642bd2734957c1d2eed"
+    },
+    {
+      "path": "download-sources009.json",
+      "bytes": 7834,
+      "sha256": "dbab7a7daf5ac2e000eda646fbb74f0bdc8ee9fd4822199043e7b03cf4fec5fd"
+    },
+    {
+      "path": "probe_qwen21_vae_checkpoint010.py",
+      "bytes": 8361,
+      "sha256": "c89fa46526def85b793e218fddc2a3212bd38bebd0cb686158b6dd5d62e79257"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1707,
+      "sha256": "9c839b3ea33ac5e26fb452ce7969efc3826e7822f41ac503b54bbfeb557b8474"
+    }
+  ]
+}

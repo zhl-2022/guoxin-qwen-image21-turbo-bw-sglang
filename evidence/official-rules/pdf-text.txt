@@ -1,0 +1,1123 @@
+===== PDF PAGE 1 =====
+超算互联⽹×    光合开发者社区"国芯国模"⿊客
+松赛事详情
+
+⼀、赛事定位
+
+国芯配国模，技术⻅真章
+
+在超算互联⽹×    光合开发者社区调优国产⼤模型，⽠分100,000元现⾦      奖励             
+
+让国产模型在国产算⼒上跑通、跑快，让你的技术贡献看得⻅、有回报
+
+欢迎AI开发者报名参赛，提交技术报告+代码仓      库链      接，      通过官⽅      验收      即得           1000元/件现⾦奖励（以
+⾸次提交的性能实测为基准，提升10%  及以上的优化另单独计费）
+
+  ⼊⻔⻔槛低：适配不要求kernel级优化，只做「模型×    卡型           ×      框架      」的      ⼯程      级适      配与      验证     ；
+
+  范围约束：在给定的模型范围内进⾏，避免重复造轮⼦；
+
+  提供环境：报名通过即可申请S  CNet上的在线资源；               
+
+  硬件固定：本次硬件为异构加速卡BW   和异构加速卡AI-64G    B，其      它硬件暂不考虑；
+
+  计件独⽴：每个模型的⾸次验收通过即计件，与后续优化相互独⽴；
+
+  不排名、不跨题⽐：每个模型只对照⾃⼰的官⽅G    PU   基线，达标即过。
+
+
+⼆、参赛流程
+
+①报名参赛
+
+在超算互联⽹（scnet.cn     ）注册账号，提交报名信息
+
+https://bvjoh3z2qoz.feishu.cn/share/base/form    /shrcnjG    s3pw  5ayiT Id5S  M     S  qQ jS  g
+
+②领算⼒券
+
+通过报名资格审核后，发放100‒300卡时S CNet算⼒券
+
+参赛统⼀⽤S  CNet算⼒资源，⾃带算⼒资源      不计      ⼊官      ⽅验      收
+
+③认领赛题
+
+赛题任务=模型×    卡型×    框架版本
+
+④提交材料
+
+按照官⽅模板输出完整技术报告+代码仓库链      接      →      平台      每周      五验      收      →      验收      通过即可      获得      激励
+
+https://bvjoh3z2qoz.feishu.cn/share/base/form    /shrcnLIas6FqdB naJ  9sD LU   U   NXnc
+
+===== PDF PAGE 2 =====
+三、赛题
+
+T 01稠密/⽂本LLM     的S  G Lang/vLLM     适配
+
+范围：认领候选清单T 01⾏任⼀模型（含M     oE/linear-attention类），跑通serving+chat
+tem    plate/tokenizer对⻬+O penAI接⼝           +cookbook   条⽬。
+
+验收：G    S  M     8K    +M     M     LU   ⼦集较官⽅G    PU   基线掉点     ≤2         pt（⼝径⻅第四章「评审⼝径」）          ；单/    多轮      、
+流式正常；⼀键脚本可复现。
+
+⽀持：新模型接⼊⽂档+合⼊PR范例；评测脚本           +官⽅基线⽂件。
+
+T 02视觉多模态理解模型（VL/VLA）S  G Lang/vLLM     适配
+
+范围：认领T 02⾏任⼀模型，图像预处理→visionencoder→LLM     全链路，⽀持多图；嵌            ⼊模型跑
+通图⽂输⼊→向量输出（em    bedding接⼝）；VLA/具⾝模型仅做serving适配（多模态输⼊、⽂
+本/动作token输出），机器⼈任务不在本赛季范围。
+
+验收：O CRB ench+M     M     M     U   ⼦集较官⽅G    PU   基线劣化≤2% （O CRB ench为千分制，即     ≤20分；
+M     M     M     U   即≤2pt；VQ A类⽤对应评测集）；嵌⼊模型⽤公⽰检索⼦集的检索指标；                   VLA/具⾝      模型在
+公⽰的图像（含深度图）输⼊集上，解析后的动作/坐标      与           G    PU   参考输出⼀      致率     ≥98% ；单图/    多图
+均正常。
+
+⽀持：多模态接⼊⽂档；VL/检索/VLA评测脚本           +官⽅基线⽂件；测试图集。
+
+T 03⽣成类模型S  G Lang/vLLM     适配（⽂⽣图/图⽣视频/⾳乐/3D 世界）
+
+范围：认领T 03⾏任⼀模型，按单模型计件；⽂⽣图/图⽣      视频      跑通           pipeline（text/im    ageencoder
+→D iT →VAE），⾳乐⽣成跑通⽂本/条件      →      ⾳频      解码      全链      路，           3D 世界模型跑通            ⽂本/  图像           →3D 产物
+（点云/3D G    S  /⽹格）全链路。
+
+验收：固定seed+公⽰prom   pt/条件集，与G    PU   参考输出对⽐——图像⽤CLIPscore/FID ⼦集、
+视频⽤VB ench⼦集、⾳乐⽤公⽰⾳频指标、3D ⽤公⽰重建指标（如深度           /点云误      差）      ，较           G    PU   参考
+劣化≤2% ；⼀键脚本+样例产物。
+
+⽀持：⽣成⼦栈说明+接⼊⽰例；标准prom    pt/条件集、G    PU   参考产物、对应评测      脚本。                      
+
+T 04语⾳模型适配（语⾳合成/语⾳识别/强制对⻬）
+
+范围：认领T 04⾏任⼀模型；T TS  模型跑通⽂本→⾳频，AS  R模型跑通⾳频→⽂本（含流            式），强
+制对⻬模型跑通⾳频+⽂本→词级/字级时间戳。
+
+验收：T TS  ⽤公⽰任务指标对⻬（含AS  R回测W   ER）；AS  R⽤公⽰测试集⼦集的           W   ER/CER；强制            对
+⻬⽤时间戳偏移AAS （m    s）；均较官⽅G    PU   基线劣化≤2% ；附      样例      ⾳频           /转写/时间戳      。
+
+⽀持：⾳频测试集+W   ER/CER与AAS  脚本；T TS  /AS  R/强制对⻬接⼊说明。
+
+===== PDF PAGE 3 =====
+四、模型清单
+
+粒度=模型×    卡型×    框架（S G Lang/vLLM ）：卡型不同按不同件数计（异构加速卡BW  、异构加速
+卡AI-64G    B 各算⼀件）；同系列多参数规格各      ⾃单      件计      ，但           AuK    /AuK   -Flash、W              an2.1-I2V480P/
+720P这类同规格变体按同⼀模型计；量化版本（INT 8/INT 4等）单独计件。清      单每周随            任务池滚            动
+更新。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+超算互联⽹AI社区模型链接
+
+请在超算互联⽹AI社区下载模型。
+
+===== PDF PAGE 4 =====
+
+
+===== PDF PAGE 5 =====
+各模型的介绍、规格与部署信息⻅⽂末附录。
+
+
+五、官⽅材料⽀持清单
+
+通⽤材料（全赛道）
+
+
+
+
+
+
+
+
+
+
+
+
+分题材料
+
+
+
+
+
+
+
+
+
+
+
+
+评审⼝径
+
+  ⻔槛G ate：精度先达标，否则不通过。基线统⼀取官⽅G    PU   结果；各指标保留⾃⾝单位，较            基线
+  劣化不超过2% （有满分的按满分计，如百分      制即           2pt、O CRB ench千分制即           20分；W   ER、F           ID 、
+  时间戳偏移等按基线值的2% ）；评测参数按      官⽅      设定      ，并   在官      ⽅基      线⽂      件中      写死           greedy解码      、思
+  考开关、m    ax_tokens、⼦集与题数；
+
+  可复现：⼲净环境⼀键复跑，偏差>20%  打回；
+
+  量化：⽀持INT 8/INT 4等量化部署（异构加速      卡      不⽀      持           FP8/FP4/M     XFP4），量化版本            单独计
+  件，须注明量化⽅法与⼯具，精度按同⼀⼝径验收；
+
+  性能：⾸次提交须附性能实测（⽂本/多模态理      解类      ⽤          bench.sh   ，⽣成类与语⾳类的测法随分
+  题材料下发），结果作为该件的性能基准；之后在同卡型、同框架、同负载下      性能提升                      10%  及以
+  上的优化另单独计费；
+
+===== PDF PAGE 6 =====
+  先到先得：优先提交的版本计⼊奖励，后续版本有亮点，或明显性能优化（性能提升>=10% ）的
+  话，另计奖励；
+
+  反作弊：改权重（申报的量化除外）/结构/tokenizer/采样语义规避计算、硬编码答案      、伪造⽇            志
+  →取消资格。
+
+
+六、提交技术报告
+
+
+       国芯国模⿊客松-技术报告模板.m    d
+       14.09K    B
+
+
+提交=⼀份技术报告+⼀个代码仓库。技术报告按官⽅《国芯国模⿊客松·技术报告模板》的8个章
+节填写，作为仓库的       README.md ；仓库内放启动、S  m    oke、精度、性能脚本，      以及      依赖      清单      、
+patch与原始结果。
+
+报告中⽤到的镜像提交到S  CNet镜像库中：          https://w  w  w  .scnet.cn/ui/aihub/im    age
+
+相应的代码提交到光合开发者社区代码托管中：https://developer.sourcefind.cn/codes
+
+产出物评审后将择优上传到M     odelZoo与S  CNet镜像库（⻅第四章「⽬标仓库」            ）。
+
+技术报告：  8个 章节写什么
+
+===== PDF PAGE 7 =====
+ ⚠报告中的版本号、精度分数与性能数字必须与仓库⾥的                     env.log  、
+  verify_result.json   、  bench/round2.jsonl   ⼀致，原始⽂件不得删减。
+
+
+
+仓库⽬录
+
+
+   代码块
+
+   1  <提交仓库   >/
+   2  ├── README.md               # 技术报告，按模板     8 个章节填写
+   3  ├── env.sh                  # 填写报告参数：模型      / 镜像  / 框架  / 卡型  / 并⾏  / 启动
+      参数
+   4  ├── env_check.sh            # 采集卡型与组件版本      → env.log（报告第   2 节）
+   5  ├── requirements-extra.txt  # 在镜像基础上升级     / 新装的包，版本写死（报告第         3 节；⽆
+      则不放）
+   6  ├── patches/                # 代码改动  *.patch，按⽂件名顺序重放（报告第         3 节；⽆则
+      留空）
+
+===== PDF PAGE 8 =====
+   7   ├── run.sh                  # 模型启动脚本：装依赖             + 重放  patch + 起服务     →
+       server.log（报告第     4 节）
+   8   ├── smoke.sh                # 健康检查       + 问答   / 多轮   / 流式   → smoke.log（报告第
+       5 节）
+   9   ├── verify.py               # 精度验证脚本         → verify_result.json（报告第       6 节）
+  10   ├── bench.sh                # 性能测试脚本：         6 档 × 2 次 → bench/（报告第        7 节）
+  11   ├── baselines/<模型    >.json   # 官⽅下发，不改
+  12   ├── data/                   # 官⽅下发的评测⼦集，不改
+  13   └── bench/                  # 两次压测的        jsonl、各档⽇志、      summary.md
+
+
+脚本模板
+
+官⽅随题下发脚⼿架，脚本⾥需填                 env.sh  ⽂件，其余⼤部分可以直接复⽤；有包升级或代码改动
+时，分别写进       requirements-extra.txt       和 patches/    ，  run.sh  启动前会⾃动安装、重
+放。评测配置与官⽅G    PU   基线写在官⽅下发的             baselines/<    模型  >.json   中，不需要也不允许修
+改。下⾯以T 01为例；T 02‒T 04的评测器，      以及      ⽣成      类、      语⾳      类模   型的      启动      ⽅式      与性      能测      法，      随分      题
+材料下发。
+
+env.sh   
+
+
+   代码块
+
+   1   # 模型、镜像、框架、卡型、并⾏⽅式与启动参数，其余脚本读这⾥的变量export
+       MODEL_ID="moonshotai/Kimi-Linear-48B-A3B-Instruct"     # 模型 ID，verify.py 据此
+       加载官⽅基线export MODEL_PATH="/data/models/Kimi-Linear-48B-A3B-Instruct" # 本地
+       权重路径export SERVED_NAME="kimi-linear-48b"  # OpenAI 接⼝⾥的 model 名export
+       IMAGE="【镜像完整地址       :tag】"       # 所⽤镜像，与报告「2. 验证环境」⼀致export
+       FRAMEWORK="sglang"             # 推理框架：sglang | vllmexport CARD="K100-AI"
+                     # 卡型：BW1000 | K100-AI（K500-SM 按 K100-AI 计）export
+       PRECISION="bf16"               # 部署精度：bf16 | int8 | int4（量化版单独计件，须注
+       明量化⽅法）export PORT=30000
+   2   export TP=4                           # 张量并⾏卡数（多机时为合计值）export EP=1
+                                # 专家并⾏⼤⼩，1 = 不开（vLLM 下 >1 即开启）export PP=1
+                                # 流⽔线并⾏段数export MAX_LEN=32768
+       # 最⼤上下⽂（sglang --context-length / vllm --max-model-len），须容纳 16K + 1K 压
+       测export MEM_FRAC=0.85                   # 显存占⽐（sglang --mem-fraction-
+       static / vllm --gpu-memory-utilization）export NNODES=1
+       # 节点数；多机时每个节点各跑⼀次 run.shexport NODE_RANK=0                    # 本节
+       点序号，主节点为 0export DIST_ADDR="10.0.0.1:50000"     # 多机时主节点的 IP:端⼝
+       export LOAD_TIMEOUT=1800              # 等待服务就绪的上限（秒），⼤模型可调⼤
+       export PATCH_ROOT="$(python -c 'import sysconfig; print(sysconfig.get_paths()
+       ["purelib"])')"  # patch 的根⽬录，默认 site-packages；源码安装时改为源码⽬录export
+       EXTRA_ARGS=""                  # 其余启动参数，如 --reasoning-parser、图模式、调度
+       参数（报告第 4 节逐条说明）
+
+===== PDF PAGE 9 =====
+requirements-extra.txt        （适配优化⽅案：在镜像基础上升级/新装的      包；     ⽰例      ，版      本号      仅作
+⽰意）
+
+
+   代码块
+
+   1   # 每⾏⼀个包，版本写死；⾏尾注明镜像内原版本与升级原因，与报告「                          3. 适配优化⽅案」⼀致
+   2   # run.sh ⽤ --no-deps 安装，防⽌依赖解析把镜像⾥的国产异构加速器版                     torch 换成   CUDA
+       版，所以连带依赖要逐个列全
+   3   # 国产异构加速器专⽤包写光合社区的              whl 下载地址，或放进仓库写相对路径
+   4   transformers==4.57.1        # 镜像内     4.51.3 → 4.57.1：模型     config 要求   ≥ 4.57
+   5   tokenizers==0.22.1          # transformers 4.57 的连带依赖
+   6   fla-core==0.4.1             # 镜像未⾃带       → 新装：   KDA kernel 依赖（纯     Triton 实现，
+       国产异构加速器可⽤）
+
+
+
+patches/0001-kda-chunk-size.patch           （适配优化⽅案：代码改动；⽰例，内容仅作格式⽰
+意）
+
+
+   代码块
+
+   1   # ⽂件名以序号开头，        run.sh 按顺序重放；路径相对         PATCH_ROOT，⽤   -p1 重放
+   2   # ⽣成⽅式：源码仓库⾥          git diff > patches/xxx.patch；改的是已安装包时，⽤           diff -ruN
+       a/ b/ ⽣成
+   3   # 报告第    3 节对每个    patch 写清：改了什么、为什么改、是否影响精度
+   4   --- a/sglang/srt/layers/attention/fla/chunk.py+++
+       b/sglang/srt/layers/attention/fla/chunk.py@@ -8,2 +8,3 @@
+   5    import torch
+   6    import triton
+   7   +from sglang.srt.utils import is_hip@@ -88,3 +89,4 @@ def chunk_kda_fwd(q, k,
+       v, g, beta, scale, initial_state):
+   8        B, T, H, K = q.shape
+   9   -    BT = 64+    # 国产异构加速器的         LDS 容量⼩于    A100 共享内存，    BT=64 时 kernel 申请
+       超限；改为     32 只改变分块⼤⼩，不改变计算结果             +    BT = 32 if is_hip() else 64
+  10        NT = triton.cdiv(T, BT)
+
+
+
+env_check.sh     （验证环境：卡型、D T K    与重点组件版本）
+
+
+   代码块
+
+   1   #!/usr/bin/env bash# 采集验证环境写⼊ env.log；报告「2. 验证环境」的版本表直接取⾃这⾥
+       # 在 run.sh 之后执⾏，记录的是升级 / 打 patch 之后实际⽣效的版本source ./env.sh
+   2   {
+   3     echo "image: $IMAGE"echo "dtk: $(cat /opt/dtk/.info/version 2>/dev/null ||
+       readlink -f /opt/dtk)"
+   4     hy-smi                                    # 国产异构加速器卡型、显存与占⽤
+   5     python -c "import sys, torch; print('python:', sys.version.split()[0]);
+       print('torch:', torch.__version__); print('HIP:', torch.version.hip);
+
+===== PDF PAGE 10 =====
+       print('Device:', torch.cuda.get_device_name(0), 'x',
+       torch.cuda.device_count())"
+   6     pip list 2>/dev/null | grep -iE
+       "^(torch|triton|transformers|tokenizers|sglang|vllm|flash|fla|lmslim|ray)|das"
+   7   } 2>&1 | tee env.log
+
+
+
+run.sh   （模型启动脚本：装依赖+重放patch+拉起S  G    Lang/vLLM   ，⽀持多机，轮      询健康检            查）
+
+
+   代码块
+
+   1   #!/usr/bin/env bash# 安装额外依赖、重放 patch，再拉起 serving 并等待就绪；多机时每个
+       节点各执⾏⼀次（NODE_RANK 不同）set -euo pipefail
+   2   source ./env.sh
+   3
+   4   # 1) 适配改动（报告「3. 适配优化⽅案」）：均可重复执⾏，已装 / 已打过的⾃动跳过if [ -f
+       requirements-extra.txt ]; then pip install -q --no-deps -r requirements-
+       extra.txt; fifor p in patches/*.patch; do
+   5     [ -e "$p" ] || continueif patch -p1 -R -f -s --dry-run -d "$PATCH_ROOT" <
+       "$p" > /dev/null 2>&1; thenecho "[run] skip $p (already applied)"else
+   6       patch -p1 -f -s -d "$PATCH_ROOT" < "$p"   # 打不上直接报错退出，不带病启动echo
+       "[run] applied $p"fidone# 2) 拼启动命令（报告「4. 服务启动脚本」）if [
+       "$FRAMEWORK" = "sglang" ]; then
+   7     CMD=(python -m sglang.launch_server --model-path "$MODEL_PATH" --served-
+       model-name "$SERVED_NAME"
+   8          --tp-size "$TP" --ep-size "$EP" --pp-size "$PP" --context-length
+       "$MAX_LEN"
+   9          --mem-fraction-static "$MEM_FRAC" --host 127.0.0.1 --port "$PORT" --
+       trust-remote-code)
+  10     if [ "$NNODES" -gt 1 ]; then
+  11       CMD+=(--nnodes "$NNODES" --node-rank "$NODE_RANK" --dist-init-addr
+       "$DIST_ADDR")
+  12     fielse  # vllm：多机先⽤ Ray 组⽹，服务只在主节点启动if [ "$NNODES" -gt 1 ];
+       thenif [ "$NODE_RANK" -ne 0 ]; then exec ray start --address "$DIST_ADDR" --
+       block; fi
+  13       ray start --head --port "${DIST_ADDR##*:}"fi
+  14     CMD=(vllm serve "$MODEL_PATH" --served-model-name "$SERVED_NAME" --tensor-
+       parallel-size "$TP"
+  15          --pipeline-parallel-size "$PP" --max-model-len "$MAX_LEN" --gpu-memory-
+       utilization "$MEM_FRAC"
+  16          --host 127.0.0.1 --port "$PORT" --trust-remote-code)
+  17     if [ "$EP" -gt 1 ]; then CMD+=(--enable-expert-parallel); fiif [ "$NNODES" -
+       gt 1 ]; then CMD+=(--distributed-executor-backend ray); fifiecho "[run]
+       ${CMD[*]} $EXTRA_ARGS" | tee server.log   # 展开后的完整命令，贴进报告第 4
+       节"${CMD[@]}" $EXTRA_ARGS >> server.log 2>&1 &
+  18   SERVER_PID=$!
+  19
+
+===== PDF PAGE 11 =====
+  20   if [ "$NODE_RANK" -ne 0 ]; then  # SGLang ⾮主节点不对外服务，守着进程即可wait
+       "$SERVER_PID"; exit $?
+  21   fi# 3) 轮询 /health，就绪即返回（不要⽤固定 sleep）；进程提前退出⽴即报错，不空等for
+       ((t = 0; t < LOAD_TIMEOUT; t += 5)); doif ! kill -0 "$SERVER_PID" 2>/dev/null;
+       thenecho "[run] server exited, see server.log" >&2; exit 1
+  22     fiif curl -sf --noproxy "*" "http://127.0.0.1:$PORT/health" > /dev/null;
+       thenecho "[run] server up after ${t}s"; exit 0
+  23     fisleep 5
+  24   doneecho "[run] server not ready in ${LOAD_TIMEOUT}s, see server.log" >&2;
+       kill "$SERVER_PID"; exit 1
+
+
+
+smoke.sh    （S  m    oke测试：健康检查+⼀句话问答+多轮           +流式）
+
+
+   代码块
+
+   1   #!/usr/bin/env bash# 服务起来后先跑它：⼏秒内确认接⼝可⽤、输出正常，再跑耗时的精度与压
+       测；输出写⼊ smoke.logset -euo pipefail
+   2   source ./env.sh
+   3   URL="http://127.0.0.1:$PORT"
+   4   CURL=(curl -sSf --noproxy "*" --max-time 300)   # -f：HTTP ⾮ 2xx 直接失败exec >
+       >(tee smoke.log) 2>&1
+   5
+   6   chat() {  # $1 = messages（JSON 数组），$2 = 是否流式"${CURL[@]}"
+       "$URL/v1/chat/completions" -H "Content-Type: application/json" \
+   7       -d "
+       {\"model\":\"$SERVED_NAME\",\"messages\":$1,\"temperature\":0,\"max_tokens\":25
+       6,\"stream\":$2}"echo
+   8   }
+   9
+  10   echo "== /health";    "${CURL[@]}" -o /dev/null -w "HTTP %{http_code}\n"
+       "$URL/health"echo "== /v1/models"; "${CURL[@]}" "$URL/v1/models"; echoecho "==
+       单轮  "; chat '[{"role":"user","content":"⽤⼀句话介绍国产异构加速器。                   "}]' falseecho
+       "== 多轮   "; chat '[{"role":"user","content":"我叫⼩海。         "},
+       {"role":"assistant","content":"你好，⼩海！          "},{"role":"user","content":"我叫什么名
+       字？  "}]' falseecho "== 流式     "; chat '[{"role":"user","content":"⽤⼀句话介绍国产异构
+       加速器。    "}]' true | tail -n 3   # 末⾏应为 data: [DONE]
+
+
+
+verify.py    （正确性证据：调⽤服务跑评测+判精度，      带⾃      检）               
+
+
+   代码块
+
+   1   #!/usr/bin/env python3# 正确性证据：按官⽅基线⽂件写死的配置调⽤服务跑固定⼦集，和官⽅
+       GPU 基线⽐；只罚劣化，不罚提升。import os, re, sys, json, argparse, urllib.request
+   2   from concurrent.futures import ThreadPoolExecutor
+   3
+
+===== PDF PAGE 12 =====
+ 4   TOL = 0.02  # 统⼀容差：劣化不超过 2%；有满分的按满分计（百分制即 2 pt），否则按基线值
+     计
+ 5   OPENER = urllib.request.build_opener(urllib.request.ProxyHandler({}))  # 访问本
+     机服务，不⾛代理def check(got, m):
+ 6       # 返回明细；越低越好的指标（WER、AAS 等）在基线⽂件⾥标 lower_is_better
+ 7       worse = got - m["ref"] if m.get("lower_is_better") else m["ref"] - got
+ 8       tol = TOL * m.get("scale", m["ref"])
+ 9       return {"got": round(got, 2), "ref": m["ref"], "worse": round(worse, 2),
+10               "tol": round(tol, 2), "pass": worse <= tol + 1e-9}
+11
+12   def chat(prompt, max_tokens, extra):
+13       body = {"model": os.environ["SERVED_NAME"], "messages": [{"role": "user",
+     "content": prompt}],
+14               "temperature": 0, "max_tokens": max_tokens, **extra}  # greedy；
+     extra 为写死的思考开关等
+15       req = urllib.request.Request(f"http://127.0.0.1:
+     {os.environ['PORT']}/v1/chat/completions",
+16                                    json.dumps(body).encode(), {"Content-Type":
+     "application/json"})
+17       with OPENER.open(req, timeout=3600) as r:
+18           text = json.load(r)["choices"][0]["message"].get("content") or
+     ""return text.split("</think>")[-1]  # 未开 reasoning parser 时去掉思考段def
+     gsm8k(item, max_tokens, extra):
+19       out = chat(item["question"] + "\nPlease reason step by step, and put your
+     final answer within \\boxed{}.",
+20                  max_tokens, extra)
+21       found = re.findall(r"\\boxed\{([^{}]*)\}", out) or re.findall(r"-?\d[\d,]*
+     (?:\.\d+)?", out)
+22       try:
+23           return bool(found) and float(found[-1].replace(",", "").strip(" $\\"))
+     == float(item["answer"])
+24       except ValueError:
+25           return Falsedef mmlu(item, max_tokens, extra):
+26       options = "\n".join(f"{k}. {v}" for k, v in zip("ABCD", item["choices"]))
+27       out = chat(f"{item['question']}\n{options}\nAnswer with the option letter
+     only.", max_tokens, extra)
+28       found = re.findall(r"\b[ABCD]\b", out)
+29       return bool(found) and found[0] == item["answer"]
+30
+31   EVALUATORS = {"gsm8k": gsm8k, "mmlu": mmlu}  # T02–T04 的评测器随分题材料下发，接⼝
+     相同def evaluate(name, m, extra):
+32       if name not in EVALUATORS:
+33           sys.exit(f"缺少评测器          {name}，请从分题材料获取           ")
+34       with open(m["subset"], encoding="utf-8") as f:
+35           items = [json.loads(line) for line in f if line.strip()]
+36       if len(items) != m["n"]:  # ⼦集题数写死，防⽌换⼦集
+37           sys.exit(f"{name} ⼦集应为          {m['n']} 题，实际        {len(items)} 题")
+
+===== PDF PAGE 13 =====
+  38        with ThreadPoolExecutor(16) as ex:
+  39            hits = list(ex.map(lambda it: EVALUATORS[name](it, m["max_tokens"],
+        extra), items))
+  40        return 100.0 * sum(hits) / len(items)
+  41
+  42    def selfcheck():
+  43        # 逻辑⾃检：劣化超容差必须 FAIL，容差内与提升必须 PASS
+  44        acc, wer = {"ref": 80.0, "scale": 100}, {"ref": 5.0, "scale": 100,
+        "lower_is_better": True}
+  45        assert not check(77.9, acc)["pass"], "掉 2.1 pt 必须             FAIL"assert
+        check(78.0, acc)["pass"] and check(85.0, acc)["pass"], "掉 2 pt 以内或涨点必须
+        PASS"assert not check(7.1, wer)["pass"] and check(4.0, wer)["pass"], "WER 升超容
+        差 FAIL，下降      PASS"print("selfcheck OK")
+  46
+  47    if __name__ == "__main__":
+  48        ap = argparse.ArgumentParser()
+  49        ap.add_argument("--selfcheck", action="store_true")
+  50        if ap.parse_args().selfcheck:
+  51            selfcheck(); sys.exit(0)
+  52
+  53        # 官⽅基线⽂件：写死⼦集与题数、max_tokens、思考开关（extra_body，如#
+        {"chat_template_kwargs": {"enable_thinking": false}}）和 GPU 基线分数，参赛者不得
+        修改with open(f"baselines/{os.environ['MODEL_ID'].replace('/', '__')}.json",
+        encoding="utf-8") as f:
+  54            base = json.load(f)
+  55        extra = base.get("extra_body", {})
+  56        detail = {name: check(evaluate(name, m, extra), m) for name, m in
+        base["metrics"].items()}
+  57        ok = all(d["pass"] for d in detail.values())
+  58        result = {k: os.environ[k] for k in ("MODEL_ID", "CARD", "FRAMEWORK",
+        "PRECISION")}
+  59        result.update(detail=detail, passed=ok)
+  60        with open("verify_result.json", "w", encoding="utf-8") as f:
+  61            json.dump(result, f, ensure_ascii=False, indent=2)
+  62        print(json.dumps(result, ensure_ascii=False, indent=2))
+  63        sys.exit(0 if ok else 1)
+
+
+
+baselines/<模型>.json           （官⽅下发，参赛者不改；⽰例数值为占位）
+
+
+   代码块
+
+   1    {"model": "moonshotai/Kimi-Linear-48B-A3B-Instruct","extra_body":
+        {},"metrics": {"gsm8k": {"subset": "data/gsm8k.jsonl", "n": 500, "max_tokens":
+        2048, "ref": 78.0, "scale": 100},"mmlu": {"subset": "data/mmlu.jsonl", "n":
+        1000, "max_tokens": 32, "ref": 70.0, "scale": 100}}}
+
+===== PDF PAGE 14 =====
+bench.sh    （性能测试脚本：6档负载，每档连测两      次取      第⼆      次；     ⾸次      提交      的结      果即      性能      基准      ）
+
+
+   代码块
+
+   1   #!/usr/bin/env bash# ⾸次提交必跑：结果即该「模型 × 卡型 × 框架 × 精度」的性能基准；后
+       续优化按同⼀负载复测对⽐# 负载固定：输⼊ 4K / 16K × 输出 1K × 并发 1 / 8 / 64，共 6
+       档；每档连测两次，第⼀次预热，第⼆次计⼊成绩set -uo pipefail                      #
+       不加 -e：某⼀档失败时记录下来，继续跑其余档source ./env.sh
+   2   BENCH_MODE=${BENCH_MODE:-text}       # text：纯⽂本；image：多模态理解，每个请求带
+       1 张图
+   3   IMAGE_RES=${IMAGE_RES:-1080p}        # BENCH_MODE=image 时的图⽚分辨率，以分题材料
+       为准mkdir -p bench && rm -f bench/round*.jsonl   # 结果⽂件是追加写⼊，重跑前清掉旧
+       结果
+   4
+   5   BENCH=sglang.benchmark.serving       # SGLang 压测客⼾端，SGLang / vLLM 服务通⽤
+   6   python -c "import $BENCH" 2>/dev/null || BENCH=sglang.bench_serving   # 旧版
+       sglang 的模块名if [ "$BENCH_MODE" = image ]; then
+   7     DATA=(--dataset-name image --image-count 1 --image-resolution "$IMAGE_RES")
+   8   else
+   9     DATA=(--dataset-name random-ids)   # 随机 token，⽆需下载数据集fifor ILEN in
+       4096 16384; dofor C in 1 8 64; do
+  10       N=$(( C * 2 > 8 ? C * 2 : 8 ))   # 请求数：并发的 2 倍，⾄少 8 个for R in 1
+       2; do
+  11         TAG="round${R}_${ILEN}_1024_c${C}"echo "[bench] $TAG"
+  12         python -m "$BENCH" \
+  13           --backend "$FRAMEWORK" --host 127.0.0.1 --port "$PORT" \
+  14           --model "$SERVED_NAME" --tokenizer "$MODEL_PATH" "${DATA[@]}" \
+  15           --random-input-len "$ILEN" --random-output-len 1024 --random-range-
+       ratio 1 \
+  16           --max-concurrency "$C" --num-prompts "$N" --seed 1 \
+  17           --output-file "bench/round${R}.jsonl" > "bench/${TAG}.log" 2>&1 \
+  18           || echo "[bench] FAIL $TAG，⻅         bench/${TAG}.log；不⽀持的档位写进报告「注意
+       事项」   "donedonedone# 第⼆次的结果汇总成 Markdown 表，直接贴进报告「7. 性能参考」
+  19   python - <<'EOF' | tee bench/summary.md
+  20   import json
+  21   cols = ["random_input_len", "random_output_len", "max_concurrency",
+       "completed", "duration",
+  22           "request_throughput", "output_throughput", "total_throughput",
+       "mean_ttft_ms", "p99_ttft_ms",
+  23           "mean_tpot_ms", "p99_tpot_ms", "mean_e2e_latency_ms"]
+  24   print("| " + " | ".join(cols) + " |")
+  25   print("|" + " --- |" * len(cols))
+  26   for line in open("bench/round2.jsonl", encoding="utf-8"):
+  27       r = json.loads(line)
+  28       print("| " + " | ".join(f"{r.get(c, '-'):.2f}" if isinstance(r.get(c),
+       float) else str(r.get(c, "-")) for c in cols) + " |")
+  29   EOF
+
+===== PDF PAGE 15 =====
+  30  echo "[bench] done; 提交 bench/round1.jsonl、bench/round2.jsonl、bench/*.log 与
+      bench/summary.md"
+
+
+
+提交前先跑   python verify.py --selfcheck   确认判分逻辑没被改坏。验证顺序为           bash
+run.sh →bash env_check.sh  →bash smoke.sh → source env.sh && python
+verify.py →bash bench.sh  ，各步产出的    env.log 、 server.log  、 smoke.log 、
+verify_result.json  、 bench/  与技术报告⼀起提交。多模态理解模型压测⽤
+BENCH_MODE=image bash bench.sh   。
+
+
+七、这些材料是什么、起什么作⽤
+
+官⽅材料分两层：通⽤材料帮你快速上⼿，分题材料告诉你怎么算过。四件套脚本把验收⼝径固化成
+可⼀键复跑的产物。
+
+通⽤材料
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+分题材料（评测/基 线）
+
+===== PDF PAGE 16 =====
+脚本各⾃的作⽤
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+附录、模型介绍与部署信息
+
+
+                                                                                                    
+
+T 01m   oonshotai/Kim   i-Linear-48B-A3B-Instruct       48B / A3B · BF16 · 98 GB               
+
+介绍：⽉之暗⾯开源的混合线性注意⼒M     oE模型（本仓库为Instruct指令版，另有           B ase预训练
+版）。核⼼是K    im    iD eltaAttention（K    D A，对           G    atedD eltaNet⻔控机制的改      进），KD                            A与全局                      M     LA
+按3:1混合；1M     上下⽂下K   Vcache最多减少75% 、解码吞吐最⾼提升6倍。      训练      数据           5.7T tokens。
+
+规格：    KimiLinearForCausalLM          （⾃定义代码，需           trust_remote_code         ）；27层、256专
+家（每token激活8个）；上下⽂1M  ；B F16，20个分⽚约98.2G    B；仓库带
+chat_template.jinja          ；M     IT。
+
+部署：python≥3.10、torch≥2.6、           fla-core    ≥0.4.0（K    D Akernel开源在FLA库）。
+READ M     E给出的vLLM     部署命令：
+
+vllm serve moonshotai/Kimi-Linear-48B-A3B-Instruct \                        
+   --port 8000 \       
+   --tensor-parallel-size 4 \             
+
+===== PDF PAGE 17 =====
+    --max-model-len 1048576 \               
+    --trust-remote-code           
+
+T 01Xiaom   iM     iM     o/M     iM     o-V2.6-D istill-Q w  en-9B9.4B · BF16 · 19 GB      
+
+介绍：⼩⽶M     iM     o团队以Q w  en3.5-9B 为基座、⽤M     iM     o⽣成的数据做S  FT 得到的           9B 智能      体模型，            覆
+盖代码、通⽤Agent、视觉编码与⽹络安全任务，作为agenticRL研究的起点      发布。SF                        T 数据共
+77.4B tokens；READ M     E报告S  W   EVerified61.1、S  W   EPro44.6、Term    inalB ench2.137.1。
+
+规格：     Qwen3_5ForConditionalGeneration                   ：32层，其中24层线性注意⼒+8层全注意⼒
+（每4层1层全注意⼒），带视觉塔；上下⽂256K ；B F16，4个分⽚约18.9G    B；⾃带                      tokenizer与
+M     iM     ov2.6chattem    plate；M     IT。
+
+部署：需使⽤⽀持Q w  en3.5的较新S  G    Lang：
+
+sglang serve \         
+    --model-path XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B \                              
+    --reasoning-parser mimo \               
+    --host 0.0.0.0 \          
+    --port 30000       
+#   开启思考：请求中带              extra_body={"chat_template_kwargs":
+{"enable_thinking": True}}#                 思考内容从        message.reasoning_content 返回                    
+
+T 02m   oonshotai/Kim   i-VL-A3B-Instruct         16B / A3B · BF16 · 33 GB                   
+
+介绍：⽉之暗⾯开源的⾼效M     oE视觉语⾔模型，      语⾔      解码      器仅      激活           2.8B 参数。由原⽣分            辨率视觉      编
+码器M     oonViT、M     LP投影层和M     oE语⾔模   型组      成，      ⽀持           128K    上下⽂，擅⻓      多轮           Agent交互
+（O S  W   orld）、O CR、⻓视频/⻓⽂档与多   图理      解。           READ M     E公布O CRB ench867、M     M     M     U   -Val
+57.0、M     athVista68.7。
+
+规格：     KimiVLForConditionalGeneration                  （⾃定义代码，需             trust_remote_code           ）；
+LLM     为M     LA+64路由专家/2共享专家；B            F16，7个分⽚约32.8G    B；M     IT。
+
+部署：Transform    ers推理建议python3.10、torch≥2.1.0、transform    ers4.48.2；vLLM     ⽀持      经PR
+#16387提交（READ M     E撰写时尚未合⼊）；平台标注的推理后端为S  G    Lang0.5.2（VLM   ）与                      vLLM     
+0.9.2。采样建议：Instruct版tem    perature0.2，greedy（0）亦      可，      与官      ⽅评      测设      定⼀      致。 
+
+T 02O penBM     B/M     iniCPM     -V-4.7-35B-A3B  35B / A3B · BF16 · 70 GB                   
+
+介绍：⾯壁智能（O penB M     B）M     iniCPM     -V系列最新      模型（2         026-10-12发布）      ，也      是该      系列      ⾸个           M     oE
+模型，总参35B、激活约3B，⽀持单图、多   图与      视频      理解      。采      ⽤           LLaVA-U   H D v4的           ViT 内早期压            缩，
+在视觉编码器内部提前压缩视觉token，并⽀持4x/16x混合压缩；配合前瞻专      家调度（                      LES ）、      细粒
+度逐层量化与D S  park投机采样，可在iPhone17ProM     ax上以约3G    B 内存达到                      13+tokens/s。
+READ M     E称Instruct模式下综合得分⾼于           Q w  en3.635B -A3B，且推理耗时更短。                
+
+规格：     MiniCPMV4_7ForConditionalGeneration                     （   minicpmv4_7       ）；语⾔模型为
+qwen3_5_moe_text           （40层、256专家、每token激活8个）      ，视      觉编      码器           27层；共           35.2B 参
+
+===== PDF PAGE 18 =====
+数，B F16约70.4G    B；另有官⽅FP8、int4、AW   Q、G    PT Q、G    G    U   F量化版与D S  park草稿      模型；
+Apache-2.0。
+
+部署：Transform    ers推理需     transformers[torch]>=5.18.0           、torchvision与torchcodec
+（CU   D A版本不匹配时可改⽤PyAV）；READ M     E称⽀持S  G    Lang、vLLM   、llam    a.cpp与O llam    a，具
+体部署⻅O penB M     B /M     iniCPM     -o的部署⽂档与M     iniCPM     -VCookBook。   官⽅D S  park模型卡中的
+vLLM     命令（节选，省略投机解码与FLAS  H _AT T N等后端参数）：
+
+vllm serve \      
+   --model openbmb/MiniCPM-V-4.7-35B-A3B \                 
+   --served-model-name MiniCPM-V-4.7-35B-A3B \                  
+   --tensor-parallel-size 2 \           
+   --max-model-len 40960 \          
+   --mm-processor-kwargs '{"downsample_mode":"4x"}' \                     
+   --trust-request-mm-kwargs \            
+   --default-chat-template-kwargs '{"enable_thinking":false}'                        
+#  可加    --speculative-config 挂载            OpenBMB/MiniCPM-V-4.7-35B-A3B-DSpark                草
+稿模型（每次起草          15   个 token）      
+
+Instruct模式推荐采样：tem    perature0.7、top_p0.95、top_k            100、m    in_p0、presence_penalty
+0、repetition_penalty1.03。
+
+T 02BAAI/RoboBrain2.5-8B-NV        8.8B · Qwen3-VL 架构 · BF16 · 17.5 GB                      
+
+介绍：智源具⾝⼤脑模型RoboB rain2.5（2026-01发布，技术报告arXiv2601.14352）的           8B 版，   在
+2.0的感知、推理与规划能⼒基础上，⽤⼤      规模      ⾼质      量时      空数      据继      续训      练。      空间      推理      从           2D 升级      到3D：
+预测带深度的3D 坐标点（3D 空间指代）、理解绝对度量约束（如「悬停在上⽅                      1‒5cm  」）、输            出描
+述完整操作过程的关键点序列（3D 空间轨迹）。时序上构建通⽤奖励模型（G               RM   ），可跨任务            、视⻆
+与本体做稠密进度预测和执⾏状态估计，为VLA强化学习提供实时稠密奖励；R                      EAD M     E称仅      ⽤⼀条⽰
+范即可在复杂精细操作任务上达到95%  +成功率      。同      时保      留           2.0的交互推理、      空间感知            、时序感            知与场
+景推理能⼒。
+
+规格：标准      Qwen3VLForConditionalGeneration             （   qwen3_vl    ；语⾔模型36层、hidden
+4096、32头/8K   V头，视觉编码器27层，结      构同           Q w  en3-VL-8B），可复⽤      框架现有                      Q w  en3-VL实
+现；8.77B 参数，B F16，2个分⽚约17.5G    B；Apache-2.0。同系列另有B AAI/RoboB rain2.5-8B -M     T
+（架构与训练数据相同、性能相近，区别仅在训练集群：NV为NVID IA集群      ，M     T 为摩      尔线程集            群）
+和4B 版B AAI/RoboB rain2.5-4B  。
+
+部署：使⽤G    itH ubFlagO pen/RoboB rain2.5代码：python3.10conda环境，             pip install -r
+requirements.txt       ；统⼀推理⼊⼝为          inference.py      中的  UnifiedInference       ：
+
+from inference import UnifiedInference                 
+model = UnifiedInference("BAAI/RoboBrain2.5-8B-NV")                      
+pred = model.inference("What is shown in this image?", image,
+task="general")      
+
+===== PDF PAGE 19 =====
+# task 可选      general / grounding / pointing / trajectory；trajectory                   输出
+[(x, y, d), ...]     ，d 为深度     
+
+时序价值估计（G    RM   ）需配合FlagO pen/Robo -D opam    ine仓库的      GRMInference     ，输⼊多路相机
+视频。READ M     E未提及S  G    Lang/vLLM     部署。
+
+T 02BAAI/M     obileVLA-R1VLA · zip 分卷       26.9 GB · 精度未标注
+
+介绍：北京⼤学AIG    eeksG    roup提出的四⾜机器⼈      视觉-语⾔-动作模   型（           ECCV2026）。通过      「结构化                      
+CoT 监督对⻬+G    RPO 强化学习」两阶段训练，把语⾔推理与连续控制统⼀起      来；配套            构建多粒            度具
+⾝CoT 数据集M     obileVLA-CoT，在VLN/VLA任务上较强基线提升约5% ，并在真实   四⾜      机器      ⼈上      验
+证。
+
+规格：模型卡为空（⽆READ M     E、⽆         config.json    ），权重以      weight.zip.part-aa      …  
+part-az   共26个分卷存放（约26.9G    B），需先合并再解压（如                cat weight.zip.part-*
+> weight.zip    ）；CC-BY-S  A-4.0。
+
+部署：以下来⾃G    itH ubAIG    eeksG    roup/M     obileVLA-R1。代码基于NaVILA（LLaVA系）；    bash
+environment_setup.sh mobilevla          会安装Python3.10、torch2.3+CU   D A12.2、
+FlashAttention2.5.8，以及   transformers==4.37.2       并覆盖仓库内的补丁⽂件。输⼊为RG    B +
+深度图（深度需⽤D epthAnythingv2外部⽣成）；输出格式为                    <think>…</think><answer>…
+</answer>   ，导航任务给⽂本动作（如              turn left 30 degree      ），控制任务给
+{"velocity": [...], "action": "..."}            。评测配置为VLN-CER2R/RxR的
+mobilevla.yaml     ；远程API只返回解析后的动作/速度，不直接驱动机器⼈。
+
+T 02BAAI/Recon2Reason-Reasoning-4B         4.4B · BF16 · 8.9 GB         
+
+介绍：⾯向室内/具⾝场景空间推理的视觉语⾔模   型，      由           Q w  en3-VL-4B -Instruct微调      ⽽来，强            化对度
+量距离、相对位置、物体布局与空间关系的推理，⽀持单图与多图输⼊。本仓      库仅含推            理模型，            检索
+增强的场景重建扩展另⾏发布。
+
+规格：标准     Qwen3VLForConditionalGeneration           ，⽆⾃定义代码、⽆需
+trust_remote_code      ；4,437,815,808参数；B F16，2个分⽚约           8.9G    B；Apache-2.0（READ M     E
+注明以训练数据与上游许可的最终确认为准）。
+
+部署：READ M     E以Transform    ers直接加载（  transformers==4.57.1       、  torch>=2.6    ），使
+⽤标准Q w  en3-VLchat格式；复现基准建      议           greedy（do_sample=False ）。官⽅评测环境：
+B F16、PyTorch2.8.0、S  D PA注意⼒。
+
+T 02O penBM     B/Trident-Q w  en3VL-2B2.1B · 嵌⼊模型         · BF16 · 4.3 GB        
+
+介绍：O penB M     B 发布的混合模态检索嵌⼊模型（      论⽂           C h ao sin th eText，arXiv2610.11816）。把⽂
+本、图⽚和图⽂融合输⼊映射到同⼀向量空间，使⼀条⽂本query能在同⼀      个列表⾥            对纯⽂本            、纯图
+⽚和图⽂⽂档统⼀排序。基于Q w  en3-VL-2B -Instruct在Trident-Train上微调，                      LoRA已合      并。
+
+规格：    Qwen3VLForEmbedding      （特征抽取，输出向量⽽⾮⽂本）；2.13B 参数；B F16，单⽂件
+约4.3G    B；M     IT（权重同时受Q w  en基座Apache-2.0约束）。
+
+===== PDF PAGE 20 =====
+部署：需配合G    itH ubO penB M     B /Trident代码：python3.12conda环境，         pip install -r
+requirements.txt       （测试于transform    ers4.57.1，Q w  en3-VL需≥4.57）；通过
+TridentQwen3VLBackend          编码，query与doc使⽤不同的默认instruction（属于训练格式）；
+输出L2归⼀化向量，⽤余弦相似度打分。
+
+T 02deepseek-ai/D eepS  eek-V4-Flash-Vision-Exp         305B MoE · 官⽅           FP8/FP4 ·
+BF16 约 609 GB         
+
+介绍：D eepS  eek-V4家族⾸个实验性多模态模型，在D eepS  eek-V4-Flash架构上加      ⼊视觉模      块并继续
+训练。相⽐D eepS  eek-V4-Flash-0731，多      模态Agent能⼒显著提升，纯⽂本           Agent能⼒      基本持平            。
+
+规格：    DeepseekV4ForCausalLM          ；43层、256路由专家（每token激活6个）     ；最      ⼤位      置           1M  ；
+共约304.6B 参数。官⽅权重：⾮专家部分      为           FP8（e4m    3，1          28×    128block，u           e8m    0scale），路由
+专家为FP4（两值打包存为int8），48个分⽚约167.8G    B；未发布B F16版，异构            加速卡            不⽀持                      FP8
+/FP4，需转为B F16（约609G    B）或量化为INT 8/INT 4部署；M     IT。仓库不含           J  injachattem    plate，
+附 encoding/     （O penAI⻛格消息→prom    pt的编码参考）和             inference/      （权重转换+最⼩
+PyTorch推理，覆盖视觉编码器/对⻬器、D Flash注意⼒、M     oE、H yper-Connections与
+D S  park）。
+
+部署：S  G    Lang命令如下；target与draft权重在同⼀个checkpoint⾥，启⽤D S  PARK    时不      要另设              -
+-speculative-draft-model-path             （详⻅S  G    Langcookbook）：
+
+sglang serve \       
+   --model-path deepseek-ai/DeepSeek-V4-Flash-Vision-Exp \                        
+   --tp 4 \    
+   --speculative-algorithm DSPARK \               
+   --mem-fraction-static 0.85 \             
+   --host 0.0.0.0 \        
+   --port 30000      
+
+vLLM  ：官⽅⽰例为单节点4×    G    B 300，镜像         vllm/vllm-openai:deepseekv4-flash-
+vision   ，参数含     --kv-cache-dtype fp8 --block-size 256 --tensor-parallel-
+size 4   、  --tool-call-parser deepseek_v4 --reasoning-parser deepseek_v4                           
+及dspark投机解码（        num_speculative_tokens=3           ），详⻅vLLM     recipe。
+
+T 03Q w  en/Q w  en-Im   age-2.1-Turbo  ⽂⽣图      / 编辑      · 16.2B · BF16 · 32 GB             
+
+介绍：通义千问Q w  en-Im    age-2.1的加速版checkpoint，⽀持⽂⽣图与图像编辑，只需                      8步去噪     ；与           
+Q w  en-Im    age-2.1同为7B 视觉⽣成架构。checkpoint内置推荐的8步采      样⽇      程，      默认           CFG    =1，并通
+过前缀K   V缓存在各去噪步之间复⽤⽂本与      参考   图上      下⽂      。
+
+规格：D iffusers⽬录结构（         transformer      /text_encoder      /vae /scheduler     /
+processor     ），共16.2B 参数（transform    er7.1B、text_encoder8.8B、VAE0.34B），全      部为
+B F16，约32.5G    B；Q w  enResearchLicense。
+
+===== PDF PAGE 21 =====
+部署：从源码安装D iffusers（需包含PR#14950的pipeline采样sigm    as⽀持），另装                      
+transformers>=5.17.0          、accelerate、pillow ：
+
+pipe = QwenImage21Pipeline.from_pretrained(                    
+    "Qwen/Qwen-Image-2.1-Turbo", dtype=torch.bfloat16).to("cuda")                              
+image = pipe(prompt=prompt, width=1696, height=2528,
+use_kv_cache=True,        
+
+generator=torch.Generator("cpu").manual_seed(42)).images[0]                          
+
+只设  num_inference_steps          不会覆盖内置⽇程，需显式传                 sigmas   ；官⽅⽰例⽤CPU   
+G    enerator设种⼦，便于与G    PU   参考产物      对⻬      初始      噪声      。分      辨率      预设     ：1          :12048×2  048、4:3
+2400×    1792、3:41792×    2400、3:22528×    1696、2:31696×2  528、16:92752×    1536、9          :16
+1536×    2752。
+
+T 03Tencent-H unyuan/H Y-O m   niW   eaving     统⼀视频⽣成           · 18.0B · BF16 约 36
+GB  
+
+介绍：腾讯混元H unyuanVideo团队与浙江⼤学      提出      的统      ⼀视      频⽣      成模   型，      以           H unyuanVideo-1.5为
+主⼲，采⽤M     LLM     +M     M     D iT +VAE框架：M     LLM     解析交错的⽂本/图像           /视频输      ⼊，可开            启思考模            式先
+推理⽤⼾意图、⽣成增强prom    pt；并借鉴Q w  en3-VL的D eepS  tacking，把多            层M     LLM     隐状      态注⼊
+M     M     D iT。⽀持⽂⽣视频、⾸帧⽣视频、⾸尾帧插帧、视频编辑、单/多主      体参      考⽣      成（           1‒4图）、      ⽂
++图+视频⽣视频及推理增强⽣成；同时发布评测基准IntelligentVB ench。
+
+规格：config类为       HunyuanVideo_1_5_Pipeline           ，⽬录含      transformer      /
+text_encoder       /vae  /upsampler    /scheduler     ，共18.0B 参数（transform    er8.3B、
+text_encoder8.3B、VAE1.26B、upsam    pler0.07B）；仓库约55.3G    B，其中           text_encoder为
+B F16、其余为FP32，按B F16计约36G    B；腾讯混元⾃有许可。
+
+部署：使⽤G    itH ubTencent-H unyuan/O m    niW   eaving代码，依赖安装同H unyuanVideo-1.5（               pip
+install -r requirements.txt            ），注意⼒库可选FlashAttention（官⽅      实际      使⽤      ）/       Flex-
+B lock-Attention（稀疏注意⼒）/S  ageAttention。统⼀⽤torchrun调                generate.py      （节选）：
+
+torchrun --nproc_per_node=8 generate.py \                   
+   --task i2v --prompt "          
+PROMPT      " − −ima   gep  ath
+IMAGE_PATH \       
+   --aspect_ratio 16:9 --seed 0 \              
+   --output_path ./outputs/i2v.mp4 --model_path $MODEL_PATH                          
+# task 可选       t2v / i2v / interpolation / reference2v / editing / tiv2v                          ；
+前三者可加       --think    
+
+默认50步、81帧（≤81帧16fps，否则24fps）、bf16、开启CPU   offloading；                     --
+pipeline_config       预设om    niw  eaving（guidance_scale6.0、flow  _shift7.0）/om    niw  eaving2
+（6.0、5.0）。显存不⾜可设
+
+===== PDF PAGE 22 =====
+PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True,max_split_size_mb:128
+。
+
+T 03W   an-AI/W   an2.1-I2V-14B-480P    图⽣视频       · 22.8B · BF16 约 46 GB               
+
+介绍：阿⾥通义万相W   an2.1系列的图⽣视频模型（480P版，⽣成更快）。W   an2.1是基      于Flow  
+M     atching框架的扩散Transform    er：um   T 5编码多语⾔⽂本并经交叉注意⼒注⼊            每个           block；⾃研           3D 
+因果VAE（W   an-VAE）可编解码任意⻓度的1080P视频并保留时序信息；也是      ⾸个能在      视频中⽣            成中
+英⽂⽂字的模型。READ M     E的⼈⼯评测显⽰其优于对⽐的开源与闭源模型。                                 
+
+规格：14B D iT（dim    5120、40层、40头；safetensors实计16.4B 参数，以FP32存储      ）；仓库            为
+W   an原⽣格式：D iT 7个分⽚约65.6G    B、um   T 5-XXL⽂本编码器（bf16，11.4G    B）、           CLIP图像      编码
+器（open-clip-xlm    -roberta-large-vit-huge-14，4          .8G    B）与W   an2.1VAE（0         .5G    B），合计约                      82.3
+G    B。按D iffusers版统计，推理所需组件共           22.8B 参数（D iT 16.4B、um   T 55.7B、CLIP视觉塔
+0.63B、VAE0.13B），按B F16计约46G    B；另有D iffusers格式W   an-AI/W   an2.1-I2V-14B -480P-
+D iffusers（约90G    B）；Apache-2.0。
+
+部署：使⽤G    itH ubW   an-Video/W   an2.1代码，    pip install -r requirements.txt              （torch
+≥2.4.0）：
+
+单卡（    README 的单卡效率测试对               14B 加了     --offload_model True         ）  
+python generate.py --task i2v-14B --size 832*480 \                       
+   --ckpt_dir ./Wan2.1-I2V-14B-480P --image examples/i2v_input.JPG --
+prompt "..."      
+# 8 卡：     FSDP + xDiT USP（Ulysses 序列并⾏）                  
+torchrun --nproc_per_node=8 generate.py --task i2v-14B --size 832*480
+\ 
+   --ckpt_dir ./Wan2.1-I2V-14B-480P --image examples/i2v_input.JPG \                             
+   --dit_fsdp --t5_fsdp --ulysses_size 8 --prompt "..."                       
+
+可选prom    pt扩写（    --use_prompt_extend         ，本地Q w  en2.5-VL-7B -Instruct或D ashS  cope
+API）。
+
+T 03M     iniM     ax/M     iniM     ax-M     usic3⾳乐⽣成 · 21.0B · BF16 约 52 GB     
+
+介绍：M     iniM     ax⾳乐⽣成模型，根据歌词+⾳乐描述⽣成最⻓5分钟的      完整      歌曲      ，段      落结      构、      ⼈声      与
+编曲在⻓时段内保持连贯。层级⾃回归H ybrid-LM  ：8       B G    lobalLLM   （由Q w  en3-8B 初始化，            逐帧预
+测第1层语义RVQ 码本）+0.6B LocalLLM   （预测其余7层声学      码本      ）；     合成      端融      合⼆      者隐      状态      ，经           
+Flow  M     atching（2.4B）与Flow  -VAE解码器（123M   ）输出32kH z/16-bit⽴体      声W   AV。
+
+规格：    MiniMaxMusic3ForConditionalGeneration                 ；仓库含      language_model      /
+transformer      /condition_encoder        /rvq_depth_decoder        /vocoder    等组件：
+safetensors共21.0B 参数（B F1618.5B +FP322.5B，含9.2B 的        qwen_7B    ⽬录），另有
+flowmatching_vae.pth          与 dav.pth    （共约10.3G    B，精度未标注）；仓库约57G    B，按
+B F16计约52G    B（.pth按原⼤⼩计）；许可⻅仓库LICENS  E。
+
+===== PDF PAGE 23 =====
+部署：官⽅⽀持S  G    Lang-O m    ni（⻅cookbook），另⽀持diffusers与Com    fyU   I。READ M     E中模型ID 
+为H F的 MiniMaxAI/MiniMax-Music3          ，使⽤权重时        --model-path     指向本地下载⽬录：
+
+sgl-omni serve --model-path MiniMaxAI/MiniMax-Music3 --port 8000                          
+
+
+#  ⽣成：复⽤语⾳接⼝，            input =    歌词（段落标签单独成⾏），                instructions =       ⾳乐描述      
+curl   http://127.0.0.1:8000/v1/audio/speech               -H 'Content-Type:
+application/json' \        
+   -d '{"model":"MiniMaxAI/MiniMax-Music3","input":"
+[Verse]\n...","instructions":"...",              
+
+"response_format":"wav","seed":7,"max_new_tokens":750,"stream":false}'
+\ 
+   --output minimax_music3.wav           
+
+max_new_tokens       为⾳频帧数（25帧/秒）。diffusers版（M     odularPipeline，需安装
+diffusers#14456对应com    m    it）：READ M     E称全精度可在24G    B 显存内运⾏，开            启⾃动                      CPU   offload
+约22G    B，再对语⾔模型逐层groupoffloading可降到8G    B。限制：推理需           CU   D A；仅⽀            持⾮流式          ；
+⽂本prom    pt≤5,000tokens；⾳频≤           9,000帧。
+
+T 03Tencent-H unyuan/H Y-W   orld-2.0    3D 世界模型         · 84.7B · BF16 约 169 GB              
+
+介绍：腾讯混元多模态世界模型框架，提供「世界⽣成」与「世界重建」两项能⼒：     输⼊⽂本            、单
+图、多视⻆图或视频，输出可编辑的3D 世界（⽹格/3D ⾼斯泼溅），可直接导⼊                      B lender/U   E/
+U   nity/Isaac。世界⽣成分四阶段：H Y-Pano2.0全景⽣成（约80B）→W   orldNav轨迹规划                      →
+W   orldS  tereo2.0世界扩展（约17B）→W   orldM     irror2.0（约1.2B）+3D G    S  组合     ；世界重            建由
+W   orldM     irror2.0单次前向同时预测深度、法线、相机参数、点云与3D G    S  属性      。
+
+规格：任务标签im    age-to-3D；仓库含          HY-Pano-2.0     与  HY-WorldMirror-2.0       两个⼦⽬录，
+共84.7B 参数（H Y-Pano-2.083.4B、W   orldM     irror-2.01.26B；B            F1682.2B +FP322.5B），仓库约
+174.7G    B，按B F16计约169G    B；腾讯混      元⾃      有许      可（License.txt）。
+
+部署：推荐CU   D A12.8+Python3.11+（conda环境        hyworld2    ）；   pip install -r
+requirements.txt      ，安装仓库⾃带的gsplat变体（或官⽅gsplat），FlashAttention-3
+（H opper）/FlashAttention-2⼆选⼀；世      界⽣      成另      需requirements_git.txt      、
+recastnavigation⼦模块与navm    esh扩展。W   orldM     irror2.0命令⾏：
+
+python -m hyworld2.worldrecon.pipeline --input_path path/to/images                           
+#  多卡（输⼊图⽚数须            ≥ GPU    数）   
+torchrun --nproc_per_node=2 -m hyworld2.worldrecon.pipeline \                         
+    --input_path path/to/images --use_fsdp --enable_bf16                       
+
+T 04Tencent-H unyuan/AuK       1.5B · 语⾳⽣成          / 编辑      · BF16 约 3.4 GB          
+
+===== PDF PAGE 24 =====
+介绍：腾讯混元开源的1.5B 语⾳⽣成与编辑基础      模型，基      于数      百万      ⼩时      ⾳频      训练      ，通      过统      ⼀的      ⾃然      语
+⾔指令接⼝⽀持：零样本T TS 、指令T TS （仅凭⾳⾊描述）、语⾳内容编辑与歌词            编辑、⾳            ⾼/语速           /
+⾳量编辑、情感/⾳⾊/去⼝⾳/⾮语⾔声⾳           /⽿语转换，以及语⾳增强、语⾳                      /⾳乐分      离与      ⽬标      说话
+⼈提取。AuK    为⾼质量B ase版。
+
+规格：checkpoint为扩散Transform    er+层融合权重（            auk_base.safetensors         ），另有
+vae.safetensors       与 config.yaml     ，共1.69B 参数，以FP32存储约6.8G    B，按B F16计约
+3.4G    B；M     LLM     编码器需另下载Q w  en/Q w  en2.5-O m    ni-3B（加载时缺少text_encoder.*     属正
+常）；M     IT。
+
+部署：以下来⾃G    itH ubTencent-H unyuan/AuK  。Python3.10（uv或conda），             pip install -
+e . （可选    [gradio]    /[comfyui]    /[train]    ）；默认安装会带PyTorch/TorchAudio/
+TorchVision，特定平台需先装匹配的PyTorch。
+
+下载    Tencent-Hunyuan/AuK         到  ./ckpts/AuK     
+下载    Qwen/Qwen2.5-Omni-3B         到 ./ckpts/Qwen2.5-Omni-3B           
+
+
+#  零样本     TTS ：⽬标⽂本写进          instruction    ，--gen_seconds 指定时⻓             
+auk-infer --audio ref.wav \            
+   --instruction "Say the following with the same voice: '...'" \                         
+   --output out_tts.wav --gen_seconds 6.0               
+
+A800-80G    B、bf16实测峰值显存约24.8‒25.0G    iB，加           --cpu_offload （仅CU   D A）约16.8‒17.0
+G    iB；另提供 auk-gradio     W   ebD em    o（默认端⼝7860）与Com    fyU   I节点。
+
+
+
+T 04Q w  en/Q w  en3-AS  R-1.7B 语⾳识别       · 1.7B · BF16 · 4.7 GB             
+
+介绍：通义千问语⾳识别模型，依托基座Q w  en3-O m    ni的⾳频理解能⼒，⽀持30种语⾔            与22种中⽂
+⽅⾔的语种识别和语⾳识别（含多国英语⼝⾳），可转写语⾳、歌声及带背景      ⾳乐的歌            曲；单模      型统
+⼀流式/离线推理，⽀持⻓⾳频。READ M     E称其达到开源AS  R最优⽔平、可⽐肩            最强商⽤                      API。部分
+W   ER：Librispeechclean/other1.63/3.38、W   enetS  peechnet/m    eeting4.97/5.88、AIS  H ELL-2
+2.71、Fleurs-zh2.41。
+
+规格：    Qwen3ASRForConditionalGeneration             （  qwen3_asr    ，⾳频编码器+⽂本解码器，
+合计2.35B 参数）；B F16，2个分⽚约4.7G    B；Apache-2.0。另有Transform    ers原⽣      格式
+Q w  en/Q w  en3-AS  R-1.7B -hf（需transform    ers≥5.13.0）。
+
+部署：官⽅推理包          qwen-asr   （建议新建Python3.12环境；           pip install -U qwen-asr          ，
+vLLM     后端⽤pip install -U qwen-asr[vllm]           ，推荐装FlashAttention2），另有D ocker
+镜像  qwenllm/qwen3-asr        。vLLM     为day-0⽀持（READ M     E⽰例使⽤           nightly版并安装
+vllm[audio]     ）：
+
+vllm serve Qwen/Qwen3-ASR-1.7B             
+#  或⽤包装命令，参数同             vllm serve     
+
+===== PDF PAGE 25 =====
+qwen-asr-serve Qwen/Qwen3-ASR-1.7B --gpu-memory-utilization 0.8 --host
+0.0.0.0 --port 8000      
+
+请求⾛   /v1/chat/completions      （content类型为    audio_url    ），也⽀持O penAI转写接⼝
+audio.transcriptions       。流式推理仅vLLM     后端⽀持，且不⽀持批量与时间戳；需要时间戳时
+配合Q w  en3-ForcedAligner-0.6B。官⽅评测      设定     ：B            F16、vLLM   、greedy、
+max_new_tokens=1024      、不指定语种。
+
+T 04Q w  en/Q w  en3-ForcedAligner-0.6B 强制对⻬      · 0.6B · BF16 · 1.8 GB          
+
+介绍：Q w  en3-AS  R系列配套的强制对⻬模型：输⼊      ⾳频      与对      应⽂      本，      以⾮      ⾃回归⽅      式输      出词      级           /字级
+时间戳，⽀持11种语⾔、最⻓5分钟语⾳      。R           EAD M     E报告时间戳偏移指标AAS  在M     FA标注集上      均值
+42.9m    s，优于NFA（129.8m    s）与W   hisperX（133.2m    s）。
+
+规格：同为     Qwen3ASRForConditionalGeneration          结构（thinker类型
+qwen3_forced_aligner       ， classify_num=5000      ）；合计0.92B 参数，B F16单⽂件约1.8
+G    B；Apache-2.0；Transform    ers原⽣格式           Q w  en/Q w  en3-ForcedAligner-0.6B -hf。
+
+部署：READ M     E中通过 qwen-asr   包以Transform    ers⽅式加载（vLLM     后端下也经
+forced_aligner_kwargs       单独加载），没有serve⽰例：
+
+from qwen_asr import Qwen3ForcedAligner            
+model = Qwen3ForcedAligner.from_pretrained(             
+    "Qwen/Qwen3-ForcedAligner-0.6B", dtype=torch.bfloat16,
+device_map="cuda:0")      
+results = model.align(audio="asr_zh.wav", text="甚⾄出现交易⼏乎停滞的情
+况。  ", language="Chinese")      
+
+也可作为Q w  en3-AS  R的 forced_aligner     参数，在转写时直接返回时间戳。
+
+
+其他规则
+
+1.优质内容使⽤说明
+
+参与者在此授权平台及其关联⽅，在注明作者信息的前提下永久、免费地使⽤      该内容，            ⽤于平台            的任
+何推⼴、宣传、案例展⽰、产品集成等。如平台将内容单独授权给第三⽅商业      伙伴，将            与作者另            ⾏协
+商并⽀付报酬。
+
+2.税务处理须知
+
+现⾦激励为税前⾦额，如按照相关税法规定，涉及平台履⾏代扣代缴（如个⼈      所得税等            ），需配            合平
+台提供完成⽀付所需的相关材料，平台扣除相关税款后⽀付。如因信息错误或      材料缺失            导致⽆法            发放
+奖励，平台不承担责任。
+
+3.信息核实与违规处理
+
+===== PDF PAGE 26 =====
+相关奖励发放前，平台保留对参与者相关信息进⾏再次核实的权利。当事⼈须      保证所提            交信息真            实有
+效，如存在欺诈、侵权、违规等⾏为，平台有权取消其参与资格，并对账号采      取管理措            施，必要            时追
+究法律责任。
+
+4.责任与义务
+
+参与者须确保提交内容真实、合法、原创，不侵犯他⼈权益。如因内容违规引      发纠纷，            由作者承            担全
+部责任，平台有权取消资格、追回奖励并依法处理。作者应积极配合审核与材      料补充（            作者应在      收到
+平台通知后10个⼯作⽇内补充技术证明材料，逾期未提供视为⾃动放弃奖励）。严禁利⽤本赛事发布
+⼴告或恶意内容，违者将永久取消参与资格及平台社区使⽤权限。参与者保证      并承诺其            提交内容      均为
+原创或已获得充分授权，不侵犯任何第三⽅的知识产权等合法权益。如因参与      者违反本            保证给平            台造
+成损失的，参与者须承担全部赔偿责任。
+
+5.社区保障与⽀持机制
+
+我们承诺严格保护作者个⼈信息与成果，仅在计划相关必要范围内（如，审核      、奖励发            放）使⽤            。审
+核过程公开透明，执⾏利益回避原则，违规⾏为可举报，我们将严肃处理并反      馈。我们            将为优秀            参与
+者提供技术培训、资源对接、品牌曝光等⻓期成⻓⽀持。
+
+6.赛事⽣效与更新机制
+
+本赛事即⽇起正式实施，平台有权根据运营需要、法律法规变化或公平性要求      ，不时对            本规则进            ⾏修
+订或更新（如奖励⾦额、评审标准优化等）。该等修订或更新将在官⽅渠道提      前公⽰，            公⽰期后            即对
+全体参与者⽣效。若参与者不同意相关变更，有权终⽌参与本活动；公⽰期结      束后仍继            续参与的            ，即
+视为接受修订后的规则。相关变动会通过官⽅渠道提前公⽰，敬请关注。

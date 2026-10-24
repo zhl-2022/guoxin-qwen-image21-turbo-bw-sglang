@@ -1,0 +1,153 @@
+INFO 10-24 17:00:03 [__init__.py:44] Available plugins for group vllm.platform_plugins:
+INFO 10-24 17:00:03 [__init__.py:46] - hcu -> vllm_hcu:hcu_platform_plugin
+INFO 10-24 17:00:03 [__init__.py:49] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 10-24 17:00:03 [__init__.py:239] Platform plugin hcu is activated
+[aiter] WARNING: NUMA balancing is enabled, which may cause errors. It is recommended to disable NUMA balancing by running "sudo sh -c 'echo 0 > /proc/sys/kernel/numa_balancing'" 
+aiter MXFP4 kernels not available: No module named 'aiter.ops.gemm_op_a4w4'
+flash_attn is installed but failed to import: cannot import name '_wrapped_flash_attn_backward' from 'flash_attn.flash_attn_interface' (/usr/local/lib/python3.10/dist-packages/flash_attn/flash_attn_interface.py). Falling back to native PyTorch attention.
+INFO: Please install lmslim if you want to infer the quantitative model of moe.
+
+{
+  "schema": "qwen21-actual-vae-checkpoint010-v1",
+  "passed": true,
+  "checkpoint_directory": "/root/private_data/guoxin-candidates/models/Qwen-Image-2.1-Turbo-fc13ba1986f",
+  "model_revision": "fc13ba1986fcb905854dc8de2f52eee395f49b5b",
+  "GPU_tensor_compute": false,
+  "full_model_weights_loaded": false,
+  "official_accuracy_verified": false,
+  "bundle_manifest_sha256": "76befcfb98ae1b272e09abad9e1db1bf319c662be1c7c36ff2208ff1af9fed3b",
+  "source_lock_sha256": "dbab7a7daf5ac2e000eda646fbb74f0bdc8ee9fd4822199043e7b03cf4fec5fd",
+  "verified_files": [
+    {
+      "path": "LICENSE",
+      "bytes": 7831,
+      "sha256": "8dc973f024ff95966bea25866efa443fd16776dcb1001e681e3d467ea572b28d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 15116,
+      "sha256": "9a262724d564444f1fd41a1a3fc1aae75bfb7873cd623abb3acd3d59f02ee4c5"
+    },
+    {
+      "path": "model_index.json",
+      "bytes": 578,
+      "sha256": "97e2febeb19d93cb41fa44807cde8bd42757950b5dffeacdb0331fb2d390cf20"
+    },
+    {
+      "path": "processor/chat_template.jinja",
+      "bytes": 5292,
+      "sha256": "3636d0f0bd6bef02654cdffdc447b79cb2cef8ab02cc75267345946291a489e4"
+    },
+    {
+      "path": "processor/processor_config.json",
+      "bytes": 1300,
+      "sha256": "14932921ca485d458a04dafd8069fbb0a4505622a48208d19ed247115801385b"
+    },
+    {
+      "path": "processor/tokenizer.json",
+      "bytes": 11422650,
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506"
+    },
+    {
+      "path": "processor/tokenizer_config.json",
+      "bytes": 705,
+      "sha256": "fd42a0b35a8d13cd473e88e310b50cbf1bccaa9eb60ed0fd873af5f8f0c59307"
+    },
+    {
+      "path": "scheduler/scheduler_config.json",
+      "bytes": 486,
+      "sha256": "16c948c71f9152a34cce6e3a2f309e97ad2dca32beecbe5e2fd3a7925b7eb4bb"
+    },
+    {
+      "path": "text_encoder/config.json",
+      "bytes": 1542,
+      "sha256": "89050cba6b66c4f68f52305b54fc37efe28d95232246b94aa8dc0cfa36f3b734"
+    },
+    {
+      "path": "text_encoder/generation_config.json",
+      "bytes": 241,
+      "sha256": "d04d0c6fdd1dc056cf68178425a3ecf17a0b9e848cf1a8378ad31c623263472c"
+    },
+    {
+      "path": "transformer/config.json",
+      "bytes": 370,
+      "sha256": "2c567038ca190824728844b8d06d94ae02360e668707afd9734e789a7eb58ce3"
+    },
+    {
+      "path": "transformer/diffusion_pytorch_model.safetensors.index.json",
+      "bytes": 30283,
+      "sha256": "17987f6623b1c814d0ef55a137d99142b7b3b040eb1bf241b5575dd35af803a2"
+    },
+    {
+      "path": "vae/config.json",
+      "bytes": 2172,
+      "sha256": "42bfdec412459bbb7bc38a0617ab70edcfc873f84ec47e0c7d01c53ba09885a5"
+    },
+    {
+      "path": "vae/diffusion_pytorch_model.safetensors",
+      "bytes": 675508656,
+      "sha256": "71879ffd5321e6d10c3c87513e2b474b1252efa7f3dec2969214a9bf06a6dd5c"
+    }
+  ],
+  "CPU_compute_dtype": "float32",
+  "strict_checkpoint_load": true,
+  "bundle": {
+    "files": 524,
+    "sha256": "76befcfb98ae1b272e09abad9e1db1bf319c662be1c7c36ff2208ff1af9fed3b"
+  },
+  "native_before": {
+    "version": "0.5.12+das185.dtk2604.torch2100.2608191739.ga14e79",
+    "root": "/root/private_data/guoxin-wan-env-006-001/venv/lib/python3.10/site-packages",
+    "python_files_verified": 1989,
+    "wheel_sha256": "7c13be91a56b160af81847fffbf4f177b0f07fe0717b4042960ee23846ae7d61"
+  },
+  "activated_packages": {
+    "finder": "BoundSourceFinder",
+    "overlay": "/root/private_data/qwen21-turbo-core-probe009/overlay"
+  },
+  "checkpoint_keys": 238,
+  "checkpoint_keys_sha256": "4283c233d1d7e02ff9ac992e589110c4ae93b48231722c35ca62e8c88cc98c25",
+  "checkpoint_shapes_sha256": "fbb891f75c1e5037d89b7705fd5b6b431cb7871bf6f9411c7b8c6e0165722458",
+  "checkpoint_dtypes": [
+    "torch.bfloat16"
+  ],
+  "parameters": 337740404,
+  "loaded_seconds": 35.95566940121353,
+  "latent": {
+    "shape": [
+      1,
+      64,
+      1,
+      2,
+      2
+    ],
+    "dtype": "torch.float32",
+    "device": "cpu",
+    "abs_max": 8.145147323608398,
+    "finite": true,
+    "sha256": "b26294f138a518e300137001916d18597ca2fc5e27be847cecfb63d45038929c"
+  },
+  "decoded": {
+    "shape": [
+      1,
+      4,
+      1,
+      32,
+      32
+    ],
+    "dtype": "torch.float32",
+    "device": "cpu",
+    "abs_max": 1.0,
+    "finite": true,
+    "sha256": "040eaaa6d96a483ea51f12b506ec439c99ffb0b83b46a4d72de1a2b32fb11cd0"
+  },
+  "native_after": {
+    "version": "0.5.12+das185.dtk2604.torch2100.2608191739.ga14e79",
+    "root": "/root/private_data/guoxin-wan-env-006-001/venv/lib/python3.10/site-packages",
+    "python_files_verified": 1989,
+    "wheel_sha256": "7c13be91a56b160af81847fffbf4f177b0f07fe0717b4042960ee23846ae7d61"
+  },
+  "native_unchanged": true,
+  "cuda_context_initialized": true,
+  "elapsed_seconds": 37.37311789300293
+}

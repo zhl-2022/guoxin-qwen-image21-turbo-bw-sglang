@@ -1,0 +1,1090 @@
+{
+  "schema": "qwen21-probe-bundle-v1",
+  "files": [
+    {
+      "path": "actual005-independent-audit.json",
+      "bytes": 2956,
+      "sha256": "d33bc4f4b5a466d98dcc214f5c89c1f24d91ffdffbad715f80bf5ce6dfb7c104"
+    },
+    {
+      "path": "actual005-raw.zip",
+      "bytes": 7129,
+      "sha256": "d80f5ed745b8a53c638eade8c8e8ee695d63a2947c3ba244d40e87ef1c15b7c3"
+    },
+    {
+      "path": "build-source.py",
+      "bytes": 16365,
+      "sha256": "5353c678f81b4d00d3c578bcf24d186bdc306642cccb36132bfa2fe8ca9fb9f3"
+    },
+    {
+      "path": "compatibility.patch",
+      "bytes": 47386,
+      "sha256": "20b8d558aa516d468dc116d6f1c4fd400cfcd36dc859fde54c4900ae48701952"
+    },
+    {
+      "path": "dependency-audit.json",
+      "bytes": 45096,
+      "sha256": "6c6fd4055ce0565b807a51cc56a2ee4378d1c6c2ee2aefeeeb6c0b5cec64975e"
+    },
+    {
+      "path": "LICENSE-upstream-APACHE-2.0",
+      "bytes": 11346,
+      "sha256": "1495e1e757ef4d0925a2350563cf5754bb23c51701a8ec4fb3c5cdcbedae6747"
+    },
+    {
+      "path": "model-assets/LICENSE",
+      "bytes": 7831,
+      "sha256": "8dc973f024ff95966bea25866efa443fd16776dcb1001e681e3d467ea572b28d"
+    },
+    {
+      "path": "model-assets/model_index.json",
+      "bytes": 578,
+      "sha256": "97e2febeb19d93cb41fa44807cde8bd42757950b5dffeacdb0331fb2d390cf20"
+    },
+    {
+      "path": "model-assets/processor/chat_template.jinja",
+      "bytes": 5292,
+      "sha256": "3636d0f0bd6bef02654cdffdc447b79cb2cef8ab02cc75267345946291a489e4"
+    },
+    {
+      "path": "model-assets/processor/processor_config.json",
+      "bytes": 1300,
+      "sha256": "14932921ca485d458a04dafd8069fbb0a4505622a48208d19ed247115801385b"
+    },
+    {
+      "path": "model-assets/processor/tokenizer.json",
+      "bytes": 11422650,
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506"
+    },
+    {
+      "path": "model-assets/processor/tokenizer_config.json",
+      "bytes": 705,
+      "sha256": "fd42a0b35a8d13cd473e88e310b50cbf1bccaa9eb60ed0fd873af5f8f0c59307"
+    },
+    {
+      "path": "model-assets/README.md",
+      "bytes": 15116,
+      "sha256": "9a262724d564444f1fd41a1a3fc1aae75bfb7873cd623abb3acd3d59f02ee4c5"
+    },
+    {
+      "path": "model-assets/scheduler/scheduler_config.json",
+      "bytes": 486,
+      "sha256": "16c948c71f9152a34cce6e3a2f309e97ad2dca32beecbe5e2fd3a7925b7eb4bb"
+    },
+    {
+      "path": "model-assets/text_encoder/config.json",
+      "bytes": 1542,
+      "sha256": "89050cba6b66c4f68f52305b54fc37efe28d95232246b94aa8dc0cfa36f3b734"
+    },
+    {
+      "path": "model-assets/text_encoder/generation_config.json",
+      "bytes": 241,
+      "sha256": "d04d0c6fdd1dc056cf68178425a3ecf17a0b9e848cf1a8378ad31c623263472c"
+    },
+    {
+      "path": "model-assets/transformer/config.json",
+      "bytes": 370,
+      "sha256": "2c567038ca190824728844b8d06d94ae02360e668707afd9734e789a7eb58ce3"
+    },
+    {
+      "path": "model-assets/transformer/diffusion_pytorch_model.safetensors.index.json",
+      "bytes": 30283,
+      "sha256": "17987f6623b1c814d0ef55a137d99142b7b3b040eb1bf241b5575dd35af803a2"
+    },
+    {
+      "path": "model-assets/vae/config.json",
+      "bytes": 2172,
+      "sha256": "42bfdec412459bbb7bc38a0617ab70edcfc873f84ec47e0c7d01c53ba09885a5"
+    },
+    {
+      "path": "overlay/sglang/kernels/__init__.py",
+      "bytes": 2575,
+      "sha256": "627aef5225e9e4862f04e43e6db064e5a497ec1f0c98cb401879ec30db905ad9"
+    },
+    {
+      "path": "overlay/sglang/kernels/cake_kernels/__init__.py",
+      "bytes": 231,
+      "sha256": "6f0af9f962464cf6c6b7ed8497b958e4c5248e1f1a7beb0e8970f5b15812c958"
+    },
+    {
+      "path": "overlay/sglang/kernels/cake_kernels/sampling.py",
+      "bytes": 1467,
+      "sha256": "ef88d0d731eaba3af1698b1ab2e43f23b18982a68a5c994396d1bb23888ed9f1"
+    },
+    {
+      "path": "overlay/sglang/kernels/fused_op.py",
+      "bytes": 28261,
+      "sha256": "749bc702db4102bb6e2620626a906ada67856daa1459bb5141bd1d652168cbd7"
+    },
+    {
+      "path": "overlay/sglang/kernels/jit/__init__.py",
+      "bytes": 248,
+      "sha256": "7d3a182933356ee4a73edae72cde73251f9b4ba13b7a1b1731b6bc8acae20f5c"
+    },
+    {
+      "path": "overlay/sglang/kernels/jit/utils/__init__.py",
+      "bytes": 1033,
+      "sha256": "115c0388c11eb179750afa9c17843cf657c35b1478b0a967476d562f66d79b91"
+    },
+    {
+      "path": "overlay/sglang/kernels/jit/utils/arch.py",
+      "bytes": 6739,
+      "sha256": "e9427faad6479e47623315c38705ee209e239f9e6212712746678cb27000552b"
+    },
+    {
+      "path": "overlay/sglang/kernels/jit/utils/common.py",
+      "bytes": 4246,
+      "sha256": "491cf8bec4102dcd9b4706c4d7202c6bd43f275be36c9f7a959cc89b156d62a3"
+    },
+    {
+      "path": "overlay/sglang/kernels/jit/utils/compile/__init__.py",
+      "bytes": 1694,
+      "sha256": "06c877744dd0d72b470bba278e6c93fd8db0a7a0e4ad5b2cde328ad10e3164fa"
+    },
+    {
+      "path": "overlay/sglang/kernels/jit/utils/compile/cache.py",
+      "bytes": 19968,
+      "sha256": "3a9c277d676596e467d6a1e700e65ab2fb5ccf91b264ebe1c3cc06659fa470bf"
+    },
+    {
+      "path": "overlay/sglang/kernels/jit/utils/compile/cpp_args.py",
+      "bytes": 1481,
+      "sha256": "84be4f6ab4b3a435a424e2762cf2f48c25ccf57119e6971e83f4856d779757c3"
+    },
+    {
+      "path": "overlay/sglang/kernels/jit/utils/compile/loader.py",
+      "bytes": 11307,
+      "sha256": "f4437c88aae8ae55a315bef9f52e19b2dabd3ad8a2cf0ffaab2a6786dbb52993"
+    },
+    {
+      "path": "overlay/sglang/kernels/jit/utils/compile/ninja.py",
+      "bytes": 9354,
+      "sha256": "082dff0b50a890f4987e1fb8caa0e0c6e77edfef766836ee4b17b5d3e514e218"
+    },
+    {
+      "path": "overlay/sglang/kernels/jit/utils/compile/parallel.py",
+      "bytes": 1316,
+      "sha256": "6085d0cc1a87b22ddb1f72d9b867e3c6f5163cf7fc17516ce30592d01b65b855"
+    },
+    {
+      "path": "overlay/sglang/kernels/jit/utils/compile/paths.py",
+      "bytes": 965,
+      "sha256": "bfa8a912174607c74237f1b5f45b0a87dc8da8b5f1f5be39868966787fae76e2"
+    },
+    {
+      "path": "overlay/sglang/kernels/jit/utils/compile/sailify.py",
+      "bytes": 8926,
+      "sha256": "e4ce41d30f5713f41f03cd72366bb36e8d0d87d218968948669ea67c19fd5998"
+    },
+    {
+      "path": "overlay/sglang/kernels/jit/utils/compile/spec.py",
+      "bytes": 4450,
+      "sha256": "f762d7d90adb2770988ab0d17b444496d9d611531ab136eb37b8c8707dd42b2f"
+    },
+    {
+      "path": "overlay/sglang/kernels/jit/utils/compile/toolchain.py",
+      "bytes": 8378,
+      "sha256": "987d4eccaa7947fa15f070cfbabb1165e43076f619f9c84d99a8e3f3f61ea483"
+    },
+    {
+      "path": "overlay/sglang/kernels/jit/utils/deps.py",
+      "bytes": 6286,
+      "sha256": "d1a8f3310081e7be917bb99659e40e7cac3d953b0b485762478660ed05da42d9"
+    },
+    {
+      "path": "overlay/sglang/kernels/kda_kernels/__init__.py",
+      "bytes": 579,
+      "sha256": "392b3bf8884e1a7bea2a50d24ecc1b081c365e76c2d407a42e5282b8f7356a95"
+    },
+    {
+      "path": "overlay/sglang/kernels/kda_kernels/norm_scale_shift_jit.py",
+      "bytes": 12582,
+      "sha256": "06001f0e9dd9723b5409a40cc0ce9ac116b571042ae6712e9e560bfd32a6379e"
+    },
+    {
+      "path": "overlay/sglang/kernels/kda_kernels/qwen38_qsa_sm121/__init__.py",
+      "bytes": 2724,
+      "sha256": "88f1fbb60a18bf65ff7ac067e60df48b8b7f473b90601f8a26313ec6059e7815"
+    },
+    {
+      "path": "overlay/sglang/kernels/kda_kernels/qwen38_qsa_sm121/kernel.py",
+      "bytes": 9254,
+      "sha256": "d4fb613069953c9c7f02760742b8018385df96f256e785745580e3bcbc829842"
+    },
+    {
+      "path": "overlay/sglang/kernels/kernel_api_logging.py",
+      "bytes": 16874,
+      "sha256": "d3cfbaa939422f47b84b96a8878a98b178a7182a79656440c08938804517c4f7"
+    },
+    {
+      "path": "overlay/sglang/kernels/numerics.py",
+      "bytes": 1787,
+      "sha256": "033849ff101bd3975d4a32ca4bba91ef16f5f5c037e469b3e3fb4de2aa2ad738"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/__init__.py",
+      "bytes": 1146,
+      "sha256": "993c0c988e0f5db1194628bfa02bd1f258812959a14060d59e50fb306d355457"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/activation/__init__.py",
+      "bytes": 5714,
+      "sha256": "c2fc3df36b7bd812e44a7ab384734d415563fc9dfab09d62165e1c0ee763e583"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/activation/activation.py",
+      "bytes": 10329,
+      "sha256": "b10583b813290eb828205177e54758c5016561ccab2bb13786ad5d8ff8ea22fd"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/activation/kimi_k3_situ_and_mul.py",
+      "bytes": 2602,
+      "sha256": "d08e02a392a22724474bf3c9a15b05713dd8834ae0497c5afc9f3fb72d3eee4b"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/attention/__init__.py",
+      "bytes": 18312,
+      "sha256": "edd3432ead389254c3de7003479564ee79dcc74266f3e4ec430c58ad0d94bf62"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/communication/__init__.py",
+      "bytes": 3507,
+      "sha256": "80849286647e11dce10ed81522d19bb2096b2eb28f5b07f0ef65532d6a3d9049"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/__init__.py",
+      "bytes": 36821,
+      "sha256": "eacd27b347fb4c7004a38d91c5bbdd133195ba51838d2989478187336ba1390c"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/activation/__init__.py",
+      "bytes": 61,
+      "sha256": "c03d250600fc36604ae39b6fb8c0c11fdc92ebe7678167d4b2c80c1a88bf4908"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/activation/gelu_tanh_cat_jit.py",
+      "bytes": 1187,
+      "sha256": "9bd53bc323612d797eba26d0a1fe8c2ce072bc9ed7ad528c75d1fa8114422c1e"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/activation/sana_conv_post_triton.py",
+      "bytes": 4953,
+      "sha256": "652a5531686ee9b0fbd83cee3460e8df8b8767f956dae19af608ee546957f277"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/activation/silu_mul_bitexact.py",
+      "bytes": 4687,
+      "sha256": "a01018505822e3bf63ae8ba059838161ce9fc67b4d0ea5309d360f3b032ef708"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/activation/situ_softcap_mul_bitexact.py",
+      "bytes": 7267,
+      "sha256": "833fbe8f3086d12d7c9b30d7cfee1eca19701bec094d4d412b36530f8f8dd437"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/attention/__init__.py",
+      "bytes": 80,
+      "sha256": "31aa3146f770b7c2f657a09645a68f4a92927a8431a0e9bde8f5ec82de250350"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/attention/sana_wm_gdn_chunkwise_triton.py",
+      "bytes": 59340,
+      "sha256": "a248f8ad86391fdf97ceff3052d3f6e9033cf04cee5dba84877860287185344e"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/attention/sana_wm_gdn_triton.py",
+      "bytes": 5631,
+      "sha256": "5b0014c517e7bc74982784889b4d8021aa74f2eda2d0e4a5a1fb48e4262eb9ac"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/attention/sparse_linear_attn_triton.py",
+      "bytes": 3860,
+      "sha256": "c92e69aabe9cf122f25213951768d2bb67199e5d401a787271840ec7ba6166d7"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/attention/vdn_delta_factors_jit.py",
+      "bytes": 2785,
+      "sha256": "58310a47aeb53e45c02f7c5afa450235f734aeb74b593f7b93b86f6cdb45d73c"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/attention/vdn_linear_branch_triton.py",
+      "bytes": 18334,
+      "sha256": "747fdfc1817d6d7c33aaf710ebc2c6887259ed6552565d1bf34875c19a034a1d"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/attention/vsa_block_sparse_sm100_jit.py",
+      "bytes": 1901,
+      "sha256": "b3c6a5385548d08a5dc7ddaf324ef18d3b5fc11d5451c34cbd30e4203f7c66bc"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/common/__init__.py",
+      "bytes": 305,
+      "sha256": "cd11d285debc36eaadfd44df85b4889612281fe41bfb9b9aba4f4d90d883f33d"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/common/fallback_npu.py",
+      "bytes": 1424,
+      "sha256": "daa3d71a16a20024d88b2ddc509e0dcd305e8acef994e251b0c446bd0c7ee478"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/common/fallback_torch.py",
+      "bytes": 4944,
+      "sha256": "eb924c9b653dfcdb7e6ee189a00e865f1c8963e655b1124780071e65937bd53c"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/common/fast_launch.py",
+      "bytes": 11512,
+      "sha256": "030fddb72b016951286370cc14b9c471846707dd718add1a8475f0acd38cd9b2"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/common/platform.py",
+      "bytes": 4636,
+      "sha256": "a79f3ed2491d746c6b76a5374f3bc2bf49f02e517ff6d72ec174264bb139b4b7"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/ext/__init__.py",
+      "bytes": 296,
+      "sha256": "2f6496367b87cc145feba93bb9b344768b30764a9eea599318bb82aa4aeb0915"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/ext/hunyuan3d_rasterizer/__init__.py",
+      "bytes": 2687,
+      "sha256": "40c53a4d56120f74c856396b7b2f35fb9cd5c9f69121c1572b626b50a0fd18f2"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/ext/mesh_processor/__init__.py",
+      "bytes": 1828,
+      "sha256": "53bde6ee40bf1706cabd9aa8535b57da8f2211f9d08dfb3f72f3e68604edc124"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/gemm/__init__.py",
+      "bytes": 34,
+      "sha256": "0f8c1c7532c279cbd252473e3d19a98a9edda9b24308b5cd2f66c5ee1badeb34"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/gemm/flux3_fp8_prims_ts.py",
+      "bytes": 6905,
+      "sha256": "2a2ab517dde3705997bbf9f3c3c05f1478ad00bee73b58a8897848b483a59393"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/gemm/flux3_nvfp4_prims_ts.py",
+      "bytes": 16776,
+      "sha256": "58729189c7a4804d2b0c59b768c98a0c2de236c0636b553ab8f101d7667f45c7"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/gemm/flux3_prims_ts_config.py",
+      "bytes": 8484,
+      "sha256": "6bfbabbdcfb7b2af0d0a1501dcd4da7127a00439b678c34f74e3c183fee3b892"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/layout/__init__.py",
+      "bytes": 215,
+      "sha256": "b9c8038df47a9ece8d4b84801ee5621ee1271bb2f40d0ddc3d16274b29fe19df"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/layout/causal_conv3d_cat_pad_triton.py",
+      "bytes": 3115,
+      "sha256": "f2f0bdd7571ab72a0891d596f09b3d2eae211e4bb83654deeb8db5e7be004d50"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/layout/flux2_token_cat_nvfp4_jit.py",
+      "bytes": 3006,
+      "sha256": "4fd0c5fbd8409268b0fb61c65630b91af4f5629d2ee18fc966031ebb79bee1fc"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/layout/joint_qkv_cat_triton.py",
+      "bytes": 4059,
+      "sha256": "b343afb1686464b79fcfae531f1e55ccf7e62e4f33650fabb7083a011f50a551"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/layout/minimax_h3_vae_output_jit.py",
+      "bytes": 6623,
+      "sha256": "50e00390b376583f1943feb89904cec2e9b74e37d56e187f62c477a2a3c629b7"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/layout/nearest_upsample_nhwc_triton.py",
+      "bytes": 6867,
+      "sha256": "73187ede8b9926e68021bbca225b4072702a77033474159de53454e477ad0b20"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/layout/ulysses_qkv_triton.py",
+      "bytes": 4512,
+      "sha256": "f14b82c3e25f71f0ba39d865eb11b510914dcf45e24a4abb86d37ef72c5998d5"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/layout/usp_relayout_jit.py",
+      "bytes": 2120,
+      "sha256": "7d4c5256c52a4d0a46c2d3ade8d8a22da497dd7c3a4d65073d425753cec6f4b8"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/layout/varlen_pack_pad_triton.py",
+      "bytes": 10556,
+      "sha256": "a8a6a8a07d5e66f8323ee5a1fb9e82700b330204fc8f0a6b46a647437cc62614"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/layout/wan_causal_cache_triton.py",
+      "bytes": 14652,
+      "sha256": "9975beb08ac5db531dfa812d24a23973d8306a1229f3d8b6b6585ce4b221259e"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/modulate/__init__.py",
+      "bytes": 88,
+      "sha256": "f5c973115750dd7fa5c08838f898e3d6ac41984ec25b7add140802f0fdeb51f5"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/modulate/conv_bias_epilogue_triton.py",
+      "bytes": 5957,
+      "sha256": "2ad395f350e9b339cf37c79d88470d86cb589028d1b29638e66d64e4bf7f4578"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/modulate/head_gate_triton.py",
+      "bytes": 2378,
+      "sha256": "4f3cb1a9a07c1ada3061d177d4c37edb114a9d25bcfac23fe4ef9458f2d9b9a1"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/modulate/indexed_modulation_triton.py",
+      "bytes": 7847,
+      "sha256": "12628a34a21f890ad21de6ccc31561b83c4ff639432ec480f949c712a81e8c3b"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/modulate/indexed_scale_shift_mxfp8_triton.py",
+      "bytes": 3448,
+      "sha256": "0008e3f39340f9d6420d331ab5434b1a8fe48679c6a4c189efe1d39b361ad851"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/modulate/ltx2_ada_values_triton.py",
+      "bytes": 5894,
+      "sha256": "7553c5a66990fb970448bcb37d3813490a2e2585934772b8e766cc2516bc6673"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/modulate/modulate_scale_shift_jit.py",
+      "bytes": 3252,
+      "sha256": "9fd588001fb3b7b9bd0abbc68c4f1210278cb19f40eea45ed74f649e2daa190e"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/modulate/residual_gate_add2_jit.py",
+      "bytes": 4901,
+      "sha256": "f41dea8346dcb6bccd8ab57bd07bea3ea32f67b25f90b3297a8fd9810393b3e0"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/modulate/residual_gate_fp32.py",
+      "bytes": 3050,
+      "sha256": "68b163904adec37f37cd62bcb0c47b9c21713a510e25e727fe6bf819115c42de"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/modulate/scale_shift_triton.py",
+      "bytes": 27359,
+      "sha256": "f861fbbe8dd266eb480fab2b19f16fea0d3320bf8fbfc3f201acf2c5a6cc7362"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/modulate/timestep_embedding_jit.py",
+      "bytes": 1382,
+      "sha256": "a6b71ee9eacfc7d6ee853ac07d9ff14cb4e1db9281410d92863911061f02d562"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/modulate/wan_temb_table_slices_triton.py",
+      "bytes": 3460,
+      "sha256": "c941346a5bcfac71b7c2d8e24c6277795c154f48784c8037b3378e755822f816"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/__init__.py",
+      "bytes": 349,
+      "sha256": "a4f74c3b8b5ff9a895cbf160c6b740fb15da22f456c28ad6d27ee0bbea3a6f6e"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/bias_residual_add_jit.py",
+      "bytes": 3721,
+      "sha256": "d9599d0ddd0d08cb080af56d292b0f7bd886558e868703ab89d8b93b736bcc8b"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/channel_rmsnorm_finish_silu_jit.py",
+      "bytes": 2949,
+      "sha256": "44e88739246d053cd11cee8f919c917c82f67ba2d28103fe2793fdb5c705d9ab"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/channel_rmsnorm_preserve_reduction.py",
+      "bytes": 2628,
+      "sha256": "00d0618625321803b1e1d2a655d8294162ccf2d7216bd10ab7717a412268385b"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/channel_rmsnorm_silu_nhwc_jit.py",
+      "bytes": 4708,
+      "sha256": "9b332024cb958b5d9b3a58363a245e30208bf56fe3faf58604d5213011212062"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/cutedsl_common/__init__.py",
+      "bytes": 74,
+      "sha256": "90de9d559a2ab0b499ac1329adf19aed6db4b2cebe99d6af72d1673c3bc34074"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/cutedsl_common/norm_fusion.py",
+      "bytes": 7146,
+      "sha256": "9251f6f951a0fe9ff335df18c053994322418daf11b07909e27c04ba33cef868"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/cutedsl_common/reduce.py",
+      "bytes": 921,
+      "sha256": "90b8a0ea9a857849799ae8c17e3306271b68156082fcc4c257b28a1d051e7e2e"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/cutedsl_utils.py",
+      "bytes": 1451,
+      "sha256": "5bd351c9360fef8596b5cd3cca269d2dd60ca3d1f3218f1149948c6549d92bb8"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/flux2_gated_resnorm_jit.py",
+      "bytes": 3423,
+      "sha256": "e89243b9493f1c800f24bcf78fb00b4d5378f43dade963402870eed61aed8672"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/fused_residual_norm_flydsl.py",
+      "bytes": 23538,
+      "sha256": "333c03d7fa729a37231e39c0d762d0883e182a0f86c7c907c8a862b1ec769a1a"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/group_norm_silu.py",
+      "bytes": 846,
+      "sha256": "e203b8644ac57f7e6385ee01ca947707af561d9f7005c640cc2b421d72ffd6b7"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/group_norm_silu_triton.py",
+      "bytes": 12347,
+      "sha256": "03a0e073cdf7a8ea5111393f952af511dc98849c2545d40da829d11e928fbc1b"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/group_norm_silu_twopass_triton.py",
+      "bytes": 8904,
+      "sha256": "4795dce8740eab0b9cb151ddf96746e8c2daaf75cfd5e80c594aad9336001305"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/h3_vae_fused_norm.py",
+      "bytes": 5965,
+      "sha256": "9c8a132182581fea270f3e7eb746c2608ab298763d49f76c0877c4e73a78ca5b"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/layernorm_modulate_xpu_triton.py",
+      "bytes": 14506,
+      "sha256": "b2153c7bff6efed7da1d8ee0c9ce838cf40619531f34265cdd5c3ae95fb03468"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/native_bf16_rmsnorm_triton.py",
+      "bytes": 6148,
+      "sha256": "d1a29e52ee499bc4ddee637e8b764254fa9e291c1e16ad9e7aa447c8919c3c96"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/norm_triton.py",
+      "bytes": 19892,
+      "sha256": "c4a4e9a8a73d8565c5c2dc6c2fb165d0bfcdd7a669311baeccf49442d6a38bce"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/rmsnorm_cast_before_weight_bitexact.py",
+      "bytes": 11983,
+      "sha256": "03563391b0e196ab3b1151020b4ed3872190ca13e3b9dd590ffa294b219a62df"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/rmsnorm_onepass_triton.py",
+      "bytes": 2481,
+      "sha256": "e47daf5c08918ccf23c7a4809307eda39a89efe7d650e134c3a8558f020341a7"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/rmsnorm_preserve_reduction.py",
+      "bytes": 3030,
+      "sha256": "06ebdfe3affadf5f674069d9152c4df575f1c95903007685614e5192a8f6da2a"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/rmsnorm_scale_shift_bitexact.py",
+      "bytes": 12556,
+      "sha256": "73761ebf3da550d0f532823c3a70d118e36e2cf4eb7cfae9657af46c41256bb4"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/rmsnorm_scale_shift_triton.py",
+      "bytes": 8121,
+      "sha256": "e7e26a5979a3ff9d7328115f47853c71c4ba6f28c87e5158a6f36522e5326be9"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/scale_residual_norm_cutedsl.py",
+      "bytes": 15293,
+      "sha256": "0bc08e070cd302850131d1d77c174a4e57719e83df3cc19ba592f32296782149"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/scale_residual_norm_scale_shift_sycl.py",
+      "bytes": 2457,
+      "sha256": "bf1341ea2d19de72347bb805c10bf7177051320734836fe3de99ce6598616ef5"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/scale_residual_norm_scale_shift_triton.py",
+      "bytes": 4876,
+      "sha256": "890db29a9c1edaae0fca4b664a490fb1f64b4ab7464fb76c411a4534558ef5e3"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/wan_norm_silu_post.py",
+      "bytes": 3052,
+      "sha256": "f57cf972c34a4f56e9489db58af5fb2c969ef5c35123778a1623da8da8e80312"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/wan_rmsnorm_silu_triton.py",
+      "bytes": 7985,
+      "sha256": "deda576095dacb7b93ffe6cd5fc2d040dd0b19c189b141a5a1ccec863429f37d"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/norm/zimage_qk_rmsnorm_triton.py",
+      "bytes": 7124,
+      "sha256": "0b208d79668c22f3830994311e64b6a5e874a7a02e80202918de92020fe51d58"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/quantization/__init__.py",
+      "bytes": 80,
+      "sha256": "247aeaf04ce6c92f7b34101ff5887137bc52ef4c41bd328c7e214d2eb5644c07"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/quantization/fp8_rowwise_triton.py",
+      "bytes": 2883,
+      "sha256": "a5aacd02f8cc0370ae5d8829fb0370ab4d838b5bde86d04e098c7cfe9a72eec5"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/quantization/swiglu_fp8_rowwise_triton.py",
+      "bytes": 6308,
+      "sha256": "c595aa69b85cecd450267122b4e1b820e27c8c7dfc3de996e5280af9c064c550"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/rope/__init__.py",
+      "bytes": 66,
+      "sha256": "524ef0ce93edcb5398e4b1e816f1a59ec57065ac0092f6ba88d8104fd818ea64"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/rope/complex_rope_triton.py",
+      "bytes": 2906,
+      "sha256": "e8fd8135d04745e391eae84baf685d7117c390e6378bed924e4797b416fbc1ea"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/rope/flux2_qknorm_rope_triton.py",
+      "bytes": 4635,
+      "sha256": "3d96bfa97a481c215c659cdd4f249054bcebf1a808f4d777f32c5fb783072db8"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/rope/flux3_video_qknorm_rope_triton.py",
+      "bytes": 4914,
+      "sha256": "fdcc83f34912c94b228ee8f5c8f7c488b4a5fbf46cf8e8322ef3a0cfadcdc32b"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/rope/helios_qk_rope_jit.py",
+      "bytes": 1301,
+      "sha256": "eb0fc1909d0072949cb9dc759ca6d0b3f419ffb5d7fd58fcd1120df2c3248ffe"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/rope/hunyuan_qkv_pack_triton.py",
+      "bytes": 7734,
+      "sha256": "42278e67341961f7187bce90f406ce91c03b9339f84a8462a36c7270f2861636"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/rope/interleaved_rope_fp64_jit.py",
+      "bytes": 1659,
+      "sha256": "6d8b1905bdf501bbad8664ebf62b15a0dbf0a6d4ae9d45698572bc76f102d8a1"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/rope/ltx25_decoder_rope_jit.py",
+      "bytes": 1998,
+      "sha256": "ba3fdda0b959937a40ccda53299d1aea3119fdab9611b5914af7c22137ec55e9"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/rope/ltx2_rotary_triton.py",
+      "bytes": 3258,
+      "sha256": "16feb7045fa6a5be7ae42191da396d97d075b1ccff7692049f4dfe205bc8efb1"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/rope/matrix_rope.py",
+      "bytes": 3634,
+      "sha256": "77e171dc4f4a29fa88e99ffedbaedbeb1635b3524ec881adae4e1384c15800e1"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/rope/qknorm_complex_rope_jit.py",
+      "bytes": 4523,
+      "sha256": "f359507eb4927fbb65f61a4c0ea5a3e85fb1434e28652f913e0fc92803916efc"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/rope/qknorm_complex_rope_kv_triton.py",
+      "bytes": 3857,
+      "sha256": "d284253003390c65b516040d7112869c2c5bff0f1d0fd9548d0587c7f6cc58e0"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/rope/qknorm_complex_rope_triton.py",
+      "bytes": 4027,
+      "sha256": "e272770027589e125bc22924a12f6e39e4100c9face226877928918e8bc60e33"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/rope/qknorm_rope_jit.py",
+      "bytes": 8088,
+      "sha256": "67d9bfb227683e9dd996f461f6843f749003c6191578a80256b1cfd085db30b7"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/rope/qwen_qkv_epilogue_jit.py",
+      "bytes": 4827,
+      "sha256": "de87aa50eb3b9b780ce44ff8c94a3b30038c2349ede36f8ff43e3d8e95a2e4ac"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/rope/rope_rotate_half_bitexact.py",
+      "bytes": 5405,
+      "sha256": "a368e5cca872d5bb8ed714335f6cf6ada70928001c29e0d5826583f1d99456cb"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/rope/rope_rotate_half_fp32.py",
+      "bytes": 2951,
+      "sha256": "5dce9574d82e574889f709374fe20f7a5fcca6b185407e886006b882835d5fce"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/rope/rotary_triton.py",
+      "bytes": 4226,
+      "sha256": "de6176c23794601b5bc6a30d61879986f837973a8a206f36e35853e95170f478"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/routing/__init__.py",
+      "bytes": 42,
+      "sha256": "55240cc828c81ea85c665f36652838c23f40c2d9684b2c458fbb12b5b2526ed2"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/routing/group_limited_topk_triton.py",
+      "bytes": 6934,
+      "sha256": "478b5bb76c4275ef4e99cb9f5f0be6401c1259406235ae92c1879b4bd964f451"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/sites/__init__.py",
+      "bytes": 797,
+      "sha256": "098f08136276863eef05d4df5981c90433819ccaa37646b5c0fc5ec71c9b7193"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/sites/bitexact_gate.py",
+      "bytes": 8305,
+      "sha256": "26b0db7664913917a89e64f6a29102f54c30b4f8c320609ccb9650a45a225ee2"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/sites/flux2_nvfp4_swiglu_quant_site.py",
+      "bytes": 659,
+      "sha256": "5017d575a6c1fa92da5b1df1f04330d6466843adc27819224f25ca0abd8c9752"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/sites/fused_gate_rmsnorm_site.py",
+      "bytes": 3259,
+      "sha256": "26ba2216e0abd498a7925e02d98f7b6bf6bba693a541d8cc517dfd866aec5d83"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/sites/fused_linear_gelu_site.py",
+      "bytes": 8137,
+      "sha256": "73816d5ff0c711520c913208ad421950f7c19a5cb2e95d07cc311ffc31ae157a"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/sites/fused_ln_modulate_site.py",
+      "bytes": 1998,
+      "sha256": "3f790451df15fe12b6c90d0c6ff22390bb3047da1d21c6d953bb1689d12ab1c0"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/sites/gated_residual_site.py",
+      "bytes": 2201,
+      "sha256": "bf646235ee37c3c1df362d8f526433d52b10cdebd99e253b7b06fddd4dfd2591"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/sites/hunyuan_qknorm_site.py",
+      "bytes": 2167,
+      "sha256": "8a69d7c815372e59707b6bc96cd018b8beae32139e2056ff92d227c46103a0ef"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/sites/lingbot_video_rmsnorm_site.py",
+      "bytes": 2891,
+      "sha256": "978c807b25cb4c97170fb117732abc08708a2cf963cfc357708566c4a7ca361e"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/sites/ltx2_qknorm_split_rope_site.py",
+      "bytes": 632,
+      "sha256": "65aa22eafc717b16dc1000684671a47d6e522c1a004c10d15cfd81b5023d28e8"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/sites/ltx2_rmsnorm_modulate_site.py",
+      "bytes": 2054,
+      "sha256": "2f889bf6b078ce0caa3bcb086736039bb98dd79099b50df94bb724c557c4f6da"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/sites/minimax_h3_norm_modulate_site.py",
+      "bytes": 781,
+      "sha256": "2e835f1de6a87f9d88905096bcacd8acc8157a6b33049c6f081633b12350a6d3"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/sites/nvfp4_bias_gelu_site.py",
+      "bytes": 1884,
+      "sha256": "3806cc38718b550fa3056c469a6549fa0f74e9b97df371ba4ee09112ff874577"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/sites/quality_gate.py",
+      "bytes": 2829,
+      "sha256": "038cf33b0f0e2d6805bd4bf3783ebd68b5a013713cc69a9cf97237f8122a5817"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/sites/qwen_image_added_qkv_site.py",
+      "bytes": 1152,
+      "sha256": "27970806437175ec07b51f1c52cfd7fa238f0c323509c2b2768f40541f747dca"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/diffusion/sites/sana_video_linear_attention_site.py",
+      "bytes": 2266,
+      "sha256": "fbcfb2f4aeaa6449aaac9f073bae74eb673255bcffdaf469583fbe37a1f4107a"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/elementwise/__init__.py",
+      "bytes": 2427,
+      "sha256": "3697a19811fe844773cc978780f78c7e713f899e9f8426801f1d37b1341733d0"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/embeddings/__init__.py",
+      "bytes": 1972,
+      "sha256": "57880e70222b38ce623858a4e667fd7104e8847ee3fff1b9db5e80ecde41a954"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/gemm/__init__.py",
+      "bytes": 15875,
+      "sha256": "a89c6ab16f3499546e22d22fa94fa8bbec3b8653f53d533f18b42a9b0afbfd3f"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/gemm/convrot_int8.py",
+      "bytes": 8264,
+      "sha256": "389a764eebbef3ed7c7fdec6bdaf66f70209deef06cd68a431463fe275fda1e1"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/gemm/cutedsl_dual_gemm.py",
+      "bytes": 64685,
+      "sha256": "83bdd9df51a8528e7197d6dd600cc5315279276d8cc6d619babab6f076357eb4"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/gemm/kimi_k3.py",
+      "bytes": 828,
+      "sha256": "106d80581645afdb704b7c788a4c8c32f3f49b224daf29b35f8b6a7bf2f9e47a"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/gemm/tiny_gemm.py",
+      "bytes": 5530,
+      "sha256": "6f4e9482f2d4be2129e84dd4e9a8966e6b96e5333e343a279ad90cecd2a205bb"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/grammar/__init__.py",
+      "bytes": 825,
+      "sha256": "650612778d49fc2fc68e5641dab243c22ae5f73117f9d363e1477ed77847fc6d"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/kv_canary/__init__.py",
+      "bytes": 888,
+      "sha256": "ecadf437fb3cf00c159d0b915ba4ce6b848710aea61d46a08e846b060f1fe267"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/kvcache/__init__.py",
+      "bytes": 2626,
+      "sha256": "255b040c5edc0280cf55d85eea70b9dc1b86c1cecbbf3623fc1a5a0aa147262a"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/layernorm/__init__.py",
+      "bytes": 3518,
+      "sha256": "c75c04ac427e38afd4747530f58e7d09db8a4f2022cd66940ca98981b55d2104"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/lora/__init__.py",
+      "bytes": 4642,
+      "sha256": "1811181aecc41ffcac39fdb83de97ce775896d4e80a45748b567c591b7d9661e"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/lplb/__init__.py",
+      "bytes": 851,
+      "sha256": "6532c81da2135d34d52a83d9213b7548a3aa93b2bcfa7c1ac829e919f11398ff"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/mamba/__init__.py",
+      "bytes": 4479,
+      "sha256": "0d935dbebb7b38b743e52ef990fd7dc2dc6caec6dca3e55e2be997e4d91ef18f"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/memory/__init__.py",
+      "bytes": 2063,
+      "sha256": "0e6e9ec2c39e0addba4afc54836c1f70b2f225c361ee00ec94388df16760d9ae"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/mm/__init__.py",
+      "bytes": 947,
+      "sha256": "d71d781668f9a04b04c632e668d8cba6d60d29126414afbdf5fc9403f56c4378"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/moe/__init__.py",
+      "bytes": 10121,
+      "sha256": "c342784c628732fdbf83980f5029c5c4cf290d7e5c92507e86be6269f9a12dcd"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/moe/kimi_k3_situ_and_mul_quant.py",
+      "bytes": 1359,
+      "sha256": "ba62b68696260912ff1c7eceeb4f255f61411b72bc9071331934345b954164ef"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/quantization/__init__.py",
+      "bytes": 4066,
+      "sha256": "5815c011eee8a23feb5ace6d3e4d03d5e409ffe742df20195aafb7c817859671"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/quantization/mxfp8_swizzled_triton.py",
+      "bytes": 4368,
+      "sha256": "95859f64d9766e898bfcf9dc7c2712a17720a04861e8d62a97a9681ccc9c1cc3"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/quantization/per_token_quant_fp8.py",
+      "bytes": 1476,
+      "sha256": "8f9ba0c5036d805eacbbb16cd4840bae035137be0fdbbb032873f291d1b510cc"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/sampling/__init__.py",
+      "bytes": 2344,
+      "sha256": "91e7e689cb43464f0ef5a296fac2a759f6723e81750db5ccd31f96dc30176e15"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/sampling/temperature_softmax.py",
+      "bytes": 4759,
+      "sha256": "5b708d92b4720ef8a4ffa635fe98c9462c5385becf569235ecaff5d63ee8b3ff"
+    },
+    {
+      "path": "overlay/sglang/kernels/ops/speculative/__init__.py",
+      "bytes": 2715,
+      "sha256": "f257491a593b29bfa23362746cee2b502dd69d0c52d18d3d19ba01e583e7b894"
+    },
+    {
+      "path": "overlay/sglang/kernels/registry.py",
+      "bytes": 2808,
+      "sha256": "9d9614b4a54647fa40c66d6baf962b4a105c653239075542ce2482fcded01cea"
+    },
+    {
+      "path": "overlay/sglang/kernels/selector.py",
+      "bytes": 3606,
+      "sha256": "b5c51a44e89b030838c52316bc6acfe46d20890c33d5f0500d9f7ec4f47a07db"
+    },
+    {
+      "path": "overlay/sglang/kernels/spec.py",
+      "bytes": 9982,
+      "sha256": "bb45e57a8ed0bda7a0f6a88ded66edd3a402f5abf88cc859c68038a8b1f2a47e"
+    },
+    {
+      "path": "overlay/sglang/multimodal_gen/configs/models/dits/qwenimage21.py",
+      "bytes": 1129,
+      "sha256": "811e53823a72f5889eec8948208cd03b0dbab8adceed4e4d2fd1cc1b23527764"
+    },
+    {
+      "path": "overlay/sglang/multimodal_gen/configs/models/encoders/qwen3vl.py",
+      "bytes": 2527,
+      "sha256": "b7f74023e4318dfe5857239a18a6ae8e36b3b963433ca1ae54d98ae6c77478de"
+    },
+    {
+      "path": "overlay/sglang/multimodal_gen/configs/models/vaes/qwenimage21.py",
+      "bytes": 3166,
+      "sha256": "9067cc4b84de94ec710ac2607fece47b932f575fe0cf4aa1b2009a62d0b851d5"
+    },
+    {
+      "path": "overlay/sglang/multimodal_gen/configs/pipeline_configs/qwen_image21.py",
+      "bytes": 4707,
+      "sha256": "7f575b40ebf57536ec9812bdd2f9706952668a45d1d0893ba798a886f06e5edb"
+    },
+    {
+      "path": "overlay/sglang/multimodal_gen/configs/sample/qwenimage21.py",
+      "bytes": 1987,
+      "sha256": "f23efeff8de492fb616c6271930f60fbb8936cd7e2c3b98e4354eddc007b1c4c"
+    },
+    {
+      "path": "overlay/sglang/multimodal_gen/runtime/cache/conditioning.py",
+      "bytes": 24983,
+      "sha256": "6912a7ed0df6413bad7200062f98be46dc82180a0226294debe0dee73181ec75"
+    },
+    {
+      "path": "overlay/sglang/multimodal_gen/runtime/layers/quantization/comfy_int8.py",
+      "bytes": 3271,
+      "sha256": "f740745bd6dc3018859313586d317c5c3404518cdf537d2d9c4fffeddd686d26"
+    },
+    {
+      "path": "overlay/sglang/multimodal_gen/runtime/layers/quantization/configs/convrot_int8_config.py",
+      "bytes": 15981,
+      "sha256": "6d1d319cd4a46c6b62893b28301f1d8f7d310d4467ca2d5101b50b828797de7f"
+    },
+    {
+      "path": "overlay/sglang/multimodal_gen/runtime/layers/quantization/convrot_int8_comfy_kitchen.py",
+      "bytes": 9594,
+      "sha256": "9c299c8a593ab8d5d82effa2c0ad0096ab189ed8956253c1faba53d2256e24f1"
+    },
+    {
+      "path": "overlay/sglang/multimodal_gen/runtime/layers/quantization/convrot_int8_jit.py",
+      "bytes": 14736,
+      "sha256": "4671c070efb014a5ccdc65b5f2311d1d1a02ce6aac5660b64f7645c8d9c6a354"
+    },
+    {
+      "path": "overlay/sglang/multimodal_gen/runtime/layers/quantization/weight_only_fp8.py",
+      "bytes": 17602,
+      "sha256": "a0b11b20f22781b17927b47379094cfedd7a867c0a3178990cc2a7fe3f88debb"
+    },
+    {
+      "path": "overlay/sglang/multimodal_gen/runtime/models/dits/qwen_image21.py",
+      "bytes": 43756,
+      "sha256": "73f5fa1636899f171f97f010c2fb132011cef6ef5feebb3b69050102dee3a108"
+    },
+    {
+      "path": "overlay/sglang/multimodal_gen/runtime/models/encoders/qwen3vl.py",
+      "bytes": 49096,
+      "sha256": "8f452e0d88cdc88008374d87bc7ce583b8b179648d215aae5f14d3ebfdbf8af9"
+    },
+    {
+      "path": "overlay/sglang/multimodal_gen/runtime/models/encoders/qwen3vl_vision.py",
+      "bytes": 12253,
+      "sha256": "d75e0977d373a2a132900a3caf3578c40e775101a7de80befb531618d89f0d99"
+    },
+    {
+      "path": "overlay/sglang/multimodal_gen/runtime/models/encoders/qwen_vl.py",
+      "bytes": 3905,
+      "sha256": "30ebd20b6e4c6c5a46c0f5e94d3c7724df84795cb147a1929359615130880848"
+    },
+    {
+      "path": "overlay/sglang/multimodal_gen/runtime/models/encoders/qwen_vl_rope.py",
+      "bytes": 2574,
+      "sha256": "0524129ff56bc42428bcfb71ac808284be5781eb8997f29b1202c30a4875ffc4"
+    },
+    {
+      "path": "overlay/sglang/multimodal_gen/runtime/models/encoders/qwen_vl_vision.py",
+      "bytes": 5027,
+      "sha256": "2a57d20ad90f3c47ac1d25dbcef6f4af25bca3abdc75d695139e176e6e70334a"
+    },
+    {
+      "path": "overlay/sglang/multimodal_gen/runtime/models/vaes/autoencoder_kl_qwenimage21.py",
+      "bytes": 22312,
+      "sha256": "2901673a9890893a1da597e1c28d8e4378606b7aedf80809de1791b9dff117dc"
+    },
+    {
+      "path": "overlay/sglang/multimodal_gen/runtime/models/vaes/resample.py",
+      "bytes": 2788,
+      "sha256": "d298740989ecedd3382dc30d5333aac75d32bc0c228b4860d8cae9466a663a5b"
+    },
+    {
+      "path": "overlay/sglang/multimodal_gen/runtime/utils/weight_attrs.py",
+      "bytes": 1050,
+      "sha256": "a803a937c1bb2dddcb675213b7a75baad0d988ad79c62d31b35db3430463fb47"
+    },
+    {
+      "path": "overlay/sglang/srt/utils/cpp_extension_loader.py",
+      "bytes": 5184,
+      "sha256": "4a8914b1d641a2af48f0378afd8161c3dd4c2e29328a8a046eb55c7f195839d2"
+    },
+    {
+      "path": "probe_qwen21_core007.py",
+      "bytes": 16637,
+      "sha256": "2994514550a2e5098adb4640b50d09d5ca54c345249ec23935f18a7539d3e155"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3431,
+      "sha256": "6f65ea381418c111d9f0d284c87331c1de0546baef8209dfee54e9870d1878c8"
+    },
+    {
+      "path": "revise007-source.py",
+      "bytes": 7057,
+      "sha256": "68f9e796488aa96edd0d8a038b1c62fb4c0eb70124d630ad5589ab7ea134c75f"
+    },
+    {
+      "path": "source-lock.json",
+      "bytes": 425332,
+      "sha256": "66410dc2160b597a4b6fe99b83c78b981921e0eb587032d567e1fff20dae2f7f"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "schema": "qwen21-turbo009-transfer-receipt-v1",
+  "run_id": "fe613d9cd6344a758bf69cef8602800f",
+  "model": "Qwen/Qwen-Image-2.1-Turbo",
+  "hf_revision": "fc13ba1986fcb905854dc8de2f52eee395f49b5b",
+  "destination": "/root/private_data/guoxin-candidates/models/Qwen-Image-2.1-Turbo-fc13ba1986f",
+  "phase": "vae",
+  "mode": "download",
+  "max_workers": 2,
+  "status": "completed_selected_phase_full_SHA_verified",
+  "files": [
+    {
+      "status": "downloaded_verified",
+      "resumed_from_bytes": 0,
+      "size": 11422650,
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506",
+      "path": "processor/tokenizer.json",
+      "source": "https://modelscope.cn/models/Qwen/Qwen-Image-2.1-Turbo/resolve/bb7684f9e2da0ab20306f2a00cdfffb9692e8790/processor/tokenizer.json"
+    },
+    {
+      "status": "downloaded_verified",
+      "resumed_from_bytes": 0,
+      "size": 30283,
+      "sha256": "17987f6623b1c814d0ef55a137d99142b7b3b040eb1bf241b5575dd35af803a2",
+      "path": "transformer/diffusion_pytorch_model.safetensors.index.json",
+      "source": "https://modelscope.cn/models/Qwen/Qwen-Image-2.1-Turbo/resolve/6774cfc8a2ae673a6eab3fc0f800262dc539e170/transformer/diffusion_pytorch_model.safetensors.index.json"
+    },
+    {
+      "status": "downloaded_verified",
+      "resumed_from_bytes": 0,
+      "size": 15116,
+      "sha256": "9a262724d564444f1fd41a1a3fc1aae75bfb7873cd623abb3acd3d59f02ee4c5",
+      "path": "README.md",
+      "source": "https://modelscope.cn/models/Qwen/Qwen-Image-2.1-Turbo/resolve/4954d69c119759f085aa36bd5e66e27647cdee60/README.md"
+    },
+    {
+      "status": "downloaded_verified",
+      "resumed_from_bytes": 0,
+      "size": 7831,
+      "sha256": "8dc973f024ff95966bea25866efa443fd16776dcb1001e681e3d467ea572b28d",
+      "path": "LICENSE",
+      "source": "https://modelscope.cn/models/Qwen/Qwen-Image-2.1-Turbo/resolve/3d11fcb9828695097c898213e62f9d807eb02872/LICENSE"
+    },
+    {
+      "status": "downloaded_verified",
+      "resumed_from_bytes": 0,
+      "size": 5292,
+      "sha256": "3636d0f0bd6bef02654cdffdc447b79cb2cef8ab02cc75267345946291a489e4",
+      "path": "processor/chat_template.jinja",
+      "source": "https://modelscope.cn/models/Qwen/Qwen-Image-2.1-Turbo/resolve/7816547c61d330a39b21e85a6239a865ecae2e13/processor/chat_template.jinja"
+    },
+    {
+      "status": "downloaded_verified",
+      "resumed_from_bytes": 0,
+      "size": 2172,
+      "sha256": "42bfdec412459bbb7bc38a0617ab70edcfc873f84ec47e0c7d01c53ba09885a5",
+      "path": "vae/config.json",
+      "source": "https://modelscope.cn/models/Qwen/Qwen-Image-2.1-Turbo/resolve/6774cfc8a2ae673a6eab3fc0f800262dc539e170/vae/config.json"
+    },
+    {
+      "status": "downloaded_verified",
+      "resumed_from_bytes": 0,
+      "size": 1542,
+      "sha256": "89050cba6b66c4f68f52305b54fc37efe28d95232246b94aa8dc0cfa36f3b734",
+      "path": "text_encoder/config.json",
+      "source": "https://modelscope.cn/models/Qwen/Qwen-Image-2.1-Turbo/resolve/11a031f6576fd6e26fb31d8bcfd6aafc1d43dde7/text_encoder/config.json"
+    },
+    {
+      "status": "downloaded_verified",
+      "resumed_from_bytes": 0,
+      "size": 1300,
+      "sha256": "14932921ca485d458a04dafd8069fbb0a4505622a48208d19ed247115801385b",
+      "path": "processor/processor_config.json",
+      "source": "https://modelscope.cn/models/Qwen/Qwen-Image-2.1-Turbo/resolve/bb7684f9e2da0ab20306f2a00cdfffb9692e8790/processor/processor_config.json"
+    },
+    {
+      "status": "downloaded_verified",
+      "resumed_from_bytes": 0,
+      "size": 705,
+      "sha256": "fd42a0b35a8d13cd473e88e310b50cbf1bccaa9eb60ed0fd873af5f8f0c59307",
+      "path": "processor/tokenizer_config.json",
+      "source": "https://modelscope.cn/models/Qwen/Qwen-Image-2.1-Turbo/resolve/fc872ee53d8967fa6be96052eb4641b80fb382f6/processor/tokenizer_config.json"
+    },
+    {
+      "status": "downloaded_verified",
+      "resumed_from_bytes": 0,
+      "size": 578,
+      "sha256": "97e2febeb19d93cb41fa44807cde8bd42757950b5dffeacdb0331fb2d390cf20",
+      "path": "model_index.json",
+      "source": "https://modelscope.cn/models/Qwen/Qwen-Image-2.1-Turbo/resolve/7816547c61d330a39b21e85a6239a865ecae2e13/model_index.json"
+    },
+    {
+      "status": "downloaded_verified",
+      "resumed_from_bytes": 0,
+      "size": 486,
+      "sha256": "16c948c71f9152a34cce6e3a2f309e97ad2dca32beecbe5e2fd3a7925b7eb4bb",
+      "path": "scheduler/scheduler_config.json",
+      "source": "https://modelscope.cn/models/Qwen/Qwen-Image-2.1-Turbo/resolve/fc872ee53d8967fa6be96052eb4641b80fb382f6/scheduler/scheduler_config.json"
+    },
+    {
+      "status": "downloaded_verified",
+      "resumed_from_bytes": 0,
+      "size": 370,
+      "sha256": "2c567038ca190824728844b8d06d94ae02360e668707afd9734e789a7eb58ce3",
+      "path": "transformer/config.json",
+      "source": "https://modelscope.cn/models/Qwen/Qwen-Image-2.1-Turbo/resolve/775c281adf80fdd95d6935fc11ab9332e8634731/transformer/config.json"
+    },
+    {
+      "status": "downloaded_verified",
+      "resumed_from_bytes": 0,
+      "size": 241,
+      "sha256": "d04d0c6fdd1dc056cf68178425a3ecf17a0b9e848cf1a8378ad31c623263472c",
+      "path": "text_encoder/generation_config.json",
+      "source": "https://modelscope.cn/models/Qwen/Qwen-Image-2.1-Turbo/resolve/11a031f6576fd6e26fb31d8bcfd6aafc1d43dde7/text_encoder/generation_config.json"
+    },
+    {
+      "status": "downloaded_verified",
+      "resumed_from_bytes": 0,
+      "size": 675508656,
+      "sha256": "71879ffd5321e6d10c3c87513e2b474b1252efa7f3dec2969214a9bf06a6dd5c",
+      "path": "vae/diffusion_pytorch_model.safetensors",
+      "source": "https://modelscope.cn/models/Qwen/Qwen-Image-2.1-Turbo/resolve/6d005a2f4131b65becceb2ca40894e0aed2f2869/vae/diffusion_pytorch_model.safetensors"
+    }
+  ],
+  "GPU_imported": false,
+  "full_checkpoint_verified": false,
+  "started_utc": "2026-10-24T08:51:37.690690+00:00",
+  "all_workers_exited_before_lock_release": true,
+  "remaining_network_bytes": 686997222,
+  "finished_utc": "2026-10-24T08:52:17.545271+00:00",
+  "torch_in_sys_modules": false
+}

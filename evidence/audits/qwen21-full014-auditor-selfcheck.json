@@ -1,0 +1,16 @@
+{
+  "scope": "CPU auditor self-check only; transfer objects are synthetic and do not prove actual full-weight verification",
+  "passed": true,
+  "checks": {
+    "synthetic_semantic_valid_fixture": true,
+    "reject_wrong_SHA": true,
+    "reject_duplicate_missing_file": true,
+    "reject_unjoined_workers": true,
+    "reject_GPU_imported_receipt": true,
+    "reject_other_namespace": true,
+    "reject_wrong_mode_status": true,
+    "actual_original_CRC_manifest_SHA25": true
+  },
+  "GPU_imported": false,
+  "network_executed": false
+}

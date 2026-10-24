@@ -1,0 +1,113 @@
+{
+  "archive_sha256": "b6faeea32b4a20eb2cc175df2e477c3d6a47ad5204e974bb4f85bf2344d54dbc",
+  "archive_bytes": 97912,
+  "CRC_verified": true,
+  "manifest_verified": true,
+  "evidence": [
+    {
+      "path": "qwen21-full-shapes012-results/full-shapes012.json",
+      "passed": true,
+      "native_sources_unchanged": true,
+      "native_source_count": 1989,
+      "bundle_bound": true,
+      "cuda_context_initialized": true,
+      "GPU_tensor_compute": false,
+      "elapsed_seconds": 62.19736366532743,
+      "components": {
+        "text_encoder": {
+          "source_keys": 750,
+          "target_keys": 750,
+          "bijection_and_shapes_verified": true,
+          "mapped_names_sha256": "93e81c9fa8fc763ec73944a003fca706a48f3260d78f5abfc61ffbe824b325f2",
+          "parameters": 8767123696,
+          "all_parameters_meta": true,
+          "meta_buffers": [
+            {
+              "name": "model.visual.rotary_pos_emb.inv_freq",
+              "shape": [
+                18
+              ],
+              "dtype": "torch.float32"
+            },
+            {
+              "name": "model.language_model.layers.0.self_attn.rotary_emb.cos_sin_cache",
+              "shape": [
+                262144,
+                128
+              ],
+              "dtype": "torch.bfloat16"
+            }
+          ],
+          "custom_weight_loader_parameters": 232,
+          "missing_key_synthesis_permitted": false,
+          "merge_or_duplicate_keys_permitted": false
+        },
+        "transformer": {
+          "source_keys": 297,
+          "target_keys": 297,
+          "bijection_and_shapes_verified": true,
+          "mapped_names_sha256": "269466c9348a53b49ee0302588b6afd130304f30e1d6416b796101243d1e7cc0",
+          "parameters": 7115124736,
+          "all_parameters_meta": true,
+          "meta_buffers": [],
+          "custom_weight_loader_parameters": 224,
+          "missing_key_synthesis_permitted": false,
+          "merge_or_duplicate_keys_permitted": false
+        },
+        "vae": {
+          "source_keys": 238,
+          "target_keys": 238,
+          "bijection_and_shapes_verified": true,
+          "mapped_names_sha256": "8c4e99da649d809422ab4e0196bae6abe815cba99b1f025482d77bde4c6cedc1",
+          "parameters": 337740404,
+          "all_parameters_meta": true,
+          "meta_buffers": [],
+          "custom_weight_loader_parameters": 0,
+          "missing_key_synthesis_permitted": false,
+          "merge_or_duplicate_keys_permitted": false
+        }
+      }
+    },
+    {
+      "path": "qwen21-vae-checkpoint010-results/vae-checkpoint010.json",
+      "passed": true,
+      "native_sources_unchanged": true,
+      "native_source_count": 1989,
+      "bundle_bound": true,
+      "cuda_context_initialized": true,
+      "GPU_tensor_compute": false,
+      "elapsed_seconds": 37.37311789300293,
+      "parameters": 337740404,
+      "checkpoint_keys": 238,
+      "latent": {
+        "shape": [
+          1,
+          64,
+          1,
+          2,
+          2
+        ],
+        "dtype": "torch.float32",
+        "device": "cpu",
+        "abs_max": 8.145147323608398,
+        "finite": true,
+        "sha256": "b26294f138a518e300137001916d18597ca2fc5e27be847cecfb63d45038929c"
+      },
+      "decoded": {
+        "shape": [
+          1,
+          4,
+          1,
+          32,
+          32
+        ],
+        "dtype": "torch.float32",
+        "device": "cpu",
+        "abs_max": 1.0,
+        "finite": true,
+        "sha256": "040eaaa6d96a483ea51f12b506ec439c99ffb0b83b46a4d72de1a2b32fb11cd0"
+      }
+    }
+  ],
+  "manifest_payloads": 25
+}

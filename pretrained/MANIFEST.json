@@ -1,0 +1,85 @@
+{
+  "schema": "qwen21-pretrained-runner-v1",
+  "files": [
+    {
+      "path": "013-to-014.patch",
+      "bytes": 62391,
+      "sha256": "7c903e66770776bc37c7948ed855da4983633d3e9b9c4b4e2f933bfa274fe063"
+    },
+    {
+      "path": "decode-order-real-CPU-regression.json",
+      "bytes": 950,
+      "sha256": "1a664e590548d2a1d955aa7a176647462e277b636628e228a3dff9216e0763e6"
+    },
+    {
+      "path": "download-sources009.json",
+      "bytes": 7834,
+      "sha256": "dbab7a7daf5ac2e000eda646fbb74f0bdc8ee9fd4822199043e7b03cf4fec5fd"
+    },
+    {
+      "path": "headers/header-receipt012.json",
+      "bytes": 3011,
+      "sha256": "cf977bc494deed902deafc56944a894a33f7b4e9ee1deb7abb7fc31b100c6b46"
+    },
+    {
+      "path": "headers/text_encoder__model.safetensors.header.json",
+      "bytes": 93184,
+      "sha256": "f219429040fa5b4bc6bdad525a3187dd398eabb41db29d00e4e6650430831866"
+    },
+    {
+      "path": "headers/transformer__diffusion_pytorch_model-00001-of-00002.safetensors.header.json",
+      "bytes": 24784,
+      "sha256": "f74e521f55710f05c7f492cc1e54686923d25439e22241af107d1a11d20a6546"
+    },
+    {
+      "path": "headers/transformer__diffusion_pytorch_model-00002-of-00002.safetensors.header.json",
+      "bytes": 10136,
+      "sha256": "49cb9bb6a7774dd266f5b19a0a645ecd63d25ae4b580774aa88d0e47d1c67799"
+    },
+    {
+      "path": "headers/vae__diffusion_pytorch_model.safetensors.header.json",
+      "bytes": 27840,
+      "sha256": "3084328b25f28c863b29b6464b6b8147b93df22ce27408dab0ca985f90ac5f52"
+    },
+    {
+      "path": "LICENSE-model-Qwen-RESEARCH",
+      "bytes": 7831,
+      "sha256": "8dc973f024ff95966bea25866efa443fd16776dcb1001e681e3d467ea572b28d"
+    },
+    {
+      "path": "LICENSE-upstream-APACHE-2.0",
+      "bytes": 11346,
+      "sha256": "1495e1e757ef4d0925a2350563cf5754bb23c51701a8ec4fb3c5cdcbedae6747"
+    },
+    {
+      "path": "probe_qwen21_decode_order014.py",
+      "bytes": 3663,
+      "sha256": "dbc2e4d703e98e86abcc3bd121c8271ac1f7a0cdd91cd222cec78df990881bc3"
+    },
+    {
+      "path": "qwen21_pretrained014.py",
+      "bytes": 11266,
+      "sha256": "bd9f1a8f855cc9ab0d21ed25a78958e1e70934725296aff62b892790503580a4"
+    },
+    {
+      "path": "qwen21_t2i_stage014.py",
+      "bytes": 7747,
+      "sha256": "faba96cda115018fc9e4fe7422f9db91e8402bf68898d9fea017590959b6969f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3116,
+      "sha256": "a54e2b838775b2a630e55cc8e2d7e65fd77a1aaf6fe16a97a8d885abd6628eae"
+    },
+    {
+      "path": "run_qwen21_pretrained014.py",
+      "bytes": 13569,
+      "sha256": "da1920b0fc344d12c8de682da64011985499089386c914f1e99833ff04d58fe1"
+    },
+    {
+      "path": "seal014-source.py",
+      "bytes": 6482,
+      "sha256": "f86d52383eebbdfd80e7a9f8c94e5d93edaa39f0645f28c9b28b6ef08f550874"
+    }
+  ]
+}

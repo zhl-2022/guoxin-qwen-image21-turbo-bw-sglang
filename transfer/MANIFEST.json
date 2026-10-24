@@ -1,0 +1,65 @@
+{
+  "schema": "qwen21-transfer-package-v1",
+  "files": [
+    {
+      "path": "build009-source.py",
+      "bytes": 6676,
+      "sha256": "1ff377b56618675496b8cef819b569b3643122c545c0ad78a6c01aa45321ccc8"
+    },
+    {
+      "path": "download-sources009.json",
+      "bytes": 7834,
+      "sha256": "dbab7a7daf5ac2e000eda646fbb74f0bdc8ee9fd4822199043e7b03cf4fec5fd"
+    },
+    {
+      "path": "download_candidate_models_20261023.py",
+      "bytes": 13592,
+      "sha256": "c7365bb68795679669cb41cb91768317bf7e93ad2c6447c1713ee17b91e646e0"
+    },
+    {
+      "path": "download_qwen21_turbo009.py",
+      "bytes": 6905,
+      "sha256": "22af33c620acab115bcc0c7aa84ed28799b6cdeeca419af23dc474ef571d1f50"
+    },
+    {
+      "path": "download_wan_models_006.py",
+      "bytes": 6114,
+      "sha256": "eb71d04d423092dc681099c19ce535b7b1427df2df7a1d25cebba78cee3a6817"
+    },
+    {
+      "path": "download_wan_models_006_002.py",
+      "bytes": 14337,
+      "sha256": "0b6e1b588053ba206af50644cf7bcd6774bcecf19dccbd1c006faeea9e4710fe"
+    },
+    {
+      "path": "LICENSE-model-Qwen-RESEARCH",
+      "bytes": 7831,
+      "sha256": "8dc973f024ff95966bea25866efa443fd16776dcb1001e681e3d467ea572b28d"
+    },
+    {
+      "path": "local-validation.json",
+      "bytes": 11086,
+      "sha256": "12d55e87be90c6cbed87cc222feb1a5ceb54ae9542ee8d0f1da65bb095f8a810"
+    },
+    {
+      "path": "modelscope-files-observation.json",
+      "bytes": 15498,
+      "sha256": "70c4155e78d0fe337b40b9821bbaeea182a1b847bd83b65288a07ffc0408314d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2883,
+      "sha256": "cc26650d214b81f853c4c18263e1c3231a88f28d224f7a0039fd9f12f29d4e95"
+    },
+    {
+      "path": "test_download_wan_parallel_006_002.py",
+      "bytes": 9700,
+      "sha256": "2cb79625a0dfa3bc2bb70a9cb1e9ba08398ef6a4ded2f28c650b0944f11d3e75"
+    },
+    {
+      "path": "test_qwen21_transfer009.py",
+      "bytes": 4239,
+      "sha256": "2ec89afc8b3cc3a44ddd34110c9980f624c4e39e138cc9f01d4fa30aeb234a6c"
+    }
+  ]
+}

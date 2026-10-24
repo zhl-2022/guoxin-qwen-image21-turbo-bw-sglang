@@ -1,0 +1,16 @@
+{
+  "pid": 27281,
+  "start_ticks": "285975971",
+  "argv": [
+    "/root/private_data/guoxin-wan-env-006-001/venv/bin/python",
+    "-B",
+    "/root/private_data/qwen21-turbo-vae-load010/probe_qwen21_vae_checkpoint010.py",
+    "--bundle",
+    "/root/private_data/qwen21-turbo-core-probe009",
+    "--output",
+    "/root/private_data/qwen21-vae-checkpoint010-results",
+    "--timeout-seconds",
+    "300"
+  ],
+  "epoch": 1792832376.0191777
+}

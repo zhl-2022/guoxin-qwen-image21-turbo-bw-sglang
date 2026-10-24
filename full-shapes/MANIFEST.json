@@ -1,0 +1,60 @@
+{
+  "schema": "qwen21-full-shapes-v1",
+  "files": [
+    {
+      "path": "build012-source.py",
+      "bytes": 5045,
+      "sha256": "9dc4d39ae636ee80b7318c522ae571751b29d07106ba78b1fcdd97107318849e"
+    },
+    {
+      "path": "fetch_qwen21_safetensors_headers012.py",
+      "bytes": 4175,
+      "sha256": "8ca6d6d189e62498ea101c2355f0dc1a19b447c6eed636cd62643e7caac97d6f"
+    },
+    {
+      "path": "headers/header-receipt012.json",
+      "bytes": 3011,
+      "sha256": "cf977bc494deed902deafc56944a894a33f7b4e9ee1deb7abb7fc31b100c6b46"
+    },
+    {
+      "path": "headers/text_encoder__model.safetensors.header.json",
+      "bytes": 93184,
+      "sha256": "f219429040fa5b4bc6bdad525a3187dd398eabb41db29d00e4e6650430831866"
+    },
+    {
+      "path": "headers/transformer__diffusion_pytorch_model-00001-of-00002.safetensors.header.json",
+      "bytes": 24784,
+      "sha256": "f74e521f55710f05c7f492cc1e54686923d25439e22241af107d1a11d20a6546"
+    },
+    {
+      "path": "headers/transformer__diffusion_pytorch_model-00002-of-00002.safetensors.header.json",
+      "bytes": 10136,
+      "sha256": "49cb9bb6a7774dd266f5b19a0a645ecd63d25ae4b580774aa88d0e47d1c67799"
+    },
+    {
+      "path": "headers/vae__diffusion_pytorch_model.safetensors.header.json",
+      "bytes": 27840,
+      "sha256": "3084328b25f28c863b29b6464b6b8147b93df22ce27408dab0ca985f90ac5f52"
+    },
+    {
+      "path": "LICENSE-upstream-APACHE-2.0",
+      "bytes": 11346,
+      "sha256": "1495e1e757ef4d0925a2350563cf5754bb23c51701a8ec4fb3c5cdcbedae6747"
+    },
+    {
+      "path": "probe_qwen21_full_shapes012.py",
+      "bytes": 3719,
+      "sha256": "aad30214a9eb089dad98ab1411b3f24c77d282540801e534fdb977756eca3012"
+    },
+    {
+      "path": "qwen21_pretrained012.py",
+      "bytes": 8750,
+      "sha256": "63bf21be98a810e9de8b40587894a1cf4c2ceb7733eb6b0890d78e4dd6c065c6"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2423,
+      "sha256": "011eac9bf03c1578bcabad3f442c73a8f0f22b1b433019ca8b46e6f3563e405a"
+    }
+  ]
+}

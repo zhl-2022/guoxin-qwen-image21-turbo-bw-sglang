@@ -1,0 +1,77 @@
+{
+  "archive": "E:\\hg20261019\\dist\\000-session007-qwen21-core005-raw.zip",
+  "archive_bytes": 7129,
+  "archive_sha256": "d80f5ed745b8a53c638eade8c8e8ee695d63a2947c3ba244d40e87ef1c15b7c3",
+  "CRC_verified": true,
+  "manifest_payloads_verified": 11,
+  "bundle_manifest_bound": true,
+  "native_wheel_sha256": "7c13be91a56b160af81847fffbf4f177b0f07fe0717b4042960ee23846ae7d61",
+  "workers": [
+    {
+      "name": "scheduler_processor",
+      "returncode": 2,
+      "passed": false,
+      "native_sources_verified": 1989,
+      "native_unchanged": true,
+      "cuda_context_initialized": false,
+      "elapsed_seconds": 4.807481398805976,
+      "result": null,
+      "error_last_line": "AttributeError: '_NamespacePath' object has no attribute 'insert'",
+      "traceback_sha256": "a736dcaad7fd130fffe933a5747d29e95ac6e100745b89b64a7887f4da6d7991"
+    },
+    {
+      "name": "config",
+      "returncode": 2,
+      "passed": false,
+      "native_sources_verified": 1989,
+      "native_unchanged": true,
+      "cuda_context_initialized": false,
+      "elapsed_seconds": 2.7727544787339866,
+      "result": null,
+      "error_last_line": "AttributeError: '_NamespacePath' object has no attribute 'insert'",
+      "traceback_sha256": "a736dcaad7fd130fffe933a5747d29e95ac6e100745b89b64a7887f4da6d7991"
+    },
+    {
+      "name": "vae",
+      "returncode": 2,
+      "passed": false,
+      "native_sources_verified": 1989,
+      "native_unchanged": true,
+      "cuda_context_initialized": false,
+      "elapsed_seconds": 2.956396016292274,
+      "result": null,
+      "error_last_line": "AttributeError: '_NamespacePath' object has no attribute 'insert'",
+      "traceback_sha256": "a736dcaad7fd130fffe933a5747d29e95ac6e100745b89b64a7887f4da6d7991"
+    },
+    {
+      "name": "dit",
+      "returncode": 2,
+      "passed": false,
+      "native_sources_verified": 1989,
+      "native_unchanged": true,
+      "cuda_context_initialized": false,
+      "elapsed_seconds": 2.855639754794538,
+      "result": null,
+      "error_last_line": "AttributeError: '_NamespacePath' object has no attribute 'insert'",
+      "traceback_sha256": "a736dcaad7fd130fffe933a5747d29e95ac6e100745b89b64a7887f4da6d7991"
+    },
+    {
+      "name": "encoder",
+      "returncode": 2,
+      "passed": false,
+      "native_sources_verified": 1989,
+      "native_unchanged": true,
+      "cuda_context_initialized": false,
+      "elapsed_seconds": 4.393005434889346,
+      "result": null,
+      "error_last_line": "AttributeError: '_NamespacePath' object has no attribute 'insert'",
+      "traceback_sha256": "a736dcaad7fd130fffe933a5747d29e95ac6e100745b89b64a7887f4da6d7991"
+    }
+  ],
+  "all_workers_passed": false,
+  "all_native_sources_unchanged": true,
+  "failure_layer": "probe source finder before component loading",
+  "model_weights_loaded": false,
+  "GPU_tensor_compute": false,
+  "full_service_ready": false
+}

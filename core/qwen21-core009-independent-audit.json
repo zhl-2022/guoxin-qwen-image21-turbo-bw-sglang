@@ -1,0 +1,42 @@
+{
+  "archive": "E:\\hg20261019\\dist\\000-session007-qwen21-core009-raw.zip",
+  "archive_bytes": 75086,
+  "archive_sha256": "1fdb4afe28a17d0c3df0be6e34da9217dad9837ddb3dcf3f998fb934e043a3b2",
+  "CRC_verified": true,
+  "manifest_payloads_verified": 5,
+  "bundle_manifest_bound": true,
+  "worker_path_prefix": "qwen009/",
+  "native_wheel_sha256": "7c13be91a56b160af81847fffbf4f177b0f07fe0717b4042960ee23846ae7d61",
+  "workers": [
+    {
+      "name": "dit",
+      "returncode": 2,
+      "passed": false,
+      "native_sources_verified": 1989,
+      "native_unchanged": true,
+      "cuda_context_initialized": true,
+      "elapsed_seconds": 41.460217400919646,
+      "result": null,
+      "error_last_line": "AttributeError: 'USPAttention' object has no attribute 'forward_with_replicated_kv_prefix'. Did you mean: '_forward_with_replicated_prefix'?",
+      "traceback_sha256": "8878ba23f214cf617be9b936bcbddea641846b2892c10d84a888641393f71e4a"
+    },
+    {
+      "name": "encoder",
+      "returncode": 2,
+      "passed": false,
+      "native_sources_verified": 1989,
+      "native_unchanged": true,
+      "cuda_context_initialized": true,
+      "elapsed_seconds": 33.88408805197105,
+      "result": null,
+      "error_last_line": "ValueError: Global server args is not set yet!",
+      "traceback_sha256": "d56a0e41bed24ee36c79ec56d0520c1d8aa6d3f4689c157939bf0822d0758f0a"
+    }
+  ],
+  "all_workers_passed": false,
+  "all_native_sources_unchanged": true,
+  "failure_layer": "see individual raw workers",
+  "model_weights_loaded": false,
+  "GPU_tensor_compute": false,
+  "full_service_ready": false
+}

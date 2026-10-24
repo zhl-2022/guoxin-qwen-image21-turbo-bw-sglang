@@ -1,0 +1,29 @@
+{
+  "schema": "qwen21-standard007-development-v1",
+  "model_id": "Qwen/Qwen-Image-2.1-Turbo",
+  "revision": "fc13ba1986fcb905854dc8de2f52eee395f49b5b",
+  "card": "BW",
+  "TP": 1,
+  "SP": 1,
+  "actual_full_pretrained_GPU_verified": true,
+  "actual_resolutions": [
+    [
+      256,
+      256
+    ],
+    [
+      512,
+      512
+    ]
+  ],
+  "profile": "T2I same prompt seed42, eight published sigmas, batch1, BF16, eager, real Torch SDPA",
+  "standard_wrapper_GPU_replayed": false,
+  "HTTP_service_tested": false,
+  "image_editing_tested": false,
+  "resolution1024_tested": false,
+  "official_accuracy_verified": false,
+  "official_performance_verified": false,
+  "official_acceptance": false,
+  "submission_ready": false,
+  "submitted": false
+}

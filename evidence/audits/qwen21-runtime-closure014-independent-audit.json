@@ -1,0 +1,64 @@
+{
+  "schema": "qwen21-full014-runtime-closure-independent-v1",
+  "passed": true,
+  "archive_bytes": 1596,
+  "archive_sha256": "38ccf98343e43adaa9ccd58c4ae56003f6ad6784e7efbc22671f05df68cdddd2",
+  "CRC_manifest_payload_SHA_verified": true,
+  "payloads": 3,
+  "platform_notebook_id": "2112237945233408001",
+  "runtime": {
+    "UTC": "2026-10-24T09:50:09.050130+00:00",
+    "platform_notebook_id": "2112237945233408001",
+    "sys_version": "3.10.12 (main, Aug 15 2025, 14:32:43) [GCC 11.4.0]",
+    "executable": "/root/private_data/guoxin-wan-env-006-001/venv/bin/python",
+    "packages": {
+      "torch": {
+        "version": "2.10.0+das.opt1.dtk2604.20260325.g6b060a",
+        "location": "/usr/local/lib/python3.10/dist-packages"
+      },
+      "transformers": {
+        "version": "5.5.0",
+        "location": "/usr/local/lib/python3.10/dist-packages"
+      },
+      "diffusers": {
+        "version": "0.37.0",
+        "location": "/root/private_data/guoxin-wan-env-006-001/venv/lib/python3.10/site-packages"
+      },
+      "triton": {
+        "version": "3.6.0+gitc73250c4.staging",
+        "location": "/usr/local/lib/python3.10/dist-packages"
+      },
+      "sglang": {
+        "version": "0.5.12+das185.dtk2604.torch2100.2608191739.ga14e79",
+        "location": "/root/private_data/guoxin-wan-env-006-001/venv/lib/python3.10/site-packages"
+      },
+      "sglang-kernel": {
+        "version": "0.4.2.post2+das185.dtk2604.torch2100.2608191745.ga14e79",
+        "location": "/root/private_data/guoxin-wan-env-006-001/venv/lib/python3.10/site-packages"
+      },
+      "Pillow": {
+        "version": "12.1.1",
+        "location": "/usr/local/lib/python3.10/dist-packages"
+      },
+      "imageio": {
+        "version": "2.36.0",
+        "location": "/root/private_data/guoxin-wan-env-006-001/venv/lib/python3.10/site-packages"
+      },
+      "imageio-ffmpeg": {
+        "version": "0.5.1",
+        "location": "/root/private_data/guoxin-wan-env-006-001/venv/lib/python3.10/site-packages"
+      }
+    }
+  },
+  "outer_timeout_pid": 29421,
+  "outer_start_ticks": "286228536",
+  "same_owned_outer_process_absent": true,
+  "driver_pid": 29422,
+  "driver_process_absent": true,
+  "driver_absent_observed_utc": "2026-10-24T09:47:30.155402+00:00",
+  "HCU_VRAM_percent": 0,
+  "HCU_utilization_percent": 0,
+  "in_process_post_cleanup_allocated_bytes": 105528832,
+  "in_process_post_cleanup_reserved_bytes": 192937984,
+  "scope": "In-process cache allocation and later independently observed process/device cleanup are separate facts"
+}

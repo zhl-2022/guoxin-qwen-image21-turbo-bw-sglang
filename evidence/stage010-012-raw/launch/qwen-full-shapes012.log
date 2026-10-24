@@ -1,0 +1,117 @@
+INFO 10-24 17:10:58 [__init__.py:44] Available plugins for group vllm.platform_plugins:
+INFO 10-24 17:10:58 [__init__.py:46] - hcu -> vllm_hcu:hcu_platform_plugin
+INFO 10-24 17:10:58 [__init__.py:49] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 10-24 17:10:58 [__init__.py:239] Platform plugin hcu is activated
+[aiter] WARNING: NUMA balancing is enabled, which may cause errors. It is recommended to disable NUMA balancing by running "sudo sh -c 'echo 0 > /proc/sys/kernel/numa_balancing'" 
+aiter MXFP4 kernels not available: No module named 'aiter.ops.gemm_op_a4w4'
+flash_attn is installed but failed to import: cannot import name '_wrapped_flash_attn_backward' from 'flash_attn.flash_attn_interface' (/usr/local/lib/python3.10/dist-packages/flash_attn/flash_attn_interface.py). Falling back to native PyTorch attention.
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+INFO: Please install lmslim if you want to infer the quantitative model of moe.
+
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[10-24 17:11:19] Disabling some offloading (except dit, text_encoder) for image generation model
+[10-24 17:11:19] server_args: {"model_path": "Qwen/Qwen-Image-2.1-Turbo", "model_id": null, "backend": "auto", "attention_backend": "torch_sdpa", "attention_backend_config": {}, "component_attention_backends": {}, "cache_dit_config": null, "nccl_port": null, "trust_remote_code": false, "revision": null, "num_gpus": 1, "performance_mode": "auto", "tp_size": 1, "sp_degree": 1, "ulysses_degree": 1, "ring_degree": 1, "dp_size": 1, "dp_degree": 1, "enable_cfg_parallel": false, "cfg_parallel_degree": 1, "hsdp_replicate_dim": 1, "hsdp_shard_dim": 1, "dist_timeout": 3600, "pipeline_class_name": null, "lora_path": null, "lora_nickname": "default", "lora_scale": 1.0, "lora_merge_mode": "auto", "lora_weight_name": null, "component_paths": {}, "transformer_weights_path": null, "quantization": null, "quantization_ignored_layers": null, "lora_target_modules": null, "dit_cpu_offload": true, "dit_layerwise_offload": false, "dit_offload_prefetch_size": 0.0, "text_encoder_cpu_offload": true, "image_encoder_cpu_offload": false, "vae_cpu_offload": false, "use_fsdp_inference": false, "pin_cpu_memory": true, "ltx2_two_stage_device_mode": null, "comfyui_mode": false, "enable_torch_compile": false, "warmup": false, "warmup_resolutions": null, "warmup_steps": 1, "disable_autocast": false, "master_port": 30005, "host": "127.0.0.1", "port": 30000, "webui": false, "webui_port": 12312, "scheduler_port": 5613, "batching_mode": "dynamic", "batching_max_size": 1, "batching_delay_ms": 0.0, "batching_config": null, "enable_batching_metrics": false, "strict_ports": false, "output_path": "outputs/", "input_save_path": "inputs/uploads", "prompt_file_path": null, "model_paths": {}, "model_loaded": {"transformer": true, "vae": true, "video_vae": true, "audio_vae": true, "video_dit": true, "audio_dit": true, "dual_tower_bridge": true}, "boundary_ratio": null, "base_gpu_id": 0, "disagg_role": "monolithic", "disagg_timeout": 600, "disagg_dispatch_policy": "round_robin", "disagg_mode": false, "disagg_server_addr": null, "encoder_urls": null, "denoiser_urls": null, "decoder_urls": null, "encoder_tp": null, "denoiser_tp": null, "denoiser_sp": null, "denoiser_ulysses": null, "denoiser_ring": null, "decoder_tp": null, "disagg_transfer_pool_size": 268435456, "disagg_p2p_hostname": "127.0.0.1", "disagg_ib_device": null, "pool_work_endpoint": null, "pool_result_endpoint": null, "log_level": "info", "uvicorn_access_log_exclude_prefixes": [], "enable_trace": false, "otlp_traces_endpoint": "localhost:4317"}
+`BaseImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `BaseImageProcessor` instead.
+[10-24 17:11:21] Using Torch SDPA backend
+[10-24 17:11:21] Using Torch SDPA backend
+{
+  "passed": true,
+  "GPU_tensor_compute": false,
+  "checkpoint_tensors_loaded": false,
+  "full_model_architectures": true,
+  "source": "Actual immutable published HTTP206 tensor headers; not whole-file SHA proof",
+  "bundle": {
+    "files": 531,
+    "sha256": "73f10aef47106011a31826ce257867cf61ddd3ebd62f94cb23068ab9e275ed0d"
+  },
+  "native_before": {
+    "version": "0.5.12+das185.dtk2604.torch2100.2608191739.ga14e79",
+    "root": "/root/private_data/guoxin-wan-env-006-001/venv/lib/python3.10/site-packages",
+    "python_files_verified": 1989,
+    "wheel_sha256": "7c13be91a56b160af81847fffbf4f177b0f07fe0717b4042960ee23846ae7d61"
+  },
+  "activation": {
+    "finder": "BoundSourceFinder",
+    "overlay": "/root/private_data/qwen21-turbo-core-probe010/overlay"
+  },
+  "srt_auxiliary_config": {
+    "class": "sglang.srt.server_args.ServerArgs",
+    "purpose": "Auxiliary native RoPE configuration; no SRT model server",
+    "model_path": "None",
+    "device": "cpu",
+    "rl_on_policy_target": null
+  },
+  "components": {
+    "text_encoder": {
+      "source_keys": 750,
+      "target_keys": 750,
+      "bijection_and_shapes_verified": true,
+      "mapped_names_sha256": "93e81c9fa8fc763ec73944a003fca706a48f3260d78f5abfc61ffbe824b325f2",
+      "parameters": 8767123696,
+      "all_parameters_meta": true,
+      "meta_buffers": [
+        {
+          "name": "model.visual.rotary_pos_emb.inv_freq",
+          "shape": [
+            18
+          ],
+          "dtype": "torch.float32"
+        },
+        {
+          "name": "model.language_model.layers.0.self_attn.rotary_emb.cos_sin_cache",
+          "shape": [
+            262144,
+            128
+          ],
+          "dtype": "torch.bfloat16"
+        }
+      ],
+      "custom_weight_loader_parameters": 232,
+      "missing_key_synthesis_permitted": false,
+      "merge_or_duplicate_keys_permitted": false
+    },
+    "transformer": {
+      "source_keys": 297,
+      "target_keys": 297,
+      "bijection_and_shapes_verified": true,
+      "mapped_names_sha256": "269466c9348a53b49ee0302588b6afd130304f30e1d6416b796101243d1e7cc0",
+      "parameters": 7115124736,
+      "all_parameters_meta": true,
+      "meta_buffers": [],
+      "custom_weight_loader_parameters": 224,
+      "missing_key_synthesis_permitted": false,
+      "merge_or_duplicate_keys_permitted": false
+    },
+    "vae": {
+      "source_keys": 238,
+      "target_keys": 238,
+      "bijection_and_shapes_verified": true,
+      "mapped_names_sha256": "8c4e99da649d809422ab4e0196bae6abe815cba99b1f025482d77bde4c6cedc1",
+      "parameters": 337740404,
+      "all_parameters_meta": true,
+      "meta_buffers": [],
+      "custom_weight_loader_parameters": 0,
+      "missing_key_synthesis_permitted": false,
+      "merge_or_duplicate_keys_permitted": false
+    }
+  },
+  "cuda_context_initialized": true,
+  "native_after": {
+    "version": "0.5.12+das185.dtk2604.torch2100.2608191739.ga14e79",
+    "root": "/root/private_data/guoxin-wan-env-006-001/venv/lib/python3.10/site-packages",
+    "python_files_verified": 1989,
+    "wheel_sha256": "7c13be91a56b160af81847fffbf4f177b0f07fe0717b4042960ee23846ae7d61"
+  },
+  "native_unchanged": true,
+  "elapsed_seconds": 62.19736366532743
+}

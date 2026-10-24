@@ -1,0 +1,7 @@
+{
+  "native_subclass": true,
+  "upstream_SP1_attention_branch_AST_identical": true,
+  "SP_above1_rejected": true,
+  "native_attention_impl_preserved": true,
+  "new_NVIDIA_JIT_used": false
+}

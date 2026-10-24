@@ -1,0 +1,63 @@
+{
+  "schema": "qwen21-standard007-local-validation-v1",
+  "UTC": "2026-10-24T10:01:29.714535+00:00",
+  "passed": true,
+  "scope": "Actual CPU/shell read-back and material-gate validation, not wrapper GPU replay",
+  "CPython310_AST_files": 243,
+  "eight_report_sections": true,
+  "offline11_wheel_CRC_SHA_metadata_verified": true,
+  "verifier_rejection_unittests_passed": 11,
+  "no_fake_verify_result_or_bench_created": true,
+  "GPU_executed": false,
+  "checks": [
+    {
+      "name": "shell-run-plan",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "stdout": "Plan only; no environment install, download, GPU execution or HTTP service.\nC:\\\\Users\\\\zhl\\\\anaconda3\\\\python.exe -B /e/hg20261019/revisions/qwen21-standard007-draft/pretrained/run_qwen21_pretrained014.py --bundle /e/hg20261019/revisions/qwen21-standard007-draft/core --expected-bundle-sha256 73f10aef47106011a31826ce257867cf61ddd3ebd62f94cb23068ab9e275ed0d --shape-receipt /e/hg20261019/revisions/qwen21-standard007-draft/evidence/stage010-012-raw/qwen21-full-shapes012-results/full-shapes012.json --resolutions 256\\,512 --output E:\\\\hg20261019\\\\revisions\\\\qwen21-standard007-draft\\\\evidence\\\\full014-raw\\\\qwen21-complete-pretrained014-results --max-seconds 1200 \n",
+      "stderr": ""
+    },
+    {
+      "name": "shell-env-plan",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "stdout": "{\"action\": \"environment\", \"scope\": \"plan only\", \"GPU_model_executed\": false}\n",
+      "stderr": ""
+    },
+    {
+      "name": "shell-smoke-actual-originals",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"driver_sources_bound\": true,\n  \"native_1989_files_unchanged\": true,\n  \"GPU_tensor_compute\": true,\n  \"GPU_tensors_loaded\": true,\n  \"cuda_context_initialized\": true,\n  \"elapsed_seconds\": 131.5344329327345,\n  \"samples\": [\n    {\n      \"width\": 256,\n      \"height\": 256,\n      \"sha256\": \"7518e55e20942d0e8d0179bbc3740acb9e10150425cca0a08cea386785708b3a\",\n      \"bytes\": 39803,\n      \"channel_extrema\": [\n        [\n          159,\n          253\n        ],\n        [\n          0,\n          253\n        ],\n        [\n          13,\n          255\n        ],\n        [\n          253,\n          255\n        ]\n      ],\n      \"GPU_eight_steps_finite\": true,\n      \"pre_norm_and_32_prefix_caches\": true,\n      \"elapsed_seconds_including_validation\": 12.086361807771027\n    },\n    {\n      \"width\": 512,\n      \"height\": 512,\n      \"sha256\": \"f5cdbeff7e9078f01ae8268cea297462b398ccc06f404ba4b349f199c01d5f26\",\n      \"bytes\": 195115,\n      \"channel_extrema\": [\n        [\n          57,\n          255\n        ],\n        [\n          0,\n          253\n        ],\n        [\n          0,\n          255\n        ],\n        [\n          254,\n          255\n        ]\n      ],\n      \"GPU_eight_steps_finite\": true,\n      \"pre_norm_and_32_prefix_caches\": true,\n      \"elapsed_seconds_including_validation\": 1.1135749416425824\n    }\n  ],\n  \"checkpoint_full_SHA_bytes\": 32451622214,\n  \"scope\": \"CPU read-back of existing actual output; no new generation or HTTP call\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "official-verify-plan-gate",
+      "returncode": 2,
+      "expected_returncode": 2,
+      "stdout": "{\"action\": \"verify\", \"scope\": \"plan only\", \"GPU_model_executed\": false}\n",
+      "stderr": ""
+    },
+    {
+      "name": "official-verify-actual-missing-material-gate",
+      "returncode": 2,
+      "expected_returncode": 2,
+      "stdout": "{\n  \"status\": \"blocked_official_material_contract_not_integrated\",\n  \"missing_environment\": [\n    \"QWEN_OFFICIAL_VERIFY_SCRIPT\",\n    \"QWEN_OFFICIAL_DATA_MANIFEST\",\n    \"QWEN_OFFICIAL_BASELINE\",\n    \"QWEN_OFFICIAL_SCORING_CONTRACT\"\n  ],\n  \"required_materials\": [\n    \"QWEN_OFFICIAL_VERIFY_SCRIPT\",\n    \"QWEN_OFFICIAL_DATA_MANIFEST\",\n    \"QWEN_OFFICIAL_BASELINE\",\n    \"QWEN_OFFICIAL_SCORING_CONTRACT\"\n  ],\n  \"official_evaluation_executed\": false,\n  \"official_accuracy_verified\": false,\n  \"official_performance_verified\": false,\n  \"submitted\": false,\n  \"reason\": \"Bind the actual organizer evaluator/self-test/data/baseline/scoring interface before implementing a formal adapter; a development PNG or returncode does not establish an official score\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "official-bench-plan-gate",
+      "returncode": 2,
+      "expected_returncode": 2,
+      "stdout": "{\"action\": \"bench\", \"scope\": \"plan only\", \"GPU_model_executed\": false}\n",
+      "stderr": ""
+    },
+    {
+      "name": "official-bench-missing-material-gate",
+      "returncode": 2,
+      "expected_returncode": 2,
+      "stdout": "{\n  \"status\": \"blocked_official_material_contract_not_integrated\",\n  \"missing_environment\": [\n    \"QWEN_OFFICIAL_BENCH_SCRIPT\",\n    \"QWEN_OFFICIAL_DATA_MANIFEST\",\n    \"QWEN_OFFICIAL_BASELINE\",\n    \"QWEN_OFFICIAL_SCORING_CONTRACT\"\n  ],\n  \"required_materials\": [\n    \"QWEN_OFFICIAL_BENCH_SCRIPT\",\n    \"QWEN_OFFICIAL_DATA_MANIFEST\",\n    \"QWEN_OFFICIAL_BASELINE\",\n    \"QWEN_OFFICIAL_SCORING_CONTRACT\"\n  ],\n  \"official_evaluation_executed\": false,\n  \"official_accuracy_verified\": false,\n  \"official_performance_verified\": false,\n  \"submitted\": false,\n  \"reason\": \"Bind the actual organizer evaluator/self-test/data/baseline/scoring interface before implementing a formal adapter; a development PNG or returncode does not establish an official score\"\n}\n",
+      "stderr": ""
+    }
+  ]
+}

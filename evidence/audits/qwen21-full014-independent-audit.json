@@ -1,0 +1,36 @@
+{
+  "archive_sha256": "d52e54209eafa1328ac7a8b16253da94f6bab368c2b70f14d42d2f2915aa6a8c",
+  "archive_bytes": 256699,
+  "CRC_verified": true,
+  "manifest_verified": true,
+  "evidence": [
+    {
+      "path": "qwen21-complete-pretrained014-results/complete-pretrained014.json",
+      "passed": true,
+      "native_sources_unchanged": true,
+      "native_source_count": 1989,
+      "bundle_bound": true,
+      "cuda_context_initialized": true,
+      "GPU_tensor_compute": true,
+      "elapsed_seconds": 131.5344329327345,
+      "driver_sources_bound": true,
+      "samples": [
+        {
+          "height": 256,
+          "width": 256,
+          "bytes": 39803,
+          "sha256": "7518e55e20942d0e8d0179bbc3740acb9e10150425cca0a08cea386785708b3a",
+          "elapsed_seconds_including_validation": 12.086361807771027
+        },
+        {
+          "height": 512,
+          "width": 512,
+          "bytes": 195115,
+          "sha256": "f5cdbeff7e9078f01ae8268cea297462b398ccc06f404ba4b349f199c01d5f26",
+          "elapsed_seconds_including_validation": 1.1135749416425824
+        }
+      ]
+    }
+  ],
+  "manifest_payloads": 11
+}

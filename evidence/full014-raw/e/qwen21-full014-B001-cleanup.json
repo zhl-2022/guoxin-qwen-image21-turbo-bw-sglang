@@ -1,0 +1,33 @@
+{
+  "same_owned_process_present": false,
+  "platform_notebook_id": "2112237945233408001",
+  "launch": {
+    "pid": 29421,
+    "starttime": "286228536",
+    "platform_id": "2112237945233408001",
+    "started_utc": "2026-10-24T09:41:41.664054+00:00",
+    "command": [
+      "timeout",
+      "--signal=INT",
+      "--kill-after=35",
+      "1250",
+      "/root/private_data/guoxin-wan-env-006-001/venv/bin/python",
+      "-B",
+      "/root/private_data/qwen21-turbo-pretrained014/run_qwen21_pretrained014.py",
+      "--bundle",
+      "/root/private_data/qwen21-turbo-core-probe010",
+      "--expected-bundle-sha256",
+      "73f10aef47106011a31826ce257867cf61ddd3ebd62f94cb23068ab9e275ed0d",
+      "--shape-receipt",
+      "/root/private_data/qwen21-full-shapes012-results/full-shapes012.json",
+      "--resolutions",
+      "256,512",
+      "--output",
+      "/root/private_data/qwen21-complete-pretrained014-results",
+      "--max-seconds",
+      "1200"
+    ],
+    "log": "/root/private_data/e/qwen21-full014-B001.log"
+  },
+  "UTC": "2026-10-24T09:45:10.550722+00:00"
+}

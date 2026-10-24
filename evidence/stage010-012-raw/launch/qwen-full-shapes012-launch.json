@@ -1,0 +1,20 @@
+{
+  "pid": 28447,
+  "start_ticks": "286040676",
+  "argv": [
+    "timeout",
+    "--signal=INT",
+    "--kill-after=30",
+    "600",
+    "/root/private_data/guoxin-wan-env-006-001/venv/bin/python",
+    "-B",
+    "/root/private_data/qwen21-turbo-full-shapes012/probe_qwen21_full_shapes012.py",
+    "--bundle",
+    "/root/private_data/qwen21-turbo-core-probe010",
+    "--expected-bundle-sha256",
+    "73f10aef47106011a31826ce257867cf61ddd3ebd62f94cb23068ab9e275ed0d",
+    "--output",
+    "/root/private_data/qwen21-full-shapes012-results"
+  ],
+  "epoch": 1792833023.0656593
+}

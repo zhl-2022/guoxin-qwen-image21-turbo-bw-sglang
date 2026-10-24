@@ -1,0 +1,18 @@
+{
+  "added_real_upstream_modules": [
+    "sglang/kernels/kda_kernels/layernorm_modulate_triton.py",
+    "sglang/kernels/kda_kernels/residual_gate_add_jit.py",
+    "sglang/kernels/ops/quantization/fp8_kernel.py",
+    "sglang/kernels/ops/quantization/fp8_utils.py",
+    "sglang/kernels/ops/quantization/per_tensor_quant_fp8.py",
+    "sglang/kernels/ops/quantization/per_token_group_quant.py",
+    "sglang/kernels/ops/quantization/per_token_group_quant_8bit_v2.py"
+  ],
+  "added_count": 7,
+  "missing_module_paths": [],
+  "conditioning_cache": false,
+  "cache_semantics": "Execute upstream original get_image_features directly; its cache=None path returns that function unchanged",
+  "native_modified": false,
+  "GPU_executed": false,
+  "sealed": false
+}

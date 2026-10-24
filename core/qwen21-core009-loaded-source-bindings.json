@@ -1,0 +1,3520 @@
+{
+  "passed": true,
+  "workers": [
+    {
+      "name": "dit",
+      "counts": {
+        "native": 507,
+        "overlay": 70
+      },
+      "all_loaded_sources_bound": true
+    },
+    {
+      "name": "encoder",
+      "counts": {
+        "native": 621,
+        "overlay": 8
+      },
+      "all_loaded_sources_bound": true
+    }
+  ],
+  "distinct_framework_modules_bound": 699,
+  "loaded_modules": {
+    "sglang.srt.debug_utils": {
+      "role": "native",
+      "path": "sglang/srt/debug_utils/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "sglang.srt.debug_utils.cuda_coredump": {
+      "role": "native",
+      "path": "sglang/srt/debug_utils/cuda_coredump.py",
+      "sha256": "c5627697539274463826f8309b358009ec062c6032dd0cfb83d5040ac15c3ffd"
+    },
+    "sglang.srt.environ": {
+      "role": "native",
+      "path": "sglang/srt/environ.py",
+      "sha256": "2678a37aff4f020bb5ea4a16dd57a8673dd40ea089de3cd01e74b13cb6e6e902"
+    },
+    "sglang.srt.observability.utils": {
+      "role": "native",
+      "path": "sglang/srt/observability/utils.py",
+      "sha256": "797ed7c3ab8785bc0d8b783bbdd70420a3363a9fb473e7a6642583fb8ea16680"
+    },
+    "sglang.srt.observability.func_timer": {
+      "role": "native",
+      "path": "sglang/srt/observability/func_timer.py",
+      "sha256": "5bac9017a6dbc69468d3a9706bb91e5901d1a1b788e8b2ab2d836f8a8fccd179"
+    },
+    "sglang.srt.utils.video_decoder": {
+      "role": "native",
+      "path": "sglang/srt/utils/video_decoder.py",
+      "sha256": "b0bb9caa02ff24e637d0654b59c563af1fef8c0bf6cf5f111eb2425c9a62a03f"
+    },
+    "sglang.srt.utils.common": {
+      "role": "native",
+      "path": "sglang/srt/utils/common.py",
+      "sha256": "fecbbff274f2663f4467db5fdb54be6a77ee0afc60571a02d78dedda3f4aa955"
+    },
+    "sglang.srt.utils": {
+      "role": "native",
+      "path": "sglang/srt/utils/__init__.py",
+      "sha256": "ceea07a199caadc8b0172d756baa7951af26614ebb41423fd3d2f449f123a5ea"
+    },
+    "sglang.srt.utils.hf_transformers_patches": {
+      "role": "native",
+      "path": "sglang/srt/utils/hf_transformers_patches.py",
+      "sha256": "f0dc7a542117fc79ea273d80821cc0f40ca71041ca1948fbc6785ac1791bd74f"
+    },
+    "sglang.global_config": {
+      "role": "native",
+      "path": "sglang/global_config.py",
+      "sha256": "6d5a542ff80c480d05c0997ccbcb4fe4221aeddd3cde8e8371a93ec91cadcc6c"
+    },
+    "sglang.lang.chat_template": {
+      "role": "native",
+      "path": "sglang/lang/chat_template.py",
+      "sha256": "d91a4548101b581828c3e7b0517360a9a42e06d8295760972200147bb51c6a19"
+    },
+    "sglang.lang.choices": {
+      "role": "native",
+      "path": "sglang/lang/choices.py",
+      "sha256": "f96d43570f4df59962569be65abcc85c6e1cb3001a87c78c42b1d6ce44b70fca"
+    },
+    "sglang.lang.ir": {
+      "role": "native",
+      "path": "sglang/lang/ir.py",
+      "sha256": "4bce1e614446737959050f9de5220b29f1adc2495afa3397a48f502bd84a45a6"
+    },
+    "sglang.utils": {
+      "role": "native",
+      "path": "sglang/utils.py",
+      "sha256": "212fb5d7c55a7e42b2dc03b43ea3dd43abdf26f9314cabd2ab9294dec42bd1a1"
+    },
+    "sglang.lang.interpreter": {
+      "role": "native",
+      "path": "sglang/lang/interpreter.py",
+      "sha256": "043cb4a126eeb75cae6ae1801a2b9f0fe516d6488efff53f7ca3e4023f4da6f9"
+    },
+    "sglang.lang.backend.base_backend": {
+      "role": "native",
+      "path": "sglang/lang/backend/base_backend.py",
+      "sha256": "b44bad182539b678b5c4696b223015bc0f5a7e5241b7676e2ab203cea69b2567"
+    },
+    "sglang.lang.api": {
+      "role": "native",
+      "path": "sglang/lang/api.py",
+      "sha256": "9327c9b84aea33295eea19f1dd0fe8a8d4850ded2ae201686f5c9de592d36adc"
+    },
+    "sglang.lang.backend.runtime_endpoint": {
+      "role": "native",
+      "path": "sglang/lang/backend/runtime_endpoint.py",
+      "sha256": "1ab18aca933fb713e37af84f751028cc3ae74012a10b82f569a2b13de9eacb6d"
+    },
+    "sglang._version": {
+      "role": "native",
+      "path": "sglang/_version.py",
+      "sha256": "d118b974d6e1ada86f284010d098e67cde4564644852f6d96f76a33090ac142d"
+    },
+    "sglang.version": {
+      "role": "native",
+      "path": "sglang/version.py",
+      "sha256": "b10f7d9ea276972352b1e9de0eb0bbb47d8ebe64c29469e15ea016a12019bb22"
+    },
+    "sglang.multimodal_gen.configs": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/__init__.py",
+      "sha256": "2826d8dd051f9024e382088f3d1508a841881e92f9979fcfc8176479610ec70e"
+    },
+    "sglang.multimodal_gen.runtime.utils.common": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/utils/common.py",
+      "sha256": "0e8676aa5d4f62e6efd22825c7c8a1a26dea606e62ac8ada0768a916267584e5"
+    },
+    "sglang.multimodal_gen.envs": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/envs.py",
+      "sha256": "f0c10140d2bbd994e150a54a021e4a8b61e45a83c4d90921c672211440e59cdd"
+    },
+    "sglang.multimodal_gen.runtime.utils.logging_utils": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/utils/logging_utils.py",
+      "sha256": "6e6b0de4803767e04c4ea1dae9f0e50f69332627726036b55f317e8077267f35"
+    },
+    "sglang.multimodal_gen.configs.models.base": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/base.py",
+      "sha256": "7384662ceb5b8578e554de4937c7dc584a7ea7dd4120074c1fb8f3f16d089dc9"
+    },
+    "sglang.multimodal_gen.runtime.layers": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/layers/__init__.py",
+      "sha256": "a64a76d0d7c09a849e42795211f1156bff40d3e5b973a7e6255f321cf3162ff1"
+    },
+    "sglang.multimodal_gen.runtime.layers.quantization.configs.base_config": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/layers/quantization/configs/base_config.py",
+      "sha256": "56c3943c380fbe0584c4f8bd75f51ad2e87605697200fceae944117cd34db9a5"
+    },
+    "sglang.multimodal_gen.utils": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/utils.py",
+      "sha256": "d8eb77c81349f636adbfaf2fe06fd9aa35040182048e4b5ffe234b83fdf74af1"
+    },
+    "sglang.multimodal_gen.runtime.platforms.interface": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/platforms/interface.py",
+      "sha256": "aa06e0d465458580f374a840f1659557eb7e554e0b9e497424e73e62700b4b75"
+    },
+    "sglang.multimodal_gen.runtime.platforms": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/platforms/__init__.py",
+      "sha256": "987d72418daf0af85ded4f0725df39b3c592791d1f3886fc8895d427b4cc4a12"
+    },
+    "sglang.multimodal_gen.configs.models.encoders.base": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/encoders/base.py",
+      "sha256": "315c00ee2fdab23ac582594130638be00c81d781d3760093b8bf9f731deace7c"
+    },
+    "sglang.multimodal_gen.configs.models.fsdp": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/fsdp.py",
+      "sha256": "3ad41ffde2108072950e2f82876504a0255324119a0470f1ff4e525ee1ac2e19"
+    },
+    "sglang.multimodal_gen.configs.models.encoders.clip": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/encoders/clip.py",
+      "sha256": "95dd43242f1bbd8a3d4eee62dde848ff2d923ce2296ced6415772e1bc5c68c7b"
+    },
+    "sglang.multimodal_gen.configs.models.encoders.flux_2": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/encoders/flux_2.py",
+      "sha256": "4c1e39bfc899f56a5dbc0c8faef7249b6d5f7f209a3fb9298096dbf07a51aeec"
+    },
+    "sglang.multimodal_gen.configs.models.encoders.gemma2": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/encoders/gemma2.py",
+      "sha256": "15334d16485d0d16ccd3ad5d9ac7a22da3603178f9f6883186770f8277145df7"
+    },
+    "sglang.multimodal_gen.configs.models.encoders.gemma_3": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/encoders/gemma_3.py",
+      "sha256": "5f99d876b7ec0709ac731985cd9108f53391a9fec6fba3be06e11194cd9b4fb9"
+    },
+    "sglang.multimodal_gen.configs.models.encoders.llama": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/encoders/llama.py",
+      "sha256": "860ebb8c5760c40ca774272ce059a0a03dc8a5f56c9453c4220d9b38a72f9425"
+    },
+    "sglang.multimodal_gen.configs.models.encoders.qwen3": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/encoders/qwen3.py",
+      "sha256": "10f848e8643309e3468a856e98ee46a4e79c6c1e465edc2e620e42b5220d6aca"
+    },
+    "sglang.multimodal_gen.configs.models.encoders.qwen3vl": {
+      "role": "overlay",
+      "path": "sglang/multimodal_gen/configs/models/encoders/qwen3vl.py",
+      "sha256": "b7f74023e4318dfe5857239a18a6ae8e36b3b963433ca1ae54d98ae6c77478de"
+    },
+    "sglang.multimodal_gen.configs.models.encoders.t5": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/encoders/t5.py",
+      "sha256": "26923a9e4cfe3fadef7c69206b51345fcce080af005d472deb0ae9e1aadc81fb"
+    },
+    "sglang.multimodal_gen.configs.models.encoders": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/encoders/__init__.py",
+      "sha256": "ffff58fa64053c672fa15dd0ab56aab060ecebf4636a2f73e736031e6e38d236"
+    },
+    "sglang.multimodal_gen.runtime.distributed.utils": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/distributed/utils.py",
+      "sha256": "d38d571a05dc1c83532b2f7942ab07807b3d0f0b7a2839d24ddfed86fe01ec40"
+    },
+    "sglang.multimodal_gen.runtime.platforms.rocm": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/platforms/rocm.py",
+      "sha256": "4ee364f94834420be0f0ca833e0c430c79043b6efa7b4d9a7bd8a0eb545b7799"
+    },
+    "sglang.multimodal_gen.runtime.utils.distributed": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/utils/distributed.py",
+      "sha256": "22de4ef9e9c8beb9f18f3e938956d67bbf98f0ea75682712388a59a270f4cb85"
+    },
+    "sglang.multimodal_gen.runtime.distributed.device_communicators": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/distributed/device_communicators/__init__.py",
+      "sha256": "a64a76d0d7c09a849e42795211f1156bff40d3e5b973a7e6255f321cf3162ff1"
+    },
+    "sglang.multimodal_gen.runtime.distributed.device_communicators.base_device_communicator": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/distributed/device_communicators/base_device_communicator.py",
+      "sha256": "17e34a4640f72e5b9e2cb52952146feffd64ad565311b4fab2212b55bf7effa9"
+    },
+    "sglang.multimodal_gen.runtime.distributed.device_communicators.cpu_communicator": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/distributed/device_communicators/cpu_communicator.py",
+      "sha256": "7d1a179969c451e8adb9b2907780f4c2b4fdd18ace8f10d7cdcb129eeba1f66d"
+    },
+    "sglang.multimodal_gen.runtime.distributed.group_coordinator": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/distributed/group_coordinator.py",
+      "sha256": "8066e437278098237d9398bca08cc65e16b4489918ef533c15603c4740cdc4ef"
+    },
+    "sglang.multimodal_gen.runtime.distributed.parallel_state": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/distributed/parallel_state.py",
+      "sha256": "640ded626561b9b4657852d8aa0f2542be4096f54532ac37453d915e62dc754e"
+    },
+    "sglang.multimodal_gen.runtime.distributed.communication_op": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/distributed/communication_op.py",
+      "sha256": "a1d2aad120fb6bcd062f157b53165dd2d363b6318da4efec58fa2ddccab69568"
+    },
+    "sglang.multimodal_gen.runtime.distributed": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/distributed/__init__.py",
+      "sha256": "2a60c5fe855152430e593dd325ba2b7bdbfa2dfaa9ad539b7b9e0e15bc40060e"
+    },
+    "sglang.kernel_api_logging": {
+      "role": "native",
+      "path": "sglang/kernel_api_logging.py",
+      "sha256": "d3cfbaa939422f47b84b96a8878a98b178a7182a79656440c08938804517c4f7"
+    },
+    "sglang.multimodal_gen.runtime.layers.utils": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/layers/utils.py",
+      "sha256": "a2dbc990916cdaef054dd201c61301edaa738ba1d330ecc7caf2b42fb639ef5b"
+    },
+    "sglang.multimodal_gen.runtime.models": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/models/__init__.py",
+      "sha256": "a64a76d0d7c09a849e42795211f1156bff40d3e5b973a7e6255f321cf3162ff1"
+    },
+    "sglang.multimodal_gen.runtime.models.utils": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/models/utils.py",
+      "sha256": "3a1dafaf32bcd63a394372e01b4cf2d67eb7670e75f16da620e63cad6614630f"
+    },
+    "sglang.multimodal_gen.runtime.models.parameter": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/models/parameter.py",
+      "sha256": "0ff10737f6b5e269626d5866ac3aa986db13cd9f76d983c1b9054d77862b97b1"
+    },
+    "sglang.multimodal_gen.runtime.layers.linear": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/layers/linear.py",
+      "sha256": "a2a7a93390bfbfe451e8077db08022974057604c238c22c78085583c523be7d0"
+    },
+    "sglang.srt.layers.amx_utils": {
+      "role": "native",
+      "path": "sglang/srt/layers/amx_utils.py",
+      "sha256": "ead3c61cedb16f5f91d8c2b4176fa30fabc79fa1489afe74b528090e4f5de5fd"
+    },
+    "sglang.srt.compilation.compilation_config": {
+      "role": "native",
+      "path": "sglang/srt/compilation/compilation_config.py",
+      "sha256": "0eb0d6586ad6d28a194ffa084e5d4b326caa317cbd09d0d8dd809219d75aac41"
+    },
+    "sglang.srt.compilation.piecewise_context_manager": {
+      "role": "native",
+      "path": "sglang/srt/compilation/piecewise_context_manager.py",
+      "sha256": "fdc49d733eb2ef500aa7b78e05d83d1cf4c4f4ea4e5910584d45fb90da65bed4"
+    },
+    "sglang.srt.distributed.utils": {
+      "role": "native",
+      "path": "sglang/srt/distributed/utils.py",
+      "sha256": "9da6796e9e64d08ccc09290088abaed177c1db789266374e7801293ef286b0ea"
+    },
+    "sglang.srt.utils.custom_op": {
+      "role": "native",
+      "path": "sglang/srt/utils/custom_op.py",
+      "sha256": "ffe4447fe63be8cc9abb47d8e277ba128e7d3d2368b05378529845caccb8f135"
+    },
+    "sglang.srt.utils.network": {
+      "role": "native",
+      "path": "sglang/srt/utils/network.py",
+      "sha256": "2cd374bcbd87966da04e4271389ee856f06fe70ecd4819ed1f3c14d00c44abdb"
+    },
+    "sglang.srt.distributed.parallel_state": {
+      "role": "native",
+      "path": "sglang/srt/distributed/parallel_state.py",
+      "sha256": "bf7bda12c8a2c4cca9c9f3f01afd8897848bc946694beb5c9fd9fb84c45a68b7"
+    },
+    "sglang.srt.distributed.communication_op": {
+      "role": "native",
+      "path": "sglang/srt/distributed/communication_op.py",
+      "sha256": "ade95b6eff386e6fe67c3603c07f8d3ea3f1a9891378ea75956c3b0393d435ef"
+    },
+    "sglang.srt.distributed": {
+      "role": "native",
+      "path": "sglang/srt/distributed/__init__.py",
+      "sha256": "8c539ccadfb01403cc05401ff739196a535096dfb8aea993ea908a073d44e2aa"
+    },
+    "sglang.srt.configs.afmoe": {
+      "role": "native",
+      "path": "sglang/srt/configs/afmoe.py",
+      "sha256": "7ab65afe8a3afb6934916907313ba8aadc3db3b733bbb5447399c69ad8e98cec"
+    },
+    "sglang.srt.configs.mamba_utils": {
+      "role": "native",
+      "path": "sglang/srt/configs/mamba_utils.py",
+      "sha256": "58e6f716e7dec0d538777442b3e912b48aac4ae4832d1e0977d8e5676c79451a"
+    },
+    "sglang.srt.configs.bailing_hybrid": {
+      "role": "native",
+      "path": "sglang/srt/configs/bailing_hybrid.py",
+      "sha256": "708167098c8be42556ada7a96cbcec5b75408313e5b75f5e05f546c03a8bebed"
+    },
+    "sglang.srt.configs.chatglm": {
+      "role": "native",
+      "path": "sglang/srt/configs/chatglm.py",
+      "sha256": "a1b9af316a8cad3ebcffc83103e3d1a748cae081ca3364f0ab73c5b2089526ee"
+    },
+    "sglang.srt.configs.dbrx": {
+      "role": "native",
+      "path": "sglang/srt/configs/dbrx.py",
+      "sha256": "b5d848917010975cabd0cc6a166b031b51347b6a6e4534ca9ba513c803412da7"
+    },
+    "sglang.srt.configs.deepseekvl2": {
+      "role": "native",
+      "path": "sglang/srt/configs/deepseekvl2.py",
+      "sha256": "d75a2c667ecfe3c591b5c2eb67aa20ab4d9386a9f504f85c98d29c97f334d059"
+    },
+    "sglang.srt.configs.dots_vlm": {
+      "role": "native",
+      "path": "sglang/srt/configs/dots_vlm.py",
+      "sha256": "436a9a3fae6c6022869a0fdbbdce20e726fea5ab1d64dc78c679e5ceee847755"
+    },
+    "sglang.srt.configs.dots_ocr": {
+      "role": "native",
+      "path": "sglang/srt/configs/dots_ocr.py",
+      "sha256": "23093622e7984d04cec4fc3a4479b4c525fd850579f62de805a4dc8c6061c134"
+    },
+    "sglang.srt.configs.exaone": {
+      "role": "native",
+      "path": "sglang/srt/configs/exaone.py",
+      "sha256": "a25dd4679414f075e5edd34af38945f451138d4c51d2d0937ecee477f66f98e7"
+    },
+    "sglang.srt.configs.falcon_h1": {
+      "role": "native",
+      "path": "sglang/srt/configs/falcon_h1.py",
+      "sha256": "8057f56c915654f83eed5df0a8dce720744ebb33723fcf08e4f8c4c76a83e930"
+    },
+    "sglang.srt.configs.granitemoehybrid": {
+      "role": "native",
+      "path": "sglang/srt/configs/granitemoehybrid.py",
+      "sha256": "f103f9bc0a893d1bbfb644f6f8137a3b252460acaf8b26803e3fb2943e1b509d"
+    },
+    "sglang.srt.configs.update_config": {
+      "role": "native",
+      "path": "sglang/srt/configs/update_config.py",
+      "sha256": "cf51fa7be66ef3a47c1c1b4d2c3a00315c9fbf16324eb6b98903cc1df6cc0420"
+    },
+    "sglang.srt.configs.qwen3_next": {
+      "role": "native",
+      "path": "sglang/srt/configs/qwen3_next.py",
+      "sha256": "e2f4974d7fea4e1d13f52c501cb4640dc3103960b03755866153260acecefb0c"
+    },
+    "sglang.srt.configs.qwen3_vl": {
+      "role": "native",
+      "path": "sglang/srt/configs/qwen3_vl.py",
+      "sha256": "3d5d16958d65d7de6d3268ccdc30b8f7508853f1ff0bba9606c0ef5be7b426fe"
+    },
+    "sglang.srt.configs.qwen3_5": {
+      "role": "native",
+      "path": "sglang/srt/configs/qwen3_5.py",
+      "sha256": "53f92b2be9d880716a1850cb4484ea2fa46408ab0b05be847ce0fa88edf71890"
+    },
+    "sglang.srt.configs.interns2preview": {
+      "role": "native",
+      "path": "sglang/srt/configs/interns2preview.py",
+      "sha256": "988c6190727a5a3fae89184dacb8c0670e0a3a0eaf7cd6e05d6372ff8db34940"
+    },
+    "sglang.srt.configs.utils": {
+      "role": "native",
+      "path": "sglang/srt/configs/utils.py",
+      "sha256": "25ffe3de229612d00dde2dbb96a0f7c945ea77f7f0ab6700dca16972dbd1f5dc"
+    },
+    "sglang.srt.multimodal.mm_utils": {
+      "role": "native",
+      "path": "sglang/srt/multimodal/mm_utils.py",
+      "sha256": "3f5beab866461b07d98327d9cb08948fb86a551c7548ab47db251c6fa1b1eb3c"
+    },
+    "sglang.srt.configs.janus_pro": {
+      "role": "native",
+      "path": "sglang/srt/configs/janus_pro.py",
+      "sha256": "3575df5c35a1ffc9d0a885d578b0f29343575311972a780a4e111107531e4e10"
+    },
+    "sglang.srt.configs.jet_nemotron": {
+      "role": "native",
+      "path": "sglang/srt/configs/jet_nemotron.py",
+      "sha256": "fd532150543dc9b781bf714c997c46f8776e898f6fabcacd685e7f606c668daf"
+    },
+    "sglang.srt.configs.jet_vlm": {
+      "role": "native",
+      "path": "sglang/srt/configs/jet_vlm.py",
+      "sha256": "503e645fa2ae2940aa619addeb6c8f6ea8752d9bf8138674c9f2f75762efb3fb"
+    },
+    "sglang.srt.configs.kimi_k25": {
+      "role": "native",
+      "path": "sglang/srt/configs/kimi_k25.py",
+      "sha256": "30210e7ef5c728c69ee4ce6975903e82a22216ff896c63f2758468cc753e7af6"
+    },
+    "sglang.srt.configs.kimi_linear": {
+      "role": "native",
+      "path": "sglang/srt/configs/kimi_linear.py",
+      "sha256": "f0fa052da8c100603a506fc086a4cc989bac7738600b73e5614b3ee620988469"
+    },
+    "sglang.srt.configs.kimi_vl_moonvit": {
+      "role": "native",
+      "path": "sglang/srt/configs/kimi_vl_moonvit.py",
+      "sha256": "871d91b7825215bbf2d8751378b8c1a607bcee6f0ce884c086ab2074d7ff25de"
+    },
+    "sglang.srt.configs.kimi_vl": {
+      "role": "native",
+      "path": "sglang/srt/configs/kimi_vl.py",
+      "sha256": "6049ff02df4d0ce0e816622c1c6f33dc8092b5c7f991412feae895b63a70e737"
+    },
+    "sglang.srt.configs.laguna": {
+      "role": "native",
+      "path": "sglang/srt/configs/laguna.py",
+      "sha256": "465d19a072a54221fd0528b5e0bcd5820e9d8744e16f7b313faae6ac61edf16a"
+    },
+    "sglang.srt.configs.lfm2": {
+      "role": "native",
+      "path": "sglang/srt/configs/lfm2.py",
+      "sha256": "831a64c6a227ba5047afcce27bea664b349fe1dc0c1d12b4bf21032a6b84f0dc"
+    },
+    "sglang.srt.configs.lfm2_moe": {
+      "role": "native",
+      "path": "sglang/srt/configs/lfm2_moe.py",
+      "sha256": "7938ca1892a47850bd8bf330c1cd8a6913c3e89be7a939f0333f401031f3b4f1"
+    },
+    "sglang.srt.configs.lfm2_vl": {
+      "role": "native",
+      "path": "sglang/srt/configs/lfm2_vl.py",
+      "sha256": "57fc21bc097621619046fb38ca6c76e7a0cc5de99a9fffc5934f67968621b582"
+    },
+    "sglang.srt.configs.longcat_flash": {
+      "role": "native",
+      "path": "sglang/srt/configs/longcat_flash.py",
+      "sha256": "06d223a87e318cac9cb6483de201e34649c6cc4a74b8162f0cbe880b73631205"
+    },
+    "sglang.srt.configs.minicpmv4_6": {
+      "role": "native",
+      "path": "sglang/srt/configs/minicpmv4_6.py",
+      "sha256": "4ff4f19844846a36feb303042ef257e6ebffdff0173f74fd3ec449e4336f226d"
+    },
+    "sglang.srt.configs.nemotron_h": {
+      "role": "native",
+      "path": "sglang/srt/configs/nemotron_h.py",
+      "sha256": "7b0b387cbf539309a435a4a5a2b2fbe8f63e6dea9c5c60f78bd625f0ce03756c"
+    },
+    "sglang.srt.configs.radio": {
+      "role": "native",
+      "path": "sglang/srt/configs/radio.py",
+      "sha256": "bc6557ca461e83c76b938949eda17d65cc8d0596a93e7ee54a94bd1d85660966"
+    },
+    "sglang.srt.multimodal.internvl_utils": {
+      "role": "native",
+      "path": "sglang/srt/multimodal/internvl_utils.py",
+      "sha256": "06fcd349896e1a3c1fd12ea0ee26801bd265e91602ff47c1c496ce226d479da5"
+    },
+    "sglang.srt.configs.nano_nemotron_vl": {
+      "role": "native",
+      "path": "sglang/srt/configs/nano_nemotron_vl.py",
+      "sha256": "1d409878d0d3dba8ffef82d2cb22c3a4048d8fed93ee9377d181691d6f2971d1"
+    },
+    "sglang.srt.configs.olmo3": {
+      "role": "native",
+      "path": "sglang/srt/configs/olmo3.py",
+      "sha256": "1d000a323ca4883ea4cd80af01885b7a874d56a82a34ea1e1bfb6f9bbe3c3313"
+    },
+    "sglang.srt.configs.qwen3_omni": {
+      "role": "native",
+      "path": "sglang/srt/configs/qwen3_omni.py",
+      "sha256": "843096226e123f12de5d1ba6dc62c3f0080787ab57da54bd7b094d0f638fbdcf"
+    },
+    "sglang.srt.multimodal.customized_mm_processor_utils": {
+      "role": "native",
+      "path": "sglang/srt/multimodal/customized_mm_processor_utils.py",
+      "sha256": "288a2c31f8de0e69212ebbdf4814802959a877e4070f0a830e57a2916a7fd78c"
+    },
+    "sglang.srt.configs.qwen3_asr": {
+      "role": "native",
+      "path": "sglang/srt/configs/qwen3_asr.py",
+      "sha256": "3ce79252169d974a777a3c7226d6a4186696143c0d1fd039f19249b10cd1d719"
+    },
+    "sglang.srt.configs.step3_vl": {
+      "role": "native",
+      "path": "sglang/srt/configs/step3_vl.py",
+      "sha256": "fceb609f29b9ec356007f919ffff1cd7f62ce6049a940fcad19b958dc1b9d53d"
+    },
+    "sglang.srt.configs.step3p5": {
+      "role": "native",
+      "path": "sglang/srt/configs/step3p5.py",
+      "sha256": "7d21dd58d40db85aba480046d75a0af66577f6232068afea36430cd9f880c47f"
+    },
+    "sglang.srt.configs": {
+      "role": "native",
+      "path": "sglang/srt/configs/__init__.py",
+      "sha256": "1c91fe4c1148e84d390d01d14f7f869c9cffd0f4a88c4e8d5d0d593fb6e8b7e9"
+    },
+    "sglang.srt.configs.linear_attn_model_registry": {
+      "role": "native",
+      "path": "sglang/srt/configs/linear_attn_model_registry.py",
+      "sha256": "ac55f1a0b1ec6f1f289874ffeefdd46f74fb6228e70f4f460ab035c76cc1a4c7"
+    },
+    "sglang.srt.connector.base_connector": {
+      "role": "native",
+      "path": "sglang/srt/connector/base_connector.py",
+      "sha256": "2c22ac4d7ff25877253ebccd341d5f2f054237cac80ca65a661a87439e01f4c5"
+    },
+    "sglang.srt.connector.serde.serde": {
+      "role": "native",
+      "path": "sglang/srt/connector/serde/serde.py",
+      "sha256": "9f9f48d8c5cb6bb582c8dffca4477c2feb1c264ee53219845fe18e508845d190"
+    },
+    "sglang.srt.connector.serde.safe_serde": {
+      "role": "native",
+      "path": "sglang/srt/connector/serde/safe_serde.py",
+      "sha256": "5d28dbf6646fd47a9e1ba262c3adf710e41896b708db7436d5496e62a3d96960"
+    },
+    "sglang.srt.connector.serde": {
+      "role": "native",
+      "path": "sglang/srt/connector/serde/__init__.py",
+      "sha256": "cee95ec9837e8eb0f288f8978d36d0280dbb9656f81fb1ee0d365c070acb9355"
+    },
+    "sglang.srt.connector.utils": {
+      "role": "native",
+      "path": "sglang/srt/connector/utils.py",
+      "sha256": "8ac4efc5abb3d7ff27a39316ea9f01c23d87f66424c1e6913bf452c003c0ed1f"
+    },
+    "sglang.srt.connector.redis": {
+      "role": "native",
+      "path": "sglang/srt/connector/redis.py",
+      "sha256": "2b77c94a6dab66c77447f2a42025778c858ab6bc315c4d6d624b569e8bcb6f3e"
+    },
+    "sglang.srt.connector.remote_instance": {
+      "role": "native",
+      "path": "sglang/srt/connector/remote_instance.py",
+      "sha256": "42f3ad17a899487ffcda88dca0464cf5eb01420909a8baa20098e06ca84b8042"
+    },
+    "sglang.srt.connector.s3": {
+      "role": "native",
+      "path": "sglang/srt/connector/s3.py",
+      "sha256": "867e4ec3d63a22d4bc44c243c274d07b941a890ec728c822c20804f509d47b03"
+    },
+    "sglang.srt.connector": {
+      "role": "native",
+      "path": "sglang/srt/connector/__init__.py",
+      "sha256": "704cb5da6e56637690e5716243bf910e72f963c4dd83f7a3a253a5c18af05a8d"
+    },
+    "sglang.srt.entrypoints.openai": {
+      "role": "native",
+      "path": "sglang/srt/entrypoints/openai/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "sglang.srt.entrypoints.openai.protocol": {
+      "role": "native",
+      "path": "sglang/srt/entrypoints/openai/protocol.py",
+      "sha256": "3ae02ddd5792c5ac6d4ec13546f836dbeba26794457eae7040d3e597a0df7bfc"
+    },
+    "sglang.srt.function_call.core_types": {
+      "role": "native",
+      "path": "sglang/srt/function_call/core_types.py",
+      "sha256": "c0b52c5bc99403e8be212cf94140cbec48eaef65be2b51c88456bd5a6fbfa00f"
+    },
+    "sglang.srt.function_call.utils": {
+      "role": "native",
+      "path": "sglang/srt/function_call/utils.py",
+      "sha256": "77490e4bccbff91aa09ae89e2df81acc61f987759cc16126780bc3a0c11458fa"
+    },
+    "sglang.srt.function_call.base_format_detector": {
+      "role": "native",
+      "path": "sglang/srt/function_call/base_format_detector.py",
+      "sha256": "dac002633e83496401b9a21ec0f8cf63aa003730f95b78fa3749e9bbdb0c7fa6"
+    },
+    "sglang.srt.function_call.deepseekv3_detector": {
+      "role": "native",
+      "path": "sglang/srt/function_call/deepseekv3_detector.py",
+      "sha256": "a555137527cd524f51a888ee49224d4761856f5b4a9d93d3ca77abfb755c06d5"
+    },
+    "sglang.srt.function_call.deepseekv32_detector": {
+      "role": "native",
+      "path": "sglang/srt/function_call/deepseekv32_detector.py",
+      "sha256": "98d05c4f49c2377d2f09b7a1a942524363a4e75eaa78417f00f04d786093ae8e"
+    },
+    "sglang.srt.function_call.deepseekv4_detector": {
+      "role": "native",
+      "path": "sglang/srt/function_call/deepseekv4_detector.py",
+      "sha256": "d826876e0b6229ff5d363da16b6c954c3211a080d72edb81cd56b0fd477487ba"
+    },
+    "sglang.srt.function_call.deepseekv31_detector": {
+      "role": "native",
+      "path": "sglang/srt/function_call/deepseekv31_detector.py",
+      "sha256": "ec6374c040a86dd2021b7ea7b989300299dea623fdaa3c71d6d9aa3f18e845d7"
+    },
+    "sglang.srt.function_call.gemma4_detector": {
+      "role": "native",
+      "path": "sglang/srt/function_call/gemma4_detector.py",
+      "sha256": "712146a24e1873fe5d2872253a1688399a8929f7d5c04094e2027428ff767d99"
+    },
+    "sglang.srt.function_call.gigachat3_detector": {
+      "role": "native",
+      "path": "sglang/srt/function_call/gigachat3_detector.py",
+      "sha256": "f544d3bf51e1afaf9c8fe62878c5ec9e929c1db2eb9b1e4040daeb0be81c413a"
+    },
+    "sglang.srt.function_call.glm4_moe_detector": {
+      "role": "native",
+      "path": "sglang/srt/function_call/glm4_moe_detector.py",
+      "sha256": "14732e370a42c411774c31ec21c248f47194e17b8d8602cdc784b5fefab56991"
+    },
+    "sglang.srt.function_call.glm47_moe_detector": {
+      "role": "native",
+      "path": "sglang/srt/function_call/glm47_moe_detector.py",
+      "sha256": "8cdf58e22e90ca600c9e6b5d480fd6acfdd85a1beffc213286d230248b0803c8"
+    },
+    "sglang.srt.parser.harmony_parser": {
+      "role": "native",
+      "path": "sglang/srt/parser/harmony_parser.py",
+      "sha256": "630786e1acd69b98e6cd819a00711749a391a6059cb4fa5219093f8e9e47f821"
+    },
+    "sglang.srt.function_call.gpt_oss_detector": {
+      "role": "native",
+      "path": "sglang/srt/function_call/gpt_oss_detector.py",
+      "sha256": "5c81fe623acd20c19106ce946d8d902a285769babba43e8ddc4c181a5a9da3e7"
+    },
+    "sglang.srt.function_call.hermes_detector": {
+      "role": "native",
+      "path": "sglang/srt/function_call/hermes_detector.py",
+      "sha256": "5dc30e64c7ccd453f3b5fc50be0321c3bb404dac3e689ad4cc384ab2c45de27c"
+    },
+    "sglang.srt.function_call.hunyuan_detector": {
+      "role": "native",
+      "path": "sglang/srt/function_call/hunyuan_detector.py",
+      "sha256": "efdc60443e5312c07ceb8d68dda6476d72f49f03d3c42942874ba67f4e4a52cd"
+    },
+    "sglang.srt.function_call.internlm_detector": {
+      "role": "native",
+      "path": "sglang/srt/function_call/internlm_detector.py",
+      "sha256": "a2339f334c5bcc7fe36d7cb7cb3b7621918eed857397df47e6f3ecee28b38133"
+    },
+    "sglang.srt.function_call.kimik2_detector": {
+      "role": "native",
+      "path": "sglang/srt/function_call/kimik2_detector.py",
+      "sha256": "0a998d82012e66293a1c0295004e8557d7dba666e28223a5f84a6dd40081da6d"
+    },
+    "sglang.srt.function_call.lfm2_detector": {
+      "role": "native",
+      "path": "sglang/srt/function_call/lfm2_detector.py",
+      "sha256": "c22dc1de5b9b9ea0ae9c2f4f6e8c121eb4f58e0bb53ecf9d29b42f58a4a61678"
+    },
+    "sglang.srt.function_call.llama32_detector": {
+      "role": "native",
+      "path": "sglang/srt/function_call/llama32_detector.py",
+      "sha256": "c6de7254589e8d39d26540bb0b28591ecea0e77ebe2ccc85a208daa66ad7d2ef"
+    },
+    "sglang.srt.function_call.mimo_detector": {
+      "role": "native",
+      "path": "sglang/srt/function_call/mimo_detector.py",
+      "sha256": "f8ddf8f3a2a744d02b45bd81def9adf106ba081705c3baa7a21decba7db46f2d"
+    },
+    "sglang.srt.function_call.minimax_m2": {
+      "role": "native",
+      "path": "sglang/srt/function_call/minimax_m2.py",
+      "sha256": "fe1dba10e3d9a76c3549a20c2b8ba1b609eefa4a817197abba8175b725a724fc"
+    },
+    "sglang.srt.function_call.mistral_detector": {
+      "role": "native",
+      "path": "sglang/srt/function_call/mistral_detector.py",
+      "sha256": "ecb2637d1766f096c698b6b8eaadeb6e772aa3487d6566f61f665c145dd73336"
+    },
+    "sglang.srt.function_call.poolside_v1_detector": {
+      "role": "native",
+      "path": "sglang/srt/function_call/poolside_v1_detector.py",
+      "sha256": "65eeb4b0f9cbacca4c8056d117f6ba5467596ed84725a10f6b361ffdbf984400"
+    },
+    "sglang.srt.function_call.pythonic_detector": {
+      "role": "native",
+      "path": "sglang/srt/function_call/pythonic_detector.py",
+      "sha256": "1cd3ddce7ad310c782f79876e55cbe767acdec7cfca1cae3419a7847132c3944"
+    },
+    "sglang.srt.function_call.qwen3_coder_detector": {
+      "role": "native",
+      "path": "sglang/srt/function_call/qwen3_coder_detector.py",
+      "sha256": "642294f642f563fadd52bff2ee3a204e30fe26f33c7e5306d47e4609ef15f129"
+    },
+    "sglang.srt.function_call.qwen25_detector": {
+      "role": "native",
+      "path": "sglang/srt/function_call/qwen25_detector.py",
+      "sha256": "e4ebe052024b4236819932ee3d54941fe2db9bb9107711ec33514d1d68c3c9e4"
+    },
+    "sglang.srt.function_call.step3_detector": {
+      "role": "native",
+      "path": "sglang/srt/function_call/step3_detector.py",
+      "sha256": "d2fccd301ea496153e3e09232d03790e9fd6ca44a034df13db1a5c14b4f742ff"
+    },
+    "sglang.srt.function_call.trinity_detector": {
+      "role": "native",
+      "path": "sglang/srt/function_call/trinity_detector.py",
+      "sha256": "868f345fb3129456073497949c913457cdc2d54ec90885d71e302bc85114fca8"
+    },
+    "sglang.srt.function_call.function_call_parser": {
+      "role": "native",
+      "path": "sglang/srt/function_call/function_call_parser.py",
+      "sha256": "97f57debadc31c9b7dedb5594374fbbcbbf597ba0cd1f2536c286f0a2d12497a"
+    },
+    "sglang.srt.layers.attention.fla.utils": {
+      "role": "native",
+      "path": "sglang/srt/layers/attention/fla/utils.py",
+      "sha256": "72afecb7e66a2f3bed4058901859dbab6aec233ecf7ddc595a9d21e123ead20f"
+    },
+    "sglang.srt.layers.attention.fla.index": {
+      "role": "native",
+      "path": "sglang/srt/layers/attention/fla/index.py",
+      "sha256": "3d257f3a166b632cb8cf006fd6796e0df3dc3d84ee832e509c81a1e8dba48d91"
+    },
+    "sglang.srt.layers.attention.fla.op": {
+      "role": "native",
+      "path": "sglang/srt/layers/attention/fla/op.py",
+      "sha256": "41cfb31f0658f7ef00c39dc0baeccd7e96cf0702a022f54c82d59c7c92e5e80e"
+    },
+    "sglang.srt.layers.attention.fla.chunk_delta_h": {
+      "role": "native",
+      "path": "sglang/srt/layers/attention/fla/chunk_delta_h.py",
+      "sha256": "bfadc7975d14646d78828d40e6e6a5ba26915500701c22c48e3860bed134bfe2"
+    },
+    "sglang.srt.utils.aio_rwlock": {
+      "role": "native",
+      "path": "sglang/srt/utils/aio_rwlock.py",
+      "sha256": "db32ca27e0d7ca53859a17c65464dddef6420f8dd971d9659f7671ce9f88cf6c"
+    },
+    "sglang.srt.lora.lora_registry": {
+      "role": "native",
+      "path": "sglang/srt/lora/lora_registry.py",
+      "sha256": "3a97e812a44b4586ffc968055c8776ae82236a1ddcd0f25c279c2715bbc22fe5"
+    },
+    "sglang.srt.parser.reasoning_parser": {
+      "role": "native",
+      "path": "sglang/srt/parser/reasoning_parser.py",
+      "sha256": "a274e6ffc7a845fd364d1847774bdea459df2902a05edf4ea8a9d7ba96d420c2"
+    },
+    "sglang.srt.sampling.custom_logit_processor": {
+      "role": "native",
+      "path": "sglang/srt/sampling/custom_logit_processor.py",
+      "sha256": "43cb66560af2d9c60b03735833923f0ec322386870ab5a70478f5a9bb42d2bd4"
+    },
+    "sglang.srt.configs.deepseek_ocr": {
+      "role": "native",
+      "path": "sglang/srt/configs/deepseek_ocr.py",
+      "sha256": "d370a027e512d93297cab86b4e9fc9e78a9c46fa1746aca12ae4fc634f354976"
+    },
+    "sglang.srt.configs.internvl": {
+      "role": "native",
+      "path": "sglang/srt/configs/internvl.py",
+      "sha256": "1bd0d64b0414ae1bd48486ffe46dff08c9041ae93adcebc58caf6c2ffb925733"
+    },
+    "sglang.srt.utils.runai_utils": {
+      "role": "native",
+      "path": "sglang/srt/utils/runai_utils.py",
+      "sha256": "fa0f6349a489b86ff61b7ab976ee583616e8e65b60b12cbe540b719d2522a2c8"
+    },
+    "sglang.srt.utils.hf_transformers.common": {
+      "role": "native",
+      "path": "sglang/srt/utils/hf_transformers/common.py",
+      "sha256": "09aa658088fc6786cee57dc7aaa9de1e9c2b803a1fb1209d72929c039c6c2893"
+    },
+    "sglang.srt.configs.model_config_parser_registry": {
+      "role": "native",
+      "path": "sglang/srt/configs/model_config_parser_registry.py",
+      "sha256": "4f11ddb4ecde882e267f96eaceb6e61efc4b38f72f9f977d91fb8d113c45c2e9"
+    },
+    "sglang.srt.utils.hf_transformers.mistral_utils": {
+      "role": "native",
+      "path": "sglang/srt/utils/hf_transformers/mistral_utils.py",
+      "sha256": "c4e801560bf188eb872581c4f955332e1f55e9c461c9fc71b047bc44b7e0febb"
+    },
+    "sglang.srt.utils.hf_transformers.config": {
+      "role": "native",
+      "path": "sglang/srt/utils/hf_transformers/config.py",
+      "sha256": "af897b38b0dd4977a66b3375695f4e1c118f03cdfe6e017bf98a0611d7cc2587"
+    },
+    "sglang.srt.utils.patch_tokenizer": {
+      "role": "native",
+      "path": "sglang/srt/utils/patch_tokenizer.py",
+      "sha256": "46ca5a3c7aeffd58a353f933dbccb1a8680a321c4918fb68f7aa64810029c857"
+    },
+    "sglang.srt.utils.hf_transformers.tokenizer": {
+      "role": "native",
+      "path": "sglang/srt/utils/hf_transformers/tokenizer.py",
+      "sha256": "39b576a5d88103c1ba5318680942bf6e60360a3875af7a0069364ab6c550d3bb"
+    },
+    "sglang.srt.utils.hf_transformers.processor": {
+      "role": "native",
+      "path": "sglang/srt/utils/hf_transformers/processor.py",
+      "sha256": "d431fd8cebe1d20537af4cfbb5237d36c01dcd6d71416a999da9bc915f97d45d"
+    },
+    "sglang.srt.utils.hf_transformers": {
+      "role": "native",
+      "path": "sglang/srt/utils/hf_transformers/__init__.py",
+      "sha256": "552de93822e7ec91dead7c17a1f99b74bb0b8693e8bb78ba04a9c655bded192c"
+    },
+    "sglang.srt.utils.hf_transformers_utils": {
+      "role": "native",
+      "path": "sglang/srt/utils/hf_transformers_utils.py",
+      "sha256": "7936a23e92f552e8c854af19134a8e19d512998cf8d1c897fe56b30af6751f78"
+    },
+    "sglang.srt.utils.tensor_bridge": {
+      "role": "native",
+      "path": "sglang/srt/utils/tensor_bridge.py",
+      "sha256": "e2928916f851d0ea70110753a6d385c40bf9b3e904e1787aad4d65d3efc9fd14"
+    },
+    "sglang.srt.server_args": {
+      "role": "native",
+      "path": "sglang/srt/server_args.py",
+      "sha256": "0b4718118c64c8b632d63fd72615e9158b0187d469dc727c98c9a9a694331900"
+    },
+    "sglang.srt.distributed.device_communicators.pynccl_allocator": {
+      "role": "native",
+      "path": "sglang/srt/distributed/device_communicators/pynccl_allocator.py",
+      "sha256": "e9d74c270c7773ebe55307608d2bb2ac6366860d203b2009c160e2a591f34390"
+    },
+    "sglang.srt.layers.deep_gemm_wrapper.configurer": {
+      "role": "native",
+      "path": "sglang/srt/layers/deep_gemm_wrapper/configurer.py",
+      "sha256": "46aa238c9ea70f53bbe37b064434dd6c8eaf6276f288da8318700f4b07f05a68"
+    },
+    "sglang.srt.layers.deep_gemm_wrapper.compile_utils": {
+      "role": "native",
+      "path": "sglang/srt/layers/deep_gemm_wrapper/compile_utils.py",
+      "sha256": "fa105a571359261e95ef4016113f699e8d6905b337375e0a7ca4e59276e1ed80"
+    },
+    "sglang.srt.layers.deep_gemm_wrapper.entrypoint": {
+      "role": "native",
+      "path": "sglang/srt/layers/deep_gemm_wrapper/entrypoint.py",
+      "sha256": "de1689aeb09a2e62268b768b943903cd31556df99fe1d468f7d678b5741a7602"
+    },
+    "sglang.srt.layers.deep_gemm_wrapper": {
+      "role": "native",
+      "path": "sglang/srt/layers/deep_gemm_wrapper/__init__.py",
+      "sha256": "7ac24c77462e8faf2de9060ea66205ba258fd89d9dc53302e1b441347d1793a2"
+    },
+    "sglang.srt.utils.patch_torch": {
+      "role": "native",
+      "path": "sglang/srt/utils/patch_torch.py",
+      "sha256": "642b5369a7e0d09e8976e7b118bfedc574d43046170be5beff2a270834309c71"
+    },
+    "sglang.srt.layers.quantization.fp8_kernel": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/fp8_kernel.py",
+      "sha256": "6d7e6874ededa250876fcc08ddeff6d35539f15c6c0d1e7201d232611a5a40f5"
+    },
+    "sglang.srt.layers.quantization.utils": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/utils.py",
+      "sha256": "cc376ca95f241d4493e7518fe216b796f95905f7ec5b9c08cf45001c8148ced3"
+    },
+    "sglang.srt.layers.quantization.base_config": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/base_config.py",
+      "sha256": "b1e8d41341fbf2ca0d9e617365e806f897eb03112919b01ee593ade7c4ee2640"
+    },
+    "sglang.srt.layers.quantization.auto_round": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/auto_round.py",
+      "sha256": "58946b2363d35c0eb21b2c6a7ca443258e5cb0fa7ec3300ad347c677f4fa1fa6"
+    },
+    "sglang.srt.layers.dp_attention": {
+      "role": "native",
+      "path": "sglang/srt/layers/dp_attention.py",
+      "sha256": "1ccf3fc31652d1a15cc6eb7001bf8548866fe66d808e0d8d1a192e650794bf7e"
+    },
+    "sglang.srt.layers.utils.common": {
+      "role": "native",
+      "path": "sglang/srt/layers/utils/common.py",
+      "sha256": "5d3b3d71926e31aa0495ca7453efaeefd4e59802619826b91276761074764f0b"
+    },
+    "sglang.srt.platforms.device_mixin": {
+      "role": "native",
+      "path": "sglang/srt/platforms/device_mixin.py",
+      "sha256": "20b68d92ab63684fa0f308b93fd1e812a0d78da6d1d7ff5b54df82cbdf6f4358"
+    },
+    "sglang.srt.platforms.interface": {
+      "role": "native",
+      "path": "sglang/srt/platforms/interface.py",
+      "sha256": "1da532ed31afedc0fa5621e8c496e7bb465c2222b928524919a0585c1084a388"
+    },
+    "sglang.srt.plugins.hook_registry": {
+      "role": "native",
+      "path": "sglang/srt/plugins/hook_registry.py",
+      "sha256": "fe214acac324cb2f019aa1dffe1ddcb6e4691862fdd1b6a0ad5033d8167e31e9"
+    },
+    "sglang.srt.plugins": {
+      "role": "native",
+      "path": "sglang/srt/plugins/__init__.py",
+      "sha256": "3a975a73f1a7887e68c81ea7a2530250597ac8ae978efc0b0f70f038a99a3164"
+    },
+    "sglang.srt.platforms": {
+      "role": "native",
+      "path": "sglang/srt/platforms/__init__.py",
+      "sha256": "001f5f64bd21e0a26ba75c7b9270c691ffdea58e530f09301152aa0778016f29"
+    },
+    "sglang.srt.layers.utils.multi_platform": {
+      "role": "native",
+      "path": "sglang/srt/layers/utils/multi_platform.py",
+      "sha256": "38d008c0db89f21ff48dd6b989f8f1bcbc4ab169dc1f4c6a9e501cf8e3fabfaf"
+    },
+    "sglang.srt.layers.utils": {
+      "role": "native",
+      "path": "sglang/srt/layers/utils/__init__.py",
+      "sha256": "84656e89a69b5cadd2cc02cbcc148e6217d0a3fcbb27d9358c73e343e0fcb6a6"
+    },
+    "sglang.srt.layers.parameter": {
+      "role": "native",
+      "path": "sglang/srt/layers/parameter.py",
+      "sha256": "412a9193ba35df1da179e8451b18fed094ab0f0753cfac25c53e1220670d20a2"
+    },
+    "sglang.srt.layers.linear": {
+      "role": "native",
+      "path": "sglang/srt/layers/linear.py",
+      "sha256": "1aeefb7919f480d4d2e3db0d58f0c56ee4e29457fd9fa0fba31995a0566268c5"
+    },
+    "sglang.srt.layers.moe.utils": {
+      "role": "native",
+      "path": "sglang/srt/layers/moe/utils.py",
+      "sha256": "f2a46ef516a8f2fc53f0435f8b50cd871c560beb18d67498dfec85dc84342c21"
+    },
+    "sglang.srt.layers.moe.moe_runner.base": {
+      "role": "native",
+      "path": "sglang/srt/layers/moe/moe_runner/base.py",
+      "sha256": "d475c10e9b8132a7650f1b86d1aedd1d3e57d75b29d60f7955511507b043aa53"
+    },
+    "sglang.jit_kernel": {
+      "role": "native",
+      "path": "sglang/jit_kernel/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "sglang.jit_kernel.utils": {
+      "role": "native",
+      "path": "sglang/jit_kernel/utils.py",
+      "sha256": "1ab214db580a1304735cce3d4fefa18bf642973bd4dfda240312c7ae08bd9756"
+    },
+    "sglang.jit_kernel.deepseek_v4": {
+      "role": "native",
+      "path": "sglang/jit_kernel/deepseek_v4.py",
+      "sha256": "5584ef0abdb0ad31d88ab0b22efb8ecf13166d15b7238e78888cadff96e23f4e"
+    },
+    "sglang.srt.distributed.naive_distributed": {
+      "role": "native",
+      "path": "sglang/srt/distributed/naive_distributed.py",
+      "sha256": "197ec21e151bf6b210b9a20f5f84d89b4d52ed741d057bdda9a2683ddc45c802"
+    },
+    "sglang.srt.utils.host_shared_memory": {
+      "role": "native",
+      "path": "sglang/srt/utils/host_shared_memory.py",
+      "sha256": "d2d3b7a8c95b98422cd755ef748ec107402d1f8679866f6f584904c9abb8be53"
+    },
+    "sglang.srt.utils.offloader": {
+      "role": "native",
+      "path": "sglang/srt/utils/offloader.py",
+      "sha256": "96692d25bb7666da4cf0bf9937e63fec71628e2bb0cba7ee69a95297e44b85a4"
+    },
+    "sglang.srt.layers.moe.moe_runner.deep_gemm": {
+      "role": "native",
+      "path": "sglang/srt/layers/moe/moe_runner/deep_gemm.py",
+      "sha256": "e5b8d28b493248183d242babf4c93709a5ad85c35c7f2b3093122ad00af415a6"
+    },
+    "sglang.srt.layers.moe.moe_runner.triton": {
+      "role": "native",
+      "path": "sglang/srt/layers/moe/moe_runner/triton.py",
+      "sha256": "6ce63661f201bab78a8afdeee7292ccd438ca1fa89120b110ed4e9ad08f83ae1"
+    },
+    "sglang.srt.layers.moe.moe_runner.triton_kernels": {
+      "role": "native",
+      "path": "sglang/srt/layers/moe/moe_runner/triton_kernels.py",
+      "sha256": "c947279c8a5a123c43856d622f8d4ba1def8aa00553f712db263eb80cae6e48d"
+    },
+    "sglang.srt.layers.moe.moe_runner.runner": {
+      "role": "native",
+      "path": "sglang/srt/layers/moe/moe_runner/runner.py",
+      "sha256": "c3aa55b4cc5d25020b247a3551a4e1c86f1ae0f0707890f26271c38288f4fde9"
+    },
+    "sglang.srt.layers.moe.moe_runner": {
+      "role": "native",
+      "path": "sglang/srt/layers/moe/moe_runner/__init__.py",
+      "sha256": "0dce0f1fa1dfcd00e32562fb8ae67ed2a87ca11bbb3ad9c7e88125ebbe696225"
+    },
+    "sglang.srt.layers.moe": {
+      "role": "native",
+      "path": "sglang/srt/layers/moe/__init__.py",
+      "sha256": "7e567eefd9b51cdcd7efd367707b89ed7434e0705d0da3f588a1c8e069f63c66"
+    },
+    "sglang.srt.layers.quantization.marlin_utils": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/marlin_utils.py",
+      "sha256": "32db72d0d60dc508290f4c2f6605fa0f5fe8c29907fc95a516a6d41642c40ed6"
+    },
+    "sglang.srt.layers.quantization.unquant": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/unquant.py",
+      "sha256": "6b4ea8c937e38dfb3cae4aeaee9238c0309df5cd6ccd4fa6dd4723e90dbfa8cf"
+    },
+    "sglang.srt.layers.quantization.base_scheme": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/base_scheme.py",
+      "sha256": "13b57181fb6066a75e892f7432ee3c94ece68758dd3e8091cca73dca6c3f5272"
+    },
+    "sglang.srt.layers.quantization.awq.schemes.awq_scheme": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/awq/schemes/awq_scheme.py",
+      "sha256": "f5c37bf94c578b3193986eb9c7e23706f7fc84363c0c7e5aa2a9e109212fdb42"
+    },
+    "sglang.srt.layers.quantization.awq.schemes.awq_linear": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/awq/schemes/awq_linear.py",
+      "sha256": "f8f3f116fbef71ef8fb95eae4de7d28f1fa645b9943707bb003cba06d3fd5515"
+    },
+    "sglang.srt.layers.quantization.awq.schemes.awq_moe": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/awq/schemes/awq_moe.py",
+      "sha256": "11dc7dc86090ef527cf69843dc26b80ec718962a3391b7c08af2886054503c77"
+    },
+    "sglang.srt.layers.quantization.awq.schemes.awq_cpu": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/awq/schemes/awq_cpu.py",
+      "sha256": "1be3974775467be6a5b9fd021dcf2edd391c7d398fa314f5087868dfa28f6516"
+    },
+    "sglang.srt.layers.moe.moe_runner.marlin": {
+      "role": "native",
+      "path": "sglang/srt/layers/moe/moe_runner/marlin.py",
+      "sha256": "132c888b42eb4f9ecfc00339785ec172408c0b1e8171804be4a3d42a094f843c"
+    },
+    "sglang.srt.layers.quantization.awq.awq_triton": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/awq/awq_triton.py",
+      "sha256": "d50c29c4fa2a71f7b7b0353cb91b372d705170366fabe33dc50ecd13d455d0c7"
+    },
+    "sglang.srt.hardware_backend.gpu.quantization.awq_kernels": {
+      "role": "native",
+      "path": "sglang/srt/hardware_backend/gpu/quantization/awq_kernels.py",
+      "sha256": "9b2d1ac0e41510ef9086cd1bdff29f4b8a943c20e8199bba24e31773581f21eb"
+    },
+    "sglang.srt.layers.quantization.awq.schemes.awq_marlin": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/awq/schemes/awq_marlin.py",
+      "sha256": "16ad327e1e3677bb3a35267a59daf2294143b60a53b09cf913aeaf0502733a46"
+    },
+    "sglang.srt.layers.quantization.awq.schemes": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/awq/schemes/__init__.py",
+      "sha256": "1fe1a2332de5f2f7b889d3473e52d78cbd32888d93c6522544670c17c0b97e03"
+    },
+    "sglang.srt.layers.quantization.awq.awq": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/awq/awq.py",
+      "sha256": "9f369477be1743cd09c91996f09abd7508b89ff80fdf460b0e0ad928a0c6fc15"
+    },
+    "sglang.srt.layers.quantization.awq": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/awq/__init__.py",
+      "sha256": "18dd83d1bd606e5e94e3fcc99c0ce2293c450f154d49a9a8592919ffd1f8cf11"
+    },
+    "sglang.srt.layers.quantization.bitsandbytes": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/bitsandbytes.py",
+      "sha256": "a93a3aada722543c391f26a48fd473c61e5c9db58d93c6c7f52ce85f41a16231"
+    },
+    "sglang.srt.layers.quantization.int8_kernel": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/int8_kernel.py",
+      "sha256": "022a87ff8ca1fb90439ee68d19d2d2dbed6de9815c910a1cdbd36b9f7bee0032"
+    },
+    "sglang.srt.layers.quantization.int8_utils": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/int8_utils.py",
+      "sha256": "60af424be95bfe7f7590d09328ae68e5aa58177d55da08838391b954aae97140"
+    },
+    "sglang.srt.layers.quantization.blockwise_int8": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/blockwise_int8.py",
+      "sha256": "8fbdeb3586d22d292c7ce05615cd4a422e4edae868acb6c125a60fdc50975078"
+    },
+    "sglang.srt.layers.quantization.compressed_tensors.schemes.compressed_tensors_scheme": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/compressed_tensors/schemes/compressed_tensors_scheme.py",
+      "sha256": "dcde6f561970fc7f44a92e000552f5e95c038bb8342bec9b9af70c55da3a5f3f"
+    },
+    "sglang.srt.layers.quantization.compressed_tensors.schemes.compressed_tensors_w4a4_mxint4_moe": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/compressed_tensors/schemes/compressed_tensors_w4a4_mxint4_moe.py",
+      "sha256": "7863ef0f3e6fa14550e66a96949ccbe7d94959eee9e73bcb1c724f2c4b9c0b35"
+    },
+    "sglang.srt.layers.quantization.fp4_utils": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/fp4_utils.py",
+      "sha256": "ad28cc0354e16011c654e458a940e2167671c7a81234ee511e4a87c70894b0c8"
+    },
+    "sglang.srt.layers.moe.cutlass_moe_params": {
+      "role": "native",
+      "path": "sglang/srt/layers/moe/cutlass_moe_params.py",
+      "sha256": "3268018db84bb5dc1623e1b77fe66d2f2b972a1f639a65ae4523a016373e36c3"
+    },
+    "sglang.srt.layers.quantization.mxfp4_tensor": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/mxfp4_tensor.py",
+      "sha256": "6c67825e520e8661591465a9fe521390844312019468ba5ac03bcccb57133a60"
+    },
+    "sglang.srt.layers.quantization.fp8_utils": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/fp8_utils.py",
+      "sha256": "2a245fecbd5e3899731a0bece8efb3697335cbce599b441be04b227fd3f04910"
+    },
+    "sglang.srt.layers.quantization.kv_cache": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/kv_cache.py",
+      "sha256": "e4e3c3bbe5fb0276cce9cf6dc1e2bd2b93d7d40d1953cef135c379433e345f08"
+    },
+    "sglang.srt.model_executor.breakable_cuda_graph": {
+      "role": "native",
+      "path": "sglang/srt/model_executor/breakable_cuda_graph/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "sglang.srt.model_executor.breakable_cuda_graph.cuda_utils": {
+      "role": "native",
+      "path": "sglang/srt/model_executor/breakable_cuda_graph/cuda_utils.py",
+      "sha256": "bde919020def0485ed65b933b92070108da87fc7f341e88558109344913fb30c"
+    },
+    "sglang.srt.model_executor.breakable_cuda_graph.breakable_cuda_graph": {
+      "role": "native",
+      "path": "sglang/srt/model_executor/breakable_cuda_graph/breakable_cuda_graph.py",
+      "sha256": "fbc760b8435e23815b49c1958d25bd5e93bb55ec06849e6cf260a1625fdbf6d3"
+    },
+    "sglang.srt.model_executor.breakable_cuda_graph.context": {
+      "role": "native",
+      "path": "sglang/srt/model_executor/breakable_cuda_graph/context.py",
+      "sha256": "0593c26248a3712ef1d857b97d8bfa923f3430a8bf571631984b82d193fb082d"
+    },
+    "sglang.srt.layers.radix_attention": {
+      "role": "native",
+      "path": "sglang/srt/layers/radix_attention.py",
+      "sha256": "54e1a7a76c41bd61022a6b0eb50f0726a5cad1afae1ac56b1af48f67181ee3a7"
+    },
+    "sglang.srt.layers.quantization.modelopt_quant": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/modelopt_quant.py",
+      "sha256": "96ed3c3eff3288cecb901bbeb57ead1fcf70aa3c6359236d882209c62fd4cabe"
+    },
+    "sglang.srt.layers.quantization.compressed_tensors.schemes.compressed_tensors_w4a4_nvfp4": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/compressed_tensors/schemes/compressed_tensors_w4a4_nvfp4.py",
+      "sha256": "3ddbce9a597022fedd8f323de898dffe4a959fc8d02c065e72aa1f7b8dfac65e"
+    },
+    "sglang.srt.layers.quantization.compressed_tensors.schemes.compressed_tensors_w4a4_nvfp4_moe": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/compressed_tensors/schemes/compressed_tensors_w4a4_nvfp4_moe.py",
+      "sha256": "830ea719df9236a4008d666fe7e3a18a8688cb551627f8bcdc0eb51f002ad373"
+    },
+    "sglang.srt.hardware_backend.npu.utils": {
+      "role": "native",
+      "path": "sglang/srt/hardware_backend/npu/utils.py",
+      "sha256": "fb3fbf9868d74ca259fa44316953edca72a5711e2c1b291b056be23cc2c0d52a"
+    },
+    "sglang.srt.hardware_backend.npu.quantization.fused_moe_method_npu": {
+      "role": "native",
+      "path": "sglang/srt/hardware_backend/npu/quantization/fused_moe_method_npu.py",
+      "sha256": "ad4a253e12406cdc51d723fac5261e7e4255d71bd5c551ec355889d84a68f17f"
+    },
+    "sglang.srt.layers.quantization.compressed_tensors.schemes.compressed_tensors_w4a8_int8_moe": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/compressed_tensors/schemes/compressed_tensors_w4a8_int8_moe.py",
+      "sha256": "f56d55a6b3697d2bfd478024a010d9563c4af2c50bdfea8ad3e1e27e588946cc"
+    },
+    "sglang.srt.layers.quantization.compressed_tensors.schemes.compressed_tensors_w8a8_fp8": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/compressed_tensors/schemes/compressed_tensors_w8a8_fp8.py",
+      "sha256": "a490cd258ed9e6ae57b010ea3ea29022bd0b863d27824e957f076c133aa3b4c4"
+    },
+    "sglang.srt.layers.moe.flashinfer_trtllm_moe": {
+      "role": "native",
+      "path": "sglang/srt/layers/moe/flashinfer_trtllm_moe.py",
+      "sha256": "067753d34e2b258939508c98e65b5ac5883217245b78563b0a7e759310b6e3b5"
+    },
+    "sglang.jit_kernel.nvfp4": {
+      "role": "native",
+      "path": "sglang/jit_kernel/nvfp4.py",
+      "sha256": "32a59bcd1b1f29cd64f5b63fb1b63d6006dedc96915937686d15b4e309824521"
+    },
+    "sglang.srt.layers.moe.moe_runner.flashinfer_trtllm": {
+      "role": "native",
+      "path": "sglang/srt/layers/moe/moe_runner/flashinfer_trtllm.py",
+      "sha256": "b4a13ab2d0eedd7b3f2de57d3a818d61ddc9e3475deedfa588d3a54a3806b66f"
+    },
+    "sglang.srt.layers.quantization.compressed_tensors.schemes.compressed_tensors_w8a8_fp8_moe": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/compressed_tensors/schemes/compressed_tensors_w8a8_fp8_moe.py",
+      "sha256": "9571b04fae42723a729c0778de2d8255c579d2e055e0a3efb58ddbf49866001e"
+    },
+    "sglang.srt.hardware_backend.npu.quantization.linear_method_npu": {
+      "role": "native",
+      "path": "sglang/srt/hardware_backend/npu/quantization/linear_method_npu.py",
+      "sha256": "a817cdbd3b6dc648318df59a032f347d92b3ad2cb3cec404a05aa19eb7d3fdd4"
+    },
+    "sglang.srt.layers.quantization.compressed_tensors.quant_ops": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/compressed_tensors/quant_ops.py",
+      "sha256": "caca1d2b2c68b2668558b63b965ed80359e3812280cc7b09e75f4867140e0a22"
+    },
+    "sglang.srt.layers.quantization.compressed_tensors.schemes.compressed_tensors_w8a8_int8": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/compressed_tensors/schemes/compressed_tensors_w8a8_int8.py",
+      "sha256": "0db48838ee5c44a4b14ebf297e910056cd81522caf0de43e0d913b4c170db6d9"
+    },
+    "sglang.srt.layers.quantization.compressed_tensors.schemes.compressed_tensors_w8a8_int8_moe": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/compressed_tensors/schemes/compressed_tensors_w8a8_int8_moe.py",
+      "sha256": "2f9ba41760c69f33417a4d7077b58e7c1b365d7b7f43f5a4d569805254d77b79"
+    },
+    "sglang.srt.layers.quantization.marlin_utils_fp8": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/marlin_utils_fp8.py",
+      "sha256": "7585155fa6c46d5d3f5376433562fc7dc5a2c9812bc53f0154aa9ff6011e7cec"
+    },
+    "sglang.srt.layers.quantization.compressed_tensors.schemes.compressed_tensors_w8a16_fp8": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/compressed_tensors/schemes/compressed_tensors_w8a16_fp8.py",
+      "sha256": "7714b0dd7621a2c8a542cdafadaf573ddf8fa60e4b2feb826ec831b0edbe565e"
+    },
+    "sglang.srt.layers.quantization.compressed_tensors.schemes.compressed_tensors_wNa16": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/compressed_tensors/schemes/compressed_tensors_wNa16.py",
+      "sha256": "5f7b311294bbf33cd43bdae1bcfcc1c7d14d17f4c9dd93b3088fc96c4b7371d0"
+    },
+    "sglang.srt.layers.quantization.gptq": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/gptq.py",
+      "sha256": "146b69edfa68f55102a48db3ed4fbe67d5daa476fc291a47a42640a8f128ca24"
+    },
+    "sglang.srt.layers.quantization.compressed_tensors.schemes.compressed_tensors_wNa16_moe": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/compressed_tensors/schemes/compressed_tensors_wNa16_moe.py",
+      "sha256": "14627d4aa00f8bb1cd13dfb2c985d92024ab1c40705acbfb9b6426c906540d86"
+    },
+    "sglang.srt.layers.quantization.compressed_tensors.schemes": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/compressed_tensors/schemes/__init__.py",
+      "sha256": "db81e48e1691cfd14fa47202568b3ed9003cea9de8af5b9852a7ffbd494f27d3"
+    },
+    "sglang.srt.layers.quantization.compressed_tensors.utils": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/compressed_tensors/utils.py",
+      "sha256": "6e2083e45c142f174b3cd4a21a90909bab4df1213c5462dc8adfdbaa761d9d11"
+    },
+    "sglang.srt.layers.quantization.fp8": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/fp8.py",
+      "sha256": "cf40750ea359d52b6640a9c390781817e64f39fd8ff1d06c35ecc498d2b82008"
+    },
+    "sglang.srt.layers.quantization.compressed_tensors.compressed_tensors": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/compressed_tensors/compressed_tensors.py",
+      "sha256": "c0f56cc5b64f7d08fa7e2f6d8f015ca3d6b1f8fabe5c6de2b96756643d0513e2"
+    },
+    "sglang.srt.layers.quantization.fpgemm_fp8": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/fpgemm_fp8.py",
+      "sha256": "3a90c900e069cb73ed02f0f01b764803822d305beba1dc401d39074274ff72ca"
+    },
+    "sglang.srt.layers.quantization.gguf": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/gguf.py",
+      "sha256": "f49c0e3e02e9b2768d6ef7f0f184f329ccdbabb6758c0f5389338c59819e9a15"
+    },
+    "sglang.srt.layers.quantization.gptq_cpu": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/gptq_cpu.py",
+      "sha256": "066f06aa402bbecdd4b071534dc12a142db748f1347fa2a8dabcdae5bcf88338"
+    },
+    "sglang.srt.layers.quantization.mlx": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/mlx.py",
+      "sha256": "c61c8679d586d2d13fb6695d1dec989d0c1224bb6e6d3745ee805cd19943c6f7"
+    },
+    "sglang.srt.layers.quantization.modelslim.schemes.modelslim_scheme": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/modelslim/schemes/modelslim_scheme.py",
+      "sha256": "1dde496c6befd36b78a5a913f35254c88d8989ddeacd6c4ba400626e2c168cf9"
+    },
+    "sglang.srt.layers.quantization.modelslim.schemes.modelslim_w4a4_int4": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/modelslim/schemes/modelslim_w4a4_int4.py",
+      "sha256": "0871d2fb604338c6ae3acf8a2545161ce2d4f3e19d9455675f39039337ffd873"
+    },
+    "sglang.srt.layers.quantization.modelslim.schemes.modelslim_w4a4_int4_moe": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/modelslim/schemes/modelslim_w4a4_int4_moe.py",
+      "sha256": "855d1ccc07f0bbe3cbcf9d54d8608e324a9d850ed0c65f17f123fed8d5df7c12"
+    },
+    "sglang.srt.layers.quantization.modelslim.schemes.modelslim_w4a8_int8_moe": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/modelslim/schemes/modelslim_w4a8_int8_moe.py",
+      "sha256": "769af5045dfddd9805ae63c08f6b6d89e2d9d7debc1eae4ecb4a295f57d5064d"
+    },
+    "sglang.srt.layers.quantization.modelslim.schemes.modelslim_w8a8_int8": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/modelslim/schemes/modelslim_w8a8_int8.py",
+      "sha256": "c31dd5ff7c011d3a2cfb0edde466243ca8c5646f91f3916eb4a40c9ab7b8aaac"
+    },
+    "sglang.srt.layers.quantization.modelslim.schemes.modelslim_w8a8_int8_moe": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/modelslim/schemes/modelslim_w8a8_int8_moe.py",
+      "sha256": "40890fa6e765e103cb7da64b7fa42672459a6dbabbf016d9464ffa433b85ba4b"
+    },
+    "sglang.srt.layers.quantization.modelslim.schemes": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/modelslim/schemes/__init__.py",
+      "sha256": "bcdbdea1efd087b32f82998a8bc6622236f69b632ade6919b9b63a213dd7db07"
+    },
+    "sglang.srt.layers.quantization.modelslim.modelslim": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/modelslim/modelslim.py",
+      "sha256": "f74d1f61abe11ff3a12dea1d20642cd002998a1304d1dd38fc20cb8c91282449"
+    },
+    "sglang.srt.layers.quantization.moe_wna16": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/moe_wna16.py",
+      "sha256": "47a05b5c27994345a7272940319193d7cef5ce4c20fddc5c95dfb896527f5768"
+    },
+    "sglang.srt.layers.quantization.mxfp4": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/mxfp4.py",
+      "sha256": "fa15e856cab8bc9a19887e14e0dcc84325d6e886711383b47cb57b37b25f8fa1"
+    },
+    "sglang.srt.layers.quantization.petit_utils": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/petit_utils.py",
+      "sha256": "fa0cb8ccc86a368200d51d27efee42d1e7d5e788c7a2709480f0d45058c6b323"
+    },
+    "sglang.srt.layers.quantization.petit": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/petit.py",
+      "sha256": "253972ff143348f81f4c045663755db93a392fca5ed615a2631f10d719bea795"
+    },
+    "sglang.srt.layers.quantization.qoq": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/qoq.py",
+      "sha256": "8ccf7ab897cacf7be8d41e92488ad05cd4f7be70f7509adea4ad9e63eb52414e"
+    },
+    "sglang.srt.layers.quantization.quark": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/quark/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "sglang.srt.layers.quantization.quark.schemes.quark_scheme": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/quark/schemes/quark_scheme.py",
+      "sha256": "4655c2f81fb7169c07393f11bd080717ab1a34fe9da32e1d0392acc706a9e77e"
+    },
+    "sglang.srt.layers.quantization.quark.schemes.quark_w4a4_mxfp4": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/quark/schemes/quark_w4a4_mxfp4.py",
+      "sha256": "3024306ee0f6554e297ad0bc856e2d4b79a9be095c68214f3323a68628ea298d"
+    },
+    "sglang.srt.layers.quantization.quark.schemes.quark_w4a4_mxfp4_moe": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/quark/schemes/quark_w4a4_mxfp4_moe.py",
+      "sha256": "f25c333e874b961e37638075e0a9be339c28e006cd4fab0373b96b2e28976ab9"
+    },
+    "sglang.srt.layers.quantization.quark.schemes.quark_w8a8_fp8": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/quark/schemes/quark_w8a8_fp8.py",
+      "sha256": "79bf0077064007ac0491721220027aa876a87c44ee6fa306e4d9743c870f4dcc"
+    },
+    "sglang.srt.layers.quantization.quark.schemes.quark_w8a8_fp8_moe": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/quark/schemes/quark_w8a8_fp8_moe.py",
+      "sha256": "13b208416d08ebee08ffa2c96b467edfc49ff3fe25005f6b31f05deea5ae32a2"
+    },
+    "sglang.srt.layers.quantization.quark.schemes": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/quark/schemes/__init__.py",
+      "sha256": "99aece24562e8a055f6d1efbbfee720c6bdebaab0aa3e22f7451860786e9da52"
+    },
+    "sglang.srt.layers.quantization.quark.utils": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/quark/utils.py",
+      "sha256": "7264f295fb8713a4ad74df00c1f61db2efeac473bfec2d180fb1b3adf214f559"
+    },
+    "sglang.srt.layers.quantization.quark.quark": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/quark/quark.py",
+      "sha256": "cfaf542081b683b5bf23bfa83f8a66d98b439d4d361aa9a7322118dbb88fa950"
+    },
+    "sglang.srt.layers.int4fp8_utils": {
+      "role": "native",
+      "path": "sglang/srt/layers/int4fp8_utils.py",
+      "sha256": "3d3268e58de63a4c211846c32e65b58df0c2933105ab153c219157be3a15c5b4"
+    },
+    "sglang.srt.layers.quantization.quark_int4fp8_moe": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/quark_int4fp8_moe.py",
+      "sha256": "e113f3f2ff6dcf50c07de97f8651564235be157f8e5bc4ce155e23b0a9b0db6b"
+    },
+    "sglang.srt.layers.quantization.w4afp8": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/w4afp8.py",
+      "sha256": "3e050a734d13af9999d4b78740566f5fb2f6425df000dd3258e2baa6ab64ee5c"
+    },
+    "sglang.srt.layers.quantization.w8a8_fp8": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/w8a8_fp8.py",
+      "sha256": "8ada747d0c640f9cfb3fd18eaf0f5ab27cd067e7075ea36f60509d6a71bb37df"
+    },
+    "sglang.srt.layers.quantization.w8a8_int8": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/w8a8_int8.py",
+      "sha256": "6a01d0fae2066634d7c499a88b47cb90f6d2cae50a17c6347bf0c04f5b0cb6ba"
+    },
+    "sglang.srt.layers.quantization.w4a8_utils": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/w4a8_utils.py",
+      "sha256": "93ec178e37bf40f22b47b1ea67058f5afabb93d46f840922813cdaca56a25cc7"
+    },
+    "sglang.srt.layers.quantization.slimquant_w4a8": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/slimquant_w4a8.py",
+      "sha256": "34e8cb2bf48b40e248494ad081e4a42f43031e8ecc329272bce9ef1b5b6afdc3"
+    },
+    "sglang.srt.layers.quantization.slimquant_w4a8_marlin": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/slimquant_w4a8_marlin.py",
+      "sha256": "654af545bf3e5eea408c76b405872d5f84e7cfbc5b2a9c67cec5009d04b382b1"
+    },
+    "sglang.srt.layers.quantization.compressed_tensors.compressed_tensors_moe_marlin": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/compressed_tensors/compressed_tensors_moe_marlin.py",
+      "sha256": "8275c5175c907b66ebb566f03c6082837f0b7650da877c8746e6f5ef1d5930a5"
+    },
+    "sglang.srt.layers.quantization.compressed_tensors.compressed_tensors_marlin": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/compressed_tensors/compressed_tensors_marlin.py",
+      "sha256": "c81cf4401189c7f08639d66c5749f987e3aed34613268cd6a35601da6392a55a"
+    },
+    "sglang.srt.layers.quantization": {
+      "role": "native",
+      "path": "sglang/srt/layers/quantization/__init__.py",
+      "sha256": "6fe98f745b08dc6c73c4c8857f72e7edd1986123fe4094ebe190a86084a6fff2"
+    },
+    "sglang.multimodal_gen.runtime.layers.quantization.fp8": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/layers/quantization/fp8.py",
+      "sha256": "3e612503448709f4ff1a5cd91748980e549b57b6c5ce08b70903826ebdaa40a4"
+    },
+    "sglang.multimodal_gen.runtime.layers.quantization.modelopt_fp8": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/layers/quantization/modelopt_fp8.py",
+      "sha256": "b3b80eed21e9a7a286ae33cf5e5c3f404161efd2886f11692dbe418c8ba95e0f"
+    },
+    "sglang.multimodal_gen.runtime.layers.quantization.modelopt_quant": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/layers/quantization/modelopt_quant.py",
+      "sha256": "e63de14fc1b169f884210e90079daee1959f9a23b51947d5ec0b2ffdb8fbd8b3"
+    },
+    "sglang.multimodal_gen.runtime.loader.utils": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/loader/utils.py",
+      "sha256": "02fb6552445b18817f50ac05ce34606bc7ae9574842466dda2f0219ba6722dc4"
+    },
+    "sglang.multimodal_gen.runtime.layers.quantization.modelslim": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/layers/quantization/modelslim.py",
+      "sha256": "04228013ad78ff9c68416e5f27046445a13dd434899607ca7bdb268bf840db59"
+    },
+    "sglang.multimodal_gen.runtime.layers.quantization.mxfp4": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/layers/quantization/mxfp4.py",
+      "sha256": "e29d835a4be8b185a93f4a3abd9d33169d86d380a018f2129bd01c6c756ffb72"
+    },
+    "sglang.multimodal_gen.runtime.layers.quantization.mxfp8_npu": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/layers/quantization/mxfp8_npu.py",
+      "sha256": "3ca7e5b1befad2bcb6c8386d79c67fdc00c431536454dcd79272ec8a561bf5a1"
+    },
+    "sglang.multimodal_gen.runtime.layers.quantization": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/layers/quantization/__init__.py",
+      "sha256": "ebbf06351e4abbdae07f7e05f34c76a441719d2218130dc576f52b1dfedeb765"
+    },
+    "sglang.multimodal_gen.configs.models.dits.base": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/dits/base.py",
+      "sha256": "dfa0816183e1ea38bcff6cb1309e2b8a7b72d7a1a41f6a5713467cb5005cf5dd"
+    },
+    "sglang.multimodal_gen.configs.models.dits.helios": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/dits/helios.py",
+      "sha256": "29a04f6038e2fad08887cc38aa3093c9c7bf3f8a773a7f33f19e4635a0f28506"
+    },
+    "sglang.multimodal_gen.configs.models.dits.hunyuan3d": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/dits/hunyuan3d.py",
+      "sha256": "de6d435afe241564869e885b6aef4adc0b5ebffa194367171edd32ca6a8d7a7d"
+    },
+    "sglang.multimodal_gen.configs.models.dits.hunyuanvideo": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/dits/hunyuanvideo.py",
+      "sha256": "06661fab8f3b75c176dc845dfb5fd45d6d6e728efa92888d2944bd78ee6c79c6"
+    },
+    "sglang.multimodal_gen.configs.models.dits.mova_audio": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/dits/mova_audio.py",
+      "sha256": "1c09a85a751e907b684de633bdaf81983744ae6a8c6d0d4c5378bdc830b3ebf7"
+    },
+    "sglang.multimodal_gen.configs.models.dits.mova_video": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/dits/mova_video.py",
+      "sha256": "9de9fb2dd5e7632d2eac90ed7d1fb517d1b0b685a1a88083198f665ef7eae460"
+    },
+    "sglang.multimodal_gen.configs.models.dits.stablediffusion3": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/dits/stablediffusion3.py",
+      "sha256": "a9ea229226afcaa3c80a2d55b95d56c0d36d1eff07c1c408a817a2a3a1dc6bc3"
+    },
+    "sglang.multimodal_gen.configs.models.dits.wanvideo": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/dits/wanvideo.py",
+      "sha256": "cf29e64b32a3267b6a74cbd368b43945ba013d75c6dd68c103b87b3fae434ddc"
+    },
+    "sglang.multimodal_gen.configs.models.dits": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/dits/__init__.py",
+      "sha256": "a450c4fa3c5c2da436e14a280fdfa3f47eb6993972da444af7975ef8f59c3810"
+    },
+    "sglang.multimodal_gen.configs.models.vaes.dac": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/vaes/dac.py",
+      "sha256": "fe3b6b8a42cd23362479af6fd36c773ad8fe35e50ebc857b74a85984fb6b4330"
+    },
+    "sglang.multimodal_gen.configs.models.vaes.base": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/vaes/base.py",
+      "sha256": "d68aee841ed23900d98c47086a2e1695d21c2fb07cb26911f30c090efc2d1690"
+    },
+    "sglang.multimodal_gen.configs.models.vaes.hunyuan3d": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/vaes/hunyuan3d.py",
+      "sha256": "acd68d4912fa9777a6fd326806996697871b15db8940cd9d5a206fa2e7a1cc84"
+    },
+    "sglang.multimodal_gen.configs.models.vaes.hunyuanvae": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/vaes/hunyuanvae.py",
+      "sha256": "a9d974c288b56fbbfcee4e75301a1110eb4f27568b41472da9002f94f37ed4ec"
+    },
+    "sglang.multimodal_gen.configs.models.vaes.stablediffusion3": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/vaes/stablediffusion3.py",
+      "sha256": "08c64fc004f286459c0809200d2cdcf3c4e14406906fa0f270db134ea462a416"
+    },
+    "sglang.multimodal_gen.configs.models.vaes.wanvae": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/vaes/wanvae.py",
+      "sha256": "513bfa001aed1e016775a21f828daf6fb78aae96c1e46a9658c776f404eb6449"
+    },
+    "sglang.multimodal_gen.configs.models.vaes": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/vaes/__init__.py",
+      "sha256": "69a0e236c949294b10c715a13e94970578a9b76a95bbbe8425e8d473171245cb"
+    },
+    "sglang.multimodal_gen.configs.models": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/__init__.py",
+      "sha256": "cb5d104fbae96c0d9e62fd62e53938fb666c8d21eceb6dd56839c6ac8820bdda"
+    },
+    "sglang.multimodal_gen.configs.pipeline_configs.model_deployment_config": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/pipeline_configs/model_deployment_config.py",
+      "sha256": "c291a8221300dbe024c596ed874c58e101c8ed532923efae32212d79f9af8caa"
+    },
+    "sglang.multimodal_gen.configs.post_training.rl_rollout": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/post_training/rl_rollout.py",
+      "sha256": "549259dd777cac147012d00cb3742553cf0b1e526bc2e45b6ae65b8400c8bd32"
+    },
+    "sglang.multimodal_gen.configs.post_training": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/post_training/__init__.py",
+      "sha256": "9af6eaef9cd2746bbc48411f2f1851a8a5c754a54a1a3997d70b21acb65ca66b"
+    },
+    "sglang.multimodal_gen.configs.sample.sampling_params": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/sample/sampling_params.py",
+      "sha256": "586e83dc37eddf12802e785e6df72e04a797df3106dfb318d0e69e382c6b096b"
+    },
+    "sglang.multimodal_gen.configs.sample.diffusers_generic": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/sample/diffusers_generic.py",
+      "sha256": "7c739ba3f8885dd79142937df6023f4210eed2cf6a60ade68062eb517b3ff129"
+    },
+    "sglang.multimodal_gen.configs.sample": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/sample/__init__.py",
+      "sha256": "a9830215a79e21f83aafa3662258b534db8361b9d50eb3a024132a09d01494bb"
+    },
+    "sglang.multimodal_gen.configs.utils": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/utils.py",
+      "sha256": "7600c200fd9da5f922009f9f1b7787f9d3bc47857ce2a1a96445e2f872d6b27d"
+    },
+    "sglang.multimodal_gen.runtime.distributed.cfg_policy": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/distributed/cfg_policy.py",
+      "sha256": "67a9a908e887dc72edb796b1498f194f11d231c772bb77456c051cf118e7449e"
+    },
+    "sglang.multimodal_gen.runtime.models.vision_utils": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/models/vision_utils.py",
+      "sha256": "c731c2f579c3be880c4810e60883c3a0048bae6583dc05bd8e3318baa9b67e47"
+    },
+    "sglang.multimodal_gen.configs.pipeline_configs.base": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/pipeline_configs/base.py",
+      "sha256": "18a552515bcbf2ffc67e60394da4b74616e7b311e264dddc5d6e782677cb9265"
+    },
+    "sglang.multimodal_gen.configs.pipeline_configs.diffusers_generic": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/pipeline_configs/diffusers_generic.py",
+      "sha256": "89f8a2961a3155938da458eebd7c81bb2b6dd115c622b0e6b757a9ab4a5c9014"
+    },
+    "sglang.multimodal_gen.configs.models.dits.flux": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/dits/flux.py",
+      "sha256": "0a6de167dc42c36d8d48ff448407d8e9a8df6fb7578b743a8ec38e62f4bea0eb"
+    },
+    "sglang.multimodal_gen.configs.models.vaes.flux": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/vaes/flux.py",
+      "sha256": "1c47aaca7238d01792e3b0f3630270e06f2667f0363317159364074ec7a9a65b"
+    },
+    "sglang.multimodal_gen.configs.pipeline_configs.hunyuan": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/pipeline_configs/hunyuan.py",
+      "sha256": "18064e5f8c811a5b030febed197e51d2408676862f08eb7387671eebb0892631"
+    },
+    "sglang.multimodal_gen.configs.models.dits.qwenimage": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/dits/qwenimage.py",
+      "sha256": "e020abec218b73b4d0e65b3bd840c4f6131ffec997a7dc51c3830c02f1f59018"
+    },
+    "sglang.multimodal_gen.configs.models.encoders.qwen_image": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/encoders/qwen_image.py",
+      "sha256": "c2f8e9ae8ae4dc66fb41dfc386e8194f6337efe197a2e7875778cd65b6af9e8e"
+    },
+    "sglang.multimodal_gen.configs.models.vaes.qwenimage": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/vaes/qwenimage.py",
+      "sha256": "b1897e2175efe57625256a8253a909c5bd6add7a609f04a597720ad38ee33cc6"
+    },
+    "sglang.multimodal_gen.runtime.post_training": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/post_training/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "sglang.multimodal_gen.runtime.post_training.sp_utils": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/post_training/sp_utils.py",
+      "sha256": "c24b4c63676632001857b19ba96aca5ede62c7e3e0c058c627dd472c12c51464"
+    },
+    "sglang.multimodal_gen.configs.post_training.pipeline_configs.qwen_image_rollout_pipeline_mixin": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/post_training/pipeline_configs/qwen_image_rollout_pipeline_mixin.py",
+      "sha256": "46f0cd5d327e7bfaa4bd45c37e4ce5be9dbbde9e3bfe82ef6e82c00b472164a5"
+    },
+    "sglang.multimodal_gen.configs.post_training.pipeline_configs.zimage_rollout_pipeline_mixin": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/post_training/pipeline_configs/zimage_rollout_pipeline_mixin.py",
+      "sha256": "7ce0975d78cb71ee7dcc40078cfe535ee76749375961f4bd7fde50d70e52b13b"
+    },
+    "sglang.multimodal_gen.configs.post_training.pipeline_configs": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/post_training/pipeline_configs/__init__.py",
+      "sha256": "384b0bb57d8d6e35f2d2cf5c9c91e648525d129c2cad5a3853af3587b5d22569"
+    },
+    "sglang.multimodal_gen.configs.pipeline_configs.qwen_image": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/pipeline_configs/qwen_image.py",
+      "sha256": "4cefd937b75f2f80a6a09c5e3813d510f918d558f5f7ec4d83a912e1adfd2bc2"
+    },
+    "sglang.multimodal_gen.configs.pipeline_configs.flux": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/pipeline_configs/flux.py",
+      "sha256": "2cae0c9201ed98271587c361dfb2bacc96a0c897ed36b82dd9ad583faa4043e2"
+    },
+    "sglang.multimodal_gen.configs.pipeline_configs.flux_finetuned": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/pipeline_configs/flux_finetuned.py",
+      "sha256": "fa802b1803e3d1ed746231aa26c4a3e9983b874ae925dbfe83ae143ac26386de"
+    },
+    "sglang.multimodal_gen.configs.pipeline_configs.helios": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/pipeline_configs/helios.py",
+      "sha256": "094a4544fb2251016ce4b62f68737327a722cf97d7506cf6ba47bd4d64de7f9f"
+    },
+    "sglang.multimodal_gen.configs.pipeline_configs.hunyuan3d": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/pipeline_configs/hunyuan3d.py",
+      "sha256": "e96d24f2939d54f2743eeee74e270c1867eb60e6011ce600da1cbb46e4ec35f0"
+    },
+    "sglang.multimodal_gen.configs.models.dits.ltx_2": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/dits/ltx_2.py",
+      "sha256": "28d8479a08c35666f4f4bdec0fff1b502b33261b4f2a6dded0decb067c91a8bb"
+    },
+    "sglang.multimodal_gen.configs.models.vaes.ltx_audio": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/vaes/ltx_audio.py",
+      "sha256": "9a4ca3c00a228f3ad5a936d4ae2ea5848d8827d73b7da32b5651bbeb5a5927e2"
+    },
+    "sglang.multimodal_gen.configs.models.vaes.ltx_video": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/vaes/ltx_video.py",
+      "sha256": "454bf6138b52cfc40b4cd1dec3bf40ecaf6a40cb33ac759cc829e439b46d0022"
+    },
+    "sglang.multimodal_gen.configs.pipeline_configs.ltx_2": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/pipeline_configs/ltx_2.py",
+      "sha256": "dedaec2821d36701664117a59647fdc3a3d273e7e6d6cb1eb409c20102fb2509"
+    },
+    "sglang.multimodal_gen.configs.pipeline_configs.wan": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/pipeline_configs/wan.py",
+      "sha256": "351d3cbb18998f79c97628aa19ed9872a18c8c0b5d8ba4c85ece7ab5ac734091"
+    },
+    "sglang.multimodal_gen.configs.pipeline_configs.mova": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/pipeline_configs/mova.py",
+      "sha256": "f06abf96ca57c897fa0b39bae601872a3750fdfe2f419d1ac07672319984e4d9"
+    },
+    "sglang.multimodal_gen.configs.models.dits.sana": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/dits/sana.py",
+      "sha256": "6f2260f640c6ad266db3af301e616b26e6472a9698c37ba2eea517753974bc1f"
+    },
+    "sglang.multimodal_gen.configs.models.vaes.sana": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/vaes/sana.py",
+      "sha256": "88a2c5396c5fc65b92fa5e024f8991c194b2f26aec9d126bd21417a6f589d7a0"
+    },
+    "sglang.multimodal_gen.configs.pipeline_configs.sana": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/pipeline_configs/sana.py",
+      "sha256": "99eee8662e5c529adea339d13132c14923ddb131115d155fc9c3869367e30192"
+    },
+    "sglang.multimodal_gen.configs.pipeline_configs.stablediffusion3": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/pipeline_configs/stablediffusion3.py",
+      "sha256": "4bb8f9d781bc7fbbbafee672cfa108b1533e5e451abef5627b7c31d11bf97f31"
+    },
+    "sglang.multimodal_gen.configs.models.dits.zimage": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/dits/zimage.py",
+      "sha256": "63b0f106d104ac2f6ad6785250942386eafd1bfc0ac4ea5e2684bf123c392674"
+    },
+    "sglang.multimodal_gen.configs.pipeline_configs.zimage": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/pipeline_configs/zimage.py",
+      "sha256": "22eeea7451724ea1c9e03dd385cdffb004dff4101114a115088769ea22ca0795"
+    },
+    "sglang.multimodal_gen.configs.pipeline_configs": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/pipeline_configs/__init__.py",
+      "sha256": "053d22a979ed29422a36216ac9268673572b4dddec980839563597efc8333339"
+    },
+    "sglang.multimodal_gen.runtime.entrypoints": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/entrypoints/__init__.py",
+      "sha256": "e05d246281dbb77e635c9e3b0c6c63637c8eac2d42cdd9459dc2b9abd899ad3c"
+    },
+    "sglang.multimodal_gen.configs.models.dits.ernie_image": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/dits/ernie_image.py",
+      "sha256": "a0832632f64f4438310845552f0cf7c2f6a01c4712bbbaa7f599381ea1be0f01"
+    },
+    "sglang.multimodal_gen.configs.models.encoders.mistral3": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/encoders/mistral3.py",
+      "sha256": "72e05222b7961fe0561853f48cdcacb7bb8235bd93b52e2350cc73ace6286f29"
+    },
+    "sglang.multimodal_gen.configs.models.vaes.ernie_image": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/vaes/ernie_image.py",
+      "sha256": "bd8cf7d4b64815b7f963413473b5a1af322d21b5bf9396ad299af0c6eb24bff6"
+    },
+    "sglang.multimodal_gen.configs.pipeline_configs.ernie_image": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/pipeline_configs/ernie_image.py",
+      "sha256": "80b0c45836ce05303f9cd99d7d2d29c04cc8d93b96279be09efc6da9f830718b"
+    },
+    "sglang.multimodal_gen.configs.models.dits.glmimage": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/dits/glmimage.py",
+      "sha256": "3daa2ae842980b184c873882de3d2ae47ca6cb6ce63e57b2225a56b2aeb85a31"
+    },
+    "sglang.multimodal_gen.configs.models.vaes.glmimage": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/vaes/glmimage.py",
+      "sha256": "a9684072f50457c607ae4a785658ce7a7ed727998c72b2cc237888cd40941310"
+    },
+    "sglang.multimodal_gen.configs.pipeline_configs.glm_image": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/pipeline_configs/glm_image.py",
+      "sha256": "9f7a047955ce66671e19d89f2fe1f0f143dac55beb5ea988be9e41a7836c9ad6"
+    },
+    "sglang.multimodal_gen.configs.models.dits.joy_image": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/models/dits/joy_image.py",
+      "sha256": "b00d8f47a806a5d69342d467e7e15718e85cfe3618ccbf5a1acc3f847fff663e"
+    },
+    "sglang.multimodal_gen.configs.pipeline_configs.joy_image": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/pipeline_configs/joy_image.py",
+      "sha256": "00688a7a0b37001e5f9e8267ff167b9567f92f5a6d1b2282b7fdca0539ec3948"
+    },
+    "sglang.multimodal_gen.configs.sample.ernie_image": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/sample/ernie_image.py",
+      "sha256": "0024b04ba1443b06d10376f794af681c880bf035cf6ae4d341f2904fe3a1dd0e"
+    },
+    "sglang.multimodal_gen.configs.sample.flux": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/sample/flux.py",
+      "sha256": "52b89b2c2ff18d91145a3d0818953a54b03384dbdfe3dc3ada8cdb889987d5e2"
+    },
+    "sglang.multimodal_gen.configs.sample.glmimage": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/sample/glmimage.py",
+      "sha256": "2c331f762f165ca433690b25215ee99765a035aff6b60e9629e7a37313b69675"
+    },
+    "sglang.multimodal_gen.configs.sample.helios": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/sample/helios.py",
+      "sha256": "8833aeb5318dbc983ec8860138b39d9c438a96f8bbaefb2402c306b97cf721b1"
+    },
+    "sglang.multimodal_gen.configs.sample.teacache": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/sample/teacache.py",
+      "sha256": "f0a19433a5f11c7d999651a1d09663d6bbbe840e7a654aeeca87fd12b262794e"
+    },
+    "sglang.multimodal_gen.configs.sample.hunyuan": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/sample/hunyuan.py",
+      "sha256": "1cbfff666fd539a55c3d21a2f91c7f81a688b34d03ecf698a080ec11d304f3bb"
+    },
+    "sglang.multimodal_gen.configs.sample.hunyuan3d": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/sample/hunyuan3d.py",
+      "sha256": "a0e25f004514dae1a3ed0088c2c223a2ee893f2968c3757cbbb2f7b9f5c47920"
+    },
+    "sglang.multimodal_gen.configs.sample.joy_image": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/sample/joy_image.py",
+      "sha256": "b61ace5aa2d288ef0b640ae2ec2acddbb497695ab13f86375542d41ee498e11f"
+    },
+    "sglang.multimodal_gen.configs.sample.ltx_2": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/sample/ltx_2.py",
+      "sha256": "7651294217faa3a3ca6dc00d93b0078e1e83c7cd6ee07916b64b11dfb7c886b1"
+    },
+    "sglang.multimodal_gen.configs.sample.mova": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/sample/mova.py",
+      "sha256": "1c3feae81b4b4e00a94844657967222b95c7d01819520b912e1afb712d4f0014"
+    },
+    "sglang.multimodal_gen.configs.sample.qwenimage": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/sample/qwenimage.py",
+      "sha256": "ea8444691bde59d12f1a6d43997e9951618c56521741144b92d32cdc01474d96"
+    },
+    "sglang.multimodal_gen.configs.sample.sana": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/sample/sana.py",
+      "sha256": "f85ffe657605d8bebf9598b33cb05589b7304923db0a37fda65462006baf4ebd"
+    },
+    "sglang.multimodal_gen.configs.sample.stablediffusion3": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/sample/stablediffusion3.py",
+      "sha256": "a414cde6f8779e90d1828b3a75446550f9ef604f78d64d8721fdfbb1b085fbe5"
+    },
+    "sglang.multimodal_gen.configs.sample.wan": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/sample/wan.py",
+      "sha256": "a9291dee236d594e8cf941e24baf229f88158cc3db47483f2dabfbcc15974efe"
+    },
+    "sglang.multimodal_gen.configs.sample.zimage": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/sample/zimage.py",
+      "sha256": "3fc5b59ef3b1093c996b18de9dccf1ef04e5f5489e9c9383a6b7eaa0187551ab"
+    },
+    "sglang.multimodal_gen.runtime.disaggregation": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/disaggregation/__init__.py",
+      "sha256": "637371500f02c55002eff448b2f32dadc9e0d01e613b6bd2bcd13551611abeba"
+    },
+    "sglang.multimodal_gen.runtime.disaggregation.roles": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/disaggregation/roles.py",
+      "sha256": "b0947330f643173add92e7dadc5c7e2159837069032a5ac86565ffbd04a5c411"
+    },
+    "sglang.multimodal_gen.runtime.layers.attention.backends": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/layers/attention/backends/__init__.py",
+      "sha256": "a64a76d0d7c09a849e42795211f1156bff40d3e5b973a7e6255f321cf3162ff1"
+    },
+    "sglang.multimodal_gen.runtime.layers.attention.backends.attention_backend": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/layers/attention/backends/attention_backend.py",
+      "sha256": "3aa56de49bcc5b451659e15b8121a171ffcaf3728c318c5e9b995a624fd8709c"
+    },
+    "sglang.multimodal_gen.runtime.layers.quantization.configs.nunchaku_config": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/layers/quantization/configs/nunchaku_config.py",
+      "sha256": "637d795cf3b26829373caeed22a7074fad44e331c952873676562e3905db83c2"
+    },
+    "sglang.multimodal_gen.configs.quantization.nunchaku": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/configs/quantization/nunchaku.py",
+      "sha256": "7d3fd2316b030329d80c0abe8a0aec4552afd7acb5ea3e8cee60cbd0ac42037f"
+    },
+    "sglang.multimodal_gen.runtime.disaggregation.disagg_args": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/disaggregation/disagg_args.py",
+      "sha256": "3c2b4c7086f7cb86c42292b4910ae0d56c740798faa4241b12266f7620dd6600"
+    },
+    "sglang.multimodal_gen.runtime.server_args_auto_tune": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/server_args_auto_tune.py",
+      "sha256": "9b7eb20ceaefd75d49be674dd2ac8423f8067f9b86a3118ffe1e2ec86c8b2641"
+    },
+    "sglang.multimodal_gen.runtime.server_args": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/server_args.py",
+      "sha256": "6d96a3b5ae4fc1ee50379369eb6e3d118542bd1ac63d4885ce012a9e180798e6"
+    },
+    "sglang.multimodal_gen.runtime.layers.attention.selector": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/layers/attention/selector.py",
+      "sha256": "6b33356ba46b1a88c03df251b569740b20b9447b47324bdf38b8865b067bd517"
+    },
+    "sglang.multimodal_gen.runtime.layers.usp": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/layers/usp.py",
+      "sha256": "3015cc0c2c955bca26bfb9d2a77f59fd6e9773a27012e58c8463454587a47c7b"
+    },
+    "sglang.multimodal_gen.runtime.managers.forward_context": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/managers/forward_context.py",
+      "sha256": "ec1d8deb655cbfd5d35a0cb5512728cab8a3290c92e81cb914453f855b7f53d0"
+    },
+    "sglang.multimodal_gen.runtime.layers.attention.layer": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/layers/attention/layer.py",
+      "sha256": "2a0350857713c3ef8b65a868af462d75d9052fa90fc22d84540fd9acaaf5d196"
+    },
+    "sglang.multimodal_gen.runtime.layers.attention.backends.sparse_linear_attn": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/layers/attention/backends/sparse_linear_attn.py",
+      "sha256": "39d456712ce3703af2505b6067e0bad96cb17597429551dcf911149ec900a042"
+    },
+    "sglang.multimodal_gen.runtime.layers.attention.backends.rocm_sparse_linear_attn": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/layers/attention/backends/rocm_sparse_linear_attn.py",
+      "sha256": "d3391a63b5495f8bac8d57f3d6466935b02a5ba059c999493c744eba09aba196"
+    },
+    "sglang.multimodal_gen.runtime.layers.attention.turbo_layer": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/layers/attention/turbo_layer.py",
+      "sha256": "5fbc2a79cfc8312e3da25bb1a996e68225748ab3f9921f83e2e8ab3b16819047"
+    },
+    "sglang.multimodal_gen.runtime.layers.attention": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/layers/attention/__init__.py",
+      "sha256": "cf66a2dd8124ee01f8e2ad9a41b48a68a49ea8f03b63054fa60e880496d360dc"
+    },
+    "sglang.multimodal_gen.runtime.loader.weight_utils": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/loader/weight_utils.py",
+      "sha256": "91e488baeee230231986c474b3d48a7388b655e5c55e290b205dc400cbb32cf1"
+    },
+    "sglang.multimodal_gen.runtime.utils.model_overlay": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/utils/model_overlay.py",
+      "sha256": "3be65b7861d221da5430062b4ead070d5080895512e7737c9aa6b83f86515ebd"
+    },
+    "sglang.multimodal_gen.runtime.utils.quantization_utils": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/utils/quantization_utils.py",
+      "sha256": "387dbf5565e084a2d1273e6c5b9c2948adb71f46d9e9c8a60a9c76d7b8cb3829"
+    },
+    "sglang.multimodal_gen.runtime.utils.hf_diffusers_utils": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/utils/hf_diffusers_utils.py",
+      "sha256": "e149ca5fdce3679c320a8b3098430b7b9feb40b7cbaeb45711fab9c439547670"
+    },
+    "sglang.multimodal_gen.runtime.loader.component_loaders.component_loader": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/loader/component_loaders/component_loader.py",
+      "sha256": "e80dc064077795b1d3c21879434c6dca2db615e1946d34923ee9d6c532854fba"
+    },
+    "sglang.multimodal_gen.runtime.managers.layerwise_offload": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/managers/layerwise_offload.py",
+      "sha256": "ad6f6a06d28b9081899ccc72ad39a3407a3e64e4be8725a3a94758cd5099f987"
+    },
+    "sglang.multimodal_gen.runtime.managers.component_resident_strategies": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/managers/component_resident_strategies.py",
+      "sha256": "8ae3a02c9738c65154c04fc2811b1d2543b98d6ea807b5eb93a5f507d74d709a"
+    },
+    "sglang.multimodal_gen.runtime.managers.component_manager": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/managers/component_manager.py",
+      "sha256": "ab114a638474b36602ad0d92c306da4b3b2b698757c106f89031d32854ecea7d"
+    },
+    "sglang.multimodal_gen.runtime.post_training.rl_dataclasses": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/post_training/rl_dataclasses.py",
+      "sha256": "d2b86d76fa1c8cfc561ab91df75089de580a61b6c7a751cb52317ce5c1f7298f"
+    },
+    "sglang.multimodal_gen.runtime.utils.perf_logger": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/utils/perf_logger.py",
+      "sha256": "4c3864cd9e5aa33a853b12fa2a70cf767f3c74d54d8111199ce103da040d5856"
+    },
+    "sglang.srt.observability.trace": {
+      "role": "native",
+      "path": "sglang/srt/observability/trace.py",
+      "sha256": "5c4b983df577f5c57a9277721d4e8abeb3120ba349c99068283faa57f5744979"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.schedule_batch": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/schedule_batch.py",
+      "sha256": "0a7431cda1bb2e9c6e4fe25b2e415e55ecb74c23bfdb13229bc47641701a806d"
+    },
+    "sglang.multimodal_gen.runtime.utils.profiler": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/utils/profiler.py",
+      "sha256": "08e732056728fa78f3327f58700a898d8679ccf604b304024cf5bcf043ad0627"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.executors.pipeline_executor": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/executors/pipeline_executor.py",
+      "sha256": "d657a0296181dd167fbb8e8fb0ddaa6cdb0a5ed33475928266ec70b07458a1d9"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.stages.dedup": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/stages/dedup.py",
+      "sha256": "574b838cb20b74b8d8c15b13847102bcf1f0ea693a99bf0985cad066a05def36"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.stages.validators": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/stages/validators.py",
+      "sha256": "2c9cd061911c1bd701a2c10294ad081168a12d895f19cd0349c30936348812e2"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.stages.base": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/stages/base.py",
+      "sha256": "f78b8e6a9165aa1f79ade6441af57123d155568151f4534992af037006e6c41e"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.diffusion_scheduler_utils": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/diffusion_scheduler_utils.py",
+      "sha256": "79087190842d77f1f695e57f6df1ec283057a4453f9d46bee0f963737b875b74"
+    },
+    "sglang.multimodal_gen.runtime.cache.cache_dit_integration": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/cache/cache_dit_integration.py",
+      "sha256": "bcc539a4c65a0aaa179f14a1042afdb1d179bfaff8fa173a9f89b0f793bbf764"
+    },
+    "sglang.multimodal_gen.runtime.cache.teacache": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/cache/teacache.py",
+      "sha256": "7b556f09c2d57614df56dfb15b904bc1bf54434261a482d425c8facc7ff51f68"
+    },
+    "sglang.multimodal_gen.runtime.cache": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/cache/__init__.py",
+      "sha256": "021376d380f4efdf3ce3ec34cf5c7eeecb1384bb06978683e7cb2898cfb9ba60"
+    },
+    "sglang.multimodal_gen.runtime.distributed.cfg_parallel_utils": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/distributed/cfg_parallel_utils.py",
+      "sha256": "645a869a996df88b1cf44059653a4442ca67fd72ef54753d396355976cb0b746"
+    },
+    "sglang.multimodal_gen.runtime.layers.attention.STA_configuration": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/layers/attention/STA_configuration.py",
+      "sha256": "fded1886b3a0fd838f5bafe9a10aa0e351ec9f7aeaee50894af3c5a017f89a4b"
+    },
+    "sglang.multimodal_gen.runtime.loader.fsdp_load": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/loader/fsdp_load.py",
+      "sha256": "ba113059abab8e67c0ceeb12a2a497b673cf9b7826e116c5e768d0d6c614ee7e"
+    },
+    "sglang.multimodal_gen.runtime.loader.transformer_load_utils": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/loader/transformer_load_utils.py",
+      "sha256": "3044813b2066ff321a2f06da79d069f249be86ed8097b3163bde15fcc71126bd"
+    },
+    "sglang.multimodal_gen.runtime.models.registry": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/models/registry.py",
+      "sha256": "fb21ede725a85f4b45bac3dd01bb35a4afa635d8d011ac3de2c943c9c26cbc0c"
+    },
+    "sglang.multimodal_gen.runtime.loader.component_loaders.transformer_loader": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/loader/component_loaders/transformer_loader.py",
+      "sha256": "d7673fd32a19fef12b0c04e192dc22051641acbe6898e53b1202a43731e2303b"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.stages.model_specific_stages": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/stages/model_specific_stages/__init__.py",
+      "sha256": "ebd231430fdad47b9245706acb16104c53254e70509649f253b659be62f413d7"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.stages.model_specific_stages.wan_ti2v": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/stages/model_specific_stages/wan_ti2v.py",
+      "sha256": "04953e11eb8e0b968a1a8dabe45009b2cab278b5b19ef49a7d724e4a34a34c6b"
+    },
+    "sglang.multimodal_gen.runtime.post_training.scheduler_rl_debug_mixin": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/post_training/scheduler_rl_debug_mixin.py",
+      "sha256": "ceb15bac24baea41a718a4c538ba1a98f2d07d32a579ce4f70407386121df58a"
+    },
+    "sglang.multimodal_gen.runtime.post_training.scheduler_rl_mixin": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/post_training/scheduler_rl_mixin.py",
+      "sha256": "9ffa667d04fb58ed1f92339f8af3d13858ac942b026362e8dd94dfe420d0a6e3"
+    },
+    "sglang.multimodal_gen.runtime.post_training.rollout_denoising_mixin": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/post_training/rollout_denoising_mixin.py",
+      "sha256": "fd3c0ef2ee23a40278af15f6258ef01ed045511a031f3df0f313bd3c54472a9f"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.stages.denoising": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/stages/denoising.py",
+      "sha256": "7e5567e3684c22654ca761aa1a56346f20d68751d48e7d4e7cecf23afb76464e"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.stages.causal_denoising": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/stages/causal_denoising.py",
+      "sha256": "e99758738261b75d6a9193318f952fdceaab936bfd9611d571f87254927a487f"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.stages.latent_preparation": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/stages/latent_preparation.py",
+      "sha256": "c0582c7dfcaa842630856dd4c8110910bd39596ded6bc413d81ef34ad74e7a49"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.stages.comfyui_latent_preparation": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/stages/comfyui_latent_preparation.py",
+      "sha256": "2dda6124c913c7c136795f00f87291dbd2d26b1ff9d0a5aade1595c5dc1c1bc4"
+    },
+    "sglang.multimodal_gen.runtime.loader.component_loaders.vae_loader": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/loader/component_loaders/vae_loader.py",
+      "sha256": "4178b90a1c3230e0217fd88a8f4ddf0ff1238c64dff934164d6786187cee5ff0"
+    },
+    "sglang.multimodal_gen.runtime.models.vaes.common": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/models/vaes/common.py",
+      "sha256": "b050fb7095a31ac0095d5938a7e1acca005291c93733b3ed68c313aafcdafaa4"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.stages.decoding": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/stages/decoding.py",
+      "sha256": "7713305661e97d6fc87d6264bc6b132dd35d27bce3b630e11ec298875929bd6d"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.stages.decoding_av": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/stages/decoding_av.py",
+      "sha256": "105ad92c4d66e15b5577ce5b7645c7e03cf854ddf1c646562be63eed6209b4c3"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.stages.ltx_2_denoising": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/stages/ltx_2_denoising.py",
+      "sha256": "daacf87102c30f3a1e1955a8eabe7672e237c31ad9c4b4b168549f5bcecfb563"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.stages.denoising_av": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/stages/denoising_av.py",
+      "sha256": "2cecd2061989545d04645ed26fa91f831e0ccf7551898b57029446160e679332"
+    },
+    "sglang.multimodal_gen.runtime.models.schedulers.base": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/models/schedulers/base.py",
+      "sha256": "91d08fbcf1717486863cc97c41aa3fe5a97f6254d0802cf8830b54c1ed530f60"
+    },
+    "sglang.multimodal_gen.runtime.models.schedulers.scheduling_flow_match_euler_discrete": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/models/schedulers/scheduling_flow_match_euler_discrete.py",
+      "sha256": "0ccaefdd6f4aa8b2d634c4702280b0a291710819bfc3dbca4700cb5086f8979b"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.stages.denoising_dmd": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/stages/denoising_dmd.py",
+      "sha256": "2dc80329fb225cba8606124b7c6c55897557e8498f62732dc2b11522a4e908ae"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.stages.encoding": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/stages/encoding.py",
+      "sha256": "a960592b256d66d0a3752a751e83eb518bee169c06dd8525e11085b8b3364b91"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.stages.hunyuan3d_paint": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/stages/hunyuan3d_paint.py",
+      "sha256": "0cce863037bb42565788b5c7c3dcde0bd6974e4b26b1efc172349ed6a542f25c"
+    },
+    "sglang.multimodal_gen.csrc.render": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/csrc/render/__init__.py",
+      "sha256": "c7c1501d0385ccb9e500061b6e087ac3965367ce82751d9f6c5d94026135f54c"
+    },
+    "sglang.multimodal_gen.csrc.render.mesh_processor": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/csrc/render/mesh_processor/__init__.py",
+      "sha256": "3f490d7ef9b96c853a08a0e317f8e52f3051a4dab52b551fc6fdbaffa60f04ec"
+    },
+    "sglang.multimodal_gen.runtime.utils.mesh3d_utils": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/utils/mesh3d_utils.py",
+      "sha256": "64e2e965ea581b4e6ce42fbaaa9deef068b07ceb478d315dc98542f4c6dd2ba3"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.stages.hunyuan3d_shape": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/stages/hunyuan3d_shape.py",
+      "sha256": "95154f55e6727a5398e15107089a03d0896506e142ef96fe53600634f6754d2e"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.stages.image_encoding": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/stages/image_encoding.py",
+      "sha256": "db69a71dd85ae0b980fb344154cd0a388aa70aa006c2d46ded33857441ef4892"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.stages.input_validation": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/stages/input_validation.py",
+      "sha256": "e0b93e3c80b4d02326fa5a9d1b16e93a92df193e8eb95b86690f813e1c48587a"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.stages.latent_preparation_av": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/stages/latent_preparation_av.py",
+      "sha256": "9bdc2a0bd83e9f5c76cfd6447ed171805d46fcb46fe630903f6c3c6e2d6d3dd0"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.stages.text_connector": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/stages/text_connector.py",
+      "sha256": "e17c21c487ccb821ded7a317d03f4b6585dc7d7d344567e9edc758deb8d25ac7"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.stages.text_encoding": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/stages/text_encoding.py",
+      "sha256": "0b2f40f7f646abadc47dd624f2f6435f648a56939ee97172f61b28da0ff0a56d"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.stages.timestep_preparation": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/stages/timestep_preparation.py",
+      "sha256": "13252ea1ddae67f77b63f08f85d4178b975338a28e884b23ba8f0eabe243c783"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.stages.upsampling": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/stages/upsampling.py",
+      "sha256": "e43f5b9b57a76e0d22cf2480a3c905907a041009a0da63b3791ae8f3bb683043"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.stages": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/stages/__init__.py",
+      "sha256": "6c28179047f6583004fccdb50749b37fdea306ae3b2fbd8a0f4e35db5693fdfd"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.composed_pipeline_base": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/composed_pipeline_base.py",
+      "sha256": "2852224fcef043d52a96028366d5d30cbb0ab8acc6857fd3c28a300cd33e0bae"
+    },
+    "sglang.multimodal_gen.registry": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/registry.py",
+      "sha256": "531c2b50e39d27798f73dbbbfbc6d67eef84a13fcb3a18a123b593fc9b9785b8"
+    },
+    "sglang.multimodal_gen.runtime.layers.vocab_parallel_embedding": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/layers/vocab_parallel_embedding.py",
+      "sha256": "501469a0b9fa22fdb2d106aefdb1288215306ed32996c6d8eeee9093a7586597"
+    },
+    "sglang.multimodal_gen.runtime.layers.lora.linear": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/layers/lora/linear.py",
+      "sha256": "db8749a663f524b1f89a3fdac4a802f4a8625120abe05392a41202fab42104da"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.lora_format_adapter": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/lora_format_adapter.py",
+      "sha256": "bd9cbafe43b461ce72f8c23916af0c225d8b93b6e8ed971ba7b9050da91b8b76"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.lora_pipeline": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/lora_pipeline.py",
+      "sha256": "79b53d7f7a73137ceac7229b1c74a104e1d5b3373f9e453ab764895ce6332138"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/__init__.py",
+      "sha256": "fe2a8c9ba62a6d2e5c104b7cc25a8c7ac5a51e146a93464a2dd07212e45fecbe"
+    },
+    "sglang.multimodal_gen.runtime.entrypoints.utils": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/entrypoints/utils.py",
+      "sha256": "c198215d6c79b22a8e28f6150ed335a5da6990a3538852b17643b08fb8f5746b"
+    },
+    "sglang.multimodal_gen.runtime.disaggregation.dispatch_policy": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/disaggregation/dispatch_policy.py",
+      "sha256": "957c7b881f80fe26a8594f97582ea0f97fafc69d8b8406689dda44c2f148ccd2"
+    },
+    "sglang.multimodal_gen.runtime.disaggregation.request_state": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/disaggregation/request_state.py",
+      "sha256": "86dd2c18a08633d96adbaeb24214d5726fd86db3f5f7d0c35966bef062e7188f"
+    },
+    "sglang.multimodal_gen.runtime.disaggregation.transport": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/disaggregation/transport/__init__.py",
+      "sha256": "6deb74a4679590b2b641b8a2b62a6a6fc390af3b608bf0319bba2f0a8aead715"
+    },
+    "sglang.multimodal_gen.runtime.disaggregation.transport.codec": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/disaggregation/transport/codec.py",
+      "sha256": "91e55012e486d449da4899e26804a3fa0495bfbf54658823c990805261007388"
+    },
+    "sglang.multimodal_gen.runtime.disaggregation.transport.protocol": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/disaggregation/transport/protocol.py",
+      "sha256": "dce32a7d73c6ac3ea07db95a2e1fa1450abe11e30a8e805689f90ed2703c2a90"
+    },
+    "sglang.multimodal_gen.runtime.disaggregation.orchestrator": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/disaggregation/orchestrator.py",
+      "sha256": "95fe507d88b67addf3c9c050fa715cdc5dde8f8a5f38b53d058569a30b76df3f"
+    },
+    "sglang.multimodal_gen.runtime.entrypoints.openai.protocol": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/entrypoints/openai/protocol.py",
+      "sha256": "846c5e03ddf4f1efbd6068be7dea04ac43b1ae21828d5831c3a0cc5ece3a482e"
+    },
+    "sglang.multimodal_gen.runtime.entrypoints.openai.storage": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/entrypoints/openai/storage.py",
+      "sha256": "2fd45ef1c008baa9ae0185c65e077525df78e1c5fb155401cefc8022c5b9d471"
+    },
+    "sglang.multimodal_gen.runtime.entrypoints.openai.stores": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/entrypoints/openai/stores.py",
+      "sha256": "a6da4167becf09f0dd4e488708077d1e325ccd04b3d4eb13420608943d279b52"
+    },
+    "sglang.multimodal_gen.runtime.ipc_array": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/ipc_array.py",
+      "sha256": "a2c78346bd200520a3d29638a08edf0c6a4338a8b9f396d8c2357ce0004fb5c7"
+    },
+    "sglang.multimodal_gen.runtime.scheduler_client": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/scheduler_client.py",
+      "sha256": "ca219fa771be6b848d3fc4b61c291bb67b8b4ddd5bdf1ff0d286b3c9e86d1cf6"
+    },
+    "sglang.multimodal_gen.runtime.utils.trace_wrapper": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/utils/trace_wrapper.py",
+      "sha256": "401360f5884b1d00c530ff16c6dee0a8fa0a4380764163744429945696be876a"
+    },
+    "sglang.multimodal_gen.runtime.entrypoints.openai.utils": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/entrypoints/openai/utils.py",
+      "sha256": "d593910180ee9bde06eb78f8841502989ed08427441289fa3d46d88d3685b176"
+    },
+    "sglang.multimodal_gen.runtime.entrypoints.openai.image_api": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/entrypoints/openai/image_api.py",
+      "sha256": "2fd1edadeb796ab8601ffbb9fac074269f0c7f5c0549ffb0851be25e06023785"
+    },
+    "sglang.multimodal_gen.runtime.entrypoints.openai.video_api": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/entrypoints/openai/video_api.py",
+      "sha256": "a5282a148ef110669e8adb0ba621bc4266b470c53fab4b22c45ee1ff28bc5d83"
+    },
+    "sglang.multimodal_gen.runtime.entrypoints.post_training": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/entrypoints/post_training/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "sglang.multimodal_gen.runtime.entrypoints.post_training.io_struct": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/entrypoints/post_training/io_struct.py",
+      "sha256": "ee70409e87d2976db1a2e4d9ef1eecdaebc183cb664b33bb36a18beb34f72776"
+    },
+    "sglang.multimodal_gen.runtime.entrypoints.post_training.utils": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/entrypoints/post_training/utils.py",
+      "sha256": "9389687983194bae3f961515c5114bdb2c9648e2f6436092fd9266ee901474fa"
+    },
+    "sglang.multimodal_gen.runtime.entrypoints.post_training.rollout_api": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/entrypoints/post_training/rollout_api.py",
+      "sha256": "ad93462e21a3df0915a51e2a87a00c93a5bb48b51b01b7afbade1cc4bdb0daa1"
+    },
+    "sglang.srt.utils.json_response": {
+      "role": "native",
+      "path": "sglang/srt/utils/json_response.py",
+      "sha256": "779bbfd1a53433fd3f82cb5eb73839c7178b42c53a5fc393f13670d53cf77cb6"
+    },
+    "sglang.multimodal_gen.runtime.entrypoints.post_training.weights_api": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/entrypoints/post_training/weights_api.py",
+      "sha256": "71cd13b51b310edc60ac15bd4a6fc213499f124d1a13968a19022eb7d768c817"
+    },
+    "sglang.multimodal_gen.runtime.entrypoints.http_server": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/entrypoints/http_server.py",
+      "sha256": "a2c8052c6448e0443e547de87454ea1147df99675574888bb73eeba4a7aab194"
+    },
+    "sglang.multimodal_gen.runtime.pipelines": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines/__init__.py",
+      "sha256": "a64a76d0d7c09a849e42795211f1156bff40d3e5b973a7e6255f321cf3162ff1"
+    },
+    "sglang.multimodal_gen.runtime.pipelines_core.executors.sync_executor": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines_core/executors/sync_executor.py",
+      "sha256": "cb3e6585bad550a9c68015252642a52c3cf5f7157e30c19aaac865d9de2949ef"
+    },
+    "sglang.multimodal_gen.runtime.pipelines.diffusers_pipeline": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/pipelines/diffusers_pipeline.py",
+      "sha256": "3d5cf441edbdc90b4d31dca2d3e537b3d493e3844a11aa5f81caa62be69ca465"
+    },
+    "sglang.multimodal_gen.runtime.loader.weights_updater": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/loader/weights_updater.py",
+      "sha256": "67a3f33a58bd3dfb6bb7bd6abf48c40658f2234f92c417b0ff51c71a4a99f26f"
+    },
+    "sglang.multimodal_gen.runtime.managers.gpu_worker": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/managers/gpu_worker.py",
+      "sha256": "41324d2f5c24aaea71ed9a3bdfe8d358b96b5e9db9fcfd8c594df79f622f2fe7"
+    },
+    "sglang.multimodal_gen.runtime.launch_server": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/launch_server.py",
+      "sha256": "514a0e7961455f83ff9481931dd0e82f830c750147c37a969312898d35fba76d"
+    },
+    "sglang.multimodal_gen.runtime.entrypoints.diffusion_generator": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/entrypoints/diffusion_generator.py",
+      "sha256": "6cc553b77751b38197cec099bc645558df1a948a109b9a415228f19abfa71d34"
+    },
+    "sglang.multimodal_gen": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/__init__.py",
+      "sha256": "a97a11a1ed866e58e1f18be0e697e07b97baac4a02aae38cf855b9308708aa37"
+    },
+    "sglang.multimodal_gen.runtime.platforms.cpu": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/platforms/cpu.py",
+      "sha256": "3a92d95626c008461db55764cef3efcc1620c798459534ee4bbe9238c94e5c08"
+    },
+    "sglang.multimodal_gen.runtime.distributed.parallel_groups": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/distributed/parallel_groups.py",
+      "sha256": "b33f9e8238660a595e80c5073abcf424b7af2081a1ac9cd694778f23f994cdf7"
+    },
+    "sglang.multimodal_gen.configs.models.dits.qwenimage21": {
+      "role": "overlay",
+      "path": "sglang/multimodal_gen/configs/models/dits/qwenimage21.py",
+      "sha256": "811e53823a72f5889eec8948208cd03b0dbab8adceed4e4d2fd1cc1b23527764"
+    },
+    "sglang.kernels.kernel_api_logging": {
+      "role": "overlay",
+      "path": "sglang/kernels/kernel_api_logging.py",
+      "sha256": "d3cfbaa939422f47b84b96a8878a98b178a7182a79656440c08938804517c4f7"
+    },
+    "sglang.kernels.spec": {
+      "role": "overlay",
+      "path": "sglang/kernels/spec.py",
+      "sha256": "bb45e57a8ed0bda7a0f6a88ded66edd3a402f5abf88cc859c68038a8b1f2a47e"
+    },
+    "sglang.kernels.registry": {
+      "role": "overlay",
+      "path": "sglang/kernels/registry.py",
+      "sha256": "9d9614b4a54647fa40c66d6baf962b4a105c653239075542ce2482fcded01cea"
+    },
+    "sglang.kernels.selector": {
+      "role": "overlay",
+      "path": "sglang/kernels/selector.py",
+      "sha256": "b5c51a44e89b030838c52316bc6acfe46d20890c33d5f0500d9f7ec4f47a07db"
+    },
+    "sglang.kernels.fused_op": {
+      "role": "overlay",
+      "path": "sglang/kernels/fused_op.py",
+      "sha256": "749bc702db4102bb6e2620626a906ada67856daa1459bb5141bd1d652168cbd7"
+    },
+    "sglang.kernels.ops.activation": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/activation/__init__.py",
+      "sha256": "c2fc3df36b7bd812e44a7ab384734d415563fc9dfab09d62165e1c0ee763e583"
+    },
+    "sglang.kernels.ops.attention": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/attention/__init__.py",
+      "sha256": "edd3432ead389254c3de7003479564ee79dcc74266f3e4ec430c58ad0d94bf62"
+    },
+    "sglang.kernels.ops.communication": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/communication/__init__.py",
+      "sha256": "80849286647e11dce10ed81522d19bb2096b2eb28f5b07f0ef65532d6a3d9049"
+    },
+    "sglang.kernels.ops.diffusion": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/diffusion/__init__.py",
+      "sha256": "eacd27b347fb4c7004a38d91c5bbdd133195ba51838d2989478187336ba1390c"
+    },
+    "sglang.kernels.ops.elementwise": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/elementwise/__init__.py",
+      "sha256": "3697a19811fe844773cc978780f78c7e713f899e9f8426801f1d37b1341733d0"
+    },
+    "sglang.kernels.ops.embeddings": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/embeddings/__init__.py",
+      "sha256": "57880e70222b38ce623858a4e667fd7104e8847ee3fff1b9db5e80ecde41a954"
+    },
+    "sglang.kernels.ops.gemm": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/gemm/__init__.py",
+      "sha256": "a89c6ab16f3499546e22d22fa94fa8bbec3b8653f53d533f18b42a9b0afbfd3f"
+    },
+    "sglang.kernels.ops.grammar": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/grammar/__init__.py",
+      "sha256": "650612778d49fc2fc68e5641dab243c22ae5f73117f9d363e1477ed77847fc6d"
+    },
+    "sglang.kernels.ops.kvcache": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/kvcache/__init__.py",
+      "sha256": "255b040c5edc0280cf55d85eea70b9dc1b86c1cecbbf3623fc1a5a0aa147262a"
+    },
+    "sglang.kernels.ops.layernorm": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/layernorm/__init__.py",
+      "sha256": "c75c04ac427e38afd4747530f58e7d09db8a4f2022cd66940ca98981b55d2104"
+    },
+    "sglang.kernels.ops.lora": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/lora/__init__.py",
+      "sha256": "1811181aecc41ffcac39fdb83de97ce775896d4e80a45748b567c591b7d9661e"
+    },
+    "sglang.kernels.ops.mamba": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/mamba/__init__.py",
+      "sha256": "0d935dbebb7b38b743e52ef990fd7dc2dc6caec6dca3e55e2be997e4d91ef18f"
+    },
+    "sglang.kernels.ops.memory": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/memory/__init__.py",
+      "sha256": "0e6e9ec2c39e0addba4afc54836c1f70b2f225c361ee00ec94388df16760d9ae"
+    },
+    "sglang.kernels.ops.mm": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/mm/__init__.py",
+      "sha256": "d71d781668f9a04b04c632e668d8cba6d60d29126414afbdf5fc9403f56c4378"
+    },
+    "sglang.kernels.ops.moe": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/moe/__init__.py",
+      "sha256": "c342784c628732fdbf83980f5029c5c4cf290d7e5c92507e86be6269f9a12dcd"
+    },
+    "sglang.kernels.ops.quantization": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/quantization/__init__.py",
+      "sha256": "5815c011eee8a23feb5ace6d3e4d03d5e409ffe742df20195aafb7c817859671"
+    },
+    "sglang.kernels.ops.sampling": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/sampling/__init__.py",
+      "sha256": "91e7e689cb43464f0ef5a296fac2a759f6723e81750db5ccd31f96dc30176e15"
+    },
+    "sglang.kernels.ops.speculative": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/speculative/__init__.py",
+      "sha256": "f257491a593b29bfa23362746cee2b502dd69d0c52d18d3d19ba01e583e7b894"
+    },
+    "sglang.kernels.ops.lplb": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/lplb/__init__.py",
+      "sha256": "6532c81da2135d34d52a83d9213b7548a3aa93b2bcfa7c1ac829e919f11398ff"
+    },
+    "sglang.kernels.ops.kv_canary": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/kv_canary/__init__.py",
+      "sha256": "ecadf437fb3cf00c159d0b915ba4ce6b848710aea61d46a08e846b060f1fe267"
+    },
+    "sglang.kernels.ops": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/__init__.py",
+      "sha256": "993c0c988e0f5db1194628bfa02bd1f258812959a14060d59e50fb306d355457"
+    },
+    "sglang.kernels": {
+      "role": "overlay",
+      "path": "sglang/kernels/__init__.py",
+      "sha256": "627aef5225e9e4862f04e43e6db064e5a497ec1f0c98cb401879ec30db905ad9"
+    },
+    "sglang.kernels.ops.diffusion.sites": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/diffusion/sites/__init__.py",
+      "sha256": "098f08136276863eef05d4df5981c90433819ccaa37646b5c0fc5ec71c9b7193"
+    },
+    "sglang.kernels.ops.diffusion.sites.bitexact_gate": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/diffusion/sites/bitexact_gate.py",
+      "sha256": "26b0db7664913917a89e64f6a29102f54c30b4f8c320609ccb9650a45a225ee2"
+    },
+    "sglang.kernels.kda_kernels": {
+      "role": "overlay",
+      "path": "sglang/kernels/kda_kernels/__init__.py",
+      "sha256": "392b3bf8884e1a7bea2a50d24ecc1b081c365e76c2d407a42e5282b8f7356a95"
+    },
+    "sglang.kernels.jit": {
+      "role": "overlay",
+      "path": "sglang/kernels/jit/__init__.py",
+      "sha256": "7d3a182933356ee4a73edae72cde73251f9b4ba13b7a1b1731b6bc8acae20f5c"
+    },
+    "sglang.kernels.jit.utils.common": {
+      "role": "overlay",
+      "path": "sglang/kernels/jit/utils/common.py",
+      "sha256": "491cf8bec4102dcd9b4706c4d7202c6bd43f275be36c9f7a959cc89b156d62a3"
+    },
+    "sglang.kernels.jit.utils.arch": {
+      "role": "overlay",
+      "path": "sglang/kernels/jit/utils/arch.py",
+      "sha256": "e9427faad6479e47623315c38705ee209e239f9e6212712746678cb27000552b"
+    },
+    "sglang.kernels.jit.utils.compile.cpp_args": {
+      "role": "overlay",
+      "path": "sglang/kernels/jit/utils/compile/cpp_args.py",
+      "sha256": "84be4f6ab4b3a435a424e2762cf2f48c25ccf57119e6971e83f4856d779757c3"
+    },
+    "sglang.kernels.jit.utils.compile.toolchain": {
+      "role": "overlay",
+      "path": "sglang/kernels/jit/utils/compile/toolchain.py",
+      "sha256": "987d4eccaa7947fa15f070cfbabb1165e43076f619f9c84d99a8e3f3f61ea483"
+    },
+    "sglang.kernels.jit.utils.compile.paths": {
+      "role": "overlay",
+      "path": "sglang/kernels/jit/utils/compile/paths.py",
+      "sha256": "bfa8a912174607c74237f1b5f45b0a87dc8da8b5f1f5be39868966787fae76e2"
+    },
+    "sglang.kernels.jit.utils.compile.spec": {
+      "role": "overlay",
+      "path": "sglang/kernels/jit/utils/compile/spec.py",
+      "sha256": "f762d7d90adb2770988ab0d17b444496d9d611531ab136eb37b8c8707dd42b2f"
+    },
+    "sglang.kernels.jit.utils.compile.cache": {
+      "role": "overlay",
+      "path": "sglang/kernels/jit/utils/compile/cache.py",
+      "sha256": "3a9c277d676596e467d6a1e700e65ab2fb5ccf91b264ebe1c3cc06659fa470bf"
+    },
+    "sglang.kernels.jit.utils.compile.ninja": {
+      "role": "overlay",
+      "path": "sglang/kernels/jit/utils/compile/ninja.py",
+      "sha256": "082dff0b50a890f4987e1fb8caa0e0c6e77edfef766836ee4b17b5d3e514e218"
+    },
+    "sglang.kernels.jit.utils.compile.sailify": {
+      "role": "overlay",
+      "path": "sglang/kernels/jit/utils/compile/sailify.py",
+      "sha256": "e4ce41d30f5713f41f03cd72366bb36e8d0d87d218968948669ea67c19fd5998"
+    },
+    "sglang.kernels.jit.utils.deps": {
+      "role": "overlay",
+      "path": "sglang/kernels/jit/utils/deps.py",
+      "sha256": "d1a8f3310081e7be917bb99659e40e7cac3d953b0b485762478660ed05da42d9"
+    },
+    "sglang.kernels.jit.utils.compile.loader": {
+      "role": "overlay",
+      "path": "sglang/kernels/jit/utils/compile/loader.py",
+      "sha256": "f4437c88aae8ae55a315bef9f52e19b2dabd3ad8a2cf0ffaab2a6786dbb52993"
+    },
+    "sglang.kernels.jit.utils.compile.parallel": {
+      "role": "overlay",
+      "path": "sglang/kernels/jit/utils/compile/parallel.py",
+      "sha256": "6085d0cc1a87b22ddb1f72d9b867e3c6f5163cf7fc17516ce30592d01b65b855"
+    },
+    "sglang.kernels.jit.utils.compile": {
+      "role": "overlay",
+      "path": "sglang/kernels/jit/utils/compile/__init__.py",
+      "sha256": "06c877744dd0d72b470bba278e6c93fd8db0a7a0e4ad5b2cde328ad10e3164fa"
+    },
+    "sglang.kernels.jit.utils": {
+      "role": "overlay",
+      "path": "sglang/kernels/jit/utils/__init__.py",
+      "sha256": "115c0388c11eb179750afa9c17843cf657c35b1478b0a967476d562f66d79b91"
+    },
+    "sglang.kernels.numerics": {
+      "role": "overlay",
+      "path": "sglang/kernels/numerics.py",
+      "sha256": "033849ff101bd3975d4a32ca4bba91ef16f5f5c037e469b3e3fb4de2aa2ad738"
+    },
+    "sglang.kernels.ops.diffusion.common": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/diffusion/common/__init__.py",
+      "sha256": "cd11d285debc36eaadfd44df85b4889612281fe41bfb9b9aba4f4d90d883f33d"
+    },
+    "sglang.kernels.ops.diffusion.common.fast_launch": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/diffusion/common/fast_launch.py",
+      "sha256": "030fddb72b016951286370cc14b9c471846707dd718add1a8475f0acd38cd9b2"
+    },
+    "sglang.kernels.ops.diffusion.common.platform": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/diffusion/common/platform.py",
+      "sha256": "a79f3ed2491d746c6b76a5374f3bc2bf49f02e517ff6d72ec174264bb139b4b7"
+    },
+    "sglang.kernels.ops.quantization.fp8_utils": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/quantization/fp8_utils.py",
+      "sha256": "98d78ce79860f027c0b5989de2aff153529e28258d53bb6f4f6e32f51b308549"
+    },
+    "sglang.kernels.ops.quantization.fp8_kernel": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/quantization/fp8_kernel.py",
+      "sha256": "1913b690b331170ae722874a3e27ca41fadbcc560ab0c0490e62e482d2c7fe67"
+    },
+    "sglang.kernels.kda_kernels.layernorm_modulate_triton": {
+      "role": "overlay",
+      "path": "sglang/kernels/kda_kernels/layernorm_modulate_triton.py",
+      "sha256": "e37860b53689a6d6df176c6fa72e853978da3f390824843783b63744e244367c"
+    },
+    "sglang.kernels.ops.diffusion.rope": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/diffusion/rope/__init__.py",
+      "sha256": "524ef0ce93edcb5398e4b1e816f1a59ec57065ac0092f6ba88d8104fd818ea64"
+    },
+    "sglang.kernels.ops.diffusion.rope.complex_rope_triton": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/diffusion/rope/complex_rope_triton.py",
+      "sha256": "e8fd8135d04745e391eae84baf685d7117c390e6378bed924e4797b416fbc1ea"
+    },
+    "sglang.kernels.ops.diffusion.rope.qknorm_complex_rope_jit": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/diffusion/rope/qknorm_complex_rope_jit.py",
+      "sha256": "f359507eb4927fbb65f61a4c0ea5a3e85fb1434e28652f913e0fc92803916efc"
+    },
+    "sglang.kernels.ops.diffusion.activation": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/diffusion/activation/__init__.py",
+      "sha256": "c03d250600fc36604ae39b6fb8c0c11fdc92ebe7678167d4b2c80c1a88bf4908"
+    },
+    "sglang.kernels.ops.diffusion.activation.silu_mul_bitexact": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/diffusion/activation/silu_mul_bitexact.py",
+      "sha256": "a01018505822e3bf63ae8ba059838161ce9fc67b4d0ea5309d360f3b032ef708"
+    },
+    "sglang.kernels.kda_kernels.residual_gate_add_jit": {
+      "role": "overlay",
+      "path": "sglang/kernels/kda_kernels/residual_gate_add_jit.py",
+      "sha256": "c100f5f5dd12112a1db3b80d0689e1a0768143d152cfedb8670138504ebc2ab8"
+    },
+    "sglang.kernels.ops.diffusion.norm": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/diffusion/norm/__init__.py",
+      "sha256": "a4f74c3b8b5ff9a895cbf160c6b740fb15da22f456c28ad6d27ee0bbea3a6f6e"
+    },
+    "sglang.kernels.ops.diffusion.norm.rmsnorm_preserve_reduction": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/diffusion/norm/rmsnorm_preserve_reduction.py",
+      "sha256": "06ebdfe3affadf5f674069d9152c4df575f1c95903007685614e5192a8f6da2a"
+    },
+    "sglang.kernels.ops.diffusion.rope.qknorm_complex_rope_triton": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/diffusion/rope/qknorm_complex_rope_triton.py",
+      "sha256": "e272770027589e125bc22924a12f6e39e4100c9face226877928918e8bc60e33"
+    },
+    "sglang.kernels.ops.diffusion.rope.qknorm_complex_rope_kv_triton": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/diffusion/rope/qknorm_complex_rope_kv_triton.py",
+      "sha256": "d284253003390c65b516040d7112869c2c5bff0f1d0fd9548d0587c7f6cc58e0"
+    },
+    "sglang.kernels.ops.gemm.convrot_int8": {
+      "role": "overlay",
+      "path": "sglang/kernels/ops/gemm/convrot_int8.py",
+      "sha256": "389a764eebbef3ed7c7fdec6bdaf66f70209deef06cd68a431463fe275fda1e1"
+    },
+    "sglang.multimodal_gen.runtime.utils.weight_attrs": {
+      "role": "overlay",
+      "path": "sglang/multimodal_gen/runtime/utils/weight_attrs.py",
+      "sha256": "a803a937c1bb2dddcb675213b7a75baad0d988ad79c62d31b35db3430463fb47"
+    },
+    "sglang.multimodal_gen.runtime.layers.quantization.comfy_int8": {
+      "role": "overlay",
+      "path": "sglang/multimodal_gen/runtime/layers/quantization/comfy_int8.py",
+      "sha256": "f740745bd6dc3018859313586d317c5c3404518cdf537d2d9c4fffeddd686d26"
+    },
+    "sglang.multimodal_gen.runtime.layers.quantization.configs.convrot_int8_config": {
+      "role": "overlay",
+      "path": "sglang/multimodal_gen/runtime/layers/quantization/configs/convrot_int8_config.py",
+      "sha256": "6d1d319cd4a46c6b62893b28301f1d8f7d310d4467ca2d5101b50b828797de7f"
+    },
+    "sglang.multimodal_gen.runtime.layers.quantization.convrot_int8_comfy_kitchen": {
+      "role": "overlay",
+      "path": "sglang/multimodal_gen/runtime/layers/quantization/convrot_int8_comfy_kitchen.py",
+      "sha256": "9c299c8a593ab8d5d82effa2c0ad0096ab189ed8956253c1faba53d2256e24f1"
+    },
+    "sglang.multimodal_gen.runtime.models.dits.base": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/models/dits/base.py",
+      "sha256": "2d6630ab79621bc5ddc4701ac2f8dd58f67fd9497225d8817a127ef63404a4f5"
+    },
+    "sglang.srt.batch_invariant_ops.batch_invariant_ops": {
+      "role": "native",
+      "path": "sglang/srt/batch_invariant_ops/batch_invariant_ops.py",
+      "sha256": "2791c532bebc2d23c920027be98638cffe81e9e9c8053cdc62f1c02e9776a095"
+    },
+    "sglang.srt.batch_invariant_ops": {
+      "role": "native",
+      "path": "sglang/srt/batch_invariant_ops/__init__.py",
+      "sha256": "e277fb7cc6addb8f34f40a7692db170d4fe2e3474ec740fd6aa2b89415748ff0"
+    },
+    "sglang.srt.layers.layernorm": {
+      "role": "native",
+      "path": "sglang/srt/layers/layernorm.py",
+      "sha256": "a6dffdf4da0865f55101c881de691afae5e99819a7e2f9076df70ae82b2dd393"
+    },
+    "sglang.multimodal_gen.runtime.models.dits.qwen_image21": {
+      "role": "overlay",
+      "path": "sglang/multimodal_gen/runtime/models/dits/qwen_image21.py",
+      "sha256": "101003dc3c76ec3b76fd68730664b1b6c4697f7dc9974e309d426252f0c69725"
+    },
+    "sglang.multimodal_gen.runtime.layers.attention.backends.sdpa": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/layers/attention/backends/sdpa.py",
+      "sha256": "637826e90099c9fb2219ffd93e64d4031ebc3d93a31b15b32efab527d5f9b20e"
+    },
+    "sglang.multimodal_gen.runtime.layers.quantization.weight_only_fp8": {
+      "role": "overlay",
+      "path": "sglang/multimodal_gen/runtime/layers/quantization/weight_only_fp8.py",
+      "sha256": "a0b11b20f22781b17927b47379094cfedd7a867c0a3178990cc2a7fe3f88debb"
+    },
+    "sglang.multimodal_gen.runtime.models.encoders.base": {
+      "role": "native",
+      "path": "sglang/multimodal_gen/runtime/models/encoders/base.py",
+      "sha256": "f7ce445f20805f44e08cc3003d5733d0ae3778a3beea22ff9950f63a3cf3ed2c"
+    },
+    "sglang.multimodal_gen.runtime.models.encoders.qwen_vl_vision": {
+      "role": "overlay",
+      "path": "sglang/multimodal_gen/runtime/models/encoders/qwen_vl_vision.py",
+      "sha256": "2a57d20ad90f3c47ac1d25dbcef6f4af25bca3abdc75d695139e176e6e70334a"
+    },
+    "sglang.jit_kernel.norm": {
+      "role": "native",
+      "path": "sglang/jit_kernel/norm.py",
+      "sha256": "fda86f5a1c7f7110d163932ada41a09cb0e068c5b62c5f86c81d6fcec1a59e93"
+    },
+    "sglang.srt.layers.utils.cp_utils": {
+      "role": "native",
+      "path": "sglang/srt/layers/utils/cp_utils.py",
+      "sha256": "82a8a25ed211b5d84b3105534f53943a534a9cb32b0bae3dfd514c43e1014fb3"
+    },
+    "sglang.srt.mem_cache.allocator": {
+      "role": "native",
+      "path": "sglang/srt/mem_cache/allocator.py",
+      "sha256": "1ce8f98b1aeeb9b37228d77785ecc5ffcc843fea7a29b38d5cb740ae413eee07"
+    },
+    "sglang.jit_kernel.kvcache": {
+      "role": "native",
+      "path": "sglang/jit_kernel/kvcache.py",
+      "sha256": "1cf0a0fd855b85b1a8d201ae5d13d8907f10c052d55289369966054c05dcb1f2"
+    },
+    "sglang.srt.constants": {
+      "role": "native",
+      "path": "sglang/srt/constants.py",
+      "sha256": "f423e3eb69382068bda8e41ce2b35f9e824fbd5b3ddbaafa95351f61f6c2f5c3"
+    },
+    "sglang.srt.layers.attention.nsa.utils": {
+      "role": "native",
+      "path": "sglang/srt/layers/attention/nsa/utils.py",
+      "sha256": "454d13a3024bf70600a86baaef9b63dfe216b980701664a2616449f25217a53f"
+    },
+    "sglang.srt.layers.attention.nsa.index_buf_accessor": {
+      "role": "native",
+      "path": "sglang/srt/layers/attention/nsa/index_buf_accessor.py",
+      "sha256": "cf328199f3eb7d29ef4bcc9171581b30a4c7adb2f4842051431a8681e783d2a6"
+    },
+    "sglang.srt.layers.attention.nsa.quant_k_cache": {
+      "role": "native",
+      "path": "sglang/srt/layers/attention/nsa/quant_k_cache.py",
+      "sha256": "23dccba0f293449067a25b90e4ac009ce4e1d424c3358aedd9396fd35c995fc6"
+    },
+    "sglang.srt.mem_cache.utils": {
+      "role": "native",
+      "path": "sglang/srt/mem_cache/utils.py",
+      "sha256": "6d6495b292ac76cbdcee8f7d0784b2be22e5fa51d568d9f3f6c5947308b06978"
+    },
+    "sglang.srt.utils.torch_memory_saver_adapter": {
+      "role": "native",
+      "path": "sglang/srt/utils/torch_memory_saver_adapter.py",
+      "sha256": "196266b5ac6c7a805b36c9953fcdd9cafb0dcc3ac7a9e25aae6edf34a8c6fba9"
+    },
+    "sglang.srt.mem_cache.memory_pool": {
+      "role": "native",
+      "path": "sglang/srt/mem_cache/memory_pool.py",
+      "sha256": "20289705a9b23a8c1dc9cb44f7e3f72de5ddfe21e0ae4dfb7cdc1f9eae4359c5"
+    },
+    "sglang.srt.mem_cache.base_swa_memory_pool": {
+      "role": "native",
+      "path": "sglang/srt/mem_cache/base_swa_memory_pool.py",
+      "sha256": "3de779f16d6a211bfe7fe9e7b1a5da4a899e7616f4fb6d4e80134aa6c316c160"
+    },
+    "sglang.srt.mem_cache.swa_memory_pool": {
+      "role": "native",
+      "path": "sglang/srt/mem_cache/swa_memory_pool.py",
+      "sha256": "72af9422de7000cc3fd8062e28cf83da9ae00c0e50d3e1a9b0e849da5df4abeb"
+    },
+    "sglang.srt.batch_overlap.operations": {
+      "role": "native",
+      "path": "sglang/srt/batch_overlap/operations.py",
+      "sha256": "1b84a32fff36a03cbdfbd5b1db8c1b1944706c1f5ad0788cfcc34c1d34c7b97c"
+    },
+    "sglang.srt.layers.moe.token_dispatcher.base": {
+      "role": "native",
+      "path": "sglang/srt/layers/moe/token_dispatcher/base.py",
+      "sha256": "c20185d4acf56dc2813ab799a678831c52940ad1a9486f140c801c7496b4ee88"
+    },
+    "sglang.srt.eplb": {
+      "role": "native",
+      "path": "sglang/srt/eplb/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "sglang.srt.layers.attention.utils": {
+      "role": "native",
+      "path": "sglang/srt/layers/attention/utils.py",
+      "sha256": "6bae800d0cb2f1b4a2abb448bec90e2c4664d0b882e8bbcdfbe06a3bc8834cc1"
+    },
+    "sglang.srt.model_executor.forward_batch_deepseek_mha_mixin": {
+      "role": "native",
+      "path": "sglang/srt/model_executor/forward_batch_deepseek_mha_mixin.py",
+      "sha256": "a05b1829eeb40cf3410acb9b4dcb800def759ed88f9d9d91f5f22c1999a3feb9"
+    },
+    "sglang.srt.model_executor.forward_batch_info": {
+      "role": "native",
+      "path": "sglang/srt/model_executor/forward_batch_info.py",
+      "sha256": "e6c966a3ceb90534175da5926a95e84090b8440a4b4cd01b0e461ff35c161027"
+    },
+    "sglang.srt.utils.gauge_histogram": {
+      "role": "native",
+      "path": "sglang/srt/utils/gauge_histogram.py",
+      "sha256": "8ab119aaf7e1c5ae497948ac51d6656e5676e4659edd410c5e940b5ed68e21db"
+    },
+    "sglang.srt.observability.metrics_collector": {
+      "role": "native",
+      "path": "sglang/srt/observability/metrics_collector.py",
+      "sha256": "907a1bf577a595aae9d32b8dc9b22da60779426860fe8ccf6b812582a4b65be5"
+    },
+    "sglang.srt.eplb.expert_distribution": {
+      "role": "native",
+      "path": "sglang/srt/eplb/expert_distribution.py",
+      "sha256": "087775b81a00a9310c685a8d84b76e5f839ef48987cc9a02b83b5719e9bbd258"
+    },
+    "sglang.srt.eplb.expert_location": {
+      "role": "native",
+      "path": "sglang/srt/eplb/expert_location.py",
+      "sha256": "8167ed8dffde0d739f55758d0b486fd7f1f0b4046f638d0fd2c9017bd2d991cf"
+    },
+    "sglang.srt.eplb.expert_location_dispatch": {
+      "role": "native",
+      "path": "sglang/srt/eplb/expert_location_dispatch.py",
+      "sha256": "999507fa3bf3ef2bf10bee5bc0c1506a57ca6db26266e8cc8912bf33da06393f"
+    },
+    "sglang.srt.state_capturer": {
+      "role": "native",
+      "path": "sglang/srt/state_capturer/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "sglang.srt.configs.model_config": {
+      "role": "native",
+      "path": "sglang/srt/configs/model_config.py",
+      "sha256": "1e86c47b86a53e3e1063a3ae601ef9de093e612ec875cce6a773fc700c872a20"
+    },
+    "sglang.srt.state_capturer.base": {
+      "role": "native",
+      "path": "sglang/srt/state_capturer/base.py",
+      "sha256": "c300262ee3d60269a1decc48cc23eee1d58fccc55ed2cdfa284f33c172e2e781"
+    },
+    "sglang.srt.state_capturer.routed_experts": {
+      "role": "native",
+      "path": "sglang/srt/state_capturer/routed_experts.py",
+      "sha256": "1e00b3b8da274657f443ea85d16ccdf6aba40320bc1368a67db958a7c836803c"
+    },
+    "sglang.srt.layers.moe.topk": {
+      "role": "native",
+      "path": "sglang/srt/layers/moe/topk.py",
+      "sha256": "51534edd384ea104f06aba96c4d747a9e237b2cc88240424b6809770aea3bb1e"
+    },
+    "sglang.srt.layers.moe.token_dispatcher.deepep": {
+      "role": "native",
+      "path": "sglang/srt/layers/moe/token_dispatcher/deepep.py",
+      "sha256": "025a20010d6be1c444f362bdc24a3ad0ea6f92540216e501c1543a338851dd5d"
+    },
+    "sglang.srt.layers.moe.token_dispatcher.flashinfer_utils": {
+      "role": "native",
+      "path": "sglang/srt/layers/moe/token_dispatcher/flashinfer_utils.py",
+      "sha256": "d26bf7c4fc811d42e30373e4495cd3163540aa8071dadc3534b675e627793389"
+    },
+    "sglang.srt.speculative.spec_registry": {
+      "role": "native",
+      "path": "sglang/srt/speculative/spec_registry.py",
+      "sha256": "13aa555e7bb70f14eb8c6715f1b9dacfde48138fee1301aeba2e1fa75ce5cea7"
+    },
+    "sglang.srt.speculative.spec_info": {
+      "role": "native",
+      "path": "sglang/srt/speculative/spec_info.py",
+      "sha256": "fc34fcb193af5603feef2310c59fed5270bfe5150911d7b085bdb2021b481eda"
+    },
+    "sglang.srt.layers.moe.token_dispatcher.flashinfer": {
+      "role": "native",
+      "path": "sglang/srt/layers/moe/token_dispatcher/flashinfer.py",
+      "sha256": "b67643f6af0efdbb8bdba19f9c11661e1d28f01450dd91d405e0aecac871b2e1"
+    },
+    "sglang.srt.layers.moe.token_dispatcher.fuseep": {
+      "role": "native",
+      "path": "sglang/srt/layers/moe/token_dispatcher/fuseep.py",
+      "sha256": "aed273d534a523c2680b13c940282bd8c164f2b7d6f25da3e626fe4fabefd5f5"
+    },
+    "sglang.srt.dllm.config": {
+      "role": "native",
+      "path": "sglang/srt/dllm/config.py",
+      "sha256": "df4efbf252a3a403ce92d6e4cc3599246dc91ff53e1a63f5de4c196034682cbf"
+    },
+    "sglang.srt.constrained.base_grammar_backend": {
+      "role": "native",
+      "path": "sglang/srt/constrained/base_grammar_backend.py",
+      "sha256": "9a2523717e4d5e9040017b27b8f6b126cbc5489f061a47e5a8adcfa96200a52f"
+    },
+    "sglang.srt.disaggregation.base.conn": {
+      "role": "native",
+      "path": "sglang/srt/disaggregation/base/conn.py",
+      "sha256": "dc7bf0d385e22f85783f021bfed30ab6855701f71b5d308cb4c9204b9390fce0"
+    },
+    "sglang.srt.disaggregation.base": {
+      "role": "native",
+      "path": "sglang/srt/disaggregation/base/__init__.py",
+      "sha256": "e15c14bf4696c709952f5d38f572bcd9a2d33719add1663944fcbd962fb0c959"
+    },
+    "sglang.srt.mem_cache.base_prefix_cache": {
+      "role": "native",
+      "path": "sglang/srt/mem_cache/base_prefix_cache.py",
+      "sha256": "73c40f32a4f02a195f86f7e90308df578a7550467e7886155c2d89abc164d145"
+    },
+    "sglang.srt.mem_cache.common": {
+      "role": "native",
+      "path": "sglang/srt/mem_cache/common.py",
+      "sha256": "de18bc234aa407bc5c1f0a20cab1da6e2195c27344d3196dcdd6381eb03c5671"
+    },
+    "sglang.srt.sampling.penaltylib.orchestrator": {
+      "role": "native",
+      "path": "sglang/srt/sampling/penaltylib/orchestrator.py",
+      "sha256": "88d9a4c04866a8b2dad0efe6f010f28f7e7dfa0e65708920f7845d760e833192"
+    },
+    "sglang.srt.sampling.penaltylib.frequency_penalty": {
+      "role": "native",
+      "path": "sglang/srt/sampling/penaltylib/frequency_penalty.py",
+      "sha256": "1f17d9124d963bdc428016f856a1715743b3d803cf55de2e8fad41550e5d8a61"
+    },
+    "sglang.srt.sampling.penaltylib.min_new_tokens": {
+      "role": "native",
+      "path": "sglang/srt/sampling/penaltylib/min_new_tokens.py",
+      "sha256": "bd63f0aab997da6e5a90ad27c4daaa6aadbac69d325bc9ae0510297103c0d276"
+    },
+    "sglang.srt.sampling.penaltylib.presence_penalty": {
+      "role": "native",
+      "path": "sglang/srt/sampling/penaltylib/presence_penalty.py",
+      "sha256": "f9f5d234903c1084b49905521b8e0ce9cc35a22d1c3e4c047c0cb4d189c291d7"
+    },
+    "sglang.srt.sampling.penaltylib.repetition_penalty": {
+      "role": "native",
+      "path": "sglang/srt/sampling/penaltylib/repetition_penalty.py",
+      "sha256": "3e1bb578d7e0097e8da81f80c72f808015bba48e4b24501c6c02c3cda632d03d"
+    },
+    "sglang.srt.sampling.penaltylib": {
+      "role": "native",
+      "path": "sglang/srt/sampling/penaltylib/__init__.py",
+      "sha256": "75ad2cf0aabb156ec1aecffdeb906058f2fbf5669d258fefc420e50a27b0c7ba"
+    },
+    "sglang.srt.sampling.sampling_params": {
+      "role": "native",
+      "path": "sglang/srt/sampling/sampling_params.py",
+      "sha256": "69b4aa9d6456f571796275db62606be1bcb573427dd56ec8d7e204ab8d52d52f"
+    },
+    "sglang.srt.sampling.sampling_batch_info": {
+      "role": "native",
+      "path": "sglang/srt/sampling/sampling_batch_info.py",
+      "sha256": "b30889b6d55e915282878027a8d820fd8ec992dec130de1c0902dc9e8694dac7"
+    },
+    "sglang.srt.disaggregation.decode_schedule_batch_mixin": {
+      "role": "native",
+      "path": "sglang/srt/disaggregation/decode_schedule_batch_mixin.py",
+      "sha256": "370c6900775fcf3e6ef17fdf92cf989a9cd37abf9694b4d69cd82d167eb32842"
+    },
+    "sglang.srt.disaggregation.utils": {
+      "role": "native",
+      "path": "sglang/srt/disaggregation/utils.py",
+      "sha256": "bdbd04fffb49ce7888057b2c4b2daa5b55adf2c645d7b5fd4972c272185eb485"
+    },
+    "sglang.srt.dllm.mixin.req": {
+      "role": "native",
+      "path": "sglang/srt/dllm/mixin/req.py",
+      "sha256": "097655a52170a7792b2444ad9ef2bb822c493f57e50c7bf3dfa64f1907797719"
+    },
+    "sglang.srt.managers.embed_types": {
+      "role": "native",
+      "path": "sglang/srt/managers/embed_types.py",
+      "sha256": "06eb5d95fc6bdb51d2a988da1f4c4147e043969bfe0b191ae77f71993f7bb315"
+    },
+    "sglang.srt.mem_cache.cache_init_params": {
+      "role": "native",
+      "path": "sglang/srt/mem_cache/cache_init_params.py",
+      "sha256": "6581ed1b10c80bc5ba4d9131b591f82591b092ea4eef1e9e531306994c4f0842"
+    },
+    "sglang.srt.disaggregation.kv_events": {
+      "role": "native",
+      "path": "sglang/srt/disaggregation/kv_events.py",
+      "sha256": "f859c48ff87c11c72aa4b08f83bf50d9aed2c04c18a6a31bf66010b374b960f8"
+    },
+    "sglang.srt.mem_cache.events": {
+      "role": "native",
+      "path": "sglang/srt/mem_cache/events.py",
+      "sha256": "3ca1af46db548c1efa05bb8b64631f5a146ffd940d89d5ab02ec473ce8ce25d1"
+    },
+    "sglang.srt.mem_cache.evict_policy": {
+      "role": "native",
+      "path": "sglang/srt/mem_cache/evict_policy.py",
+      "sha256": "36147544538f81f9a1b0434c4c7e77ebed76796eb89046d62b59b4d2312f9c4c"
+    },
+    "sglang.srt.mem_cache.radix_cache": {
+      "role": "native",
+      "path": "sglang/srt/mem_cache/radix_cache.py",
+      "sha256": "6127f3ad1d36228a35de419c62a1b74aef295d7d5c73963d85e1961883a4103e"
+    },
+    "sglang.srt.observability.req_time_stats": {
+      "role": "native",
+      "path": "sglang/srt/observability/req_time_stats.py",
+      "sha256": "edfcdd63953f78577856b8c48fcb5c382420f683e8535cb9b97e3b1ef5d6a9ed"
+    },
+    "sglang.srt.utils.cuda_ipc_transport_utils": {
+      "role": "native",
+      "path": "sglang/srt/utils/cuda_ipc_transport_utils.py",
+      "sha256": "9073df7cee8bfb42bc42b5706f77dcbe7cb7e6ce84aaac1e4089fcdb0a49c637"
+    },
+    "sglang.srt.managers.schedule_batch": {
+      "role": "native",
+      "path": "sglang/srt/managers/schedule_batch.py",
+      "sha256": "a3dfd3f81b8240586ab9d24359a1ce498f3994cb4afb53c604d1d6c88fb659ee"
+    },
+    "sglang.srt.elastic_ep.elastic_ep": {
+      "role": "native",
+      "path": "sglang/srt/elastic_ep/elastic_ep.py",
+      "sha256": "5abc50194e4cff8d52cc27047f1745ef16dbdf04a08eceff7825f750f0b6d202"
+    },
+    "sglang.srt.layers.moe.token_dispatcher.mooncake": {
+      "role": "native",
+      "path": "sglang/srt/layers/moe/token_dispatcher/mooncake.py",
+      "sha256": "3c578d6fa1adb5eb6b2748c54e89f852fd3c646e46700dc77f6c0af463e57fd0"
+    },
+    "sglang.srt.layers.moe.token_dispatcher.moriep": {
+      "role": "native",
+      "path": "sglang/srt/layers/moe/token_dispatcher/moriep.py",
+      "sha256": "907ebafb10d78cd05221ebdb582a9fb18cfbc1ae55f976fc1079e9bcea9e4be6"
+    },
+    "sglang.srt.layers.moe.token_dispatcher.nixl": {
+      "role": "native",
+      "path": "sglang/srt/layers/moe/token_dispatcher/nixl.py",
+      "sha256": "afbcce5b4c2759d0c7418bc8f6ecabb2855f046f8ee065780f9fa08f3f59b2dc"
+    },
+    "sglang.srt.layers.moe.token_dispatcher.standard": {
+      "role": "native",
+      "path": "sglang/srt/layers/moe/token_dispatcher/standard.py",
+      "sha256": "7b493721a71cebe8e8a5a7c82bad171e8e3ee3fb511f0758ad683964b8884473"
+    },
+    "sglang.srt.layers.moe.token_dispatcher": {
+      "role": "native",
+      "path": "sglang/srt/layers/moe/token_dispatcher/__init__.py",
+      "sha256": "5e2a0ea19f4e2a996f056e583dc1b2a693842ad94b82cfc46efcc6c7f965c4e0"
+    },
+    "sglang.srt.batch_overlap.operations_strategy": {
+      "role": "native",
+      "path": "sglang/srt/batch_overlap/operations_strategy.py",
+      "sha256": "845dbcd2354e6b312c1a43c23db676b84710842bf65a6f95ae626818870ed100"
+    },
+    "sglang.srt.layers.attention.base_attn_backend": {
+      "role": "native",
+      "path": "sglang/srt/layers/attention/base_attn_backend.py",
+      "sha256": "ea6a1578e6f545204fc93fcacad852466de7122221aea07682835fca0f4fb783"
+    },
+    "sglang.srt.layers.flashinfer_comm_fusion": {
+      "role": "native",
+      "path": "sglang/srt/layers/flashinfer_comm_fusion.py",
+      "sha256": "73c9a6929f6c666a11dd03d347d0676c30e5527c597be432e10068c7debcf716"
+    },
+    "sglang.srt.layers.communicator": {
+      "role": "native",
+      "path": "sglang/srt/layers/communicator.py",
+      "sha256": "1827d3c7e8805cf87b1bb0e5ccb264e4fa939e8c69dff044e7c7a4a17ed1e59f"
+    },
+    "sglang.srt.batch_overlap.two_batch_overlap": {
+      "role": "native",
+      "path": "sglang/srt/batch_overlap/two_batch_overlap.py",
+      "sha256": "5c6384d22a4ec04cc516aae01383f8a5aba229341431d5e3a3ad72662a2308fb"
+    },
+    "sglang.srt.layers.utils.logprob": {
+      "role": "native",
+      "path": "sglang/srt/layers/utils/logprob.py",
+      "sha256": "694cc2017d5fb534f735c6fef36cc014ad697c2ede1715224280098fc5fb2e15"
+    },
+    "sglang.srt.layers.vocab_parallel_embedding": {
+      "role": "native",
+      "path": "sglang/srt/layers/vocab_parallel_embedding.py",
+      "sha256": "f7f960eb4af7ec4640ef59926497657c1a06310abc18c9d53ede7856b45c8a11"
+    },
+    "sglang.srt.layers.logits_processor": {
+      "role": "native",
+      "path": "sglang/srt/layers/logits_processor.py",
+      "sha256": "821f3670f6141c9860f05b3945c0f0141bcc5d11f3e95ef06716f1fcd60de636"
+    },
+    "sglang.srt.model_executor.input_buffers": {
+      "role": "native",
+      "path": "sglang/srt/model_executor/input_buffers.py",
+      "sha256": "3eecd9d8605a3b3906cfd0bcabdad323716928413e03c335e0448318b1f63abd"
+    },
+    "sglang.srt.multiplex.pdmux_context": {
+      "role": "native",
+      "path": "sglang/srt/multiplex/pdmux_context.py",
+      "sha256": "b4e6ff1aa10a19f9cdd285088424b9388574fd291edfd466e155cbaa8e876b9e"
+    },
+    "sglang.srt.model_executor.cuda_graph_runner": {
+      "role": "native",
+      "path": "sglang/srt/model_executor/cuda_graph_runner.py",
+      "sha256": "606ef6a1037eaae2f20aabcd9ca5a8b9aeefcdc942fcf44903cfaf38a8c40bfc"
+    },
+    "sglang.srt.model_loader.remote_instance_weight_loader_utils": {
+      "role": "native",
+      "path": "sglang/srt/model_loader/remote_instance_weight_loader_utils.py",
+      "sha256": "6e4743a6715a7a24bd854144b9d9383fd6479da8ca39991845f4e96d5a5c6b2a"
+    },
+    "sglang.srt.configs.modelopt_config": {
+      "role": "native",
+      "path": "sglang/srt/configs/modelopt_config.py",
+      "sha256": "a6be10fc9e06d457fec32db805847359a374508df8aeb78679fecdb7a7745f73"
+    },
+    "sglang.srt.configs.load_config": {
+      "role": "native",
+      "path": "sglang/srt/configs/load_config.py",
+      "sha256": "a5ec4d9eb570fcd48f7e85391310becc9591b4df65c070e0b6d6d9ac674550c8"
+    },
+    "sglang.srt.layers.modelopt_utils": {
+      "role": "native",
+      "path": "sglang/srt/layers/modelopt_utils.py",
+      "sha256": "01b862c26bb554ea1278f256cad805c51c3feaa4ed376aea4fad433c36e8088c"
+    },
+    "sglang.srt.model_loader.utils": {
+      "role": "native",
+      "path": "sglang/srt/model_loader/utils.py",
+      "sha256": "2a2f3bb813a825e3a4421e6bda10b2b8fe93be71f288a3f3afdc52edc65e2c65"
+    },
+    "sglang.srt.model_loader.ci_weight_validation": {
+      "role": "native",
+      "path": "sglang/srt/model_loader/ci_weight_validation.py",
+      "sha256": "a368a9aacf9f770a3c75882b942df3fb806f25574713ecac6698ddd371913240"
+    },
+    "sglang.srt.model_loader.weight_utils": {
+      "role": "native",
+      "path": "sglang/srt/model_loader/weight_utils.py",
+      "sha256": "82d6f10e735169802b0895d667b11bba9918909d386c8bbbdb3cde7c557c6ce4"
+    },
+    "sglang.srt.model_loader.loader": {
+      "role": "native",
+      "path": "sglang/srt/model_loader/loader.py",
+      "sha256": "6bdeddc5e455e6fc807f57db0c94ead4bf9a5b15d2e33740e872db52e4dfe90c"
+    },
+    "sglang.srt.model_loader": {
+      "role": "native",
+      "path": "sglang/srt/model_loader/__init__.py",
+      "sha256": "8cfa1f43a634864baf70c664ad8bc911a9da50a1cf84a7942f5187bef477ce00"
+    },
+    "sglang.srt.models.utils": {
+      "role": "native",
+      "path": "sglang/srt/models/utils.py",
+      "sha256": "8c338ded867f87eff884a2340ebb72a400232dd826d9938fa3e5c0d79597bf19"
+    },
+    "sglang.srt.utils.multi_stream_utils": {
+      "role": "native",
+      "path": "sglang/srt/utils/multi_stream_utils.py",
+      "sha256": "8df6b8186cbd06c2427da8a410dbce2ce3b68171ad3fb8fd03bf2530f306cf4a"
+    },
+    "sglang.srt.layers.attention.flashattention_interface": {
+      "role": "native",
+      "path": "sglang/srt/layers/attention/flashattention_interface.py",
+      "sha256": "c9ba42041a2d7d8ff9746f461c5b77bb8c41ad2686f01cb54340f5ad80588b0d"
+    },
+    "sglang.srt.layers.attention.triton_ops.prefill_attention": {
+      "role": "native",
+      "path": "sglang/srt/layers/attention/triton_ops/prefill_attention.py",
+      "sha256": "eb158c4c03e69091eb95a1bce093c9b054ac1ca5aab12769063d2e84630ca7f3"
+    },
+    "sglang.srt.layers.rotary_embedding.utils": {
+      "role": "native",
+      "path": "sglang/srt/layers/rotary_embedding/utils.py",
+      "sha256": "d7850c8a1d01a39e215e534b42aa9cfffe7820c49015f4b4fcdeea8110189e87"
+    },
+    "sglang.srt.layers.rotary_embedding.base": {
+      "role": "native",
+      "path": "sglang/srt/layers/rotary_embedding/base.py",
+      "sha256": "50b801ec65a3ab07eeb5fc159f462d509a84b9875d1a472f4ad01758dec3d8a8"
+    },
+    "sglang.srt.layers.rotary_embedding.triton_kernels": {
+      "role": "native",
+      "path": "sglang/srt/layers/rotary_embedding/triton_kernels.py",
+      "sha256": "49b3a2ca2784b4ffb0773947d2e26055f55a520c9cd847b86bcc3f6c2bf94d05"
+    },
+    "sglang.srt.layers.rotary_embedding.yarn": {
+      "role": "native",
+      "path": "sglang/srt/layers/rotary_embedding/yarn.py",
+      "sha256": "03fe348adb8ebe0eaef472a1c7d2af8bc1b072b4dc5787f0f1a90ae3bdb3cc93"
+    },
+    "sglang.srt.layers.rotary_embedding.mrope": {
+      "role": "native",
+      "path": "sglang/srt/layers/rotary_embedding/mrope.py",
+      "sha256": "1f202758f01afe8afc45bf4b4e6797e6cab63cb7778381de771a001399f7aaa8"
+    },
+    "sglang.srt.layers.rotary_embedding.rope_variant": {
+      "role": "native",
+      "path": "sglang/srt/layers/rotary_embedding/rope_variant.py",
+      "sha256": "5ae4410dcd9687de7f2a7bebf352a10e2185b0222d8ad850724f4cf54fa4cf9b"
+    },
+    "sglang.srt.layers.rotary_embedding.factory": {
+      "role": "native",
+      "path": "sglang/srt/layers/rotary_embedding/factory.py",
+      "sha256": "943b2f75edb523999540f1018fbfed06d21a8309847d5ad72e59a50ea9a92821"
+    },
+    "sglang.srt.layers.rotary_embedding": {
+      "role": "native",
+      "path": "sglang/srt/layers/rotary_embedding/__init__.py",
+      "sha256": "7329f3e0422fdae69421c4335cd49e9ccaa89b861d7f89123cd1f207aa511ed6"
+    },
+    "sglang.srt.layers.attention.vision": {
+      "role": "native",
+      "path": "sglang/srt/layers/attention/vision.py",
+      "sha256": "1dc2bbc578e3b5bac852f3905a45185503b6c04cc5a82171f46e9664dbe7bde1"
+    },
+    "sglang.srt.layers.conv": {
+      "role": "native",
+      "path": "sglang/srt/layers/conv.py",
+      "sha256": "92856ee4c2a9578ace37cc7337297ec15ea9dc665edd0a33cd9e347f7994cba4"
+    },
+    "sglang.srt.layers.activation": {
+      "role": "native",
+      "path": "sglang/srt/layers/activation.py",
+      "sha256": "e818b626dbec0bda3948c10b5d9b04ac823f3f54ea41c94cdf3d9b8308259a62"
+    },
+    "sglang.srt.layers.pooler": {
+      "role": "native",
+      "path": "sglang/srt/layers/pooler.py",
+      "sha256": "d5da170733535bf89d8e8ba4ec5a5ec060b8625911bd3eb7a21544db9972839c"
+    },
+    "sglang.srt.layers.multimodal": {
+      "role": "native",
+      "path": "sglang/srt/layers/multimodal.py",
+      "sha256": "bcdb307b427499a78188df1e8659b17ecf98625ae632595897a35cfd8e7b35e8"
+    },
+    "sglang.srt.mem_cache.multimodal_cache": {
+      "role": "native",
+      "path": "sglang/srt/mem_cache/multimodal_cache.py",
+      "sha256": "f1415edeb4554534de2648e2ee1ffacde06236a7b0028f29f94b9b94a954b739"
+    },
+    "sglang.srt.multimodal.processors.base_processor": {
+      "role": "native",
+      "path": "sglang/srt/multimodal/processors/base_processor.py",
+      "sha256": "a5ade398be31ea486499bd5730a00c33f5eb2bc26f25e635dbd9f9c7a110b5e0"
+    },
+    "sglang.srt.multimodal.evs.evs_core": {
+      "role": "native",
+      "path": "sglang/srt/multimodal/evs/evs_core.py",
+      "sha256": "a96d74c0d6d08b2d54301a2744037a9a2600c2ca0a199d32e2e69e6cd5094d18"
+    },
+    "sglang.srt.multimodal.evs.evs_module": {
+      "role": "native",
+      "path": "sglang/srt/multimodal/evs/evs_module.py",
+      "sha256": "0ebd652748903794048e397310edc797779d60066dab18715146c34397632b35"
+    },
+    "sglang.srt.multimodal.evs.evs_processor": {
+      "role": "native",
+      "path": "sglang/srt/multimodal/evs/evs_processor.py",
+      "sha256": "aa39f0bdadc56b0bd8f20ea8a4a8408a05895ee6a4c82386025d45486622aa25"
+    },
+    "sglang.srt.multimodal.evs": {
+      "role": "native",
+      "path": "sglang/srt/multimodal/evs/__init__.py",
+      "sha256": "d0a4e395f23d868ff513c20f7f5b76591a5232c461346cd1300c0b75130d1503"
+    },
+    "sglang.srt.managers.mm_utils": {
+      "role": "native",
+      "path": "sglang/srt/managers/mm_utils.py",
+      "sha256": "10429561ac7504569094d08502ca95d47a6fbd4e9597a75c3fd84cf3f3f70c8d"
+    },
+    "sglang.srt.models.qwen2": {
+      "role": "native",
+      "path": "sglang/srt/models/qwen2.py",
+      "sha256": "05574b38c2411a9c4e09cbcb1500e79bccf60e1d1f564c71a10413393a8d2857"
+    },
+    "sglang.srt.models.qwen3": {
+      "role": "native",
+      "path": "sglang/srt/models/qwen3.py",
+      "sha256": "e82752b69a988e229ec4b3294cda68c42487a230c1deae001d4ae959129b5d07"
+    },
+    "sglang.srt.multimodal.vit_cuda_graph_runner": {
+      "role": "native",
+      "path": "sglang/srt/multimodal/vit_cuda_graph_runner.py",
+      "sha256": "1bfe53db188fe4ebf4ba6a740d1df9704bd496c4154361c6076e30dd3c4594f1"
+    },
+    "sglang.srt.models.qwen3_vl": {
+      "role": "native",
+      "path": "sglang/srt/models/qwen3_vl.py",
+      "sha256": "5d75f718a45129495ee28adebf7e35d49475186e4a8ce9ef04419f59ff5cc48f"
+    },
+    "sglang.multimodal_gen.runtime.models.encoders.qwen3vl_vision": {
+      "role": "overlay",
+      "path": "sglang/multimodal_gen/runtime/models/encoders/qwen3vl_vision.py",
+      "sha256": "adf5bebf00bf2cb466d0b508d1945f62f59dadc382b76df6d6647e79a9717c68"
+    },
+    "sglang.multimodal_gen.runtime.models.encoders.qwen_vl": {
+      "role": "overlay",
+      "path": "sglang/multimodal_gen/runtime/models/encoders/qwen_vl.py",
+      "sha256": "30ebd20b6e4c6c5a46c0f5e94d3c7724df84795cb147a1929359615130880848"
+    },
+    "sglang.multimodal_gen.runtime.models.encoders.qwen_vl_rope": {
+      "role": "overlay",
+      "path": "sglang/multimodal_gen/runtime/models/encoders/qwen_vl_rope.py",
+      "sha256": "0524129ff56bc42428bcfb71ac808284be5781eb8997f29b1202c30a4875ffc4"
+    },
+    "sglang.multimodal_gen.runtime.models.encoders.qwen3vl": {
+      "role": "overlay",
+      "path": "sglang/multimodal_gen/runtime/models/encoders/qwen3vl.py",
+      "sha256": "448eb17c5a6421a45e4ee089eae17d4ca198a983905ec17c269d2f30dc893012"
+    }
+  },
+  "scope": "Recorded loaded .py source identities, separate from component success or official accuracy"
+}

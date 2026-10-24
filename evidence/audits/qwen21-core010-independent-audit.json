@@ -1,0 +1,82 @@
+{
+  "archive": "E:\\hg20261019\\dist\\000-session007-qwen21-stage010-012-raw.zip",
+  "archive_bytes": 97912,
+  "archive_sha256": "b6faeea32b4a20eb2cc175df2e477c3d6a47ad5204e974bb4f85bf2344d54dbc",
+  "CRC_verified": true,
+  "manifest_payloads_verified": 25,
+  "bundle_manifest_bound": true,
+  "worker_path_prefix": "qwen21-core-probe010-results/",
+  "native_wheel_sha256": "7c13be91a56b160af81847fffbf4f177b0f07fe0717b4042960ee23846ae7d61",
+  "workers": [
+    {
+      "name": "dit",
+      "returncode": 0,
+      "passed": true,
+      "native_sources_verified": 1989,
+      "native_unchanged": true,
+      "cuda_context_initialized": true,
+      "elapsed_seconds": 34.07126073585823,
+      "result": {
+        "parameters": 478352,
+        "output": {
+          "shape": [
+            1,
+            16,
+            4
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "abs_max": 0.513344943523407,
+          "finite": true,
+          "sha256": "909599b171da5be037ba6cfd036f80f3f6b3f0e16b771a2ab6f0da47bd03e37f"
+        }
+      },
+      "error_last_line": null,
+      "traceback_sha256": null
+    },
+    {
+      "name": "encoder",
+      "returncode": 0,
+      "passed": true,
+      "native_sources_verified": 1989,
+      "native_unchanged": true,
+      "cuda_context_initialized": true,
+      "elapsed_seconds": 33.667890165001154,
+      "result": {
+        "parameters": 121056,
+        "conditioning": {
+          "shape": [
+            1,
+            4,
+            64
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "abs_max": 0.061009813100099564,
+          "finite": true,
+          "sha256": "aaefbbf51f7aefc23c95a3f7d045a8ea8c5c85bc919d036ee1d29f7ec6bfa48f"
+        },
+        "logits": {
+          "shape": [
+            1,
+            1,
+            32
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "abs_max": 0.00900326669216156,
+          "finite": true,
+          "sha256": "0c3ec2e8740d71b788a9da28583cbca568916bf3b9742751a1e8401a2ac85f7a"
+        }
+      },
+      "error_last_line": null,
+      "traceback_sha256": null
+    }
+  ],
+  "all_workers_passed": true,
+  "all_native_sources_unchanged": true,
+  "failure_layer": "see individual raw workers",
+  "model_weights_loaded": false,
+  "GPU_tensor_compute": false,
+  "full_service_ready": false
+}

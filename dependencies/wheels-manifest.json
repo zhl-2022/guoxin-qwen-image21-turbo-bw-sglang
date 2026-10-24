@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "Python": "3.10",
+  "platform": "Linux x86_64/DTK26.04/Torch2.10 DAS",
+  "wheels": [
+    {
+      "name": "sglang",
+      "version": "0.5.12+das185.dtk2604.torch2100.2608191739.ga14e79",
+      "filename": "sglang-0.5.12+das185.dtk2604.torch2100.2608191739.ga14e79-cp310-cp310-linux_x86_64.whl",
+      "bytes": 8014097,
+      "sha256": "7c13be91a56b160af81847fffbf4f177b0f07fe0717b4042960ee23846ae7d61",
+      "url": "https://pypi.sourcefind.cn/customer/dtk2604-rc4/+f/7c1/3be91a56b160a/sglang-0.5.12+das185.dtk2604.torch2100.2608191739.ga14e79-cp310-cp310-linux_x86_64.whl#sha256=7c13be91a56b160af81847fffbf4f177b0f07fe0717b4042960ee23846ae7d61"
+    },
+    {
+      "name": "sglang-kernel",
+      "version": "0.4.2.post2+das185.dtk2604.torch2100.2608191745.ga14e79",
+      "filename": "sglang_kernel-0.4.2.post2+das185.dtk2604.torch2100.2608191745.ga14e79-cp39-abi3-linux_x86_64.whl",
+      "bytes": 6805029,
+      "sha256": "a766e90b7614aeced2b36c957cae4dab17e591056edb0a0eda8feb201940c914",
+      "url": "https://pypi.sourcefind.cn/customer/dtk2604-rc4/+f/a76/6e90b7614aece/sglang_kernel-0.4.2.post2+das185.dtk2604.torch2100.2608191745.ga14e79-cp39-abi3-linux_x86_64.whl#sha256=a766e90b7614aeced2b36c957cae4dab17e591056edb0a0eda8feb201940c914"
+    },
+    {
+      "name": "diffusers",
+      "version": "0.37.0",
+      "filename": "diffusers-0.37.0-py3-none-any.whl",
+      "bytes": 5000449,
+      "url": "https://files.pythonhosted.org/packages/f7/55/586a3a2b9c95f371c9c3cb048c3cac15aedcce8d6d53ebd6bbc46860722d/diffusers-0.37.0-py3-none-any.whl",
+      "sha256": "7eab74bf896974250b5e1027cae813aba1004f02d97c9b44891b83713386aa08"
+    },
+    {
+      "name": "addict",
+      "version": "2.4.0",
+      "filename": "addict-2.4.0-py3-none-any.whl",
+      "bytes": 3832,
+      "url": "https://files.pythonhosted.org/packages/6a/00/b08f23b7d7e1e14ce01419a467b583edbb93c6cdb8654e54a9cc579cd61f/addict-2.4.0-py3-none-any.whl",
+      "sha256": "249bb56bbfd3cdc2a004ea0ff4c2b6ddc84d53bc2194761636eb314d5cfa5dfc"
+    },
+    {
+      "name": "imageio",
+      "version": "2.36.0",
+      "filename": "imageio-2.36.0-py3-none-any.whl",
+      "bytes": 315414,
+      "url": "https://files.pythonhosted.org/packages/4e/e7/26045404a30c8a200e960fb54fbaf4b73d12e58cd28e03b306b084253f4f/imageio-2.36.0-py3-none-any.whl",
+      "sha256": "471f1eda55618ee44a3c9960911c35e647d9284c68f077e868df633398f137f0"
+    },
+    {
+      "name": "imageio-ffmpeg",
+      "version": "0.5.1",
+      "filename": "imageio_ffmpeg-0.5.1-py3-none-manylinux2010_x86_64.whl",
+      "bytes": 26900394,
+      "url": "https://files.pythonhosted.org/packages/fe/44/c9e18a73dfd939b5b0ec843870ac72f1f6c17e31a03149b687a85465bff7/imageio_ffmpeg-0.5.1-py3-none-manylinux2010_x86_64.whl",
+      "sha256": "5289f75c7f755b499653f3209fea4efd1430cba0e39831c381aad2d458f7a316"
+    },
+    {
+      "name": "orjson",
+      "version": "3.11.3",
+      "filename": "orjson-3.11.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "bytes": 132966,
+      "url": "https://files.pythonhosted.org/packages/44/1d/ca2230fd55edbd87b58a43a19032d63a4b180389a97520cc62c535b726f9/orjson-3.11.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "sha256": "d7d18dd34ea2e860553a579df02041845dee0af8985dff7f8661306f95504ddf"
+    },
+    {
+      "name": "apache-tvm-ffi",
+      "version": "0.1.9",
+      "filename": "apache_tvm_ffi-0.1.9-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "bytes": 2323684,
+      "url": "https://files.pythonhosted.org/packages/ae/b6/f1ec5c528918c4dae03885ec472663072a984431d7d7fb04ca0798a2e13c/apache_tvm_ffi-0.1.9-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "sha256": "7f6bc8846d570b8ce38692fc91b530b44cd6ae092c805a844da23970e81b12c0"
+    },
+    {
+      "name": "moviepy",
+      "version": "2.2.1",
+      "filename": "moviepy-2.2.1-py3-none-any.whl",
+      "bytes": 129871,
+      "url": "https://files.pythonhosted.org/packages/9a/73/7d3b2010baa0b5eb1e4dfa9e4385e89b6716be76f2fa21a6c0fe34b68e5a/moviepy-2.2.1-py3-none-any.whl",
+      "sha256": "6b56803fec2ac54b557404126ac1160e65448e03798fa282bd23e8fab3795060"
+    },
+    {
+      "name": "proglog",
+      "version": "0.1.12",
+      "filename": "proglog-0.1.12-py3-none-any.whl",
+      "bytes": 6337,
+      "url": "https://files.pythonhosted.org/packages/c1/1b/f7ea6cde25621cd9236541c66ff018f4268012a534ec31032bcb187dc5e7/proglog-0.1.12-py3-none-any.whl",
+      "sha256": "ccaafce51e80a81c65dc907a460c07ccb8ec1f78dc660cfd8f9ec3a22f01b84c"
+    },
+    {
+      "name": "python-dotenv",
+      "version": "1.2.1",
+      "filename": "python_dotenv-1.2.1-py3-none-any.whl",
+      "bytes": 21230,
+      "url": "https://files.pythonhosted.org/packages/14/1b/a298b06749107c305e1fe0f814c6c74aea7b2f1e10989cb30f544a1b3253/python_dotenv-1.2.1-py3-none-any.whl",
+      "sha256": "b81ee9561e9ca4004139c6cbba3a238c32b03e4894671e181b671e8cb8425d61"
+    }
+  ],
+  "native_packages_to_preserve": [
+    "torch",
+    "torchvision",
+    "torchaudio",
+    "triton",
+    "transformers",
+    "vllm",
+    "vllm-hcu"
+  ],
+  "dependency_resolution": false,
+  "native_compatibility_not_yet_proven": true,
+  "all_upstream_extras_not_installed": true,
+  "imageio_ffmpeg_transfer": "Huawei byte-identical mirror; identity pinned to publisher PyPI SHA256"
+}

@@ -1,0 +1,134 @@
+{
+  "passed": true,
+  "native_DAS": false,
+  "GPU_tensor_compute": false,
+  "checkpoint_loaded": false,
+  "collapse_image_slots_AST_identical": true,
+  "prompt_cases": [
+    {
+      "prompt": "A red cube on a clean white background.",
+      "drop_idx": 14,
+      "input_ids": [
+        [
+          151644,
+          8948,
+          198,
+          1092,
+          30782,
+          408,
+          323,
+          23643,
+          279,
+          3897,
+          9934,
+          13,
+          151645,
+          198,
+          151644,
+          872,
+          198,
+          32,
+          2518,
+          23739,
+          389,
+          264,
+          4240,
+          4158,
+          4004,
+          13,
+          151645,
+          198,
+          151644,
+          77091,
+          198
+        ]
+      ],
+      "valid_tokens_after_drop": 17,
+      "batch_shapes": {
+        "input_ids": [
+          1,
+          31
+        ],
+        "attention_mask": [
+          1,
+          31
+        ],
+        "mm_token_type_ids": [
+          1,
+          31
+        ]
+      }
+    },
+    {
+      "prompt": "",
+      "drop_idx": 14,
+      "input_ids": [
+        [
+          151644,
+          8948,
+          198,
+          1092,
+          30782,
+          408,
+          323,
+          23643,
+          279,
+          3897,
+          9934,
+          13,
+          151645,
+          198,
+          151644,
+          872,
+          198,
+          220,
+          151645,
+          198,
+          151644,
+          77091,
+          198
+        ]
+      ],
+      "valid_tokens_after_drop": 9,
+      "batch_shapes": {
+        "input_ids": [
+          1,
+          23
+        ],
+        "attention_mask": [
+          1,
+          23
+        ],
+        "mm_token_type_ids": [
+          1,
+          23
+        ]
+      }
+    }
+  ],
+  "pack_unpack_exact": true,
+  "latent_stats_roundtrip_max_abs": 5.364418029785156e-07,
+  "latent_stats_roundtrip_float32_bound": 5.521440471056849e-06,
+  "sigma8": [
+    1.0,
+    0.978453,
+    0.95418,
+    0.926626,
+    0.89508,
+    0.845148,
+    0.704534,
+    0.414568
+  ],
+  "timesteps": [
+    1000.0,
+    978.4530029296875,
+    954.1799926757812,
+    926.6260375976562,
+    895.0799560546875,
+    845.1480102539062,
+    704.5339965820312,
+    414.5679931640625
+  ],
+  "cuda_context_initialized": false,
+  "stage_sha256": "d7896af2c2c07634c72fd64e215f783a7e14776e10f3fe672a9193e1766873d0"
+}
